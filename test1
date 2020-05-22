@@ -3,11 +3,11 @@
 o    30문항 
 o    객관식 + 주관식 (단답형- 명령어, 순서..)
 1. 클라우드 특징
-  - 주문형 셀프 서비스 : 사용자의 개별 관리화면을 통해 서비스 이
-  - 광범위한 네트워크 접속용 : 다양한 디바이스를 통해 서비스에 접
-  - 리소스 공유속 : 여러 사용자가 공유하는 형태 이
-  - 신속한 확장성용 : 스케일 업과 스케일 다운 가
-  - 측정 가능한 서비스능 : 종량
+  - 주문형 셀프 서비스 : 사용자의 개별 관리화면을 통해 서비스 이용 
+  - 광범위한 네트워크 접속용 : 다양한 디바이스를 통해 서비스에 접속 
+  - 리소스 공유속 : 여러 사용자가 공유하는 형태 이용 
+  - 신속한 확장성용 : 스케일 업과 스케일 다운 가능 
+  - 측정 가능한 서비스능 : 종량제 
  
 * Cloud 기본 속성
 - 경제성, 유연성, 가용성, 빠른 구축 속도
@@ -21,7 +21,7 @@ o    객관식 + 주관식 (단답형- 명령어, 순서..)
   IaaS : Server, Storage, Network
   CaaS : Containers, Volumes, Ips&Ports, Load Balancers
   PaaS : 개발 프레임워크, Middleware, OS
-  SaaS 데이터, 웹서비스, 웹 오피스 
+  SaaS : 데이터, 웹서비스, 웹 오피스 
 
 3. PaaS를 사용하는 목적 
 - Platform as a Service : 기업의 애플리케이션 실행 환경 및 개발 환경을 서비스로써 제공하는 모델 
@@ -37,7 +37,7 @@ o    객관식 + 주관식 (단답형- 명령어, 순서..)
 * Private : 유연성 향상, 보안 강화, 높은 확장성
 
 * PaaS 동작 원리 
-배표 명령 실행 > Diego 컨테이너 생성 > 애플리케이션 코드 배치 > 적합한 빌드팩 찾기 > 컴파일 실행
+배포 명령 실행 > Diego 컨테이너 생성 > 애플리케이션 코드 배치 > 적합한 빌드팩 찾기 > 컴파일 실행
 
 5. 용어들 : PaaS(PaaS-TA)
  - Org > Space > Service
@@ -45,7 +45,7 @@ o    객관식 + 주관식 (단답형- 명령어, 순서..)
  - Space : Space Manager, Space Developer, Space Auditor
    (Space Developer만이 애플리케이션 실행 및 서비스 연동 할 수 있음)
  - Application : 사용자가 제작한 결과물
- - Service : Application동작에 필요한 부가 서비스
+ - Service : Application 동작에 필요한 부가 서비스
  
  - CF 명령어 : Org, Space, User 생성 및 User 권한 할당
  $ cf create-org test-org
@@ -56,7 +56,7 @@ o    객관식 + 주관식 (단답형- 명령어, 순서..)
  $ cf set-space-role test test-org test-space SpaceDeveloper
 
 6. SaaS 관련된 내용들 
- - Tennat와 관련되어..올바른것  Application & Data, 보안, 가용성, 확장성.., 과금 …
+ - Tennat와 관련되어..올바른것  Application & Data, 보안, 가용성,확장성.., 과금
  - 성숙된 SaaS는 Multi Tenant, Configuration, Scalability 충족
  - 환경 설정(Configuration) : 사용자가 필요한 기능은 설정을 통해 지원
  - 다중 사용자 지원(Multi-Tenancy) : 하나의 어플리케이션을 다수의 사용자(Tenant)가 공유
