@@ -2,7 +2,7 @@
 http://playpark.paas-ta.org/
 paasta_trainee05 trainee05
 
-Vmware EXE Server => http://192.168.55.26/
+Vmware EXE Server => http://192.168.55.26
 ID/PW => root /JSlab123
 
 https://github.com/PaaS-TA 접속
@@ -381,3 +381,87 @@ $ cf enable-service-access CubridDB
 $ cf service-access	
 
 $ cf buildpacks
+
+# To start vm
+
+cd ~/workspace/paasta-5.0/deployment/bosh-deployment
+echo $(bosh int warden/state.json --path /current_vm_cid)
+vboxmanage startvm $(bosh int warden/state.json --path /current_vm_cid) --type headless 
+
+# ip route list
+
+$ sudo ip route add 10.244.0.0/16 via 192.168.150.55
+
+source admin
+bosh envs
+bosh -e vbox env
+
+curl https://api.10.244.0.34.xip.io/v2/info -k 
+
+cf login -a https://api.10.244.0.34.xip.io --skip-ssl-validation
+cf login --skip-ssl-validation -a https://api.10.244.0.34.xip.io -u admin -p admin 
+
+# summary
+$ bosh -e vbox update-cloud-config cloud-config.yml
+$ bosh -e vbox update-runtime-config dns.yml
+$ bosh -e vbox uplod-semcell
+$ bosh -e vbox uplod-release <<< use-compiled-releases.yml
+$ bosh -e vbox -d paasta deploy ***.yml
+$ bosh -e vbox -d paasta vms --vitals
+$ bosh -e vbox tasks
+$ bosh -e vbox locks
+$ bosh -e vbox cancel-task 123
+$ bosh -e vbox env
+$ bosh int warden/cred.yml --path /jumpbox_ssh/private_key > jumpbox.key
+$ ssh -i jumpbox.key jumpbox@192.168.150.55
+$ bosh/ sudo su 
+$ bosh/ monit summary
+===============
+cd ~/workspace/paasta-5.0/deployment/bosh-deployment
+bosh int ./warden/creds.yml --path /jumpbox_ssh/private_key > jumpbox.key
+chmod 600 jumpbox.key
+ssh jumpbox@192.168.150.55 -i jumpbox.key
+
+sudo su
+monit summary  (-> 내부 프로세스 확인) /var/vcap
+=================
+$ bosh/ netstat -antl | grep LISTEN
+$ bosh/ cd /var/vcap/sys/log
+$ bosh/ cd /var/vcap/jobs/**/config
+$ bosh/ cd /var/vcap/store/tasks/
+$ bosh -e vbox vms
+$ bosh -e vbox -d paasta vms
+$ bosh -e vbox -d paasta stemcells
+$ bosh -e vbox -d paasta releases
+$ bosh -e vbox -d paasta ssh api
+api/*****/ sudo su 
+api/*****/ monit summary
+$ install cf-cli
+$ cf login -a https://api.10.244.0.34.xip.io --skip-ssl-validation
+admin/admin/edu-org
+$ cf create-user USERNAME PASSWORD
+$ cf create-org test-org
+$ cf create-space dev -o test-org
+$ cf set-org-role USERNAME test-org OrgManager
+$ cf set-space-role USERNAME test-org dev SpaceDeveloper
+$ cf push -f manifest.yml
+$ cf push my-app -p my-app.war -m 1G
+$ cf push --docker-image user/docker-image-name
+$ cf create-service Mysql-DB Mysql-Plan1-10con mydb
+$ cf create-user-provided-service ...
+$ cf services
+$ cf bind-service my-app mydb
+$ cf env my-app
+$ cf unbind-service my-ap-mydb
+$ cf delete-service our-db
+$ cf logs my-app --recent
+$ cf ssh my-app -L 3308:10.10.4.14:330
+$ cf scale my-app -i 3
+$ cf service-brokers
+$ cf enable-service-access my-broker
+$ cf service-access
+$ cf buildpacks
+
+
+$ cf marketplace
+
