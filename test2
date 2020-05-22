@@ -1,0 +1,383 @@
+*****[실습 1일차]*****
+http://playpark.paas-ta.org/
+paasta_trainee05 trainee05
+
+Vmware EXE Server => http://192.168.55.26/
+ID/PW => root /JSlab123
+
+https://github.com/PaaS-TA 접속
+
+https://github.com/PaaS-TA/Guide-4.0-ROTELLE/blob/master/Install-Guide/Bosh
+ -> Bosh-Lite 설치 가이드 환경설정v2.0.md
+
+https://github.com/PaaS-TA/Guide-4.0-ROTELLE/blob/master/Install-Guide/Bosh
+-> Bosh-Lite 설치 가이드v2.0.md
+  
+<<< BOSH Installation >>>
+1. Inception 서버 설치
+ubuntu / 1234
+Inception 서버 IP : 192.168.55.136 
+ 
+2. Bosh cli 설치
+sudo apt-get update
+mkdir workspace
+cd workspace
+sudo apt-get install -y curl
+curl -Lo ./bosh https://s3.amazonaws.com/bosh-cli-artifacts/bosh-cli-6.1.0-linux-amd64
+chmod +x ./bosh
+sudo mv ./bosh /usr/local/bin/bosh
+bosh -v
+
+3. dependency 설치
+[Ubuntu 18.04]
+sudo apt-get install -y build-essential zlibc zlib1g-dev ruby ruby-dev openssl libxslt1-dev libxml2-dev libssl-dev libreadline7 libreadline-dev libyaml-dev libsqlite3-dev sqlite3
+
+[다운로드]
+wget http://45.248.73.44/index.php/s/Qi2zGPnGNEjb4Ax/download.zip
+
+[Bosh 환경 설정]
+cd ~/workspace/paasta-5.0/deployment/bosh-deployment
+chmod 755 *.sh
+
+4. VirtualBox 설치
+sudo apt update
+sudo apt upgrade
+wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
+wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | sudo apt-key add -
+sudo add-apt-repository "deb http://download.virtualbox.org/virtualbox/debian bionic contrib"
+sudo apt update
+sudo apt install virtualbox-6.0
+VBoxManage --version
+
+5. BOSH Deploy
+cd ~/workspace/paasta-5.0/deployment/bosh-deployment
+./deploy-bosh-lite.sh
+
+
+6. Alias and log into the Director
+$ cd ~/workspace/bosh-deployment
+$ bosh alias-env vbox -e 192.168.50.6 --ca-cert <(bosh int ./creds.yml --path /director_ssl/ca)
+$ export BOSH_CA_CERT=$(bosh int ./{iaas}/creds.yml --path /director_ssl/ca)
+$ export BOSH_CLIENT=admin
+$ export BOSH_CLIENT_SECRET=`bosh int ./creds.yml --path /admin_password`
+$ bosh -e vbox env
+
+cd ~/workspace/paasta-5.0/deployment/bosh-deployment
+
+vi admin
+export BOSH_CA_CERT=$(bosh int ~/workspace/paasta-5.0/deployment/bosh-deployment/warden/creds.yml --path /director_ssl/ca)
+export BOSH_CLIENT=admin
+export BOSH_CLIENT_SECRET=$(bosh int ~/workspace/paasta-5.0/deployment/bosh-deployment/warden/creds.yml --path /admin_password)
+cat admin
+
+chmod 755 admin
+source admin
+
+7. BOSH Login
+bosh alias-env vbox -e 192.168.150.55 --ca-cert <(bosh int ./warden/creds.yml --path /director_ssl/ca)
+
+bosh envs 
+bosh -e vbox env
+
+8. jumpbox (/var/vcap/)
+cd ~/workspace/paasta-5.0/deployment/bosh-deployment
+bosh int ./warden/creds.yml --path /jumpbox_ssh/private_key > jumpbox.key
+chmod 600 jumpbox.key
+ssh jumpbox@192.168.150.55 -i jumpbox.key
+
+sudo su
+monit summary  (-> 내부 프로세스 확인) /var/vcap
+
+9. credhub cli install
+cd ~/workspace/
+
+wget https://github.com/cloudfoundry-incubator/credhub-cli/releases/download/2.0.0/credhub-linux-2.0.0.tgz
+tar -xvf credhub-linux-2.0.0.tgz
+chmod +x credhub
+sudo mv credhub /usr/local/bin/credhub
+credhub --version
+
+10 credhub login
+cd ~/workspace/paasta-5.0/deployment/bosh-deployment
+
+export CREDHUB_CLIENT=credhub-admin
+export CREDHUB_SECRET=$(bosh int --path /credhub_admin_client_secret ./warden/creds.yml)
+export CREDHUB_CA_CERT=$(bosh int --path /credhub_tls/ca ./warden/creds.yml)
+credhub login -s https://192.168.150.55:8844 --skip-tls-validation (bosh internal ip)
+credhub find
+
+# To save state of vm
+
+cd ~/workspace/paasta-5.0/deployment/bosh-deployment
+echo $(bosh int warden/state.json --path /current_vm_cid)
+vboxmanage controlvm $(bosh int warden/state.json --path /current_vm_cid) savestate 
+
+*****[실습 2일차]*****
+
+# To start vm
+
+cd ~/workspace/paasta-5.0/deployment/bosh-deployment
+echo $(bosh int warden/state.json --path /current_vm_cid)
+vboxmanage startvm $(bosh int warden/state.json --path /current_vm_cid) --type headless 
+
+1. Local Route
+$ source admin 
+$ bosh envs
+$ bosh -e vbox env
+$ sudo ip route add 10.244.0.0/16 via 192.168.150.55
+$ ip route list
+
+
+2. cloud-config 설정
+$ cd ~/workspace/paasta-5.0/deployment/cloud-config
+$ bosh -e {director_alias} update-cloud-config {IaaS}-cloud-config.yml
+$ bosh -e vbox update-cloud-config bosh-lite-cloud-config.yml
+
+3. BOSH에 upload된 cloud-config 확인
+$ bosh -e vbox cloud-config
+
+4. runtime-config설정 정보를 BOSH에 update - micro-bosh 를 vbox로 변경
+$ cd ~/workspace/paasta-5.0/deployment/bosh-deployment
+$ chmod 755 ./update-runtime-config.sh
+$ cat ./update-runtime-config.sh
+$ ./update-runtime-config.sh
+
+5.PaaS-TA Deploy 실행
+$ ./deploy-bosh-lite.sh
+
+$ source admin 
+$ cd ~/workspace/paasta-5.0/stemcell/paasta$ 
+$ bosh -e vbox upload-stemcell bosh-stemcell-315.64-warden-boshlite-ubuntu-xenial-go_agent.tgz
+$ bosh -e vbox stemcells
+
+다시 
+
+$ cd ~/workspace/paasta-5.0/deployment/paasta-deployment
+$ ./deploy-bosh-lite.sh
+
+6. PaaS-TA Deploy VM 확인
+$ bosh -e {director_alias} -d {deploy_name} vms
+$ bosh -e vbox -d paasta vms
+
+
+7. Bosh Commands 
+ bosh -e vbox -d paasta ssh api
+ bosh -e vbox -d paasta ssh api/2 (여러대)
+ 
+ 1) releases
+    bosh -e vbox releases
+    bosh -e vbox create-release --force --tarball=diego-2.22.0+dev.4.tgz
+    bosh -e vbox upload-release ./diego-2.22.0+dev.4.tgz
+    bosh -e vbox delete-release diego/2.22.0+dev.4
+
+ 2) deployments
+    bosh -e vbox deployments
+    #delete
+    bosh -e vbox -d zookeeper delete-deployment --force
+
+ 3) vms & instances
+    bosh -e vbox vms
+    bosh -e vbox instancesreleases:
+
+ 4) ssh
+    bosh -e vbox ssh -d {deployment-name} {job-name}
+    bosh -e vbox ssh -d cf nats
+
+ 5) tasks
+    bosh -e vbox tasks
+
+ 6) locks
+    bosh -e vbox locks
+
+8. cf cli 설치 (Linux)
+
+<<< PaaS-TA App Push Test >>>
+1. cf cli Installation
+ 1) Add the Cloud Foundry Foundation public key and package repository to your system:
+    $ wget -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | sudo apt-key add -
+    
+ 2) Add the repository to source.list file
+    $ echo "deb https://packages.cloudfoundry.org/debian stable main" | sudo tee /etc/apt/sources.list.d/cloudfoundry-cli.list
+    
+ 3) Update your local package index:
+    $ sudo apt-get update
+    
+ 4) Install the cf CLI:
+    $ sudo apt-get install cf-cli
+    
+    $ cf -v
+    cf 버전 6.51.0+2acd15650.2020-04-07    
+
+2. cf login
+ $ cf login -a https://api.10.244.0.34.xip.io --skip-ssl-validation
+ => id/pw : admin/admin
+
+ $ cf orgs
+ $ cf create-org edu-org
+ $ cf create-space dev -o edu-org
+ $ cf create-user -h
+ $ cf create-user edu-user password1
+ $ cf set-org-role edu-user edu-org OrgManager
+ $ cf set-space-role -h 
+ $ cf set-space-role edu-user edu-org dev SpaceDeveloper
+ 
+ $ cf set-space-role edu-user edu-org dev SpaceManager
+ 
+ cf logout
+ cf login --skip-ssl-validation
+
+ cf orgs
+ cf spaces
+
+ $ sudo apt-get update
+ $ sudo apt install openjdk-8-jdk
+ $ java -version
+   openjdk version "1.8.0_252"
+
+ $ sudo apt-get install git
+ $ git --version
+   git version 2.17.1
+
+ $ cd ~/workspace 
+ $ git clone https://github.com/cloudfoundry-samples/spring-music.git
+ $ cd spring-music/
+ $ ./gradlew clean assemble
+ $ vi manifest.yml
+ 
+--
+applications:
+- name: spring-music
+  memory: 1G
+  random-route: true ( spring-music-xxx.10.244.0.34.xip.io)
+  path: build/libs/spring-music-1.0.jar
+  env:
+    JBP_CONFIG_SPRING_AUTO_RECONFIGURATION: '{enabled: false}'
+#    JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ } }'
+ 
+ cf target
+ cf target -o xxx -s bbb (타겟을 바꾸고 싶다)
+ 
+ $ cf push
+   spring-music-reliable-crane-hx.10.244.0.34.xip.io
+ $ ch apps 
+ 
+ $ curl spring-music-reliable-crane-hx.10.244.0.34.xip.io
+ 
+  cf scale -h
+
+  $ export BOSH_ENVIRONMENT=vbox
+    
+3. cf create-org & space
+ $ cf create-space test-space -o test-org
+ $ cf create-user test test1234
+ $ cf set-org-role teorg test-org
+ $ cf create-st test-org OrgManager
+ $ cf set-space-role test test-org test-space SpaceManager
+ $ cf set-space-role test test-org test-space SpaceDeveloper
+
+4. cf login test user
+ $ cf login 
+API EndPoint: https://api.bosh-lite.com
+Email> test
+Password>
+....
+
+5. Java 8 install
+ $ sudo apt-get update
+ $ sudo apt install openjdk-8-jdk
+ $ java -version
+
+6. Sample app test
+ $ mkdir ~/workspace/sample
+ $ cd ~/workspace/sample
+ $ git clone https://github.com/cloudfoundry-samples/spring-music.git
+ $ cd spring-music/
+ $ ./gradlew clean assemble
+
+7. manifest.yml
+ $ vi manifest.yml
+ ---
+ applications:
+ - name: spring-music
+   memory: 1G
+   random-route: true 
+   buildpack: java_buildpack
+   health-check-type: none
+   path: build/libs/spring-music-1.0.jar
+  
+8. cf push
+ $ cd ~/workspace/sample/spring-music
+ $ cf push
+ $ cf apps
+ $ curl spring-music-reflective-nyala.bosh-lite.com
+
+*****[실습 3일차]*****
+- URL : http://playpark.paas-ta.org/
+- ID/PW : paasta_trainee05/trainee05
+
+ 3) cf 명령(cf apps, cf service, cf --help -a로 확인)
+  - cf create-org
+    $ cf create-org test-org
+    $ cf create-space test-space -o test-org
+    $ cf create-user test test1234
+    $ cf set-org-role test test-org OrgManager
+    $ cf set-space-role test test-org test-space SpaceManager
+    $ cf set-space-role test test-org test-space SpaceDeveloper
+  - cf Login
+    cf login --skip-ssl-validation -a https://api.paas-ta.org -u paasta_trainee05 -p trainee05 -o paasta_trainee05 -s dev
+  - cf command
+    $ vi manifest.yml
+    $ cf push -f manifest.yml   
+    cf logs api-edu005 --recent'
+    $ cf apps
+    $ cf services
+    $ cf bind-service welcome-cf mysql01
+    $ cf restage welcome-cf
+    $ cf env welcome-cf
+    $ cf marketplace
+    $ cf create-service Mysql-DB Mysql-Plan1-10con mysql02
+    $ cf unbind-service welcome-cf mysql01
+    $ cf bind-service welcome-cf mysql02
+    $ cf restage welcome-cf
+    $ cf services
+    * cf create-user-provided-service SERVICE_INSTANCE [-p CREDENTIALS]을 이용하여 사용자 제공 서비스를 생성한다.
+    $ cf create-user-provided-service extsvc -p "{\"hostname\":\"10.10.1.1\",\"username\":\"user01\",\"password\":\"pass\"}"
+    
+    - cf CLI를통한 앱 구축 실습에서 2문제(Page 99~)
+
+<<< Service-Broker Registration >>>
+wget http://45.248.73.44/index.php/s/e9dwpHTwp3SDRGB/download -O paasta-cubrid-2.0-edu.tar
+bosh -e vbox env
+
+#Bosh Login
+export CREDPATH=/home/ubuntu/workspace/bosh-deployment
+export BOSH_CA_CERT=$(bosh int $CREDPATH/creds.yml --path /director_ssl/ca)
+export BOSH_CLIENT=admin
+export BOSH_CLIENT_SECRET=$(bosh int $CREDPATH/creds.yml --path /admin_password)
+bosh alias-env vbox -e 192.168.50.58 --ca-cert <(bosh int $CREDPATH/creds.yml --path /director_ssl/ca)
+tar xvf paasta-cubrid-2.0-edu.tar
+cd paasta-cubrid-2.0-edu
+bosh -e vbox upload-release paasta-cubrid-2.0.tgz
+bosh -e vbox stemcells
+vi paasta_cubrid_bosh2.0.yml
+./deploy-cubrid-bosh2.0.sh
+bosh -e vbox vms  (broker ip check)
+cf login
+cf create-service-broker cubrid-service-broker admin cloudfoundry http://10.244.0.101:8080
+cf service-brokers
+cf service-access
+cf enable-service-access CubridDB
+cf service-access
+cf marketplace
+
+
+*****[실습 4일차]*****
+$ cf login
+$ cf service-brokers
+$ cf create-service-broker cubrid-service-broker admin cloudfoundry http://10.244.0.101:8080
+$ cf service-brokers
+$ cf service-access
+$ cf enable-service-access CubridDB
+$ cf service-access	
+
+$ cf buildpacks
