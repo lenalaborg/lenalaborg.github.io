@@ -13,8 +13,8 @@
     --body-background: #ffffff;
     --body-font-color: #343a40;
 
-    --button-background: #62cb97;
-    --button-border-color: #A50034;
+    --button-background: #000000;
+    --button-border-color: #000000;
 
     --link-color: #518169;
     --link-color-visited: #c54e8a;
@@ -41,8 +41,8 @@
         --body-background: #ffffff;
         --body-font-color: #343a40;
 
-        --button-background: #62cb97;
-        --button-border-color: #A50034;
+        --button-background: #576a5e;
+        --button-border-color: #000000;
 
         --link-color: #518169;
         --link-color-visited: #c54e8a;
@@ -71,8 +71,8 @@
     --body-background: #343a40;
     --body-font-color: #ced3d8;
 
-    --button-background: #62cb97;
-    --button-border-color: #A50034;
+    --button-background: #576a5e;
+    --button-border-color: #000000;
 
     --link-color: #7ac29e;
     --link-color-visited: #c27a9e;
@@ -99,8 +99,8 @@
         --body-background: #343a40;
         --body-font-color: #ced3d8;
 
-        --button-background: #62cb97;
-        --button-border-color: #A50034;
+        --button-background: #576a5e;
+        --button-border-color: #000000;
 
         --link-color: #7ac29e;
         --link-color-visited: #c27a9e;
