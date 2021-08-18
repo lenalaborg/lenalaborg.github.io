@@ -1,3 +1,1 @@
-```tpl
-{{</* include file="/static/_includes/install2.html.part" */>}}
-```
+{{< include file="/static/_includes/install2.html.part" type="html" >}}
