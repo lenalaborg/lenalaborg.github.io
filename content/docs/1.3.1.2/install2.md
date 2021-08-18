@@ -1,1 +1,1 @@
-{{< include file="/static/_includes/install2.html.part" type="html" >}}
+{{< include file="/static/_includes/install2.html" type="html" >}}
