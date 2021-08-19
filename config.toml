@@ -20,3 +20,4 @@ disablePathToLower = true
 
 [params]
   geekdocMenuBundle = true
+  geekdocLogo = "logo_lena_w.png"
