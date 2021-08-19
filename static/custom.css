@@ -7,7 +7,7 @@
 /* Light mode theming */
 :root,
 :root[color-mode="light"] {
-    --header-background: #ffffff;
+    --header-background: #C9C6C6;
     --header-font-color: #ffffff;
 
     --body-background: #ffffff;
@@ -35,7 +35,7 @@
 }
 @media (prefers-color-scheme: light) {
     :root {
-        --header-background: #ffffff;
+        --header-background: #C9C6C6;
         --header-font-color: #ffffff;
 
         --body-background: #ffffff;
@@ -65,7 +65,7 @@
 
 /* Dark mode theming */
 :root[color-mode="dark"] {
-    --header-background: #ffffff;
+    --header-background: #C9C6C6;
     --header-font-color: #ffffff;
 
     --body-background: #343a40;
@@ -93,7 +93,7 @@
 }
 @media (prefers-color-scheme: dark) {
     :root {
-        --header-background: #ffffff;
+        --header-background: #c9c6c6;
         --header-font-color: #ffffff;
 
         --body-background: #343a40;
