@@ -18,6 +18,11 @@
     }
 
     .gdoc-brand__img {
+        height: 2rem
+        /*display: none*/
+    }
+
+    .gdoc-brand__title {
         display: none
     }
 
