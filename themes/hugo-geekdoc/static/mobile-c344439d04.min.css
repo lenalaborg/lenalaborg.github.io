@@ -63,10 +63,6 @@
         width: 100%
     }
 
-    .gdoc_brightness_light .gdoc_brightness_dark .gdoc_brightness_auto {
-        color: #2f333e;
-    }
-
     #menu-control:checked ~ main .gdoc-nav nav, #menu-control:checked ~ main .gdoc-page {
         transform: translateX(16rem)
     }
