@@ -2582,6 +2582,10 @@ img {
     animation: spin 1s ease infinite
 }
 
+.gdoc_brightness_light .gdoc_brightness_dark .gdoc_brightness_auto {
+    color: #2f333e;
+}
+
 @-webkit-keyframes spin {
     100% {
         transform: rotate(360deg)
