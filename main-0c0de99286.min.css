@@ -2242,7 +2242,9 @@ img {
 
 .gdoc-header .icon {
     width: 2rem;
-    height: 2rem
+    height: 2rem;
+    color: #2f333e;
+
 }
 
 .gdoc-brand {
@@ -2580,10 +2582,6 @@ img {
     border-radius: 50%;
     -webkit-animation: spin 1s ease infinite;
     animation: spin 1s ease infinite
-}
-
-.gdoc_brightness_light .gdoc_brightness_dark .gdoc_brightness_auto {
-    color: #2f333e;
 }
 
 @-webkit-keyframes spin {
