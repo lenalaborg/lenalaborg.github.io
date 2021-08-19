@@ -2255,6 +2255,10 @@ img {
     height: 2rem
 }
 
+.gdoc-brand__title {
+    display: none
+}
+
 .gdoc-menu-header__items {
     display: inline-block
 }
