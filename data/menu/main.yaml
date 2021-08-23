@@ -13,6 +13,8 @@ main:
             ref: "/docs/1.3.1.2/installation"
           - name: installation2
             ref: "/docs/1.3.1.2/installation2"
+          - name: installation3
+            ref: "/docs/1.3.1.2/installation3"
           - name: manual
             ref: "https://lenalaborg.github.io/docs/1.3.1.2/000.installation_container.html"
             external: true
