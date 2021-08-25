@@ -6,18 +6,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.8">
 <meta name="author" content="LENA Support">
-<title>MANUAL</title>
+<title>User Guide</title>
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.0.min.js" ></script>
 <script type="text/javascript">
     $(document).ready(function () {
-        
-        var $toc = $('#toc') 
+
+        var $toc = $('#toc')
         $("ul li a", $toc).click(function(){
             var $t = $(this);
             $('a', $toc).removeClass('focus');
             $t.addClass('focus');
         })
-    
+
     });
 </script>
 <style>
@@ -52,7 +52,8 @@ svg:not(:root){overflow:hidden}
 figure{margin:0}
 fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}
 legend{border:0;padding:0}
-.button{background: #f5f5f5; padding: 2px 5px;}
+span.icon {background: #f1f1f1; padding: 0px 5px; font-weight: bold;}
+.button{background: #f1f1f1; padding: 0px 5px;}
 button,input,select,textarea{font-family:inherit;font-size:100%;margin:0}
 button,input{line-height:normal}
 button,select{text-transform:none}
@@ -96,7 +97,7 @@ select{width:100%}
 .admonitionblock.note>table td.icon > i::before { color: #4273bf; }
 .admonitionblock.note>table td.icon > i::before { display: inline-block; vertical-align: middle;color: #0073bb;padding-left: 10px; }
 .admonitionblock.note>table td.content { padding-left: 1em !important; }
-    
+
 /*.admonitionblock.important>table { border: 1px solid #df331259 !important; background-color: rgba(253,243,241,.8); border-left: 3px solid #e04e4e !important; }
 .admonitionblock.important>table td.icon > i { display: block; position: absolute; top: 10px; left: 20px; width: 200px; text-align: left; text-shadow: 1px 1px 2px rgba(0,0,0,.0); font-size: 20px !important; background: transparent; }
 .admonitionblock.important>table td.icon > i::after { content: "Important"; font-size: 15px; font-weight: 600; padding-left: 8px; margin-top: 0px; display: inline-block; vertical-align: middle; }
@@ -150,7 +151,7 @@ blockquote cite::before{content:"\2014 \0020"}
 blockquote cite a,blockquote cite a:visited{color:rgba(0,0,0,.6)}
 blockquote,blockquote p{line-height:1.6;color:rgba(0,0,0,.85)}
 .paragraph a { display: inline-block; margin-bottom: 1.25rem;}
-    
+
 @media screen and (min-width:768px) {
 h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2}
 h1{font-size:2.75em}
@@ -190,7 +191,7 @@ kbd{font-family:"Noto Sans KR","Droid Sans Mono","DejaVu Sans Mono",monospace;di
 .menuseq{word-spacing:-.02em}
 .menuseq b.caret{font-size:1.25em;line-height:.8}
 .menuseq i.caret{font-weight:bold;text-align:center;width:.45em}
-.button {font-weight: bold; color: #c40352;}
+.button {font-weight: bold; /*color: #c40352;*/}
 b.button::before,b.button::after{position:relative;top:-1px;font-weight:400}
 b.button::before{content:"[";padding:0 3px 0 2px}
 b.button::after{content:"]";padding:0 2px 0 3px}
@@ -232,14 +233,14 @@ p a>code:hover{color:rgba(0,0,0,.9)}
 #toc ul{font-family:"Noto Sans KR","Open Sans","DejaVu Sans",sans-serif;list-style-type:none}
 #toc ul.sectlevel1 > li > a {display: block; width: 100%; font-size: 1.2em; font-weight: 500; padding: .1rem .6rem; }
 #toc ul li a {color: #111; line-height: 1.5; }
-#toc ul li a:hover{background: #f5efef; border-radius: 4px; color: #7a2518 !important; }
-#toc ul li a:focus{background: #7a2518; border-radius: 4px; color: #fff !important; }
-#toc ul li a.focus{background: #7a2518; border-radius: 4px; color: #fff !important; }
+#toc ul li a:hover{background: #f6e8ec; border-radius: 4px; color: #BF1C4A !important; }
+#toc ul li a:focus{background: #BF1C4A; border-radius: 4px; color: #fff !important; }
+#toc ul li a.focus{background: #BF1C4A; border-radius: 4px; color: #fff !important; }
 #toc ul li ul.sectlevel2 li a {display: block; width: 100%; font-size: 0.95em; color: #111; padding: .1rem .6rem; }
 #toc li{line-height:1.3334;margin-top:.0em}
 #toc a{text-decoration:none}
 #toc a:active{text-decoration:underline}
-#toctitle{color:#7a2518; font-size: 1.0em; font-weight: 500;}
+#toctitle{color:#BF1C4A; font-size: 1.0em; font-weight: 500;}
 
 @media screen and (min-width:768px){
 #toctitle{font-size:1.375em !important;}
@@ -349,7 +350,7 @@ td.tableblock>.content>:last-child.sidebarblock{margin-bottom:0}
 table.tableblock,th.tableblock,td.tableblock{border:0 solid #dedede}
 table.grid-all>thead>tr>.tableblock,table.grid-all>tbody>tr>.tableblock{border-width:0 1px 1px 0; text-align: center; background: none !important; color: #111; font-weight: bold;}
 table.grid-all>thead>tr>td.tableblock,table.grid-all>tbody>tr>td.tableblock {text-align: left;}
-table.grid-all>tbody>tr>td.tableblock p {font-size: 1em;}   
+table.grid-all>tbody>tr>td.tableblock p {font-size: 1.08em;}
 table.grid-all>thead>tr:nth-child(even)>td {background: #f8f9fa !important;}
 table.grid-all>tfoot>tr>.tableblock{border-width:1px 1px 0 0}
 table.grid-cols>*>tr>.tableblock{border-width:0 1px 0 0}
@@ -367,7 +368,8 @@ th.halign-center,td.halign-center{text-align:center}
 th.valign-top,td.valign-top{vertical-align:top}
 th.valign-bottom,td.valign-bottom{vertical-align:bottom}
 th.valign-middle,td.valign-middle{vertical-align:middle}
-table thead th,table tfoot th{font-weight:bold}
+table thead th,table tfoot th{font-weight:bold;}
+table tr th { font-size: 0.93em !important; }
 tbody tr th{display:table-cell;line-height:1.6;background:#f7f8f7}
 tbody tr th,tbody tr th p,tfoot tr th,tfoot tr th p{color:rgba(0,0,0,.8);font-weight:bold}
 p.tableblock>code:only-child{background:none;padding:0}
@@ -524,6 +526,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 @media amzn-kf8{#header,#content,#footnotes,#footer{padding:0}}
 
 pre.CodeRay {background-color:#f7f7f8; border: 1px solid #e6e6e6; border-radius: 10px;}
+pre.CodeRay code, pre.CodeRay pre {font-size: 1.08em;}
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
@@ -620,7 +623,7 @@ table.CodeRay td.code>pre{padding:0}
 </head>
 <body class="book toc2 toc-left">
 <div id="header">
-<h1>MANUAL</h1>
+<h1>User Guide</h1>
 <div class="details">
 <span id="author" class="author">LENA Support</span><br>
 <span id="email" class="email"><a href="mailto:lena-support@lgcns.com">lena-support@lgcns.com</a></span><br>
@@ -11854,8 +11857,7 @@ WAS가 전송한 이벤트 정보는 Manager의 DB에 일정 기간(3달) 동안
 <div class="ulist">
 <ul>
 <li>
-<p>Diagnostics Calendar에서 특정 일자를 클릭하면, 화면 하단에 선택한 일자의 시간대 별 진단 발생 그래프가 표시 된다.
-시간 별 진단 발생 그래프의 진단 Type Label에 Mouse Over 하면 그래프에 숫자로 발생 횟수가 표시 된다.</p>
+<p>Diagnostics Calendar에서 특정 일자를 클릭하면, 화면 하단에 선택한 일자의 시간대 별 진단 발생 그래프가 표시 된다.</p>
 </li>
 </ul>
 </div>
@@ -11882,7 +11884,7 @@ Report는 7일간 보관되며 오래된 Report는 자동으로 삭제된다.</p
 <div class="title">Figure 30. 진단/대응 리포트 목록 화면</div>
 </div>
 <div class="paragraph">
-<p><span class="button">View 버튼</span> 을 선택하여 Report를 확인할 수 있으며, <span class="button">Excel 버튼</span> 을 클릭하여 다운로드 받을 수 있다.</p>
+<p><span class="button">View 버튼</span> 을 선택하여 Report를 확인할 수 있다.</p>
 </div>
 </div>
 <div class="sect4">
@@ -12284,8 +12286,8 @@ Fault 상황은 진단/대응 Rule에 설정한 설정 내용의 모두를 만�
 <div class="title">Figure 34. 진단/대응 결과 알림 목록 일괄 확인</div>
 </div>
 <div class="paragraph">
-<p><span class="icon">home 아이콘</span> 을 클릭하면 선택한 알림에 대한 진단 이력 화면으로 이동한다.
-<span class="icon">v 아이콘#을 클릭하는 것은 선택한 알림을 확인했다는 것을 의미하며, 이렇게 틀릭한 알림은 Manager 우측 상단의 [.icon]#종 아이콘</span> 에 더이상 표시되지 않는다.</p>
+<p><span class="icon">Home 아이콘</span> 을 클릭하면 선택한 알림에 대한 진단 이력 화면으로 이동한다.
+<span class="icon">V 아이콘</span> 을 클릭하는 것은 선택한 알림을 확인했다는 것을 의미하며, 이렇게 클릭한 알림은 Manager 우측 상단의 <span class="icon">종 아이콘</span> 에 더이상 표시되지 않는다.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -18507,7 +18509,7 @@ session server 모듈을 embedded 한다.</p></td>
 <div id="footer">
 <div id="footer-text">
 Version 1.3.1.2<br>
-Last updated 2021-08-12 11:23:22 +0900
+Last updated 2021-08-24 09:26:20 +0900
 </div>
 </div>
 </body>
