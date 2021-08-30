@@ -3034,3 +3034,30 @@ img {
 .gdoc-mermaid {
     font-family: "Liberation Sans", sans-serif
 }
+
+/*=== 210830 css 추가 ===*/
+body { font-family: "noto sans kr","open sans","dejavu sans",sans-serif!important; }
+main.container { padding: 0 1rem 1rem; }
+.gdoc-nav { flex: 0 0 16rem; font-size: .95rem; border-right: 1px solid #e7e7e9; }
+.gdoc-nav nav { width: 16rem; padding: 1rem 1.5rem 1rem 1.5rem; }
+.gdoc-page { min-width: 20rem; flex-grow: 1; padding: 1rem 0 1rem 4rem; }
+.gdoc-nav--main h2 { color: #bf1c4a !important; font-weight: 500; }
+.gdoc-nav__list li { margin: .15rem 0; }
+.gdoc-nav__list li .flex a { font-size: 1.08rem; font-weight: 500; padding: .1rem .6rem .1rem .6rem; }
+.gdoc-nav__list li .flex a:hover { color:#bf1c4a!important; background: #f6e8ec; text-decoration: none !important; border-radius: 4px; }
+.gdoc-nav__list li .gdoc-nav__list { padding-left: 1.3rem; }
+.gdoc-nav__list li .gdoc-nav__list .flex a { font-size: .85rem; padding: .1rem .6rem; line-height: 1.5; font-weight: 400; color: #111; }
+
+/* Dark */
+.color-toggle-dark .gdoc-nav { background: #2c3238!important; border-right: 1px solid #495056; }
+.color-toggle-dark .gdoc-search .gdoc-search__input { background: #343b40; }
+.color-toggle-dark .gdoc-nav--main h2 { color: #e2458b!important; font-weight: 500; }
+.color-toggle-dark .gdoc-nav__list li .gdoc-nav__list .flex a { font-size: .85rem; padding: .1rem .6rem; line-height: 1.5; font-weight: 400; color: #ced3d8; }
+.color-toggle-dark .gdoc-nav__list li .flex a:hover { color: #e24b8e!important; background: rgb(177 177 177/15%)!important; }
+
+/* Auto */
+.color-toggle-auto .gdoc-nav { background: #2c3238!important; border-right: 1px solid #495056; }
+.color-toggle-auto .gdoc-search .gdoc-search__input { background: #343b40; }
+.color-toggle-auto .gdoc-nav--main h2 { color: #e2458b!important; font-weight: 500; }
+.color-toggle-dark .gdoc-nav__list li .gdoc-nav__list .flex a { font-size: .85rem; padding: .1rem .6rem; line-height: 1.5; font-weight: 400; color: #ced3d8; }
+.color-toggle-auto .gdoc-nav__list li .flex a:hover { color: #e24b8e!important; background: rgb(177 177 177/15%)!important; }
