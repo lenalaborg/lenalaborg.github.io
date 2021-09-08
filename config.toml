@@ -19,4 +19,5 @@ disablePathToLower = true
     endLevel = 9
 
 [params]
+  geekdocMenuBundle = true
   geekdocLogo = "logo_lena_w.png"
