@@ -15,7 +15,7 @@ disablePathToLower = true
     # Needed for mermaid shortcode
     unsafe = true
   [markup.tableOfContents]
-    startLevel = 2
+    startLevel = 1
     endLevel = 9
 
 [params]
