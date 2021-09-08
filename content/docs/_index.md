@@ -1,5 +1,5 @@
 ---
 title: Documentation
 geekdocFlatSection: false
-geekdocCollapseSection = false
+geekdocCollapseSection: false
 ---
