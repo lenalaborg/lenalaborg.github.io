@@ -1,30 +1,15 @@
 ---
 main:
-  - name: Document
+  - name: Documentation
     ref: "/docs"
-    icon: "gdoc_notification"
     sub:
       - name: 1.3.1.2
         ref: "/docs/1.3.1.2"
         sub:
-          - name: install
-            ref: "/docs/1.3.1.2/install"
-          - name: installation
-            ref: "/docs/1.3.1.2/installation"
-          - name: installation2
-            ref: "/docs/1.3.1.2/installation2"
-          - name: installation3
-            ref: "/docs/1.3.1.2/installation3"
-          - name: manual1
-            ref: "https://lenalaborg.github.io/docs/1.3.1.2/000.installation_container.html"
-            external: true
           - name: manual2
             ref: "/docs/1.3.1.2/manual1"
-          - name: manual3
-            ref: "https://lenalaborg.github.io/docs/1.3.1.2/manual_exclusive.html"
-            external: true
-  - name: Patch
-    ref: "/patch"
-    sub:
-      - name: 1.3.1.2
-        ref: "/patch/1.3.1.2"
+#  - name: Patch
+#    ref: "/patch"
+#    sub:
+#      - name: 1.3.1.2
+#        ref: "/patch/1.3.1.2"
