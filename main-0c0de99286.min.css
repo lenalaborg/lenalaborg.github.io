@@ -3044,7 +3044,7 @@ main.container { padding: 0 1rem 1rem; }
 .gdoc-nav--main h2 { color: #bf1c4a !important; font-weight: 500; }
 .gdoc-nav__list li { margin: .15rem 0; }
 
-.gdoc-nav--main > ul > li > span { font-size: 1.08rem; font-weight: 700; padding: .1rem .6rem .1rem .0rem; }
+.gdoc-nav--main > ul > li > span { font-size: 1.08rem; font-weight: 700; padding: .1rem .6rem .6rem .0rem; }
 
 .gdoc-nav__list li .flex a { font-size: 1.08rem; font-weight: 700; padding: .1rem .6rem .1rem .6rem; }
 .gdoc-nav__list li .flex a:hover { color:#bf1c4a!important; background: #f6e8ec; text-decoration: none !important; border-radius: 4px; }
