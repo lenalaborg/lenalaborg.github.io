@@ -3043,7 +3043,7 @@ main.container { padding: 0 1rem 1rem; }
 .gdoc-page { min-width: 20rem; flex-grow: 1; padding: 1rem 0 1rem 4rem; }
 .gdoc-nav--main h2 { color: #bf1c4a !important; font-weight: 500; }
 .gdoc-nav__list li { margin: .15rem 0; }
-.gdoc-nav__list li .flex a { font-size: 1.08rem; font-weight: 500; padding: .1rem .6rem .1rem .6rem; }
+.gdoc-nav__list li .flex a { font-size: 1.08rem; font-weight: 700; padding: .1rem .6rem .1rem .6rem; }
 .gdoc-nav__list li .flex a:hover { color:#bf1c4a!important; background: #f6e8ec; text-decoration: none !important; border-radius: 4px; }
 .gdoc-nav__list li .gdoc-nav__list { padding-left: 1.3rem; }
 .gdoc-nav__list li .gdoc-nav__list .flex a { font-size: .85rem; padding: .1rem .6rem; line-height: 1.5; font-weight: 400; color: #111; }
