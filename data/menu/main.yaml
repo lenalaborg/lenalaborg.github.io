@@ -3,11 +3,14 @@ main:
   - name: Documentation
     ref: "/docs"
     sub:
-      - name: 1.3.1.2
-        ref: "/docs/1.3.1.2"
+      - name: 1.3.1
+        ref: "/docs/1.3.1"
         sub:
-          - name: manual2
-            ref: "/docs/1.3.1.2/manual1"
+          - name: 1.3.1.2
+            ref: "/docs/1.3.1/1.3.1.2"
+            sub:
+              - name: manual2
+                ref: "/docs/1.3.1/1.3.1.2/manual1"
 #  - name: Patch
 #    ref: "/patch"
 #    sub:
