@@ -1,4 +1,4 @@
 ---
 title: Documentation
-geekdocFlatSection: true
+geekdocFlatSection: false
 ---
