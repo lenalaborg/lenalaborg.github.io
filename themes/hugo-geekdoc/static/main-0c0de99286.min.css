@@ -2864,8 +2864,7 @@ img {
 }
 
 .gdoc-markdown__align--left {
-    text-align: left;
-    margin-left: 24rem
+    text-align: left
 }
 
 .gdoc-markdown__align--left h1, .gdoc-markdown__align--left h2, .gdoc-markdown__align--left h3, .gdoc-markdown__align--left h4, .gdoc-markdown__align--left h5, .gdoc-markdown__align--left h6 {
