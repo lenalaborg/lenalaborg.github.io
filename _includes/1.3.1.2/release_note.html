@@ -7,6 +7,19 @@
 <meta name="generator" content="Asciidoctor 1.5.8">
 <meta name="author" content="LENA Support">
 <title>Release Note</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.0.min.js" ></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            var $toc = $('#toc')
+            $("ul li a", $toc).click(function(){
+                var $t = $(this);
+                $('a', $toc).removeClass('focus');
+                $t.addClass('focus');
+            })
+
+        });
+    </script>
 <style>
 /* Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
 /* Uncomment @import statement to use as custom stylesheet */
