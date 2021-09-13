@@ -4,7 +4,8 @@
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
 <meta name=color-scheme content="light dark">
-<meta name=description content="LG CNS DevOn Solutions | DevOn Support Center | LG CNS -- -- -- --     (function(w, d, s, l, i) { w[l] = w[l] || []; w[l].push({ 'gtm.start' : new Date().getTime(), event : 'gtm.js' }); var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=&#39; + l : ''; j.async = true; j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f); })(window, document, 'script', 'dataLayer', 'GTM-NK4VJ5K'); 	    function fnLogout(url) { $.">
+<meta name=description content="LG CNS의 LENA Web Application Server / Web Server 란?    LENA는 클라우드 환경과 데이터 센터 운영 노하우가 결집되어 편리한 WAS 관리 기능, 안정성 및 고가용성을 위한 다양한 기능을 제공하며, 대규모 트랜잭션 처리에 적합하도록 설계되어 서버 장애에 효율적으로 대응합니다.
+ LENA       서비스 특징    Enterprise 요건 제공     EJB, JTA/XA, JMS, JAX-WS 등 EE Spec 지원 서버 Startup/Restart 및 Deploy 성능 향상 CPU, 메모리 자원 사용 효율성 향상 이기종 통합 가능한 Session Clustering Resource 암호화와 접근성 제어를 통한 Security 강화  운영 관점의 차별화 기능 제공     토폴로지 View를 통한 전사적 운영 가시성 확보 End to End 구간 모니터링 시간, URL, IP 기반의 실시간 서비스 제어 운영자 Action Tracing / Report 운영환경 Backup/Restore/History관리  지능형 장애 진단/대응 및 서비스 추적     URL, IP 기반의 서비스 추적 및 프로파일 분석 대시보드를 통한 시스템 성능 및 이상 징후 파악 실시간 장애 사전 진단 및 대응 장애 발생 실시간 알림 장애 원인 분석 및 Report 제공  Multi-Server관리 및 Centralized Operation     WYSIWYG방식으로 노드, 서버 설치 및 연동 다중 서버(Group) 및 Application 관리 실시간 Multi-Server 클러스터링 & 동기화 중앙 서버를 통한 Auto Install & Patch Scalability강화(Local & Remote Clone)  Cloud 특화 기능 제공     지속적인 서비스 운영과 IT 자원 최적화를 위한 향상된 확장성 제공 Pubic, Private, Hybrid Cloud Scalability 제공 사용량 기반 과금으로 서비스 운영 비용 최적화 가변적인 클라우드 환경에서 안정적인 Load Balancing 제공  ">
 <title>LENA</title>
 <link rel=icon href=/favicon/lena_logo.png type=image/x-icon>
 <script src=/js/darkmode-ce906ea916.min.js></script>
@@ -104,356 +105,97 @@ hidden-mobile" itemprop=breadcrumb>
 </div>
 </div>
 <article class="gdoc-markdown gdoc-markdown__align--left">
+<div class=gdoc-page__anchorwrap>
+<h2 id=lg-cns의-lena-web-application-server--web-server-란>
+LG CNS의 LENA Web Application Server / Web Server 란?
+<a data-clipboard-text=https://lenalaborg.github.io/#lg-cns의-lena-web-application-server--web-server-란 class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor LG CNS의 LENA Web Application Server / Web Server 란?" href=#lg-cns%ec%9d%98-lena-web-application-server--web-server-%eb%9e%80><svg class="icon gdoc_link"><use xlink:href="#gdoc_link"/></svg>
+</a>
+</h2>
+</div><p>LENA는 클라우드 환경과 데이터 센터 운영 노하우가 결집되어 편리한 WAS 관리 기능, 안정성 및 고가용성을 위한 다양한 기능을 제공하며, 대규모 트랜잭션 처리에 적합하도록 설계되어 서버 장애에 효율적으로 대응합니다.</p>
 <div class=gdoc-include><!doctype html>
-<html lang=ko>
+<html lang=en>
 <head>
-<title>LG CNS DevOn Solutions | DevOn Support Center | LG CNS</title>
 <meta charset=utf-8>
-<meta http-equiv=x-ua-compatible content="IE=edge">
-<meta name=viewport content="user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1,width=device-width,target-densitydpi=medium-dpi">
-<meta name=author content="LG CNS">
-<meta name=description content="LG CNS DevOn Solutions - Technical Support Center">
-<meta property="og:type" content="website">
-<meta property="og:url" content="http://soltech.lgcns.com">
-<meta property="og:description" content="Technical Support Center - LG CNS DevOn Solutions">
-<meta property="og:image" content="http://soltech.lgcns.com/resources/images/og_image_main.jpg">
-<link href=http://127.0.0.1:8080/resources/favicon.ico rel="shortcut icon">
-<link rel=stylesheet href=/css/introduction.css>
-<link rel=stylesheet href=/css/aos.css>
-<script async src=/js/gtm.js></script>
-<script type=text/javascript src=/js/jquery-3.2.0.min.js></script>
-<script type=text/javascript src=/js/common.js></script>
-<script type=text/javascript src=/js/aos.js></script>
-<script type=text/javascript>(function(b,d,e,a,g){b[a]=b[a]||[],b[a].push({'gtm.start':(new Date).getTime(),event:'gtm.js'});var f=d.getElementsByTagName(e)[0],c=d.createElement(e),h=a!='dataLayer'?'&l='+a:'';c.async=!0,c.src='https://www.googletagmanager.com/gtm.js?id='+g+h,f.parentNode.insertBefore(c,f)})(window,document,'script','dataLayer','GTM-NK4VJ5K')</script>
+<title>LENA</title>
 </head>
-<body class=introduction>
-<noscript>
-<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NK4VJ5K" height=0 width=0 style=display:none;visibility:hidden></iframe>
-</noscript>
-<script type=text/javascript>function fnLogout(a){$.ajax({type:"GET",url:a,success:function(a){location.reload()},error:function(){alert('Communication with the server failed.')}})}</script>
-<script>$(document).on('click','.gnb > ul > li#gnb-menu1',function(){$(this).addClass('on'),$('.gnb > ul > li#gnb-menu2').removeClass('on'),$('.gnb > ul > li#gnb-menu3').removeClass('on')}),$(document).on('click','.gnb > ul > li#gnb-menu2',function(){$(this).addClass('on'),$('.gnb > ul > li#gnb-menu1').removeClass('on'),$('.gnb > ul > li#gnb-menu3').removeClass('on')}),$(document).on('click','.gnb > ul > li#gnb-menu3',function(){$(this).addClass('on'),$('.gnb > ul > li#gnb-menu1').removeClass('on'),$('.gnb > ul > li#gnb-menu2').removeClass('on')}),$(document).on('mouseleave','.sub > .depth-wrap',function(){$('.gnb > ul > li').removeClass('on')}),$(document).on('click','.gnb > ul > li#gnb-menu1',function(){$('.sub > .depth-wrap.sub-menu1-wrap').slideDown(400),$('.sub > .depth-wrap.sub-menu2-wrap').hide(),$('.sub > .depth-wrap.sub-menu3-wrap').hide()}),$(document).on('click','.gnb > ul > li#gnb-menu2',function(){$('.sub > .depth-wrap.sub-menu2-wrap').slideDown(400),$('.sub > .depth-wrap.sub-menu1-wrap').hide(),$('.sub > .depth-wrap.sub-menu3-wrap').hide()}),$(document).on('click','.gnb > ul > li#gnb-menu3',function(){$('.sub > .depth-wrap.sub-menu3-wrap').slideDown(400),$('.sub > .depth-wrap.sub-menu1-wrap').hide(),$('.sub > .depth-wrap.sub-menu2-wrap').hide()}),$(document).on('mouseleave','.sub > .depth-wrap.sub-menu1-wrap',function(){$('.sub > .depth-wrap.sub-menu1-wrap').hide()}),$(document).on('mouseleave','.sub > .depth-wrap.sub-menu2-wrap',function(){$('.sub > .depth-wrap.sub-menu2-wrap').hide()}),$(document).on('mouseleave','.sub > .depth-wrap.sub-menu3-wrap',function(){$('.sub > .depth-wrap.sub-menu3-wrap').hide()}),$(document).on('click','.sub > .depth-wrap.sub-menu1-wrap > .depth1 #d1-menu1 a',function(){$(this).addClass('on'),$('.sub > .depth-wrap.sub-menu1-wrap > .depth1 #d1-menu2 a').removeClass('on'),$('.sub > .depth-wrap.sub-menu1-wrap > .depth1 #d1-menu3 a').removeClass('on'),$('.sub > .depth-wrap.sub-menu1-wrap > .depth2 #d2-menu1').addClass('on'),$('.sub > .depth-wrap.sub-menu1-wrap > .depth2 #d2-menu1').removeClass('off'),$('.sub > .depth-wrap.sub-menu1-wrap > .depth2 #d2-menu2').addClass('off'),$('.sub > .depth-wrap.sub-menu1-wrap > .depth2 #d2-menu3').addClass('off')}),$(document).on('click','.sub > .depth-wrap.sub-menu1-wrap > .depth1 #d1-menu2 a',function(){$(this).addClass('on'),$('.sub > .depth-wrap.sub-menu1-wrap > .depth1 #d1-menu1 a').removeClass('on'),$('.sub > .depth-wrap.sub-menu1-wrap > .depth1 #d1-menu3 a').removeClass('on'),$('.sub > .depth-wrap.sub-menu1-wrap > .depth2 #d2-menu2').addClass('on'),$('.sub > .depth-wrap.sub-menu1-wrap > .depth2 #d2-menu2').removeClass('off'),$('.sub > .depth-wrap.sub-menu1-wrap > .depth2 #d2-menu1').addClass('off'),$('.sub > .depth-wrap.sub-menu1-wrap > .depth2 #d2-menu3').addClass('off')}),$(document).on('click','.sub > .depth-wrap.sub-menu1-wrap > .depth1 #d1-menu3 a',function(){$(this).addClass('on'),$('.sub > .depth-wrap.sub-menu1-wrap > .depth1 #d1-menu1 a').removeClass('on'),$('.sub > .depth-wrap.sub-menu1-wrap > .depth1 #d1-menu2 a').removeClass('on'),$('.sub > .depth-wrap.sub-menu1-wrap > .depth2 #d2-menu3').addClass('on'),$('.sub > .depth-wrap.sub-menu1-wrap > .depth2 #d2-menu3').removeClass('off'),$('.sub > .depth-wrap.sub-menu1-wrap > .depth2 #d2-menu1').addClass('off'),$('.sub > .depth-wrap.sub-menu1-wrap > .depth2 #d2-menu2').addClass('off')})</script>
-<script>$(document).on('click','#sidebar .lang a',function(){$('#sidebar .lang .lang-pop-wrap').hasClass('on')?$(this).next().hasClass('on')?($('#sidebar .lang .lang-pop-wrap').removeClass('on'),$('#sidebar .lang .lang-pop-wrap').slideUp()):($('#sidebar .lang .lang-pop-wrap').removeClass('on'),$('#sidebar .lang .lang-pop-wrap').slideUp(),$(this).next().slideDown(),$(this).next().addClass("on")):($(this).next().slideDown(),$(this).next().addClass("on"))})</script>
-<script>$(document).ready(function(){var a=$('#support-main').offset();$(window).scroll(function(){$(document).scrollTop()>80?($('.sub-main').addClass('fixinner'),$('#page-container-wrap').addClass('fixinner')):($('.sub-main').removeClass('fixinner'),$('#page-container-wrap').removeClass('fixinner'))})})</script>
-<script>$(document).ready(function(){$('.imgPop').click(function(){var a=window.innerWidth,b;if(a<769)b=$(this).children().attr("src"),window.open(b);else return!1})})</script>
-<script>$(window).resize(function(){var c=500,b=$(window).scrollTop(),a=$(window).scrollTop();$(window).scroll(function(){var c=$(window).width();c<768&&(a=$(this).scrollTop(),a>b?$(".sub-main.fixinner").css("top","-100px"):a<b&&$(".sub-main.fixinner").css("top","0px"),b=a)})})</script>
-<script>AOS.init({easing:'ease',duration:1e3})</script>
-<script>$(window).scroll(function(){$(this).scrollTop()>200?$('.top').fadeIn():$('.top').fadeOut()})</script>
-<div id=page-container-wrap class=introduction>
-<div id=page-container>
-<section class="container solution devOn">
-<div class=contents id=contents>
-<div class=con>
+<body>
 <div class=inner>
-<p class=ft01 data-aos=fade-up data-aos-duration=1000 data-aos-delay=400>LG CNS의 <span class=tUnder>LENA</span>란?</p>
-<p class="caseS w80p">LENA는 클라우드 환경과 데이터 센터 운영 노하우가 결집되어 편리한 WAS 관리 기능, 안정성 및 고가용성을 위한 다양한 기능을 제공하며, 대규모 트랜잭션 처리에 적합하도록 설계되어 서버 장애에 효율적으로 대응합니다.</p>
+<p class="ft01 aos-init aos-animate" data-aos=fade-up data-aos-duration=1000 data-aos-delay=400>
+<iframe id=youtube-player data-youtube-id=pZg69kkhcqI frameborder=0 allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player" width=720 height=405 src="https://www.youtube.com/embed/pZg69kkhcqI?autoplay=1&rel=0&enablejsapi=1&origin=https%3A%2F%2Fsoltech.lgcns.com&widgetid=1"></iframe>
+</p>
 </div>
-</div>
-<div class=con>
-<div class=inner>
-<h2 class=bdtBk>서비스 특징</h2>
-<div class=featureList2li data-aos=fade-up data-aos-duration=1000 data-aos-delay=200>
-<ul>
-<li>
-<div class=fLNum>01</div>
-<div class=fLText>
-<strong class=redTxt>Enterprise 요건 제공</strong>
-<ul class="liHyphen first">
+</body>
+</html></div>
+<div class=gdoc-page__anchorwrap>
+<h2 id=서비스-특징>
+서비스 특징
+<a data-clipboard-text=https://lenalaborg.github.io/#서비스-특징 class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor 서비스 특징" href=#%ec%84%9c%eb%b9%84%ec%8a%a4-%ed%8a%b9%ec%a7%95><svg class="icon gdoc_link"><use xlink:href="#gdoc_link"/></svg>
+</a>
+</h2>
+</div><div class=gdoc-page__anchorwrap>
+<h4 id=enterprise-요건-제공>
+Enterprise 요건 제공
+<a data-clipboard-text=https://lenalaborg.github.io/#enterprise-요건-제공 class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor Enterprise 요건 제공" href=#enterprise-%ec%9a%94%ea%b1%b4-%ec%a0%9c%ea%b3%b5><svg class="icon gdoc_link"><use xlink:href="#gdoc_link"/></svg>
+</a>
+</h4>
+</div><ul>
 <li>EJB, JTA/XA, JMS, JAX-WS 등 EE Spec 지원</li>
 <li>서버 Startup/Restart 및 Deploy 성능 향상</li>
 <li>CPU, 메모리 자원 사용 효율성 향상</li>
 <li>이기종 통합 가능한 Session Clustering</li>
 <li>Resource 암호화와 접근성 제어를 통한 Security 강화</li>
 </ul>
-</div>
-</li>
-<li>
-<div class=fLNum>02</div>
-<div class=fLText>
-<strong class=redTxt>운영 관점의 차별화 기능 제공</strong>
-<ul class="liHyphen first">
+<div class=gdoc-page__anchorwrap>
+<h4 id=운영-관점의-차별화-기능-제공>
+운영 관점의 차별화 기능 제공
+<a data-clipboard-text=https://lenalaborg.github.io/#운영-관점의-차별화-기능-제공 class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor 운영 관점의 차별화 기능 제공" href=#%ec%9a%b4%ec%98%81-%ea%b4%80%ec%a0%90%ec%9d%98-%ec%b0%a8%eb%b3%84%ed%99%94-%ea%b8%b0%eb%8a%a5-%ec%a0%9c%ea%b3%b5><svg class="icon gdoc_link"><use xlink:href="#gdoc_link"/></svg>
+</a>
+</h4>
+</div><ul>
 <li>토폴로지 View를 통한 전사적 운영 가시성 확보</li>
 <li>End to End 구간 모니터링</li>
 <li>시간, URL, IP 기반의 실시간 서비스 제어</li>
 <li>운영자 Action Tracing / Report</li>
 <li>운영환경 Backup/Restore/History관리</li>
 </ul>
-</div>
-</li>
-<li>
-<div class=fLNum>03</div>
-<div class=fLText>
-<strong class=redTxt>지능형 장애 진단/대응 및 서비스 추적</strong>
-<ul class="liHyphen first">
+<div class=gdoc-page__anchorwrap>
+<h4 id=지능형-장애-진단대응-및-서비스-추적>
+지능형 장애 진단/대응 및 서비스 추적
+<a data-clipboard-text=https://lenalaborg.github.io/#지능형-장애-진단대응-및-서비스-추적 class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor 지능형 장애 진단/대응 및 서비스 추적" href=#%ec%a7%80%eb%8a%a5%ed%98%95-%ec%9e%a5%ec%95%a0-%ec%a7%84%eb%8b%a8%eb%8c%80%ec%9d%91-%eb%b0%8f-%ec%84%9c%eb%b9%84%ec%8a%a4-%ec%b6%94%ec%a0%81><svg class="icon gdoc_link"><use xlink:href="#gdoc_link"/></svg>
+</a>
+</h4>
+</div><ul>
 <li>URL, IP 기반의 서비스 추적 및 프로파일</li>
 <li>분석 대시보드를 통한 시스템 성능 및 이상 징후 파악</li>
 <li>실시간 장애 사전 진단 및 대응</li>
 <li>장애 발생 실시간 알림</li>
 <li>장애 원인 분석 및 Report 제공</li>
 </ul>
-</div>
-</li>
-<li>
-<div class=fLNum>04</div>
-<div class=fLText>
-<strong class=redTxt>Multi-Server관리 및 Centralized Operation</strong>
-<ul class="liHyphen first">
+<div class=gdoc-page__anchorwrap>
+<h4 id=multi-server관리-및-centralized-operation>
+Multi-Server관리 및 Centralized Operation
+<a data-clipboard-text=https://lenalaborg.github.io/#multi-server관리-및-centralized-operation class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor Multi-Server관리 및 Centralized Operation" href=#multi-server%ea%b4%80%eb%a6%ac-%eb%b0%8f-centralized-operation><svg class="icon gdoc_link"><use xlink:href="#gdoc_link"/></svg>
+</a>
+</h4>
+</div><ul>
 <li>WYSIWYG방식으로 노드, 서버 설치 및 연동</li>
 <li>다중 서버(Group) 및 Application 관리</li>
 <li>실시간 Multi-Server 클러스터링 & 동기화</li>
 <li>중앙 서버를 통한 Auto Install & Patch</li>
-<li>Scalability강화(Local&Remote Clone)</li>
+<li>Scalability강화(Local & Remote Clone)</li>
 </ul>
-</div>
-</li>
-<li>
-<div class=fLNum>05</div>
-<div class=fLText>
-<strong class=redTxt>Cloud 특화 기능 제공</strong>
-<ul class="liHyphen first">
+<div class=gdoc-page__anchorwrap>
+<h4 id=cloud-특화-기능-제공>
+Cloud 특화 기능 제공
+<a data-clipboard-text=https://lenalaborg.github.io/#cloud-특화-기능-제공 class="gdoc-page__anchor gdoc-page__anchor--right clip" aria-label="Anchor Cloud 특화 기능 제공" href=#cloud-%ed%8a%b9%ed%99%94-%ea%b8%b0%eb%8a%a5-%ec%a0%9c%ea%b3%b5><svg class="icon gdoc_link"><use xlink:href="#gdoc_link"/></svg>
+</a>
+</h4>
+</div><ul>
 <li>지속적인 서비스 운영과 IT 자원 최적화를 위한 향상된 확장성 제공</li>
 <li>Pubic, Private, Hybrid Cloud Scalability 제공</li>
 <li>사용량 기반 과금으로 서비스 운영 비용 최적화</li>
 <li>가변적인 클라우드 환경에서 안정적인 Load Balancing 제공</li>
 </ul>
-</div>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="con introduction ver2">
-<div class=inner>
-<h2 class=bdtBk>서비스 도입 효과</h2>
-<div class=effectTypeTitle data-aos=fade-up data-aos-duration=1000 data-aos-delay=200>
-<ul>
-<li>
-<div class=effectTit>
-<span>01</span>
-<div>IT비용 절감</div>
-</div>
-<div class=effectText>
-<ul class="liHyphen first">
-<li>클라우드 환경에 적합한 라이선스 구조</li>
-<li>데이터센터 운영 Know-how를 이용한 관리 비용 절감</li>
-</ul>
-</div>
-</li>
-<li>
-<div class=effectTit>
-<span>02</span>
-<div>Vendor 종속성 해결</div>
-</div>
-<div class=effectText>
-<ul class="liHyphen first">
-<li>표준기술을 통하여 Vender SW 종속성 해결</li>
-<li>클라우드 적용 경험을 바탕으로 하는 확장성 강화</li>
-</ul>
-</div>
-</li>
-<li>
-<div class=effectTit>
-<span>03</span>
-<div>유연한 시스템 구성</div>
-</div>
-<div class=effectText>
-<ul class="liHyphen first">
-<li>전통적인 시스템뿐 아니라 클라우드 기반 서비스에 최적화된 아키텍처 제공</li>
-</ul>
-</div>
-</li>
-<li>
-<div class=effectTit>
-<span>04</span>
-<div>운영 효율성 확보</div>
-</div>
-<div class=effectText>
-<ul class="liHyphen first">
-<li>실시간 자동 장애 대응으로 운영 신뢰성 강화</li>
-<li>운영자의 실수를 방지하는 기능 제공으로 시스템 안정성 강화</li>
-</ul>
-</div>
-</li>
-<li>
-<div class=effectTit>
-<span>05</span>
-<div>고객 IT Ownership 강화</div>
-</div>
-<div class=effectText>
-<ul class="liHyphen first">
-<li>Vendor의 종속성 해결로 의사 결정권 강화</li>
-<li>비즈니스 환경에 따른 기만한 대응 가능</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="con architecture">
-<div class=inner>
-<h2 class=bdtBk>솔루션 아키텍처</h2>
-<div class="imgPop typeCenter" data-aos=fade-up data-aos-duration=1000 data-aos-delay=200>
-<img src=/images/img_lena1.jpg alt="솔루션 아키텍처">
-</div>
-</div>
-</div>
-<div class="con dmInfo">
-<div class=inner>
-<h2 class=bdtBk>서비스 적용 사례</h2>
-<div class="smallInr first" data-aos=fade-up data-aos-duration=1000 data-aos-delay=200>
-<h3><strong>01</strong><span>메리츠화재</span></h3>
-<div class=infoInr>
-<div class=topText>
-<dl class="dlText type2 first">
-<dt class=redTxt>메리츠화재 표준 WAS로 선정</dt>
-<dd>Mission Critical한 계정계 업무와 산출계, 정보계 등 전체 금융업무시스템에 도입</dd>
-<dd>무중단 서비스 운영 전환 및 성능/ 자원사용률 향상을 통해 운영 품질과 생산성을 개선하고, 비용을 절감</dd>
-</dl>
-</div>
-</div>
-</div>
-<div class="smallInr another3" data-aos=fade-up data-aos-duration=1000 data-aos-delay=200>
-<h3><strong>02</strong><span>한국스마트카드(티머니)</span></h3>
-<div class=infoInr>
-<div class=topText>
-<dl class="dlText type2 first">
-<dt class=redTxt>티머니 모바일, 고속모바일, KOBUS 등 4개 시스템 적용</dt>
-<dd>교통카드 및 전자화폐로 사용할 수 있는 NFC 기반 모바일 스마트 카드 서비스</dd>
-<dd>가입자 200만 이상의 대용량 온라인 / 배치 트랜잭션 처리, Micro Service Architecture 적용 사례</dd>
-</dl>
-</div>
-</div>
-</div>
-<div class="smallInr another3" data-aos=fade-up data-aos-duration=1000 data-aos-delay=200>
-<h3><strong>03</strong><span>한국조폐공사</span></h3>
-<div class=infoInr>
-<div class=topText>
-<dl class="dlText type2 first">
-<dt class=redTxt>조폐공사 블록체인서비스 플랫폼 적용</dt>
-<dd>국내 최초 공공 블록체인 플랫폼으로 지역화폐, 모바일 인증 , 문서 인증 등을 서비스</dd>
-<dd>DApp SDK 등 플랫폼 전반에 적용, Public 블록체인 대비 우수한 고성능 서비스 제공</dd>
-</dl>
-</div>
-</div>
-</div>
-<div class="smallInr another3" data-aos=fade-up data-aos-duration=1000 data-aos-delay=200>
-<h3><strong>04</strong><span>LG U+</span></h3>
-<div class=infoInr>
-<div class=topText>
-<strong class=redTxtSize20>EPS 시스템, 경영관리, 정산 시스템 등 20개 시스템 적용</strong>
-</div>
-</div>
-</div>
-<div class="smallInr another3" data-aos=fade-up data-aos-duration=1000 data-aos-delay=200>
-<h3><strong>05</strong><span>LG전자</span></h3>
-<div class=infoInr>
-<div class=topText>
-<dl class="dlText type2 first">
-<dt class=redTxt>EP, 고객서비스(GSCS), 렌탈서비스관리 (CSMS), LG Pay 등 글로벌/내·외부 150여개 시스템 적용</dt>
-<dd>(EP시스템 : LG전자의 Global 업무 포털 시스템으로 전 직원이 업무를 위해 상시 사용하는 대규모 시스템, 8만명 이상의 대규모 사용자 대상 안정적 Session 처리 수행)</dd>
-</dl>
-</div>
-</div>
-</div>
-<div class="smallInr another3" data-aos=fade-up data-aos-duration=1000 data-aos-delay=200>
-<h3><strong>06</strong><span>LG화학</span></h3>
-<div class=infoInr>
-<div class=topText>
-<dl class="dlText type2 first">
-<dt class=redTxt>LG화학 표준 WAS로 선정</dt>
-<dd>해외 법인, 통합법무지원, IT Helpdesk, R&D 포털, ESS 포털 시스템 등 글로벌/내·외부 시스템 적용</dd>
-</dl>
-</div>
-</div>
-</div>
-<div class="smallInr another3" data-aos=fade-up data-aos-duration=1000 data-aos-delay=200>
-<h3><strong>07</strong><span>에스앤아이 코퍼레이션</span></h3>
-<div class=infoInr>
-<div class=topText>
-<dl class="dlText type2 first">
-<dt class=redTxt>에스앤아이 코퍼레이션 표준 WAS로 선정</dt>
-<dd>사이언스파크 포털, 빌딩 포털, 보안 포털, 생활연수원, 경영지원 시스템 등 10여개 시스템 적용</dd>
-</dl>
-</div>
-</div>
-</div>
-<div class="smallInr another3" data-aos=fade-up data-aos-duration=1000 data-aos-delay=200>
-<h3><strong>08</strong><span>판토스</span></h3>
-<div class=infoInr>
-<div class=topText>
-<dl class="dlText type2 first">
-<dt class=redTxt>판토스 WAS로 선정</dt>
-<dd>HMS, DMS, MIS 시스템 등 글로벌/내·외부 10여개 시스템 적용</dd>
-</dl>
-</div>
-</div>
-</div>
-<div class="smallInr another3" data-aos=fade-up data-aos-duration=1000 data-aos-delay=200>
-<h3><strong>09</strong><span>GS리테일</span></h3>
-<div class=infoInr>
-<div class=topText>
-<dl class="dlText type2 first">
-<dt class=redTxt>판매, 배송, 마케팅 등 유통 업무 전반에 걸친 시스템 20여개에 적용</dt>
-<dd>초기도입 후 GS리테일 전사 표준화에 이어 계열사 표준으로 확산</dd>
-</dl>
-</div>
-</div>
-</div>
-<div class="smallInr another3" data-aos=fade-up data-aos-duration=1000 data-aos-delay=200>
-<h3><strong>10</strong><span>KT</span></h3>
-<div class=infoInr>
-<div class=topText>
-<dl class="dlText type2 first">
-<dt class=redTxt>KT 비즈메카 EZ 서비스 적용</dt>
-<dd>국내 최대 규모 가입자를 대상으로 제공되는 KT의 대표적 기업용 업무포털 서비스 (SaaS)</dd>
-</dl>
-</div>
-</div>
-</div>
-<div class="smallInr another3" data-aos=fade-up data-aos-duration=1000 data-aos-delay=200>
-<h3><strong>11</strong><span>LF패션</span></h3>
-<div class=infoInr>
-<div class=topText>
-<strong class=redTxtSize20>LF 패션 쇼핑몰, 브랜드별 홈페이지 시스템 U2L 프로젝트 적용, 대규모 사용자 세션처리 사례</strong>
-</div>
-</div>
-</div>
-<div class="smallInr another3" data-aos=fade-up data-aos-duration=1000 data-aos-delay=200>
-<h3><strong>12</strong><span>LG스포츠</span></h3>
-<div class=infoInr>
-<div class=topText>
-<dl class="dlText type2 first">
-<dt class=redTxt>홈페이지 및 모바일 시스템 적용, 인기 스포츠단의 홈페이지로 홍보 및 실시간 예매 서비스 제공</dt>
-<dd>홍보/예매 시스템 특성상 이벤트 시점에 발생하는 대규모 트랜잭션을 안정적으로 처리</dd>
-</dl>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="con monaDown">
-<div class=inner>
-<ul>
-<li>
-<div><span>브로슈어</span>
-<p>LENA 브로슈어를 지금 다운로드 하세요.</p>
-</div>
-<div>
-<div class="btnBox btn2">
-<a class="btnBk icoDownWt downPopBtn" data-filename=솔루션_LENA_브로슈어.pdf href=# title="LENA 브로슈어 다운로드"><span>다운로드</span></a>
-</div>
-</div>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</section>
-<a href=# class=top style=display:none>go to top</a>
-</div>
-</div>
-</body>
-</html></div>
 </article>
 <div class="gdoc-page__footer flex flex-wrap justify-between">
 </div>
