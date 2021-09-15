@@ -12,84 +12,80 @@
 /* Uncomment @import statement to use as custom stylesheet */
 /*@import "https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700";*/
 
+    /* Dark Mode */
+    .color-toggle-dark #toc.toc2 { background: #2c3238 !important; border-right: 1px solid #495056; }
+    .color-toggle-dark #toc ul.sectlevel1 li a { color: #ced3d8 !important; }
+    .color-toggle-dark #toc ul.sectlevel1 li ul.sectlevel2 li a { color: #ced3d8 !important; }
+    .color-toggle-dark #toc ul.sectlevel1 li ul.sectlevel2 li a:hover { color: #e24b8e !important; }
+    .color-toggle-dark #toctitle { color: #e2458b !important; }
+    .color-toggle-dark #toc ul li a:hover { color: #e24b8e !important; background: rgb(177 177 177 / 15%) !important; }
+    .color-toggle-dark  #toc ul li a.focus { background: #c53c79 !important; }
+    .color-toggle-dark #header>h1 { color: #ced3d8 !important; }
+    .color-toggle-dark #header .details { color: #ced3d8 !important; background-color: rgb(235 242 242 / 15%); }
+    .color-toggle-dark #content h1>a.link, .color-toggle-dark h2>a.link, .color-toggle-dark h3>a.link, .color-toggle-dark #toctitle>a.link, .color-toggle-dark .sidebarblock>.content>.title>a.link, .color-toggle-dark h4>a.link, .color-toggle-dark h5>a.link, .color-toggle-dark h6>a.link { color: #ced3d8 !important; }
+    .color-toggle-dark #content h1>a.link:hover, .color-toggle-dark h2>a.link:hover, .color-toggle-dark h3>a.link:hover, .color-toggle-dark #toctitle>a.link:hover, .color-toggle-dark .sidebarblock>.content>.title>a.link:hover, .color-toggle-dark h4>a.link:hover, .color-toggle-dark h5>a.link:hover, .color-toggle-dark h6>a.link:hover { color : #e24b8e !important }
+    .color-toggle-dark #header .details span.email a { color:#f5f5f5; }
+    .color-toggle-dark .admonitionblock.note table { background-color: rgb(5 34 51 / 50%) !important; }
+    .color-toggle-dark .admonitionblock table tr { background: none !important; }
+    .color-toggle-dark .admonitionblock table td.content { color: #ced3d8 !important; }
+    .color-toggle-dark .admonitionblock.important table { background-color: rgb(78 13 13 / 50%); }
+    .color-toggle-dark a { color: #528be0; }
+    .color-toggle-dark .button { background: rgb(241 241 241 / 15%); }
+    .color-toggle-dark .sect1+.sect1 { border-top: 1px solid rgb(231 231 233 / 25%); }
+    .color-toggle-dark main.container { padding: 0rem 1rem 1rem; }
+    .color-toggle-dark table thead, .color-toggle-dark table tfoot { background: #3d454c; }
+    .color-toggle-dark table.grid-all>thead>tr>.tableblock, .color-toggle-dark table.grid-all>tbody>tr>.tableblock { color: #ced3d8 !important; }
+    .color-toggle-dark .gdoc-markdown table:not(.lntable) tbody tr:nth-child(1n) { background: #353c41; }
+    .color-toggle-dark .gdoc-markdown table:not(.lntable) tbody tr:nth-child(2n) { background: #2f353a; }
+    .color-toggle-dark .gdoc-markdown table:not(.lntable) tr { border-bottom: 1px solid #495056; }
+    .color-toggle-dark .gdoc-markdown table:not(.lntable) thead { border-bottom: 1px solid #5a6268;}
+    .color-toggle-dark table.tableblock, .color-toggle-dark th.tableblock, .color-toggle-dark td.tableblock {border: 1px solid #495056;}
+    .color-toggle-dark pre.CodeRay {background-color: #2f353a; border: 1px solid #4e555c;}
+    .color-toggle-dark pre.CodeRay code[data-lang=bash] {color: #ced3d8;}
 
+    /* Auto Mode */
+    .color-toggle-auto #toc.toc2 { background: #2c3238 !important; border-right: 1px solid #495056; }
+    .color-toggle-auto #toc ul.sectlevel1 li a { color: #ced3d8 !important; }
+    .color-toggle-auto #toc ul.sectlevel1 li ul.sectlevel2 li a { color: #ced3d8 !important; }
+    .color-toggle-auto #toc ul.sectlevel1 li ul.sectlevel2 li a:hover { color: #e24b8e !important; }
+    .color-toggle-auto #toctitle { color: #e2458b !important; }
+    .color-toggle-auto #toc ul li a:hover { color: #e24b8e !important; background: rgb(177 177 177 / 15%) !important; }
+    .color-toggle-auto  #toc ul li a.focus { background: #c53c79 !important; }
+    .color-toggle-auto #header>h1 { color: #ced3d8 !important; }
+    .color-toggle-auto #header .details { color: #ced3d8 !important; background-color: rgb(235 242 242 / 15%); }
+    .color-toggle-auto #content h1>a.link, .color-toggle-auto h2>a.link, .color-toggle-auto h3>a.link, .color-toggle-auto #toctitle>a.link, .color-toggle-auto .sidebarblock>.content>.title>a.link, .color-toggle-auto h4>a.link, .color-toggle-auto h5>a.link, .color-toggle-auto h6>a.link { color: #ced3d8 !important; }
+    .color-toggle-auto #content h1>a.link:hover, .color-toggle-auto h2>a.link:hover, .color-toggle-auto h3>a.link:hover, .color-toggle-auto #toctitle>a.link:hover, .color-toggle-auto .sidebarblock>.content>.title>a.link:hover, .color-toggle-auto h4>a.link:hover, .color-toggle-auto h5>a.link:hover, .color-toggle-auto h6>a.link:hover { color : #e24b8e !important }
+    .color-toggle-auto #header .details span.email a { color:#f5f5f5; }
+    .color-toggle-auto .admonitionblock.note table { background-color: rgb(5 34 51 / 50%) !important; }
+    .color-toggle-auto .admonitionblock table tr { background: none !important; }
+    .color-toggle-auto .admonitionblock table td.content { color: #ced3d8 !important; }
+    .color-toggle-auto .admonitionblock.important table { background-color: rgb(78 13 13 / 50%); }
+    .color-toggle-auto a { color: #528be0; }
+    .color-toggle-auto .button { background: rgb(241 241 241 / 15%); }
+    .color-toggle-auto .sect1+.sect1 { border-top: 1px solid rgb(231 231 233 / 25%); }
+    .color-toggle-auto main.container { padding: 0rem 1rem 1rem; }
+    .color-toggle-auto table thead, .color-toggle-auto table tfoot { background: #3d454c; }
+    .color-toggle-auto table.grid-all>thead>tr>.tableblock, .color-toggle-auto table.grid-all>tbody>tr>.tableblock { color: #ced3d8 !important; }
+    .color-toggle-auto .gdoc-markdown table:not(.lntable) tbody tr:nth-child(1n) { background: #353c41; }
+    .color-toggle-auto .gdoc-markdown table:not(.lntable) tbody tr:nth-child(2n) { background: #2f353a; }
+    .color-toggle-auto .gdoc-markdown table:not(.lntable) tr { border-bottom: 1px solid #495056; }
+    .color-toggle-auto .gdoc-markdown table:not(.lntable) thead { border-bottom: 1px solid #5a6268;}
+    .color-toggle-auto table.tableblock, .color-toggle-auto th.tableblock, .color-toggle-auto td.tableblock {border: 1px solid #495056;}
+    .color-toggle-auto pre.CodeRay {background-color: #2f353a; border: 1px solid #4e555c;}
+    .color-toggle-auto pre.CodeRay code[data-lang=bash] {color: #ced3d8;}
 
+    /* main-0c0de99286.min.css 수정 */
+    .gdoc-markdown ol, .gdoc-markdown ul { padding-left: 0rem; }
+    .gdoc-page__header { margin-left: 19rem; }
+    .gdoc-markdown__align--left { margin-left: 19rem; }
+    .gdoc-page__footer a, .gdoc-page__footer a:visited, .gdoc-page__header a, .gdoc-page__header a:visited { color: #518169; }
+    .gdoc-markdown table:not(.lntable) thead { border-bottom: 1px solid #dedede;}
+    .gdoc-markdown b, .gdoc-markdown optgroup, .gdoc-markdown strong { font-weight: 700; }
+    .gdoc-markdown table:not(.lntable) tr { border-bottom: 1px solid #dedede;}
+    main.container { padding: 0rem 1rem 1rem; }
+    #content p .icon {display: inline-block; width: auto !important; height: auto !important; top: unset; stroke-width: unset; stroke: currentColor; fill: currentColor; position: relative;}
 
 @import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
-
-/* Dark Mode */
-.color-toggle-dark #toc.toc2 { background: #2c3238 !important; border-right: 1px solid #495056; }
-.color-toggle-dark #toc ul.sectlevel1 li a { color: #ced3d8 !important; }
-.color-toggle-dark #toc ul.sectlevel1 li ul.sectlevel2 li a { color: #ced3d8 !important; }
-.color-toggle-dark #toc ul.sectlevel1 li ul.sectlevel2 li a:hover { color: #e24b8e !important; }
-.color-toggle-dark #toctitle { color: #e2458b !important; }
-.color-toggle-dark #toc ul li a:hover { color: #e24b8e !important; background: rgb(177 177 177 / 15%) !important; }
-.color-toggle-dark  #toc ul li a.focus { background: #c53c79 !important; }
-.color-toggle-dark #header>h1 { color: #ced3d8 !important; }
-.color-toggle-dark #header .details { color: #ced3d8 !important; background-color: rgb(235 242 242 / 15%); }
-.color-toggle-dark #content h1>a.link, .color-toggle-dark h2>a.link, .color-toggle-dark h3>a.link, .color-toggle-dark #toctitle>a.link, .color-toggle-dark .sidebarblock>.content>.title>a.link, .color-toggle-dark h4>a.link, .color-toggle-dark h5>a.link, .color-toggle-dark h6>a.link { color: #ced3d8 !important; }
-.color-toggle-dark #content h1>a.link:hover, .color-toggle-dark h2>a.link:hover, .color-toggle-dark h3>a.link:hover, .color-toggle-dark #toctitle>a.link:hover, .color-toggle-dark .sidebarblock>.content>.title>a.link:hover, .color-toggle-dark h4>a.link:hover, .color-toggle-dark h5>a.link:hover, .color-toggle-dark h6>a.link:hover { color : #e24b8e !important }
-.color-toggle-dark #header .details span.email a { color:#f5f5f5; }
-.color-toggle-dark .admonitionblock.note table { background-color: rgb(5 34 51 / 50%) !important; }
-.color-toggle-dark .admonitionblock table tr { background: none !important; }
-.color-toggle-dark .admonitionblock table td.content { color: #ced3d8 !important; }
-.color-toggle-dark .admonitionblock.important table { background-color: rgb(78 13 13 / 50%); }
-.color-toggle-dark a { color: #528be0; }
-.color-toggle-dark .button { background: rgb(241 241 241 / 15%); }
-.color-toggle-dark .sect1+.sect1 { border-top: 1px solid rgb(231 231 233 / 25%); }
-.color-toggle-dark main.container { padding: 0rem 1rem 1rem; }
-.color-toggle-dark table thead, .color-toggle-dark table tfoot { background: #3d454c; }
-.color-toggle-dark table.grid-all>thead>tr>.tableblock, .color-toggle-dark table.grid-all>tbody>tr>.tableblock { color: #ced3d8 !important; }
-.color-toggle-dark .gdoc-markdown table:not(.lntable) tbody tr:nth-child(1n) { background: #353c41; }
-.color-toggle-dark .gdoc-markdown table:not(.lntable) tbody tr:nth-child(2n) { background: #2f353a; }
-.color-toggle-dark .gdoc-markdown table:not(.lntable) tr { border-bottom: 1px solid #495056; }
-.color-toggle-dark .gdoc-markdown table:not(.lntable) thead { border-bottom: 1px solid #5a6268;}
-.color-toggle-dark table.tableblock, .color-toggle-dark th.tableblock, .color-toggle-dark td.tableblock {border: 1px solid #495056;}
-.color-toggle-dark pre.CodeRay {background-color: #2f353a; border: 1px solid #4e555c;}
-.color-toggle-dark pre.CodeRay code[data-lang=bash] {color: #ced3d8;}
-
-/* Auto Mode */
-.color-toggle-auto #toc.toc2 { background: #2c3238 !important; border-right: 1px solid #495056; }
-.color-toggle-auto #toc ul.sectlevel1 li a { color: #ced3d8 !important; }
-.color-toggle-auto #toc ul.sectlevel1 li ul.sectlevel2 li a { color: #ced3d8 !important; }
-.color-toggle-auto #toc ul.sectlevel1 li ul.sectlevel2 li a:hover { color: #e24b8e !important; }
-.color-toggle-auto #toctitle { color: #e2458b !important; }
-.color-toggle-auto #toc ul li a:hover { color: #e24b8e !important; background: rgb(177 177 177 / 15%) !important; }
-.color-toggle-auto  #toc ul li a.focus { background: #c53c79 !important; }
-.color-toggle-auto #header>h1 { color: #ced3d8 !important; }
-.color-toggle-auto #header .details { color: #ced3d8 !important; background-color: rgb(235 242 242 / 15%); }
-.color-toggle-auto #content h1>a.link, .color-toggle-auto h2>a.link, .color-toggle-auto h3>a.link, .color-toggle-auto #toctitle>a.link, .color-toggle-auto .sidebarblock>.content>.title>a.link, .color-toggle-auto h4>a.link, .color-toggle-auto h5>a.link, .color-toggle-auto h6>a.link { color: #ced3d8 !important; }
-.color-toggle-auto #content h1>a.link:hover, .color-toggle-auto h2>a.link:hover, .color-toggle-auto h3>a.link:hover, .color-toggle-auto #toctitle>a.link:hover, .color-toggle-auto .sidebarblock>.content>.title>a.link:hover, .color-toggle-auto h4>a.link:hover, .color-toggle-auto h5>a.link:hover, .color-toggle-auto h6>a.link:hover { color : #e24b8e !important }
-.color-toggle-auto #header .details span.email a { color:#f5f5f5; }
-.color-toggle-auto .admonitionblock.note table { background-color: rgb(5 34 51 / 50%) !important; }
-.color-toggle-auto .admonitionblock table tr { background: none !important; }
-.color-toggle-auto .admonitionblock table td.content { color: #ced3d8 !important; }
-.color-toggle-auto .admonitionblock.important table { background-color: rgb(78 13 13 / 50%); }
-.color-toggle-auto a { color: #528be0; }
-.color-toggle-auto .button { background: rgb(241 241 241 / 15%); }
-.color-toggle-auto .sect1+.sect1 { border-top: 1px solid rgb(231 231 233 / 25%); }
-.color-toggle-auto main.container { padding: 0rem 1rem 1rem; }
-.color-toggle-auto table thead, .color-toggle-auto table tfoot { background: #3d454c; }
-.color-toggle-auto table.grid-all>thead>tr>.tableblock, .color-toggle-auto table.grid-all>tbody>tr>.tableblock { color: #ced3d8 !important; }
-.color-toggle-auto .gdoc-markdown table:not(.lntable) tbody tr:nth-child(1n) { background: #353c41; }
-.color-toggle-auto .gdoc-markdown table:not(.lntable) tbody tr:nth-child(2n) { background: #2f353a; }
-.color-toggle-auto .gdoc-markdown table:not(.lntable) tr { border-bottom: 1px solid #495056; }
-.color-toggle-auto .gdoc-markdown table:not(.lntable) thead { border-bottom: 1px solid #5a6268;}
-.color-toggle-auto table.tableblock, .color-toggle-auto th.tableblock, .color-toggle-auto td.tableblock {border: 1px solid #495056;}
-.color-toggle-auto pre.CodeRay {background-color: #2f353a; border: 1px solid #4e555c;}
-.color-toggle-auto pre.CodeRay code[data-lang=bash] {color: #ced3d8;}
-
-/* main-0c0de99286.min.css 수정 */
-.gdoc-markdown ol, .gdoc-markdown ul { padding-left: 0rem; }
-.gdoc-page__header { margin-left: 19rem; }
-.gdoc-markdown__align--left { margin-left: 19rem; }
-.gdoc-page__footer a, .gdoc-page__footer a:visited, .gdoc-page__header a, .gdoc-page__header a:visited { color: #518169; }
-.gdoc-markdown table:not(.lntable) thead { border-bottom: 1px solid #dedede;}
-.gdoc-markdown b, .gdoc-markdown optgroup, .gdoc-markdown strong { font-weight: 700; }
-.gdoc-markdown table:not(.lntable) tr { border-bottom: 1px solid #dedede;}
-main.container { padding: 0rem 1rem 1rem; }
-#content p .icon {display: inline-block; width: auto !important; height: auto !important; top: unset; stroke-width: unset; stroke: currentColor; fill: currentColor; position: relative;}
-
 article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section{display:block}
 audio,video{display:inline-block}
 audio:not([controls]){display:none;height:0}
