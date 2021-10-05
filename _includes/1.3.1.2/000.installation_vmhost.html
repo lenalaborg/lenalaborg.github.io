@@ -5160,6 +5160,19 @@ blockquote, blockquote p {
 <style>
 /* Stylesheet for CodeRay to match GitHub theme | MIT License | http://foundation.zurb.com */
 /*pre.CodeRay {background-color:#f7f7f8;}*/
+
+/* GNB, LNB 고정 */
+.gdoc-header { position: fixed; width: 100%; z-index: 9999; }
+.container { margin: unset; padding: 1rem 1rem 1rem 1.8rem; }
+main.container { padding: 70px 1rem 1rem 1rem; }
+.gdoc-page { position: relative; }
+.gdoc-nav nav, .gdoc-page, .markdown{will-change: auto; }
+#toc.toc2 { left: 0px; top: 69px; }
+
+.gdoc-header__link { position: relative; }
+.gdoc-header__link::after { content: "Docs"; position: absolute; left: 120px; top: 3px; color: #444; font-size: 24px; font-weight: 500; letter-spacing: -0.5px; }
+.gdoc-header__link .gdoc-brand { margin-top: 4px; }
+
 .CodeRay .line-numbers{border-right:1px solid #d8d8d8;padding:0 0.5em 0 .25em}
 .CodeRay span.line-numbers{display:inline-block;margin-right:.5em;color:rgba(0,0,0,.3)}
 .CodeRay .line-numbers strong{color:rgba(0,0,0,.4)}
