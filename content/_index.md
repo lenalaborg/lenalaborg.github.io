@@ -10,6 +10,8 @@ LENA는 클라우드 환경과 데이터 센터 운영 노하우가 결집되어
 
 ## 서비스 특징
 #### Enterprise 요건 제공
+- 표준 Java 웹 어플리케이션 구동 환경 제공
+- 안정적 세션정보를 유지를 위한 세션 클러스터링 제공
 - 서버 Startup/Restart 및 Deploy 성능 향상
 - CPU, 메모리 자원 사용 효율성 향상
 - Resource 암호화와 접근성 제어를 통한 Security 강화
@@ -35,6 +37,5 @@ LENA는 클라우드 환경과 데이터 센터 운영 노하우가 결집되어
 
 #### Cloud 특화 기능 제공
 - 지속적인 서비스 운영과 IT 자원 최적화를 위한 향상된 확장성 제공
-- Pubic, Private, Hybrid Cloud Scalability 제공
 - 사용량 기반 과금으로 서비스 운영 비용 최적화
 - 가변적인 클라우드 환경에서 안정적인 Load Balancing 제공
