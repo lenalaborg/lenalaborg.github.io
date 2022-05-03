@@ -13,8 +13,8 @@
 jenkins 에서 받아 /static/_includes/{version} 디렉토리에 추가
 
 - jenkins 파일 경로 \
-src/main/resources/static/ko/installation/vmhost/000.installation_vmhost.html \
-src/main/resources/static/ko/manual/manual_exclusive.html \
+src/main/resources/static/ko/installation/vmhost/000.installation_vmhost.html  
+src/main/resources/static/ko/manual/manual_exclusive.html  
 src/main/resources/static/ko/release-note/release_note.html
 
 #### HTML 파일 내 이미지 경로 수정
@@ -29,11 +29,11 @@ src/main/resources/static/ko/release-note/release_note.html
 방법 : 신규 버전 디렉토리 생성 후 pdf 디렉토리에 jenkins 에 생성된 pdf 파일 추가
 
 - jenkins 파일 경로 \
-installation/container/000.installation_container.pdf       -> LENA_Installation_Container_v*.*.pdf \
-installation/vmhost/000.installation_vmhost.pdf             -> LENA_Installation_Enterprise_v*.*.pdf \
-installation/vmhost/000.installation_vmhost.pdf             -> LENA_Installation_VM_v*.*.pdf \
-installation/vmhost/standard/000.installation_vmhost.pdf    -> LENA_Installation_Standard_v*.*.pdf \
-manual/manual_container.pdf                                 -> LENA_Manual_Container_v*.*.pdf \
-manual/manual_enterprise.pdf                                -> LENA_Manual_Enterprise_v*.*.pdf \
-manual/manual_enterprise.pdf                                -> LENA_Manual_VM_v*.*.pdf \
-manual/manual_standard.pdf                                  -> LENA_Manual_Standard_v*.*.pdf
+target/generated-docs/pdf/ko/installation/container/000.installation_container.pdf       -> LENA_Installation_Container_v\*.\*.pdf  
+target/generated-docs/pdf/ko/installation/vmhost/000.installation_vmhost.pdf             -> LENA_Installation_Enterprise_v\*.\*.pdf  
+target/generated-docs/pdf/ko/installation/vmhost/000.installation_vmhost.pdf             -> LENA_Installation_VM_v\*.\*.pdf  
+target/generated-docs/pdf/ko/installation/vmhost/standard/000.installation_vmhost.pdf    -> LENA_Installation_Standard_v\*.\*.pdf  
+target/generated-docs/pdf/ko/manual/manual_container.pdf                                 -> LENA_Manual_Container_v\*.\*.pdf  
+target/generated-docs/pdf/ko/manual/manual_enterprise.pdf                                -> LENA_Manual_Enterprise_v\*.\*.pdf  
+target/generated-docs/pdf/ko/manual/manual_enterprise.pdf                                -> LENA_Manual_VM_v\*.\*.pdf  
+target/generated-docs/pdf/ko/manual/manual_standard.pdf                                  -> LENA_Manual_Standard_v\*.\*.pdf
