@@ -29,6 +29,7 @@ src/main/resources/static/ko/release-note/release_note.html
 방법 : 신규 버전 디렉토리 생성 후 pdf 디렉토리에 jenkins 에 생성된 pdf 파일 추가
 
 - jenkins 파일 경로 \
+LENA_Brochure.pdf 파일은 이전버전 디렉토리에서 복제  
 target/generated-docs/pdf/ko/installation/container/000.installation_container.pdf       -> LENA_Installation_Container_v\*.\*.pdf  
 target/generated-docs/pdf/ko/installation/vmhost/000.installation_vmhost.pdf             -> LENA_Installation_Enterprise_v\*.\*.pdf  
 target/generated-docs/pdf/ko/installation/vmhost/000.installation_vmhost.pdf             -> LENA_Installation_VM_v\*.\*.pdf  
