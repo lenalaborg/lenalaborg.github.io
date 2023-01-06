@@ -5807,7 +5807,7 @@ LENA WAS SE가 제공하는 Engine 외에도 EJB Engine, JMS Engine 등 J2EE Spe
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.2.0/static/images/manual/overview2_mechanism.png" alt="overview2 mechanism">
+<img src="../resources/static/images/manual/overview2_mechanism.png" alt="overview2 mechanism">
 </div>
 <div class="title">Figure 1. LENA Mechanism</div>
 </div>
@@ -5992,7 +5992,7 @@ LENA WAS SE가 제공하는 Engine 외에도 EJB Engine, JMS Engine 등 J2EE Spe
 <h3 id="_log_in"><a class="link" href="#_log_in">2.1. Log In</a></h3>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.2.0/static/images/manual/common_login.png" alt="common login">
+<img src="../resources/static/images/manual/common_login.png" alt="common login">
 </div>
 <div class="title">Figure 2. Manager 접속화면</div>
 </div>
@@ -6026,7 +6026,7 @@ LENA WAS SE가 제공하는 Engine 외에도 EJB Engine, JMS Engine 등 J2EE Spe
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.2.0/static/images/manual/dashboard_overview.png" alt="dashboard overview">
+<img src="../resources/static/images/manual/dashboard_overview.png" alt="dashboard overview">
 </div>
 <div class="title">Figure 3. Dashboard</div>
 </div>
@@ -6260,7 +6260,7 @@ All은 권한이 있는 모든 시스템의 정보를 통합하여 보여준다.
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.2.0/static/images/manual/server_1_system.png" alt="server 1 system">
+<img src="../resources/static/images/manual/server_1_system.png" alt="server 1 system">
 </div>
 <div class="title">Figure 4. System List</div>
 </div>
@@ -6356,7 +6356,7 @@ All은 권한이 있는 모든 시스템의 정보를 통합하여 보여준다.
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.2.0/static/images/manual/server_2_node.png" alt="server 2 node">
+<img src="../resources/static/images/manual/server_2_node.png" alt="server 2 node">
 </div>
 <div class="title">Figure 5. Node List</div>
 </div>
@@ -6849,7 +6849,7 @@ Node에 설치한 Server의 등록, 수정, 삭제를 수행하며, 그 외 Serv
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.2.0/static/images/manual/server_3_application_server.png" alt="server 3 application server">
+<img src="../resources/static/images/manual/server_3_application_server.png" alt="server 3 application server">
 </div>
 <div class="title">Figure 6. Web Application Server List</div>
 </div>
@@ -10101,7 +10101,7 @@ Node에 설치한 Web Server의 등록, 수정, 삭제가 가능하며, 시작�
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.2.0/static/images/manual/server_4_web_server.png" alt="server 4 web server">
+<img src="../resources/static/images/manual/server_4_web_server.png" alt="server 4 web server">
 </div>
 </div>
 <div class="paragraph">
@@ -10767,7 +10767,7 @@ AccessFileName : .htaccess)에 대하여 어떤 지시자 사용을 허가할 �
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.2.0/static/images/manual/server_4_web_server_process_info.png" alt="server 4 web server process info">
+<img src="../resources/static/images/manual/server_4_web_server_process_info.png" alt="server 4 web server process info">
 </div>
 </div>
 <div class="paragraph">
@@ -10973,23 +10973,37 @@ AccessFileName : .htaccess)에 대하여 어떤 지시자 사용을 허가할 �
 <div class="sect4">
 <h5 id="_connector"><a class="link" href="#_connector">Connector</a></h5>
 <div class="paragraph">
-<p>Web Server의 Connector정보와 Load Balancer정보를 편집할 수 있다.
-Connector Info 영역의 정보는 Web Server 내에 설정된 Load Balancer의 기본
-설정 값을, Load Balancer영역은 Web Server와 WAS를
-연계하는 정보를 관리한다.</p>
+<p>Web Server와 WAS를 연계하기 위한 정보를 관리한다.<br>
+Connector 페이지는 연계 방식에 따라 JK와 Proxy 탭으로 나누어져 있으며, 각 탭에서 모듈에 따른 Connector 설정 정보를 편집할 수 있다.</p>
+</div>
+<div class="sect5">
+<h6 id="_jk"><a class="link" href="#_jk">JK</a></h6>
+<div class="paragraph">
+<p>JK(mod_jk)를 사용할 때의 설정 정보를 편집한다.<br></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../resources/static/images/manual/server_4_web_server_jk.png" alt="server 4 web server jk">
+</div>
 </div>
 <div class="paragraph">
-<p>설정 정보의 상세 내용은 다음과 같다.</p>
+<p>JK 탭의 설정은 위 화면과 같이 Connector Info, Load Balancer, URI Pattern Group의 세 가지 영역으로 나누어져 있다.</p>
 </div>
 <div class="olist arabic">
-<ol class="arabic">
+<ol class="arabic" start="1">
 <li>
-<p>Connector Info (/conf/extra/httpd-jk.conf와 /conf/extra/workers.properties 파일 관리)</p>
+<p>Connector Info<br>
+JK의 기본 설정 값을 관리한다.</p>
 </li>
 </ol>
 </div>
+<div class="imageblock">
+<div class="content">
+<img src="../resources/static/images/manual/server_4_web_server_jk_connector_info.png" alt="server 4 web server jk connector info">
+</div>
+</div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 51. Connector Info</caption>
+<caption class="title">Table 51. Connector Info (JK)</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 50%;">
@@ -11005,93 +11019,133 @@ Connector Info 영역의 정보는 Web Server 내에 설정된 Load Balancer의 
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Type(*)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Web Server와 WAS가 통신할 때 사용하는 프로토콜</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ajp 13</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Web Server와 WAS가 통신할 때 사용하는 프로토콜이다.<br>
+(ajp12, ajp13, ajp14, jni, lb 그리고 status 중 하나를 사용할 수 있으나 ajp13, lb, status를 권장한다.)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Default: ajp13</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Load Balancing Factor(*)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">WAS의 부하 분산 지수. 즉, 작업량 할당 비율</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Default : 1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">WAS의 부하 분산 지수. 즉, 작업량 할당 비율을 의미한다.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Default: 1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Request Read Timeout(*)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">JK와 WAS 간에 응답 대기 시간(TCP socket 내부적인 상태에 대한 timeout을 의미)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Default : 300 (s)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Request Read Timeout(s)(*)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">JK와 원격 호스트 간의 통신 채널에 사용되는 Timeout(초)이다. 지정된 시간 초과 내에 원격 호스트가 응답하지 않으면 JK가 오류를 발생시키고 다시 시도한다.<br>
+0(기본값)으로 설정하면 JK는 모든 소켓 작업에서 계속 응답을 기다린다.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Default: 300</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Socket Connect Timeout(*)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">JK와 WAS 간의 socket 연결 대기시간</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Default : 5 (s)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Socket Connect Timeout(s)(*)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">JK와 원격 호스트 간 소켓 연결을 구성하는 데에 걸리는 시간(초)의 임계치를 의미한다. 지정된 시간 내에 소켓 연결을 구성하지 못하면 JK가 오류를 발생시키고 재연결을 시도한다.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Default: 5</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Socket Keepalive(*)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Web Server와 WAS 간에 방화벽이 있는
-경우 inactive 상태인 connection은 버리게 되어 있는데
-OS에 keep alive 메시지를 보내서 방화벽이 inactive connection을 잘라버리는 것을 막을지 여부 설정</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Default : true</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Socket Keep Alive(*)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Web Server와 WAS 사이에 방화벽이 존재하는 경우 비활성화 된 연결을 버리도록 되어있으나, 이 속성이 TRUE일 때에는 운영 체제에 KEEP_ALIVE 메시지를 보내도록 함으로써 방화벽이 비활성화 된 연결을 끊지 못하도록 한다.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Default: TRUE</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Connect Timeout(*)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">JK와 WAS 간에 연결이 완료된 후, ajp13 프로토콜에서의 cping request에 대한 cpong respond 대기 시간</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Default : 10 (s)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">connectTimeout: JK와 WAS 간 연결이 완료된 후, ajp13 프로토콜에서 cping request에 대한 cpong respond 대기 시간(s)을 의미한다.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Default: 10</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Connection Pool Size(*)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">JK와 WAS 간에 커넥션을 cache하는 크기</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Default : 128</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">JK와 WAS 간 커넥션 풀로 유지 관리되는 커넥션 개수를 의미한다.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Default: 128</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Connection Pool Min Size(*)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">JK와 WAS 간에 커넥션을 cache하는 최소 크기</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Default : 32</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">JK와 WAS 간 커넥션 풀로 유지 관리되는 커넥션의 최소 개수를 의미한다.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Default: 32</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Connection Pool Timeout(*)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Connection pool에서socket을 close 하기까지 open된 socket을 유지하는 시간</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">WAS에서 connectionTimeout 설정과 같이 설정해야 함</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Connection Pool Timeout(s)(*)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">JK가 비활성화 된 소켓을 닫기 전에 유지해야 하는 시간(초)을 지정한다. 0으로 지정 시 소켓을 닫는 것을 비활성화 한다.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">WAS의 connectionTimeout 옵션과 함께 사용한다.<br>
+Default: 20</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Log Level(*)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">에러 로그 파일의 기록 내용을 얼마나 자세히 기록할지 지정</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Default : error</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">로그 파일에 기록될 로그 수준을 지정한다.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Default: error</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Log Format(*)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">로그 파일에 어떤 포맷으로 로그를 남길지 설정</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">로그 파일에 어떤 포맷으로 로그를 남길지 설정한다.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Default: "[%a %b %d %H:%M:%S %Y]"</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Status(*)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Server 상태 모니터링 설정값 셋팅 여부</p>
-<p class="tableblock">Enable 선택시 Status Url과 Allow IP를 설정할 수 있음</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Default : Enable</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Server 상태 모니터링 설정값 셋팅 여부로, Enable 선택시 Status Url과 Allow IP를 설정할 수 있다.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Default: Enable</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Status Url(*)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Server 상태 모니터링 URL</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Default : /jk-status/</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Server 상태 모니터링을 위한 URL이다.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Default: /jk-status/</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Status Allow IP(*)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Server 상태 모니터링 URL에 접근 가능한 IP</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Default : 127.0.0.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Server 상태 모니터링 URL에 접근 가능한 IP이다.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Default: 127.0.0.1</p></td>
 </tr>
 </tbody>
 </table>
 <div class="olist arabic">
 <ol class="arabic" start="2">
 <li>
-<p>Load Balancer Info</p>
+<p>Load Balancer<br>
+부하 분산을 위해 Load Balancer의 기본 설정 및 Worker를 관리한다.<br>
+Load Balancer 영역에는 Overview 탭과 Configuration 탭이 존재하며, Overview 탭에서는 현재 생성되어 있는 Load Balancer의 전반적인 정보를 확인할 수 있고 Configuration 탭에서는 Load Balancer의 상세 내용을 구성할 수 있다.</p>
 </li>
 </ol>
 </div>
-<div class="paragraph">
-<p>(/conf/extra/workers.propertes,
-/conf/extra/uriworkermap/uriworkermap_\{Virtual Host ID}.properties,
-/conf/extra/vhost/\{Virtual Host ID}.conf 파일 관리)</p>
+<div class="imageblock">
+<div class="content">
+<img src="../resources/static/images/manual/server_4_web_server_jk_lb_overview.png" alt="server 4 web server jk lb overview">
+</div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 52. Load Balancer Info</caption>
+<caption class="title">Table 52. Load Balancer Info - Overview (JK)</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 50%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">항목(*는 필수값)</th>
+<th class="tableblock halign-left valign-top">설명</th>
+<th class="tableblock halign-left valign-top">비고</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Load Balancer ID</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">현재 생성되어 있는 Load Balancer의 ID이다.</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Target Server</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Load Balancer에 등록된 Worker의 기본 정보이다.<br>
+'Node Name/Server Name' 형식으로 출력된다.</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">URI Pattern Group ID</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">특정 URI Pattern에서 Load Balancer를 지정한 경우, 해당 URI Pattern이 속해있는 URI Pattern Group ID가 출력된다.</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="imageblock">
+<div class="content">
+<img src="../resources/static/images/manual/server_4_web_server_jk_lb_config.png" alt="server 4 web server jk lb config">
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 53. Load Balancer Info - Configuration (JK)</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 50%;">
@@ -11107,97 +11161,145 @@ OS에 keep alive 메시지를 보내서 방화벽이 inactive connection을 잘�
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Load Balancer ID(*)</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Load Balancer 를 구분하는 명칭</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Load Balancer의 이름이다.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">'lb_'라는 접두사가 추가된다.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Sticky Session</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Session ID를 기반으로 라우팅을 지원할지 여부</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Default : true</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Session Cookie</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Session Cookie Name을 변경하고자 할 경우 설정 + (WAS에서 Session Cookie Name 변경시 같이 변경해줘야 함)</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Default: JSESSIONID</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">URI Patterns(*)</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Web server로 들어온 요청들에 대해 URI패턴을 검사하여 WAS로 전달하는 uri mapping을 정의</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Session ID를 기반으로 라우팅을 지원할 지에 대한 여부이다.</p></td>
+<td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Method(*)</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Load Balancer 가 부하를 분산하기 적절한 worker를 판별하는데 사용할 메서드</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>다음과 같은 타입을 제공함</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>R[equest] : 요청수가 가장 적은 worker 선택. (Default)</p>
-</li>
-<li>
-<p>S[ession] : 연결된 세션이 가장 적은 worker 선택</p>
-</li>
-<li>
-<p>N[ext] : S[ession]과 비슷하지만 더 적은 수의 session을 분산해야 하는 경우 선택</p>
-</li>
-<li>
-<p>T[raffic] : JK와 AJP커넥터 사이에 네트워크 트래픽이 가장 작은 worker 선택</p>
-</li>
-<li>
-<p>B[usyness] : 요청 수를 기반으로 가장 부하가 적은 worker 선택 </p>
-</li>
-</ul>
-</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Load Balancer가 부하를 분산하기 적절한 Worker를 판별하는데 사용하는 방법을 지정한다.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">* R[equest] : 요청수가 가장 적은 Worker를 선택한다. (Default)<br>
+* S[ession] : 연결된 세션이 가장 적은 Worker를 선택한다.<br>
+* N[ext] : S[ession]과 비슷하지만 더 적은 수의 Session을 분산해야 하는 경우 선택한다.<br>
+* T[raffic] : JK와 AJP커넥터 사이에 네트워크 트래픽이 가장 작은 Worker를 선택한다.<br>
+* B[usyness] : 요청 수를 기반으로 가장 부하가 적은 Worker를 선택한다.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Redirect</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>해당 worker가 error 상태일 때 받은 요청을 대신 처리할
-failover worker를 설정</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Default : Round Robin</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">LB Factor</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>작업량 할당 비율. 해당 worker가 얼마나 많은 일을 할지 정의
-(5로 설정할 경우 1로 설정한 다른 worker보다 5배 더 많은 request를 받음)</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Session Cookie</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Session Cookie 이름을 변경하고자 하는 경우 설정한다.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Default: JSESSIONID</p></td>
 </tr>
 </tbody>
 </table>
 <div class="paragraph">
-<p>URI Pattern 정보는 /conf/extra/uriworkermap/uriworkermap_\{Virtual Host
-ID}.properties 파일에 관리된다.</p>
+<p>Worker는 Load Balancer Worker List 테이블의 Add Worker 버튼으로 추가한다.<br>
+Add Worker 버튼을 눌렀을 때 Worker를 추가할 수 있는 창이 화면에 출력되며, 사용자는 이 창에서 LENA Manager에서 관리하는 서버를 Worker를 선택할 수 있다.
+추가된 Worker는 아래와 같은 정보를 통해 관리된다.</p>
 </div>
-<div class="paragraph">
-<p>WAS List의 [+] 버튼을 통해 Load Balancer와 연계되는
-WAS를 추가할 수 있으며, 추가된 WAS의 ⓧ
-버튼을 통해 해당 WAS를 제외할 수 있다.</p>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 54. Load Balancer Worker List</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 50%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">항목(*는 필수값)</th>
+<th class="tableblock halign-left valign-top">설명</th>
+<th class="tableblock halign-left valign-top">비고</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Node Name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Worker가 가리키는 서버의 노드 이름이다.</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Server Name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Worker가 가리키는 서버의 이름이다.</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Server Type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Worker가 가리키는 서버의 유형이다.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">값으로 Standard 또는 Enterprise가 출력 된다.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Redirect</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">해당 Worker가 오류 상태일 때, 이 Worker가 받은 요청을 대신 처리 할 Failover Worker를 설정한다.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Default: NONE</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Load Balancing Factor</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">작업량 할당 비율으로, 해당 Worker가 다른 Worker들에 비해 얼마나 많은 일을 할 지 정의한다.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Default: 1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Route ID</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Worker의 Route ID이다.</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Order</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Worker들 간의 순서를 변경할 수 있다.</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="olist arabic">
+<ol class="arabic" start="3">
+<li>
+<p>URI Pattern Group<br>
+Web server로 들어온 요청들에 대해 URI 패턴을 검사하여 WAS로 전달하는 URI Mapping을 정의한다.</p>
+</li>
+</ol>
 </div>
-<div class="paragraph">
-<p>연계 WAS 정보는 /conf/extra/workers.properties 파일에
-관리된다.</p>
+<div class="imageblock">
+<div class="content">
+<img src="../resources/static/images/manual/server_4_web_server_jk_uri_pattern_group.png" alt="server 4 web server jk uri pattern group">
 </div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 55. URI Pattern Group (JK)</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 50%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">항목(*는 필수값)</th>
+<th class="tableblock halign-left valign-top">설명</th>
+<th class="tableblock halign-left valign-top">비고</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">URI Pattern Group ID(*)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">URI 패턴을 그룹화하고 관리하는 데 사용되는 이름이다.<br>
+Virtual Host에서 사용하는 URI Pattern Group일 경우, ID 옆에 어느 Virtual Host에서 사용하고 있는 지에 대한 정보가 함께 출력된다.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Group 생성 시 'uri_'라는 접두사가 추가된다.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mode</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">URI 패턴을 LENA Manager가 관리하는 형식으로 입력할 지, 사용자 임의로 입력할 지 지정한다. 본 항목에 따라 Patterns to be Included/Excluded 또는 URI Patterns로 입력하는 화면이 출력된다.<br>
+이미 저장된 패턴이 LENA Manager가 관리하는 방식이라면 Standard로, 사용자 임의 형식이라면 Manual로 자동 지정된다.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Standard: LENA Manager URI Rule에 따른 입력 방식<br>
+Manual: 사용자 임의 입력 방식</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Patterns to be Included</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">WAS로 전달 할 URI 패턴을 입력한다. 우측 Select box를 통해 Load Balancer를 선택해야 저장할 수 있다. ⓧ버튼을 통해 패턴을 삭제할 수 있다.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">모든 문자를 허용하는 의미의 Asterisk(*)를 사용할 수 있으며 Hash(#), Equal(=)은 허용되지 않는다.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Patterns to be Excluded</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">WAS로 전달 하지 않을 URI 패턴을 입력한다. ⓧ버튼을 통해 패턴을 삭제할 수 있다.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">모든 문자를 허용하는 의미의 Asterisk(*)를 사용할 수 있다.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">URI Patterns</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">사용자 임의의 패턴을 입력할 시 사용한다.</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -11211,6 +11313,316 @@ WAS를 추가할 수 있으며, 추가된 WAS의 ⓧ
 </td>
 </tr>
 </table>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_proxy"><a class="link" href="#_proxy">Proxy</a></h6>
+<div class="paragraph">
+<p>Proxy(mod_proxy)를 사용할 때의 설정 정보를 편집한다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../resources/static/images/manual/server_4_web_server_proxy.png" alt="server 4 web server proxy">
+</div>
+</div>
+<div class="paragraph">
+<p>Proxy 탭의 설정은 Connector Info, Load Balancer, URI Pattern Group의 세 가지 영역으로 나누어져 있다.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="1">
+<li>
+<p>Connector Info<br>
+Proxy의 기본 설정 값을 관리한다.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../resources/static/images/manual/server_4_web_server_proxy_connector_info.png" alt="server 4 web server proxy connector info">
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 56. Connector Info (Proxy)</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 50%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">항목(*는 필수값)</th>
+<th class="tableblock halign-left valign-top">설명</th>
+<th class="tableblock halign-left valign-top">비고</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Socket Connect Timeout(s)(*)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Apache httpd가 백엔드에 연결을 생성하는 것을 완료할때 까지 대기하는 시간(s)이다.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Default: 5</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DNS Lookup Interval(s)(*)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DNS 조회 간격. 기능을 사용하지 않으려면 0으로 설정한다.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Default: 10</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Request Read Timeout(s)(*)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Apache httpd가 백엔드에서 주고 받는 전송된 데이터를 기다리는 시간(초)이다.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Default: 300</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Background ServerFault Check Interval(s)(*)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">백엔드 서버와 연결된 Member가 오류 상태인 경우, 본 항목에 설정한 간격(초)으로 서버를 확인하고 서버가 정상 동작 하면 요청을 다시 전달한다. 기능을 사용하지 않으려면 0으로 설정한다.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Default: 10</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ServerFault Retry Time(s)(*)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">백엔드 서버와 연결된 Member가 오류 상태인 경우, Apache httpd timeout(초)이 만료될 때 까지 어떠한 요청도 해당 서버에 전달하지 않는다.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Background ServerFault Check Interval 항목이 0인 경우 수정 가능하다.<br>
+Default: 60</p></td>
+</tr>
+</tbody>
+</table>
+<div class="olist arabic">
+<ol class="arabic" start="2">
+<li>
+<p>Load Balancer<br>
+부하 분산을 위해 Load Balancer의 기본 설정 및 Member를 관리한다.<br>
+Load Balancer 영역에는 Overview 탭과 Configuration 탭이 존재하며, Overview 탭에서는 현재 생성되어 있는 Load Balancer의 전반적인 정보를 확인할 수 있고 Configuration 탭에서는 Load Balancer의 상세 내용을 구성할 수 있다.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../resources/static/images/manual/server_4_web_server_proxy_lb_overview.png" alt="server 4 web server proxy lb overview">
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 57. Load Balancer Info - Overview (Proxy)</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 50%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">항목(*는 필수값)</th>
+<th class="tableblock halign-left valign-top">설명</th>
+<th class="tableblock halign-left valign-top">비고</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Load Balancer ID</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">현재 생성되어 있는 Load Balancer의 ID이다.</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Target Server</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Load Balancer에 등록된 Member의 기본 정보이다.<br>
+'Node Name/Server Name' 또는 'Address:Port' 형식으로 출력된다.</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">URI Pattern Group ID</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">특정 URI Pattern에서 Load Balancer를 지정한 경우, 해당 URI Pattern이 속해있는 URI Pattern Group ID가 출력된다.</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="imageblock">
+<div class="content">
+<img src="../resources/static/images/manual/server_4_web_server_proxy_lb_config.png" alt="server 4 web server proxy lb config">
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 58. Load Balancer Info - Configuration (Proxy)</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 50%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">항목(*는 필수값)</th>
+<th class="tableblock halign-left valign-top">설명</th>
+<th class="tableblock halign-left valign-top">비고</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Load Balancer ID(*)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Load Balancer의 이름이다.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">'lb_'라는 접두사가 추가된다.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sticky Session</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Session ID를 기반으로 라우팅을 지원할 지에 대한 여부이다.</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Method(*)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Load Balancer가 부하를 분산하기 적절한 Member를 판별하는데 사용하는 방법을 지정한다.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">* R[equest] : 요청수가 가장 적은 Member를 선택한다. (Default)<br>
+* T[raffic] : 네트워크 트래픽이 가장 작은 Member를 선택한다.<br>
+* B[usyness] : 요청 수를 기반으로 가장 부하가 적은 Member를 선택한다.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Session Cookie</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Session Cookie 이름을 변경하고자 하는 경우 설정한다.</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Protocol Type(*)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Member의 프로토콜 타입을 지정한다. Member가 지정되어 있지 않은 경우에만 변경 가능하다.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Default: HTTP</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SSL Enable</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Proxy용 SSL/TLS 프로토콜 엔진을 사용한다.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">이 옵션은 설정이 불가능하며 오직 Protocol 설정에 따라 동작한다.<br>
+Default: HTTP인 경우 Off, HTTPS인 경우 On</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SSLProxyCheckPeerExpire</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">원격 서버 인증서가 만료되었는지 확인한다.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Default: On</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SSLProxyCheckPeerCN</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">원격 서버 인증서의 CN 필드를 확인한다.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Default: Off</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Member는 Load Balancer Member List 테이블의 Add Member 버튼으로 추가한다.<br>
+Add Member 버튼을 눌렀을 때 Member를 추가할 수 있는 창이 화면에 출력되며, 사용자는 이 창에서 LENA Manager에서 관리하는 서버를 Member로 선택하거나 직접 Member 정보를 입력하여 추가할 수 있다.</p>
+</div>
+<div class="paragraph">
+<p>추가된 Member는 아래와 같은 정보를 통해 관리된다.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 59. Load Balancer Member List</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 50%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">항목(*는 필수값)</th>
+<th class="tableblock halign-left valign-top">설명</th>
+<th class="tableblock halign-left valign-top">비고</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Target Server</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Member가 가리키는 서버의 기본 정보이다.<br>
+LENA Manager에서 관리하는 Member인 경우 Node Name/Server Name의 형태로, LENA Manager가 관리하지 않는 Member인 경우 Address:Port의 형태로 출력된다.</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Protocol Type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Member가 사용하는 프로토콜 유형이다.</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Redirect</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">해당 Member가 오류 상태일 때, 이 Member가 받은 요청을 대신 처리 할 Failover Member를 설정한다.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Default: NONE</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Load Balancing Factor</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">작업량 할당 비율으로, 해당 Member가 다른 Member들에 비해 얼마나 많은 일을 할 지 정의한다.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Default: 1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Route ID</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Member의 Route ID이다.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sticky Session을 사용하는 경우 필수로 입력해야 한다.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Order</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Member들 간의 순서를 변경할 수 있다.</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="olist arabic">
+<ol class="arabic" start="3">
+<li>
+<p>URI Pattern Group<br>
+Web server로 들어온 요청들에 대해 URI 패턴을 검사하여 WAS로 전달하는 URI Mapping을 정의한다.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../resources/static/images/manual/server_4_web_server_proxy_uri_standard.png" alt="server 4 web server proxy uri standard">
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 60. URI Pattern Group (Proxy)</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 50%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">항목(*는 필수값)</th>
+<th class="tableblock halign-left valign-top">설명</th>
+<th class="tableblock halign-left valign-top">비고</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">URI Pattern Group ID(*)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">URI 패턴을 그룹화하고 관리하는 데 사용되는 이름이다.<br>
+Virtual Host에서 사용하는 URI Pattern Group일 경우, ID 옆에 어느 Virtual Host에서 사용하고 있는 지에 대한 정보가 함께 출력된다.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Group 생성 시 'uri_'라는 접두사가 추가된다.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mode</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">URI 패턴을 LENA Manager가 관리하는 형식으로 입력할 지, 사용자 임의로 입력할 지 지정한다. 본 항목에 따라 Patterns to be Included/Excluded 또는 URI Patterns로 입력하는 화면이 출력된다.<br>
+이미 저장된 패턴이 LENA Manager가 관리하는 방식이라면 Standard로, 사용자 임의 형식이라면 Manual로 자동 지정된다.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Standard: LENA Manager URI Rule에 따른 입력 방식<br>
+Manual: 사용자 임의 입력 방식</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Patterns to be Included</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">WAS로 전달 할 URI 패턴을 입력한다. 우측 Select box를 통해 Load Balancer를 선택해야 저장할 수 있다. ⓧ버튼을 통해 패턴을 삭제할 수 있다.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">모든 문자를 허용하는 의미의 Asterisk(*)를 사용할 수 있으며 Hash(#), Equal(=)은 허용되지 않는다.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Patterns to be Excluded</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">WAS로 전달 하지 않을 URI 패턴을 입력한다. ⓧ버튼을 통해 패턴을 삭제할 수 있다.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">모든 문자를 허용하는 의미의 Asterisk(*)를 사용할 수 있다.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">URI Patterns</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">사용자 임의의 패턴을 입력할 시 사용한다.</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>설정을 변경할 경우 수정된 사항의 반영을 위하여 Server의 재기동이 필요하다</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
 </div>
 </div>
 <div class="sect4">
@@ -11238,7 +11650,7 @@ Virtual Host ID를 다른 Virtual Host ID로 변경해야 한다.</p>
 /conf/extra/ssl/ssl_\{Virtual Host ID}.conf 파일 관리)</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 53. Virtual Host 설정 정보</caption>
+<caption class="title">Table 61. Virtual Host 설정 정보</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 50%;">
@@ -11484,7 +11896,7 @@ Virtual Host ID를 다른 Virtual Host ID로 변경해야 한다.</p>
 </ol>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 54. Log Home</caption>
+<caption class="title">Table 62. Log Home</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 50%;">
@@ -11523,7 +11935,7 @@ Log Home Prefix항목에서 로그디렉토리 홈 경로 입력가능</p></td>
 Server가 시작하거나 동작하는데 문제가 발생시 여기에 설정된 위치의 파일을 먼저 확인한다.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 55. Error Log</caption>
+<caption class="title">Table 63. Error Log</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 50%;">
@@ -11560,7 +11972,7 @@ Server가 시작하거나 동작하는데 문제가 발생시 여기에 설정�
 <p>로그파일에 사용할 형식을 설정한다.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 56. Log Format</caption>
+<caption class="title">Table 64. Log Format</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 50%;">
@@ -11594,7 +12006,7 @@ Server가 시작하거나 동작하는데 문제가 발생시 여기에 설정�
 </ol>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 57. Log Format with logio</caption>
+<caption class="title">Table 65. Log Format with logio</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 50%;">
@@ -11631,7 +12043,7 @@ Server가 시작하거나 동작하는데 문제가 발생시 여기에 설정�
 <p>Request의 조건에 따라 환경변수를 설정할 때 사용한다.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 58. Env</caption>
+<caption class="title">Table 66. Env</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 50%;">
@@ -11780,7 +12192,7 @@ Node에 설치한 Session Server의 등록, 수정, 삭제가 가능하며, 시�
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.2.0/static/images/manual/server_5_session_server.png" alt="server 5 session server">
+<img src="../resources/static/images/manual/server_5_session_server.png" alt="server 5 session server">
 </div>
 <div class="title">Figure 7. Session Server List</div>
 </div>
@@ -11788,7 +12200,7 @@ Node에 설치한 Session Server의 등록, 수정, 삭제가 가능하며, 시�
 <p>Session Server의 속성은 아래와 같다.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 59. Session Server 속성</caption>
+<caption class="title">Table 67. Session Server 속성</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 50%;">
@@ -12072,7 +12484,7 @@ Session Server 목록에서 Server를 선택하면 설정 정보를 관리하는
 </ol>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 60. Configuration</caption>
+<caption class="title">Table 68. Configuration</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 50%;">
@@ -12134,7 +12546,7 @@ Session Server 목록에서 Server를 선택하면 설정 정보를 관리하는
 <p><span class="button">Refresh 버튼</span> 을 클릭하면 리스트를 갱신해준다.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 61. Connected WAS List</caption>
+<caption class="title">Table 69. Connected WAS List</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 50%;">
@@ -12171,7 +12583,7 @@ Session Server 목록에서 Server를 선택하면 설정 정보를 관리하는
 <p><span class="button">Refresh 버튼</span> 을 클릭하면 리스트를 갱신해준다.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 62. Status</caption>
+<caption class="title">Table 70. Status</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -12294,7 +12706,7 @@ Session Server 목록에서 Server를 선택하면 설정 정보를 관리하는
 </ol>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 63. Log Home</caption>
+<caption class="title">Table 71. Log Home</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 50%;">
@@ -12371,7 +12783,7 @@ ADMIN &gt; Manager Environment &gt; Manager Configuration 항목에서
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.2.0/static/images/manual/server_cluster_overview.png" alt="server cluster overview">
+<img src="../resources/static/images/manual/server_cluster_overview.png" alt="server cluster overview">
 </div>
 <div class="title">Figure 8. Server Cluster 화면</div>
 </div>
@@ -12384,7 +12796,7 @@ ADMIN &gt; Manager Environment &gt; Manager Configuration 항목에서
 <p>Server Cluster List 테이블에서 제공되는 속성은 아래와 같다.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 64. Server Cluster 속성</caption>
+<caption class="title">Table 72. Server Cluster 속성</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 50%;">
@@ -12531,7 +12943,7 @@ Server Cluster에 대한 Overview 화면이 출력된다.</p>
 <p>Server Cluster 상세 영역의 항목 및 버튼이 제공하는 기능은 아래와 같다.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 65. Server Cluster 상세 영역의 항목 및 버튼</caption>
+<caption class="title">Table 73. Server Cluster 상세 영역의 항목 및 버튼</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -12951,7 +13363,7 @@ Server에서 동일한 내용으로 유지할 파일 목록이다. Server Cluste
 </ul>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 66. Clone 팝업창 항목 설명</caption>
+<caption class="title">Table 74. Clone 팝업창 항목 설명</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -13054,7 +13466,7 @@ Rolling Restart 영역에서는 선택된 서버들이 순차적으로 재기동
 <p>팝업창의 Action 항목에는 <span class="button">Force Restart 버튼</span> 과 <span class="button">Next 버튼</span> 이 제공된다.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 67. Rolling Restart 팝업창 항목 설명</caption>
+<caption class="title">Table 75. Rolling Restart 팝업창 항목 설명</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 66.6667%;">
@@ -13097,7 +13509,7 @@ Rolling Restart 영역에서는 선택된 서버들이 순차적으로 재기동
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 68. Rolling Restart 팝업창 버튼 설명</caption>
+<caption class="title">Table 76. Rolling Restart 팝업창 버튼 설명</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -13218,7 +13630,7 @@ Server에서 동일한 내용으로 유지할 파일 목록이다. Server Cluste
 </ul>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 69. Clone 팝업창 항목 설명</caption>
+<caption class="title">Table 77. Clone 팝업창 항목 설명</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -13311,7 +13723,7 @@ Server에서 동일한 내용으로 유지할 파일 목록이다. Server Cluste
 Rolling Restart 영역에서는 선택된 서버들이 순차적으로 재기동을 수행하는 상태를 확인할 수 있다.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 70. Rolling Restart 팝업창 항목 설명</caption>
+<caption class="title">Table 78. Rolling Restart 팝업창 항목 설명</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 66.6667%;">
@@ -13450,7 +13862,7 @@ Init-Script에는 필요한 환경변수를 설정하고, scale.sh을 호출하�
 </ul>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 71. scale.sh 참조 환경변수</caption>
+<caption class="title">Table 79. scale.sh 참조 환경변수</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -13651,7 +14063,7 @@ if [ &quot;$LENA_WEB_SCALING&quot; = &quot;Y&quot; ]; then $LENA_WEB_HOME/bin/sc
 stop-agent.sh의 옵션 정보는 다음과 같다.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 72. stop-agent.sh의 옵션 정보</caption>
+<caption class="title">Table 80. stop-agent.sh의 옵션 정보</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -13904,7 +14316,7 @@ stop-agent.sh -ur 10.80.44.55:78700 -f</code></pre>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.2.0/static/images/manual/resource_database.png" alt="resource database">
+<img src="../resources/static/images/manual/resource_database.png" alt="resource database">
 </div>
 <div class="title">Figure 9. Database 목록 조회 화면</div>
 </div>
@@ -13974,7 +14386,7 @@ stop-agent.sh -ur 10.80.44.55:78700 -f</code></pre>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.2.0/static/images/manual/resource_datasource.png" alt="resource datasource">
+<img src="../resources/static/images/manual/resource_datasource.png" alt="resource datasource">
 </div>
 <div class="title">Figure 10. DataSource 목록 조회 화면</div>
 </div>
@@ -14037,7 +14449,7 @@ stop-agent.sh -ur 10.80.44.55:78700 -f</code></pre>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.2.0/static/images/manual/resource_datasource_detail.png" alt="resource datasource detail">
+<img src="../resources/static/images/manual/resource_datasource_detail.png" alt="resource datasource detail">
 </div>
 <div class="title">Figure 11. DataSource 상세 정보 화면</div>
 </div>
@@ -14248,7 +14660,7 @@ stop-agent.sh -ur 10.80.44.55:78700 -f</code></pre>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.2.0/static/images/manual/resource_jta.png" alt="resource jta">
+<img src="../resources/static/images/manual/resource_jta.png" alt="resource jta">
 </div>
 <div class="title">Figure 12. JTA 목록 조회 화면</div>
 </div>
@@ -14285,7 +14697,7 @@ stop-agent.sh -ur 10.80.44.55:78700 -f</code></pre>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.2.0/static/images/manual/resource_jta_detail.png" alt="resource jta detail">
+<img src="../resources/static/images/manual/resource_jta_detail.png" alt="resource jta detail">
 </div>
 <div class="title">Figure 13. JTA 상세 정보 화면</div>
 </div>
@@ -14435,7 +14847,7 @@ stop-agent.sh -ur 10.80.44.55:78700 -f</code></pre>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.2.0/static/images/manual/resource_jms.png" alt="resource jms">
+<img src="../resources/static/images/manual/resource_jms.png" alt="resource jms">
 </div>
 <div class="title">Figure 14. JMS 목록 조회 화면</div>
 </div>
@@ -14475,7 +14887,7 @@ stop-agent.sh -ur 10.80.44.55:78700 -f</code></pre>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.2.0/static/images/manual/resource_jms_detail.png" alt="resource jms detail">
+<img src="../resources/static/images/manual/resource_jms_detail.png" alt="resource jms detail">
 </div>
 <div class="title">Figure 15. JMS 상세 정보 화면</div>
 </div>
@@ -14625,7 +15037,7 @@ stop-agent.sh -ur 10.80.44.55:78700 -f</code></pre>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.2.0/static/images/manual/resource_application.png" alt="resource application">
+<img src="../resources/static/images/manual/resource_application.png" alt="resource application">
 </div>
 <div class="title">Figure 16. Application 목록 조회 화면</div>
 </div>
@@ -14669,7 +15081,7 @@ stop-agent.sh -ur 10.80.44.55:78700 -f</code></pre>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.2.0/static/images/manual/resource_application_detail.png" alt="resource application detail">
+<img src="../resources/static/images/manual/resource_application_detail.png" alt="resource application detail">
 </div>
 <div class="title">Figure 17. Application 상세 정보 화면</div>
 </div>
@@ -14868,19 +15280,19 @@ stop-agent.sh -ur 10.80.44.55:78700 -f</code></pre>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.2.0/static/images/manual/diagnostics_monitoring_dashboard_node_tab.png" alt="diagnostics monitoring dashboard node tab">
+<img src="../resources/static/images/manual/diagnostics_monitoring_dashboard_node_tab.png" alt="diagnostics monitoring dashboard node tab">
 </div>
 <div class="title">Figure 18. Monitoring Dashboard의 Node 탭 화면</div>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.2.0/static/images/manual/diagnostics_monitoring_dashboard_cluster_tab.png" alt="diagnostics monitoring dashboard cluster tab">
+<img src="../resources/static/images/manual/diagnostics_monitoring_dashboard_cluster_tab.png" alt="diagnostics monitoring dashboard cluster tab">
 </div>
 <div class="title">Figure 19. Monitoring Dashboard의 Server Cluster 탭 화면</div>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.2.0/static/images/manual/container/monitoring_serviceCluster.png" alt="monitoring serviceCluster">
+<img src="../resources/static/images/manual/container/monitoring_serviceCluster.png" alt="monitoring serviceCluster">
 </div>
 <div class="title">Figure 20. Monitoring Dashboard의 Service Cluster 탭 화면</div>
 </div>
@@ -14902,7 +15314,7 @@ stop-agent.sh -ur 10.80.44.55:78700 -f</code></pre>
 <p>Monitoring Dashboard 화면에서 사용된 속성들은 아래와 같다. 사용률 형태로 제공하는 정보의 색상은 Status Range 속성을 이용해 변경할 수 있다. (이 장의 하위 절인 모니터링 기본 설정 참고)</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 73. Node 상태</caption>
+<caption class="title">Table 81. Node 상태</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 50%;">
@@ -14934,7 +15346,7 @@ stop-agent.sh -ur 10.80.44.55:78700 -f</code></pre>
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 74. Application Server 상태</caption>
+<caption class="title">Table 82. Application Server 상태</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 50%;">
@@ -14981,7 +15393,7 @@ stop-agent.sh -ur 10.80.44.55:78700 -f</code></pre>
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 75. Web Server 상태</caption>
+<caption class="title">Table 83. Web Server 상태</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 50%;">
@@ -15028,7 +15440,7 @@ stop-agent.sh -ur 10.80.44.55:78700 -f</code></pre>
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 76. Session Server 상태</caption>
+<caption class="title">Table 84. Session Server 상태</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 50%;">
@@ -15073,7 +15485,7 @@ stop-agent.sh -ur 10.80.44.55:78700 -f</code></pre>
 <p>각 서버를 즉시 제어할 수 있는 기능을 다음과 같이 함께 제공된다.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 77. Application Server 제어 기능</caption>
+<caption class="title">Table 85. Application Server 제어 기능</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 50%;">
@@ -15128,7 +15540,7 @@ stop-agent.sh -ur 10.80.44.55:78700 -f</code></pre>
 <td class="content">
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.2.0/static/images/manual/diagnostics_current_status_dump.png" alt="diagnostics current status dump">
+<img src="../resources/static/images/manual/diagnostics_current_status_dump.png" alt="diagnostics current status dump">
 </div>
 <div class="title">Figure 21. Dump 창</div>
 </div>
@@ -15149,7 +15561,7 @@ Thread Dump는 {log_home}/logs/tdump, Active Service Dump는 {log_home}/logs/sdu
 <p>Dump 관리 화면의 항목은 다음과 같다.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 78. Dump 화면 항목</caption>
+<caption class="title">Table 86. Dump 화면 항목</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -15187,7 +15599,7 @@ Thread Dump는 {log_home}/logs/tdump, Active Service Dump는 {log_home}/logs/sdu
 </table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 79. Web Server제어 기능</caption>
+<caption class="title">Table 87. Web Server제어 기능</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 50%;">
@@ -15240,7 +15652,7 @@ Thread Dump는 {log_home}/logs/tdump, Active Service Dump는 {log_home}/logs/sdu
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.2.0/static/images/manual/diagnostics_current_status_system.png" alt="diagnostics current status system">
+<img src="../resources/static/images/manual/diagnostics_current_status_system.png" alt="diagnostics current status system">
 </div>
 <div class="title">Figure 22. System 탭</div>
 </div>
@@ -15296,7 +15708,7 @@ Total Memory(서버에서 사용중인 총 메모리)가 있다.
 Thread List의 항목은 아래와 같다.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 80. Thread List 항목</caption>
+<caption class="title">Table 88. Thread List 항목</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 50%;">
@@ -15366,7 +15778,7 @@ Thread List의 항목은 아래와 같다.</p>
 <p><span class="button">+ 버튼</span> 을 눌러 다음과 같은 상세 정보를 확인할 수 있다.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 81. Thread 상세 정보 항목</caption>
+<caption class="title">Table 89. Thread 상세 정보 항목</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 50%;">
@@ -15470,7 +15882,7 @@ Thread List의 항목은 아래와 같다.</p>
 해당 정보 내 항목은 Thread List 항목과 유사하며, 다음과 같은 추가 항목이 존재한다.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 82. Active Service List 항목</caption>
+<caption class="title">Table 90. Active Service List 항목</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 50%;">
@@ -15500,7 +15912,7 @@ Thread List의 항목은 아래와 같다.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.2.0/static/images/manual/diagnostics_current_status_datasource.png" alt="diagnostics current status datasource">
+<img src="../resources/static/images/manual/diagnostics_current_status_datasource.png" alt="diagnostics current status datasource">
 </div>
 <div class="title">Figure 23. DataSource 탭 화면</div>
 </div>
@@ -15542,7 +15954,7 @@ Active Connections가 붉은 점선에 근접할 경우 유의해야 한다.
 설정 항목은 다음과 같다.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 83. 모니터링 관련 기본 설정 항목</caption>
+<caption class="title">Table 91. 모니터링 관련 기본 설정 항목</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 50%;">
@@ -15596,7 +16008,7 @@ Active Connections가 붉은 점선에 근접할 경우 유의해야 한다.
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.2.0/static/images/manual/diagnostics_analysis_dashboard.png" alt="diagnostics analysis dashboard">
+<img src="../resources/static/images/manual/diagnostics_analysis_dashboard.png" alt="diagnostics analysis dashboard">
 </div>
 <div class="title">Figure 24. Analysis Dashboard</div>
 </div>
@@ -15623,7 +16035,7 @@ Active Connections가 붉은 점선에 근접할 경우 유의해야 한다.
 <p>Chart에서 X축과 Y축의 의미는 다음과 같다.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 84. Performance Map Chart의 X, Y축 의미</caption>
+<caption class="title">Table 92. Performance Map Chart의 X, Y축 의미</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 50%;">
@@ -15673,7 +16085,7 @@ Active Connections가 붉은 점선에 근접할 경우 유의해야 한다.
 <p>Chart 상단에 표시되는 System 상태 요약 정보는 다음과 같다.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 85. System 상태 요약 정보 항목</caption>
+<caption class="title">Table 93. System 상태 요약 정보 항목</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 50%;">
@@ -15719,7 +16131,7 @@ Dashboard에 처음 진입하면 전체 시스템이 표시되며, Chart 내에�
 <p>시스템 아이콘 위에서 마우스 우클릭을 하면 다음과 같은 기능을 수행할 수 있다.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 86. 시스템 아이콘에서 우클릭 시 사용 가능한 기능</caption>
+<caption class="title">Table 94. 시스템 아이콘에서 우클릭 시 사용 가능한 기능</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 50%;">
@@ -15762,7 +16174,7 @@ WEB, WAS, SESSION 서버의 현재 상태가 좌측에 표시된다.
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.2.0/static/images/manual/diagnostics_analysis_system_detail.png" alt="diagnostics analysis system detail">
+<img src="../resources/static/images/manual/diagnostics_analysis_system_detail.png" alt="diagnostics analysis system detail">
 </div>
 <div class="title">Figure 25. System Detail 화면</div>
 </div>
@@ -15785,7 +16197,7 @@ WEB, WAS, SESSION 서버의 현재 상태가 좌측에 표시된다.
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.2.0/static/images/manual/diagnostics_analysis_system_detail_xlog.png" alt="diagnostics analysis system detail xlog">
+<img src="../resources/static/images/manual/diagnostics_analysis_system_detail_xlog.png" alt="diagnostics analysis system detail xlog">
 </div>
 <div class="title">Figure 26. Transaction 상세 정보 화면</div>
 </div>
@@ -15794,7 +16206,7 @@ WEB, WAS, SESSION 서버의 현재 상태가 좌측에 표시된다.
 각 유형 별 정보에서 볼 수 있는 항목은 다음과 같다.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 87. CLIENT 관련 데이터의 항목</caption>
+<caption class="title">Table 95. CLIENT 관련 데이터의 항목</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 50%;">
@@ -15846,7 +16258,7 @@ WEB, WAS, SESSION 서버의 현재 상태가 좌측에 표시된다.
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 88. WEB 관련 데이터의 항목</caption>
+<caption class="title">Table 96. WEB 관련 데이터의 항목</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 50%;">
@@ -15876,7 +16288,7 @@ WEB, WAS, SESSION 서버의 현재 상태가 좌측에 표시된다.
 </ul>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 89. 기본정보</caption>
+<caption class="title">Table 97. 기본정보</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 50%;">
@@ -15940,7 +16352,7 @@ WEB, WAS, SESSION 서버의 현재 상태가 좌측에 표시된다.
 </ul>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 90. 프로파일 정보</caption>
+<caption class="title">Table 98. 프로파일 정보</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 50%;">
@@ -16021,7 +16433,7 @@ WEB, WAS, SESSION 서버의 현재 상태가 좌측에 표시된다.
 <p>현재 검출된 진단 결과 건수, 오늘 발생한 전체 진단 결과 건수, 지난 날(Default: 1일 전) 발생한 진단 결과 건수의 요약 정보를 보여준다.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 91. 분석 요약 정보 항목</caption>
+<caption class="title">Table 99. 분석 요약 정보 항목</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 50%;">
@@ -16123,7 +16535,7 @@ WAS가 전송한 이벤트 정보는 Manager의 DB에 일정 기간(3달) 동안
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.2.0/static/images/manual/diagnostics_event_dashboard.png" alt="diagnostics event dashboard">
+<img src="../resources/static/images/manual/diagnostics_event_dashboard.png" alt="diagnostics event dashboard">
 </div>
 <div class="title">Figure 27. Event Dashboard</div>
 </div>
@@ -16136,7 +16548,7 @@ WAS가 전송한 이벤트 정보는 Manager의 DB에 일정 기간(3달) 동안
 <p>이벤트 목록의 항목은 다음과 같다.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 92. Event List 항목</caption>
+<caption class="title">Table 100. Event List 항목</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 50%;">
@@ -16228,7 +16640,7 @@ WAS가 전송한 이벤트 정보는 Manager의 DB에 일정 기간(3달) 동안
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.2.0/static/images/manual/diagnostics_event_detail.png" alt="diagnostics event detail">
+<img src="../resources/static/images/manual/diagnostics_event_detail.png" alt="diagnostics event detail">
 </div>
 <div class="title">Figure 28. Event 상세 정보 화면</div>
 </div>
@@ -16236,7 +16648,7 @@ WAS가 전송한 이벤트 정보는 Manager의 DB에 일정 기간(3달) 동안
 <p>Event 상세 정보의 공통 항목은 다음과 같다.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 93. Event 상세 정보의 공통 항목(Event Common Info)</caption>
+<caption class="title">Table 101. Event 상세 정보의 공통 항목(Event Common Info)</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 50%;">
@@ -16334,7 +16746,7 @@ WAS가 전송한 이벤트 정보는 Manager의 DB에 일정 기간(3달) 동안
 <p>Event 별로 서로 다른 상세 정보 항목은 다음과 같다.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 94. Out Of Memory 이벤트 상세 정보 항목(Event Detail Info)</caption>
+<caption class="title">Table 102. Out Of Memory 이벤트 상세 정보 항목(Event Detail Info)</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 50%;">
@@ -16356,7 +16768,7 @@ WAS가 전송한 이벤트 정보는 Manager의 DB에 일정 기간(3달) 동안
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 95. Full GC 이벤트 상세 정보 항목(Event Detail Info)</caption>
+<caption class="title">Table 103. Full GC 이벤트 상세 정보 항목(Event Detail Info)</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 50%;">
@@ -16403,7 +16815,7 @@ WAS가 전송한 이벤트 정보는 Manager의 DB에 일정 기간(3달) 동안
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 96. Stuck Thread 이벤트 상세 정보 항목(Event Detail Info)</caption>
+<caption class="title">Table 104. Stuck Thread 이벤트 상세 정보 항목(Event Detail Info)</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 50%;">
@@ -16446,7 +16858,7 @@ WAS가 전송한 이벤트 정보는 Manager의 DB에 일정 기간(3달) 동안
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 97. Error 이벤트 상세 정보 항목(Event Detail Info)</caption>
+<caption class="title">Table 105. Error 이벤트 상세 정보 항목(Event Detail Info)</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 50%;">
@@ -16499,7 +16911,7 @@ WAS가 전송한 이벤트 정보는 Manager의 DB에 일정 기간(3달) 동안
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.2.0/static/images/manual/diagnostics_statistics.png" alt="diagnostics statistics">
+<img src="../resources/static/images/manual/diagnostics_statistics.png" alt="diagnostics statistics">
 </div>
 <div class="title">Figure 29. Statistics 화면</div>
 </div>
@@ -16545,7 +16957,7 @@ Report는 7일간 보관되며 오래된 Report는 자동으로 삭제된다.</p
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.2.0/static/images/manual/diagnostics_report_list.png" alt="diagnostics report list">
+<img src="../resources/static/images/manual/diagnostics_report_list.png" alt="diagnostics report list">
 </div>
 <div class="title">Figure 30. 진단/대응 리포트 목록 화면</div>
 </div>
@@ -16560,7 +16972,7 @@ Report는 7일간 보관되며 오래된 Report는 자동으로 삭제된다.</p
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.2.0/static/images/manual/diagnostics_report.png" alt="diagnostics report">
+<img src="../resources/static/images/manual/diagnostics_report.png" alt="diagnostics report">
 </div>
 <div class="title">Figure 31. 진단/대응 리포트 화면</div>
 </div>
@@ -16591,7 +17003,7 @@ Fault 상황은 진단/대응 Rule에 설정한 설정 내용의 모두를 만�
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.2.0/static/images/manual/diagnostics_report_detail.png" alt="diagnostics report detail">
+<img src="../resources/static/images/manual/diagnostics_report_detail.png" alt="diagnostics report detail">
 </div>
 <div class="title">Figure 32. 진단/대응 리포트 상세 정보</div>
 </div>
@@ -16599,7 +17011,7 @@ Fault 상황은 진단/대응 Rule에 설정한 설정 내용의 모두를 만�
 <p>Report 상세 정보의 항목은 다음과 같다.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 98. Report 상세 정보 항목</caption>
+<caption class="title">Table 106. Report 상세 정보 항목</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 50%;">
@@ -16647,7 +17059,7 @@ Fault 상황은 진단/대응 Rule에 설정한 설정 내용의 모두를 만�
 <p>Request Full 진단 Report의 Back Data는, 가장 많이 호출된 5개의 서비스 정보이다.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 99. Request Full 진단 Report의 Back Data 항목</caption>
+<caption class="title">Table 107. Request Full 진단 Report의 Back Data 항목</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 50%;">
@@ -16692,7 +17104,7 @@ Fault 상황은 진단/대응 Rule에 설정한 설정 내용의 모두를 만�
 <p>대량 DB Data 요청 진단 Report의 Back Data는, 대량 DB Data 요청을 가장 많이 한 5개의 서비스 정보이다.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 100. 대량 DB Data 요청 진단 Report의 Back Data 항목</caption>
+<caption class="title">Table 108. 대량 DB Data 요청 진단 Report의 Back Data 항목</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 50%;">
@@ -16727,7 +17139,7 @@ Fault 상황은 진단/대응 Rule에 설정한 설정 내용의 모두를 만�
 <p>DB Conn Full 진단 Report의 Back Data는, 과다 점유된 DataSource Connection Pool 정보이다.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 101. DB Conn Full 진단 Report의 Back Data 항목</caption>
+<caption class="title">Table 109. DB Conn Full 진단 Report의 Back Data 항목</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 50%;">
@@ -16757,7 +17169,7 @@ Fault 상황은 진단/대응 Rule에 설정한 설정 내용의 모두를 만�
 <p>Long Transaction 진단 Report의 Back Data는, 진단 대상 서비스 중에서 가장 오래 걸린 5개의 서비스이다.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 102. Long Transaction 진단 Report의 Back Data 항목</caption>
+<caption class="title">Table 110. Long Transaction 진단 Report의 Back Data 항목</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 50%;">
@@ -16802,7 +17214,7 @@ Fault 상황은 진단/대응 Rule에 설정한 설정 내용의 모두를 만�
 <p>Peak Control 진단 Report의 Back Data는, 진단 대상 서비스 중에서 가장 오래 걸린 5개의 서비스이다.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 103. Peak Control 진단 Report의 Back Data 항목</caption>
+<caption class="title">Table 111. Peak Control 진단 Report의 Back Data 항목</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 50%;">
@@ -16847,7 +17259,7 @@ Fault 상황은 진단/대응 Rule에 설정한 설정 내용의 모두를 만�
 <p>OOM 진단 Report의 Back Data는, OOM 발생 여부 및 메모리 사용 정보이다.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 104. OOM 진단 Report의 Back Data 항목</caption>
+<caption class="title">Table 112. OOM 진단 Report의 Back Data 항목</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 50%;">
@@ -16892,7 +17304,7 @@ Fault 상황은 진단/대응 Rule에 설정한 설정 내용의 모두를 만�
 <p>Hang 진단 Report의 Back Data는, 서버 상태 및 시스템 리소스 정보이다.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 105. Hang 진단 Report의 Back Data 항목</caption>
+<caption class="title">Table 113. Hang 진단 Report의 Back Data 항목</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 50%;">
@@ -16937,7 +17349,7 @@ Fault 상황은 진단/대응 Rule에 설정한 설정 내용의 모두를 만�
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.2.0/static/images/manual/diagnostics_alert.png" alt="diagnostics alert">
+<img src="../resources/static/images/manual/diagnostics_alert.png" alt="diagnostics alert">
 </div>
 <div class="title">Figure 33. 진단/대응 결과 알림</div>
 </div>
@@ -16947,7 +17359,7 @@ Fault 상황은 진단/대응 Rule에 설정한 설정 내용의 모두를 만�
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.2.0/static/images/manual/diagnostics_alert_list.png" alt="diagnostics alert list">
+<img src="../resources/static/images/manual/diagnostics_alert_list.png" alt="diagnostics alert list">
 </div>
 <div class="title">Figure 34. 진단/대응 결과 알림 목록 일괄 확인</div>
 </div>
@@ -17084,7 +17496,7 @@ OOM이 발생하면 Server의 정상적인 동작을 보장할 수 없으므로,
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.2.0/static/images/manual/diagnostics_current_status_diagnostics_rule_setting.png" alt="diagnostics current status diagnostics rule setting">
+<img src="../resources/static/images/manual/diagnostics_current_status_diagnostics_rule_setting.png" alt="diagnostics current status diagnostics rule setting">
 </div>
 <div class="title">Figure 35. Diagnostics Rule Setting 화면</div>
 </div>
@@ -17120,7 +17532,7 @@ OOM이 발생하면 Server의 정상적인 동작을 보장할 수 없으므로,
 <p>진단 유형 별 Rule 설정 항목을 다음과 같다.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 106. Request Full 진단 Rule</caption>
+<caption class="title">Table 114. Request Full 진단 Rule</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 50%;">
@@ -17186,7 +17598,7 @@ OOM이 발생하면 Server의 정상적인 동작을 보장할 수 없으므로,
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 107. 대량 DB Data 요청 진단 Rule</caption>
+<caption class="title">Table 115. 대량 DB Data 요청 진단 Rule</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 50%;">
@@ -17257,7 +17669,7 @@ OOM이 발생하면 Server의 정상적인 동작을 보장할 수 없으므로,
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 108. DB Conn Full 진단 Rule</caption>
+<caption class="title">Table 116. DB Conn Full 진단 Rule</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 50%;">
@@ -17323,7 +17735,7 @@ OOM이 발생하면 Server의 정상적인 동작을 보장할 수 없으므로,
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 109. Long Transaction 진단 Rule</caption>
+<caption class="title">Table 117. Long Transaction 진단 Rule</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 50%;">
@@ -17399,7 +17811,7 @@ OOM이 발생하면 Server의 정상적인 동작을 보장할 수 없으므로,
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 110. Hang 진단 Rule</caption>
+<caption class="title">Table 118. Hang 진단 Rule</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 50%;">
@@ -17504,7 +17916,7 @@ OOM이 발생하면 Server의 정상적인 동작을 보장할 수 없으므로,
 </table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 111. OOM 진단 Rule</caption>
+<caption class="title">Table 119. OOM 진단 Rule</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 50%;">
@@ -17578,7 +17990,7 @@ OOM이 발생하면 Server의 정상적인 동작을 보장할 수 없으므로,
 </tbody>
 </table>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 112. Peak Control 진단 Rule</caption>
+<caption class="title">Table 120. Peak Control 진단 Rule</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 50%;">
@@ -17665,7 +18077,7 @@ OOM이 발생하면 Server의 정상적인 동작을 보장할 수 없으므로,
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.2.0/static/images/manual/diagnostics_current_status_server_rule_mapping.png" alt="diagnostics current status server rule mapping">
+<img src="../resources/static/images/manual/diagnostics_current_status_server_rule_mapping.png" alt="diagnostics current status server rule mapping">
 </div>
 <div class="title">Figure 36. 진단 Rule Mapping 화면</div>
 </div>
@@ -17674,7 +18086,7 @@ OOM이 발생하면 Server의 정상적인 동작을 보장할 수 없으므로,
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.2.0/static/images/manual/diagnostics_current_status_server_rule_setting.png" alt="diagnostics current status server rule setting">
+<img src="../resources/static/images/manual/diagnostics_current_status_server_rule_setting.png" alt="diagnostics current status server rule setting">
 </div>
 <div class="title">Figure 37. Server Rule Setting 화면</div>
 </div>
@@ -17721,7 +18133,7 @@ Session을 찾기 위해서는 Cluster된 Session Server가 기동중이어야 �
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.2.0/static/images/manual/diagnostics_session_trace.png" alt="diagnostics session trace">
+<img src="../resources/static/images/manual/diagnostics_session_trace.png" alt="diagnostics session trace">
 </div>
 <div class="title">Figure 38. Session Trace 화면</div>
 </div>
@@ -17729,7 +18141,7 @@ Session을 찾기 위해서는 Cluster된 Session Server가 기동중이어야 �
 <p>조회 결과 항목은 다음과 같다.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 113. Session Trace 조회 결과 항목</caption>
+<caption class="title">Table 121. Session Trace 조회 결과 항목</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 50%;">
@@ -17793,7 +18205,7 @@ Session을 찾기 위해서는 Cluster된 Session Server가 기동중이어야 �
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.2.0/static/images/manual/diagnostics_event_trace.png" alt="diagnostics event trace">
+<img src="../resources/static/images/manual/diagnostics_event_trace.png" alt="diagnostics event trace">
 </div>
 <div class="title">Figure 39. Event Trace 화면</div>
 </div>
@@ -17803,7 +18215,7 @@ Session을 찾기 위해서는 Cluster된 Session Server가 기동중이어야 �
 검색 결과에서 Status 항목은 발생한 이벤트의 중요도를 의미한다.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 114. Event Trace 검색 결과 항목</caption>
+<caption class="title">Table 122. Event Trace 검색 결과 항목</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 50%;">
@@ -17859,7 +18271,7 @@ Session을 찾기 위해서는 Cluster된 Session Server가 기동중이어야 �
 각 항목은 다음과 같다.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 115. Event Trace 정보의 상세 정보 항목</caption>
+<caption class="title">Table 123. Event Trace 정보의 상세 정보 항목</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 50%;">
@@ -17924,7 +18336,7 @@ Session을 찾기 위해서는 Cluster된 Session Server가 기동중이어야 �
 <p>Trace되는 이벤트는 아래와 같다.(Event Code는 Log 파일을 보면 확인할 수 있다. 화면에서는 코드를 문장으로 풀이해 보여준다.)</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 116. Trace되는 이벤트 코드 및 설명</caption>
+<caption class="title">Table 124. Trace되는 이벤트 코드 및 설명</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 50%;">
@@ -17992,7 +18404,7 @@ Session을 찾기 위해서는 Cluster된 Session Server가 기동중이어야 �
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.2.0/static/images/manual/diagnostics_trace_setting.png" alt="diagnostics trace setting">
+<img src="../resources/static/images/manual/diagnostics_trace_setting.png" alt="diagnostics trace setting">
 </div>
 <div class="title">Figure 40. Trace Setting 화면</div>
 </div>
@@ -18000,7 +18412,7 @@ Session을 찾기 위해서는 Cluster된 Session Server가 기동중이어야 �
 <p>Trace 설정 항목은 아래와 같다.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 117. Trace Setting 항목</caption>
+<caption class="title">Table 125. Trace Setting 항목</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 50%;">
@@ -18087,7 +18499,7 @@ TunA APM 메뉴의 구성은 아래와 같다.</p>
 <h5 id="_tuna_연결_정보_입력"><a class="link" href="#_tuna_연결_정보_입력">TunA 연결 정보 입력</a></h5>
 <div class="imageblock text-center">
 <div class="content">
-<img src="/resources/1.3.2.0/static/images/manual/diagnostics_tuna_connection_1.png" alt="diagnostics tuna connection 1">
+<img src="../resources/static/images/manual/diagnostics_tuna_connection_1.png" alt="diagnostics tuna connection 1">
 </div>
 <div class="title">Figure 41. TunA 연결 정보 입력 화면</div>
 </div>
@@ -18137,7 +18549,7 @@ TunA APM 메뉴의 구성은 아래와 같다.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.2.0/static/images/manual/diagnostics_tuna_connection_1_action.png" alt="image" width="150" height="50">
+<img src="../resources/static/images/manual/diagnostics_tuna_connection_1_action.png" alt="image" width="150" height="50">
 </div>
 <div class="title">Figure 42. TunA 연결 정보 입력 후 Action 컬럼</div>
 </div>
@@ -18172,7 +18584,7 @@ TunA APM 메뉴의 구성은 아래와 같다.</p>
 <h5 id="_tuna_사용자_정보_입력"><a class="link" href="#_tuna_사용자_정보_입력">TunA 사용자 정보 입력</a></h5>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.2.0/static/images/manual/diagnostics_tuna_connection_2.png" alt="diagnostics tuna connection 2">
+<img src="../resources/static/images/manual/diagnostics_tuna_connection_2.png" alt="diagnostics tuna connection 2">
 </div>
 <div class="title">Figure 43. TunA 사용자 정보 입력 화면</div>
 </div>
@@ -18196,7 +18608,7 @@ TunA APM 메뉴의 구성은 아래와 같다.</p>
 </table>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.2.0/static/images/manual/diagnostics_tuna_connection_2_dialog_1.png" alt="diagnostics tuna connection 2 dialog 1">
+<img src="../resources/static/images/manual/diagnostics_tuna_connection_2_dialog_1.png" alt="diagnostics tuna connection 2 dialog 1">
 </div>
 <div class="title">Figure 44. TunA 사용자 정보 입력 다이얼로그 화면</div>
 </div>
@@ -18239,7 +18651,7 @@ TunA APM 메뉴의 구성은 아래와 같다.</p>
 </table>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.2.0/static/images/manual/diagnostics_tuna_connection_2_dialog_2.png" alt="diagnostics tuna connection 2 dialog 2">
+<img src="../resources/static/images/manual/diagnostics_tuna_connection_2_dialog_2.png" alt="diagnostics tuna connection 2 dialog 2">
 </div>
 <div class="title">Figure 45. 신규 사용자의 TunA 시스템 그룹 입력 다이얼로그 화면</div>
 </div>
@@ -18282,7 +18694,7 @@ TunA APM 메뉴의 구성은 아래와 같다.</p>
 </table>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.2.0/static/images/manual/diagnostics_tuna_connection_2_dialog_3.png" alt="diagnostics tuna connection 2 dialog 3">
+<img src="../resources/static/images/manual/diagnostics_tuna_connection_2_dialog_3.png" alt="diagnostics tuna connection 2 dialog 3">
 </div>
 <div class="title">Figure 46. 기존 사용자의 TunA 시스템 그룹 입력 다이얼로그 화면</div>
 </div>
@@ -18309,7 +18721,7 @@ TunA APM 메뉴의 구성은 아래와 같다.</p>
 <h5 id="_tuna_연결_확인"><a class="link" href="#_tuna_연결_확인">TunA 연결 확인</a></h5>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.2.0/static/images/manual/diagnostics_tuna_connection_3.png" alt="diagnostics tuna connection 3">
+<img src="../resources/static/images/manual/diagnostics_tuna_connection_3.png" alt="diagnostics tuna connection 3">
 </div>
 <div class="title">Figure 47. Open TunA 버튼이 활성화 된 모습</div>
 </div>
@@ -18327,7 +18739,7 @@ TunA 에서 제공되는 Agent 파일은 TunA Host Agent와 TunA Java Agent로 �
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.2.0/static/images/manual/diagnostics_tuna_module_1.png" alt="diagnostics tuna module 1">
+<img src="../resources/static/images/manual/diagnostics_tuna_module_1.png" alt="diagnostics tuna module 1">
 </div>
 <div class="title">Figure 48. Agent Module Upload 버튼</div>
 </div>
@@ -18359,7 +18771,7 @@ TunA 에서 제공되는 Agent 파일은 TunA Host Agent와 TunA Java Agent로 �
 </table>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.2.0/static/images/manual/diagnostics_tuna_module_2.png" alt="diagnostics tuna module 2">
+<img src="../resources/static/images/manual/diagnostics_tuna_module_2.png" alt="diagnostics tuna module 2">
 </div>
 <div class="title">Figure 49. Agent Module Upload 후의 화면</div>
 </div>
@@ -18402,7 +18814,7 @@ TunA 에서 제공되는 Agent 파일은 TunA Host Agent와 TunA Java Agent로 �
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.2.0/static/images/manual/diagnostics_tuna_install_1.png" alt="diagnostics tuna install 1">
+<img src="../resources/static/images/manual/diagnostics_tuna_install_1.png" alt="diagnostics tuna install 1">
 </div>
 <div class="title">Figure 50. Install Management 화면</div>
 </div>
@@ -18453,7 +18865,7 @@ TunA 에서 제공되는 Agent 파일은 TunA Host Agent와 TunA Java Agent로 �
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.2.0/static/images/manual/diagnostics_tuna_install_1_dialog_1.png" alt="diagnostics tuna install 1 dialog 1">
+<img src="../resources/static/images/manual/diagnostics_tuna_install_1_dialog_1.png" alt="diagnostics tuna install 1 dialog 1">
 </div>
 <div class="title">Figure 51. Host 추가 다이얼로그 화면</div>
 </div>
@@ -18530,7 +18942,7 @@ LENA Manager에 등록 또는 설치된 Node를 포함하는 Host만 확인 할 
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.2.0/static/images/manual/diagnostics_tuna_install_1_dialog_2.png" alt="diagnostics tuna install 1 dialog 2">
+<img src="../resources/static/images/manual/diagnostics_tuna_install_1_dialog_2.png" alt="diagnostics tuna install 1 dialog 2">
 </div>
 <div class="title">Figure 52. WAS 추가 다이얼로그 화면</div>
 </div>
@@ -18597,7 +19009,7 @@ LENA Manager에 등록 또는 설치된 WAS만 확인 할 수 있다.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.2.0/static/images/manual/diagnostics_tuna_install_2.png" alt="diagnostics tuna install 2">
+<img src="../resources/static/images/manual/diagnostics_tuna_install_2.png" alt="diagnostics tuna install 2">
 </div>
 <div class="title">Figure 53. Host와 WAS가 설치 대상 목록에 추가된 Install Management 화면</div>
 </div>
@@ -18646,7 +19058,7 @@ LENA Manager에 등록 또는 설치된 WAS만 확인 할 수 있다.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.2.0/static/images/manual/diagnostics_tuna_host_1.png" alt="diagnostics tuna host 1">
+<img src="../resources/static/images/manual/diagnostics_tuna_host_1.png" alt="diagnostics tuna host 1">
 </div>
 <div class="title">Figure 54. Host Management 화면</div>
 </div>
@@ -18726,7 +19138,7 @@ LENA Manager에 등록 또는 설치된 WAS만 확인 할 수 있다.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.2.0/static/images/manual/diagnostics_tuna_was_1.png" alt="diagnostics tuna was 1">
+<img src="../resources/static/images/manual/diagnostics_tuna_was_1.png" alt="diagnostics tuna was 1">
 </div>
 <div class="title">Figure 55. WAS - TunA Tab 화면</div>
 </div>
@@ -18783,7 +19195,7 @@ LENA Manager에 등록 또는 설치된 WAS만 확인 할 수 있다.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.2.0/static/images/manual/topology_overview.png" alt="topology overview">
+<img src="../resources/static/images/manual/topology_overview.png" alt="topology overview">
 </div>
 <div class="title">Figure 56. Topolopgy 화면</div>
 </div>
@@ -18977,7 +19389,7 @@ Request 수, 평균 응답시간, 서비스 응답 error 수를 확인 할 수 �
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.2.0/static/images/manual/topology_control_edit_off.png" alt="topology control edit off">
+<img src="../resources/static/images/manual/topology_control_edit_off.png" alt="topology control edit off">
 </div>
 <div class="title">Figure 57. Topolopgy Control [Edit: OFF]</div>
 </div>
@@ -19257,7 +19669,7 @@ Request 수, 평균 응답시간, 서비스 응답 error 수를 확인 할 수 �
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.2.0/static/images/manual/topology_control_edit_on.png" alt="topology control edit on">
+<img src="../resources/static/images/manual/topology_control_edit_on.png" alt="topology control edit on">
 </div>
 <div class="title">Figure 58. Topolopgy Control [Edit: ON]</div>
 </div>
@@ -19593,7 +20005,7 @@ Request 수, 평균 응답시간, 서비스 응답 error 수를 확인 할 수 �
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.2.0/static/images/manual/admin_users.png" alt="admin users">
+<img src="../resources/static/images/manual/admin_users.png" alt="admin users">
 </div>
 <div class="title">Figure 59. Users 화면</div>
 </div>
@@ -19601,7 +20013,7 @@ Request 수, 평균 응답시간, 서비스 응답 error 수를 확인 할 수 �
 <p>사용자 관리의 속성은 아래와 같다.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 118. 사용자 관리 속성</caption>
+<caption class="title">Table 126. 사용자 관리 속성</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 50%;">
@@ -19800,7 +20212,7 @@ ADMIN &gt; Auths 메뉴를 통해 권한 그룹을 생성, 수정, 삭제할 수
 <h5 id="_권한_목록"><a class="link" href="#_권한_목록">권한 목록</a></h5>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.2.0/static/images/manual/admin_auths.png" alt="admin auths">
+<img src="../resources/static/images/manual/admin_auths.png" alt="admin auths">
 </div>
 <div class="title">Figure 60. Auths 화면</div>
 </div>
@@ -19808,7 +20220,7 @@ ADMIN &gt; Auths 메뉴를 통해 권한 그룹을 생성, 수정, 삭제할 수
 <p>권한 관리의 속성은 아래와 같다.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 119. 권한 관리 속성</caption>
+<caption class="title">Table 127. 권한 관리 속성</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 50%;">
@@ -19920,7 +20332,7 @@ ADMIN &gt; Auths 메뉴를 통해 권한 그룹을 생성, 수정, 삭제할 수
 <h5 id="_사용자_권한_조회"><a class="link" href="#_사용자_권한_조회">사용자 권한 조회</a></h5>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.2.0/static/images/manual/admin_user_auth_mapping.png" alt="admin user auth mapping">
+<img src="../resources/static/images/manual/admin_user_auth_mapping.png" alt="admin user auth mapping">
 </div>
 <div class="title">Figure 61. User-Auth Mapping 화면</div>
 </div>
@@ -19928,7 +20340,7 @@ ADMIN &gt; Auths 메뉴를 통해 권한 그룹을 생성, 수정, 삭제할 수
 <p>사용자 권한 관리의 속성은 아래와 같다.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 120. 사용자 권한 관리의 속성</caption>
+<caption class="title">Table 128. 사용자 권한 관리의 속성</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 50%;">
@@ -20014,7 +20426,7 @@ LENA Manager에 등록된 모든 메뉴를 보여주는 메뉴 목록 중 접근
 <h5 id="_메뉴_권한_조회"><a class="link" href="#_메뉴_권한_조회">메뉴 권한 조회</a></h5>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.2.0/static/images/manual/admin_menu_auth_mapping.png" alt="admin menu auth mapping">
+<img src="../resources/static/images/manual/admin_menu_auth_mapping.png" alt="admin menu auth mapping">
 </div>
 <div class="title">Figure 62. Menu-Auth Mapping 화면</div>
 </div>
@@ -20022,7 +20434,7 @@ LENA Manager에 등록된 모든 메뉴를 보여주는 메뉴 목록 중 접근
 <p>메뉴 권한 관리의 속성은 아래와 같다.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 121. 메뉴 권한 관리의 속성</caption>
+<caption class="title">Table 129. 메뉴 권한 관리의 속성</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 50%;">
@@ -20180,7 +20592,7 @@ LENA Manager에 등록된 모든 메뉴를 보여주는 메뉴 목록 중 접근
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.2.0/static/images/manual/admin_license.png" alt="admin license">
+<img src="../resources/static/images/manual/admin_license.png" alt="admin license">
 </div>
 <div class="title">Figure 63. License의 목록 화면</div>
 </div>
@@ -20194,7 +20606,7 @@ LENA Manager에 등록된 모든 메뉴를 보여주는 메뉴 목록 중 접근
 <p>상세 정보 항목은 아래와 같다.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 122. License의 상세 정보 항목</caption>
+<caption class="title">Table 130. License의 상세 정보 항목</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 50%;">
@@ -20326,7 +20738,7 @@ License 발급에 필요한 시스템 현황을 확인할 수 있다.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.2.0/static/images/manual/admin_license_system_info_ui.png" alt="admin license system info ui">
+<img src="../resources/static/images/manual/admin_license_system_info_ui.png" alt="admin license system info ui">
 </div>
 <div class="title">Figure 64. System Information</div>
 </div>
@@ -20448,7 +20860,7 @@ License의 상태는 Status 항목을 보면 확인할 수 있다.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.2.0/static/images/manual/admin_license.png" alt="admin license">
+<img src="../resources/static/images/manual/admin_license.png" alt="admin license">
 </div>
 <div class="title">Figure 65. License의 목록 화면</div>
 </div>
@@ -20462,7 +20874,7 @@ License의 상태는 Status 항목을 보면 확인할 수 있다.</p>
 <p>상세 정보 항목은 아래와 같다.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 123. License의 상세 정보 항목</caption>
+<caption class="title">Table 131. License의 상세 정보 항목</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 50%;">
@@ -20579,7 +20991,7 @@ License 발급에 필요한 시스템 현황을 확인할 수 있다.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.2.0/static/images/manual/admin_license_system_info_ui.png" alt="admin license system info ui">
+<img src="../resources/static/images/manual/admin_license_system_info_ui.png" alt="admin license system info ui">
 </div>
 <div class="title">Figure 66. System Information</div>
 </div>
@@ -20694,7 +21106,7 @@ ${LENA_HOME}/bin에 위치한 start-agent.sh, check-license.sh파일과 각 Appl
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.2.0/static/images/manual/admin_service_control_rule_setting.png" alt="admin service control rule setting">
+<img src="../resources/static/images/manual/admin_service_control_rule_setting.png" alt="admin service control rule setting">
 </div>
 <div class="title">Figure 67. Rule Setting 화면</div>
 </div>
@@ -20716,7 +21128,7 @@ ${LENA_HOME}/bin에 위치한 start-agent.sh, check-license.sh파일과 각 Appl
 <p>Rule 추가 시 설정 가능한 속성은 아래와 같다.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 124. Rule 추가 시 설정 가능한 속성</caption>
+<caption class="title">Table 132. Rule 추가 시 설정 가능한 속성</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 50%;">
@@ -20810,7 +21222,7 @@ Proxy Server의 보안적 특성으로 인해 User IP를 구할 수 없어 Rule 
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.2.0/static/images/manual/admin_service_control_rule_applying.png" alt="admin service control rule applying">
+<img src="../resources/static/images/manual/admin_service_control_rule_applying.png" alt="admin service control rule applying">
 </div>
 <div class="title">Figure 68. Rule Applying 화면</div>
 </div>
@@ -20818,7 +21230,7 @@ Proxy Server의 보안적 특성으로 인해 User IP를 구할 수 없어 Rule 
 <p>Rule 현황 및 적용 화면에서 사용되는 속성들은 Rule설정 화면과 유사하며 아래의 속성들은 추가적인 속성들이다.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 125. 추가적인 속성</caption>
+<caption class="title">Table 133. 추가적인 속성</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 50%;">
@@ -20868,7 +21280,7 @@ Proxy Server의 보안적 특성으로 인해 User IP를 구할 수 없어 Rule 
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.2.0/static/images/manual/admin_service_control_log.png" alt="admin service control log">
+<img src="../resources/static/images/manual/admin_service_control_log.png" alt="admin service control log">
 </div>
 <div class="title">Figure 69. Service Control Log 화면</div>
 </div>
@@ -20876,7 +21288,7 @@ Proxy Server의 보안적 특성으로 인해 User IP를 구할 수 없어 Rule 
 <p>처리 목록에서 사용되는 속성들은 아래와 같다.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 126. 로그 정보의 항목</caption>
+<caption class="title">Table 134. 로그 정보의 항목</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 50%;">
@@ -21015,7 +21427,7 @@ accessfilter.interval=60</code></pre>
 <p>Patch Info 영역에서는 매니저에 업로드 된 패치파일 중, 최상위 버전의 상세정보를 표시한다.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 127. Patch Info 항목</caption>
+<caption class="title">Table 135. Patch Info 항목</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 50%;">
@@ -21127,7 +21539,7 @@ Manager의 패치 및 복구를 실행할 수 있다.</p>
 <p>화면에 표시되는 각 항목에 대한 설명은 아래와 같다.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 128. Manager Info 항목</caption>
+<caption class="title">Table 136. Manager Info 항목</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 50%;">
@@ -21185,7 +21597,7 @@ Manager의 패치 및 복구를 실행할 수 있다.</p>
 <p>화면에 표시되는 각 항목에 대한 설명은 아래와 같다.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 129. History 항목</caption>
+<caption class="title">Table 137. History 항목</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 50%;">
@@ -21286,7 +21698,7 @@ Manager Patch Info화면의 Handwork 버튼이 흰색으로 변경된다.</p>
 <p>화면에 표시되는 각 항목에 대한 설명은 아래와 같다</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 130. Node Patch Status 항목</caption>
+<caption class="title">Table 138. Node Patch Status 항목</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 50%;">
@@ -21415,7 +21827,7 @@ Manager Patch Info화면의 Handwork 버튼이 흰색으로 변경된다.</p>
 <p>화면에 표시되는 각 항목에 대한 설명은 다음과 같다.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 131. Server Cluster Patch Status 항목</caption>
+<caption class="title">Table 139. Server Cluster Patch Status 항목</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 50%;">
@@ -21494,7 +21906,7 @@ Manager Patch Info화면의 Handwork 버튼이 흰색으로 변경된다.</p>
 <p>패치를 적용할 서버를 그룹별 조건(node단위, cluster 단위)으로 검색한다.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 132. Application Server Patch Status 항목</caption>
+<caption class="title">Table 140. Application Server Patch Status 항목</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 50%;">
@@ -21728,7 +22140,7 @@ ver., patch ver.에는 각각 이전 버전과 패치파일버전이 표시된�
 <p><span class="button">상세(노트) 버튼</span> 을 클릭하여 패치/복원에 대한 이력을 가장 최근의 이력부터 5개를 조회한다.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 133. History 항목</caption>
+<caption class="title">Table 141. History 항목</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 50%;">
@@ -21798,7 +22210,7 @@ ver., patch ver.에는 각각 이전 버전과 패치파일버전이 표시된�
 <p>패치를 적용할 서버를 그룹별 조건(node단위)으로 검색한다.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 134. Session Server Patch Status 항목</caption>
+<caption class="title">Table 142. Session Server Patch Status 항목</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 50%;">
@@ -22008,7 +22420,7 @@ ver., patch ver.에는 각각 이전 버전과 패치파일버전이 표시된�
 <p><span class="button">상세(노트) 버튼</span> 을 클릭하여 패치/복원에 대한 이력을 가장 최근의 이력부터 5개를 조회한다.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 135. History 항목</caption>
+<caption class="title">Table 143. History 항목</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 50%;">
@@ -22076,7 +22488,7 @@ Action Trace에서는 이러한 수행이력을 조회/추적하는 기능을 �
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.2.0/static/images/manual/admin_action_trace.png" alt="admin action trace">
+<img src="../resources/static/images/manual/admin_action_trace.png" alt="admin action trace">
 </div>
 <div class="title">Figure 70. Action Trace 화면</div>
 </div>
@@ -22089,7 +22501,7 @@ Action Trace에서는 이러한 수행이력을 조회/추적하는 기능을 �
 <p>조회 화면에 표기되는 항목은 아래와 같다.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 136. 이력 상세 정보 항목</caption>
+<caption class="title">Table 144. 이력 상세 정보 항목</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 50%;">
@@ -22152,7 +22564,7 @@ Server ID, Node ID, Server Cluster ID가 데이터 관리용 Key값 (일련번�
 이 기능의 입출력 항목은 아래와 같다.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 137. Search ID 기능의 입출력 항목</caption>
+<caption class="title">Table 145. Search ID 기능의 입출력 항목</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 50%;">
@@ -22245,7 +22657,7 @@ Server ID, Node ID, Server Cluster ID가 데이터 관리용 Key값 (일련번�
 </td>
 <td class="content">
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 138. JMX for Server Status: true 사용시 WAS Status 표시</caption>
+<caption class="title">Table 146. JMX for Server Status: true 사용시 WAS Status 표시</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 25%;">
@@ -22260,7 +22672,7 @@ Server ID, Node ID, Server Cluster ID가 데이터 관리용 Key값 (일련번�
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.2.0/static/images/manual/server_3_application_server_status_green.png" alt="server 3 application server status green">
+<img src="../resources/static/images/manual/server_3_application_server_status_green.png" alt="server 3 application server status green">
 </div>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Started</p></td>
@@ -22269,7 +22681,7 @@ Server ID, Node ID, Server Cluster ID가 데이터 관리용 Key값 (일련번�
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.2.0/static/images/manual/server_3_application_server_status_yellow.png" alt="server 3 application server status yellow">
+<img src="../resources/static/images/manual/server_3_application_server_status_yellow.png" alt="server 3 application server status yellow">
 </div>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Started(Warning)</p></td>
@@ -22278,7 +22690,7 @@ Server ID, Node ID, Server Cluster ID가 데이터 관리용 Key값 (일련번�
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.2.0/static/images/manual/server_3_application_server_status_stopped.png" alt="server 3 application server status stopped">
+<img src="../resources/static/images/manual/server_3_application_server_status_stopped.png" alt="server 3 application server status stopped">
 </div>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Stopped</p></td>
@@ -22287,7 +22699,7 @@ Server ID, Node ID, Server Cluster ID가 데이터 관리용 Key값 (일련번�
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.2.0/static/images/manual/server_3_application_server_status_error.png" alt="server 3 application server status error">
+<img src="../resources/static/images/manual/server_3_application_server_status_error.png" alt="server 3 application server status error">
 </div>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Error</p></td>
@@ -22365,7 +22777,7 @@ Server ID, Node ID, Server Cluster ID가 데이터 관리용 Key값 (일련번�
 <p>현재의 Manager 정보를 제공한다. Manager의 역할에 관계없이, 현재의 관리화면을 제공하는 Manager 자신을 Local Manager, 원격지 Manager를 Remote Manager라 칭한다.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 139. Local Manager 정보 항목</caption>
+<caption class="title">Table 147. Local Manager 정보 항목</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 60%;">
@@ -22417,7 +22829,7 @@ Server ID, Node ID, Server Cluster ID가 데이터 관리용 Key값 (일련번�
 <p>원격지 Manager의 정보를 제공한다.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 140. Remote Manager 정보 항목</caption>
+<caption class="title">Table 148. Remote Manager 정보 항목</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 60%;">
@@ -22485,7 +22897,7 @@ Server ID, Node ID, Server Cluster ID가 데이터 관리용 Key값 (일련번�
 <p>이중화된 Manager간 Database 및 File 동기화 최신 이력을 조회할 수 있다.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 141. Latest Sync Status 정보 항목</caption>
+<caption class="title">Table 149. Latest Sync Status 정보 항목</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 60%;">
@@ -23115,7 +23527,7 @@ patch is completed.!!</code></pre>
 </div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 142. patch.sh의 입력 인수 및 입력 항목</caption>
+<caption class="title">Table 150. patch.sh의 입력 인수 및 입력 항목</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 50%;">
@@ -23382,7 +23794,7 @@ version is completed.!!</code></pre>
 <p>Application Server 기동시 Database 에 접속 불가하거나, pool 생성, validation 쿼리 실패 등의 이상상태가 감지되면 서버를 종료한다.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 143. DBCP 부가기능, Application Server 제어</caption>
+<caption class="title">Table 151. DBCP 부가기능, Application Server 제어</caption>
 <colgroup>
 <col style="width: 22.2222%;">
 <col style="width: 22.2222%;">
@@ -23474,7 +23886,7 @@ VM위에서 작동하는 Standalone 모드와 Application Server에 Session Serv
 <h4 id="_session_server_standalone_모드"><a class="link" href="#_session_server_standalone_모드">10.11.1. Session Server Standalone 모드</a></h4>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.2.0/static/images/manual/appendix_session_standalone.png" alt="image" width="507" height="404">
+<img src="../resources/static/images/manual/appendix_session_standalone.png" alt="image" width="507" height="404">
 </div>
 </div>
 <div class="sect4">
@@ -23837,7 +24249,7 @@ Server와 접속을 유지하고 있기 때문에 Primary Session Server 장애�
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.2.0/static/images/manual/appendix_session_failover.png" alt="image" width="391" height="373">
+<img src="../resources/static/images/manual/appendix_session_failover.png" alt="image" width="391" height="373">
 </div>
 </div>
 </div>
@@ -23850,7 +24262,7 @@ Module을 내장하는 방식이다.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.2.0/static/images/manual/appendix_session_embedemode.png" alt="image" width="391" height="373">
+<img src="../resources/static/images/manual/appendix_session_embedemode.png" alt="image" width="391" height="373">
 </div>
 </div>
 <div class="sect4">
@@ -23863,7 +24275,7 @@ ${LENA_HOME}/servers/[ApplicationServer명]/conf/session.conf 를
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.2.0/static/images/manual/appendix_session_settings.png" alt="image" width="623" height="144">
+<img src="../resources/static/images/manual/appendix_session_settings.png" alt="image" width="623" height="144">
 </div>
 </div>
 <div class="paragraph">
@@ -24093,7 +24505,7 @@ session server 모듈을 embedded 한다.</p></td>
 <div id="footer">
 <div id="footer-text">
 Version 1.3.2.0<br>
-Last updated 2022-12-01 10:33:55 +0900
+Last updated 2023-01-06 09:06:10 +0900
 </div>
 </div>
 </body>
