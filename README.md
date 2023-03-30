@@ -8,7 +8,7 @@
 
 ### 화면용 html 파일 추가 / 변환 작업
 #### html 파일 추가
-경로 : /static/_includes/{version}
+경로 : /static/_includes/{version}  
 방법 : 신규 버전 디렉토리 생성 후 000.installation_vmhost.html, manual_exclusive.html, release_note.html 파일을
 jenkins 에서 받아 /static/_includes/{version} 디렉토리에 추가
 
