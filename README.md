@@ -28,13 +28,14 @@ src/main/resources/static/ko/release-note/release_note.html
 경로 : /resources/{version}/pdf
 방법 : 신규 버전 디렉토리 생성 후 pdf 디렉토리에 jenkins 에 생성된 pdf 파일 추가
 
-- jenkins 파일 경로 \
-LENA_Brochure.pdf 파일은 이전버전 디렉토리에서 복제  
-target/generated-docs/pdf/ko/installation/container/000.installation_container.pdf       -> LENA_Installation_Container_v\*.\*.pdf  
-target/generated-docs/pdf/ko/installation/vmhost/000.installation_vmhost.pdf             -> LENA_Installation_Enterprise_v\*.\*.pdf  
-target/generated-docs/pdf/ko/installation/vmhost/000.installation_vmhost.pdf             -> LENA_Installation_VM_v\*.\*.pdf  
-target/generated-docs/pdf/ko/installation/vmhost/standard/000.installation_vmhost.pdf    -> LENA_Installation_Standard_v\*.\*.pdf  
-target/generated-docs/pdf/ko/manual/manual_container.pdf                                 -> LENA_Manual_Container_v\*.\*.pdf  
-target/generated-docs/pdf/ko/manual/manual_enterprise.pdf                                -> LENA_Manual_Enterprise_v\*.\*.pdf  
-target/generated-docs/pdf/ko/manual/manual_enterprise.pdf                                -> LENA_Manual_VM_v\*.\*.pdf  
-target/generated-docs/pdf/ko/manual/manual_standard.pdf                                  -> LENA_Manual_Standard_v\*.\*.pdf
+- LENA_Brochure.pdf 파일은 이전버전 디렉토리에서 복제
+- jenkins lena-doc job 의 artifact 로 생성된 pdf 를 복제
+대상목록
+> - LENA_Installation_Container_v1.3.pdf
+> - LENA_Installation_Enterprise_v1.3.pdf
+> - LENA_Installation_Standard_v1.3.pdf
+> - LENA_Installation_VM_v1.3.pdf
+> - LENA_Manual_Container_v1.3.pdf
+> - LENA_Manual_Enterprise_v1.3.pdf
+> - LENA_Manual_Standard_v1.3.pdf
+> - LENA_Manual_VM_v1.3.pdf
