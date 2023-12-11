@@ -13,7 +13,7 @@
 jenkins 에서 받아 /static/_includes/{version} 디렉토리에 추가
 
 - jenkins 파일 경로 \
-src/main/resources/static/ko/installation/vmhost/000.installation_vmhost.html  
+src/main/resources/static/ko/installation/vmhost/enterprise/000.installation_vmhost.html  
 src/main/resources/static/ko/manual/manual_exclusive.html  
 src/main/resources/static/ko/release-note/release_note.html
 
