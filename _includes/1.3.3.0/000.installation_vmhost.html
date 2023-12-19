@@ -5329,11 +5329,11 @@ table.CodeRay td.code>pre{padding:0}
 </li>
 <li><a href="#_node_원격_설치lena_manager_web_ui">3.1.3. Node 원격 설치(LENA Manager Web UI)</a></li>
 <li><a href="#_was_설치실행">3.1.4. WAS 설치/실행</a></li>
-<li><a href="#_web_servera_설치실행">3.1.5. Web Server(A) 설치/실행</a></li>
-<li><a href="#_web_servera_was_연동">3.1.6. Web Server(A) - WAS 연동</a></li>
-<li><a href="#_web_servern_설치실행">3.1.7. Web Server(N) 설치/실행</a></li>
-<li><a href="#_web_servern_was_연동_proxy">3.1.8. Web Server(N) - WAS 연동 (Proxy)</a></li>
-<li><a href="#_web_servern_was_연동_net_gateway">3.1.9. Web Server(N) - WAS 연동 (Net Gateway)</a></li>
+<li><a href="#_weba_server_설치실행">3.1.5. WebA Server 설치/실행</a></li>
+<li><a href="#_weba_server_was_연동">3.1.6. WebA Server - WAS 연동</a></li>
+<li><a href="#_webn_server_설치실행">3.1.7. WebN Server 설치/실행</a></li>
+<li><a href="#_webn_server_was_연동_proxy">3.1.8. WebN Server - WAS 연동 (Proxy)</a></li>
+<li><a href="#_webn_server_was_연동_net_gateway">3.1.9. WebN Server - WAS 연동 (Net Gateway)</a></li>
 <li><a href="#_session_server_설치_및_연동">3.1.10. Session Server 설치 및 연동</a>
 <ul class="sectlevel4">
 <li><a href="#_standalone_모드_설치와_was_연동">Standalone 모드 설치와 WAS 연동</a></li>
@@ -5568,9 +5568,9 @@ Database / DataSource / MessageService(JMS) / Transaction(JTA) / Application / L
 <div class="sect2">
 <h3 id="_mechanism"><a class="link" href="#_mechanism">1.2. Mechanism</a></h3>
 <div class="paragraph">
-<p>LENA는 Manager를 통해서 Web Server/WAS 를 모니터링 및 통합관리하는 기능을 제공한다.
+<p>LENA는 Manager를 통해서 Web Server/WAS를 모니터링 및 통합관리하는 기능을 제공한다.
 이를 위해 Node라는 단위로 Agent가 설치되는데 이를 Node Agent라고 한다.
-Node Agent는 Manager의 사용자 명령을 전달받아 Node에 설치된 Web Server/WAS 를 제어하며
+Node Agent는 Manager의 사용자 명령을 전달받아 Node에 설치된 Web Server/WAS를 제어하며
 Node가 설치된 Host/VM, Web Server 의 모니터링 정보를 Manager로 전송한다.</p>
 </div>
 <div class="imageblock text-center">
@@ -6721,7 +6721,7 @@ Node 등록을 위해 'Register' 버튼을 클릭하면 아래와 같이 Node를
 <p>Node Type: Application / Web 중에 선택</p>
 </li>
 <li>
-<p>Node IP: Node가 설치된 Server의 IP Adress</p>
+<p>Node IP: Node가 설치된 Server의 IP Address</p>
 </li>
 <li>
 <p>Node Port: Node 설치시 입력한 Node Port</p>
@@ -6814,7 +6814,7 @@ Node 등록을 위해 'Register' 버튼을 클릭하면 아래와 같이 Node를
 <p>Node Name: 원격 Server에 설치할 Node의 명칭</p>
 </li>
 <li>
-<p>Node Address: Node를 설치할 원격 Server의 IP Adress</p>
+<p>Node Address: Node를 설치할 원격 Server의 IP Address</p>
 </li>
 <li>
 <p>Node Port: 원격 Server에서 Node가 사용할  Port</p>
@@ -6872,8 +6872,8 @@ Node 등록을 위해 'Register' 버튼을 클릭하면 아래와 같이 Node를
 <div class="sect3">
 <h4 id="_was_설치실행"><a class="link" href="#_was_설치실행">3.1.4. WAS 설치/실행</a></h4>
 <div class="paragraph">
-<p>WAS Node를 설치, 등록까지 완료했다면 이제 LENA Manager Web UI를 통해 WAS 를 설치할 수 있다.
-LENA Manager 상단의 'SERVER' 메뉴를 선택 한 뒤 좌측에서 WAS 를 설치할 WAS Node를 선택하면 WAS List를 확인할 수 있다. 이 화면에서 'Install' 버튼을 클릭한다.</p>
+<p>WAS Node를 설치, 등록까지 완료했다면 이제 LENA Manager Web UI를 통해 WAS를 설치할 수 있다.
+LENA Manager 상단의 'SERVER' 메뉴를 선택 한 뒤 좌측에서 WAS를 설치할 WAS Node를 선택하면 WAS List를 확인할 수 있다. 이 화면에서 'Install' 버튼을 클릭한다.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -6896,7 +6896,7 @@ LENA Manager 상단의 'SERVER' 메뉴를 선택 한 뒤 좌측에서 WAS 를 �
 <p>Server Type: WAS의 Type, Standard / Enterprise 중 택</p>
 </li>
 <li>
-<p>Node: WAS 가 설치될 Node(수정불가)</p>
+<p>Node: WAS가 설치될 Node(수정불가)</p>
 </li>
 <li>
 <p>Server ID: LENA Manager 가 WAS를 식별하기 위한 명칭</p>
@@ -6908,7 +6908,7 @@ LENA Manager 상단의 'SERVER' 메뉴를 선택 한 뒤 좌측에서 WAS 를 �
 <p>Run User: WAS 의 기동 시 사용할 OS 계정(수정불가)</p>
 </li>
 <li>
-<p>Install Root Path: WAS 가 설치될 경로(수정불가)</p>
+<p>Install Root Path: WAS가 설치될 경로(수정불가)</p>
 </li>
 <li>
 <p>Log Home: WAS Log의 경로</p>
@@ -6924,7 +6924,7 @@ LENA Manager 상단의 'SERVER' 메뉴를 선택 한 뒤 좌측에서 WAS 를 �
 </div>
 </li>
 <li>
-<p>JVM Route: Web Server와 연동 시 Web Server 가 WAS를 식별하기 위한 값</p>
+<p>JVM Route: Web Server와 연동 시 Web Server가 WAS를 식별하기 위한 값</p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
@@ -6946,14 +6946,14 @@ LENA Manager 상단의 'SERVER' 메뉴를 선택 한 뒤 좌측에서 WAS 를 �
 </td>
 <td class="content">
 <div class="paragraph">
-<p>WAS 는 기동 시 HTTP, HTTPS, AJP 등 다양한 Port를 사용하는데 LENA 에서는 WAS 설치 시 사용자 편의를 위해 HTTP Port 만을 입력받고 이를 기준으로 다른 Port 값을 자동계산하여 설치한다.</p>
+<p>WAS는 기동 시 HTTP, HTTPS, AJP 등 다양한 Port를 사용하는데 LENA 에서는 WAS 설치 시 사용자 편의를 위해 HTTP Port 만을 입력받고 이를 기준으로 다른 Port 값을 자동계산하여 설치한다.</p>
 </div>
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>WAS 설치 정보를 모두 입력 한 뒤 'Save' 버튼을 클릭하면 WAS가 설치되며 WAS List 에서 설치한 WAS 를 확인 할 수 있다.</p>
+<p>WAS 설치 정보를 모두 입력 한 뒤 'Save' 버튼을 클릭하면 WAS가 설치되며 WAS List 에서 설치한 WAS를 확인 할 수 있다.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -6962,7 +6962,7 @@ LENA Manager 상단의 'SERVER' 메뉴를 선택 한 뒤 좌측에서 WAS 를 �
 <div class="title">Figure 12. WAS 정상 설치 후 WAS List</div>
 </div>
 <div class="paragraph">
-<p>중지되어 있는 WAS 를 기동하려면 WAS List 우측의 'Start' 버튼을 클릭한다. 또한 기동되어있는 WAS 를 중지하려면 같은 위치에 'Stop' 버튼으로 바뀌므로 해당 버튼을 클릭한다.</p>
+<p>중지되어 있는 WAS를 기동하려면 WAS List 우측의 'Start' 버튼을 클릭한다. 또한 기동되어있는 WAS를 중지하려면 같은 위치의 'Stop' 버튼을 바뀌므로 해당 버튼을 클릭한다.</p>
 </div>
 <div class="paragraph">
 <p>WAS 기동 시에는 WAS 기동 Log(Application 이 배포되어 있다면 Application 기동 Log 도 함께)가 Popup 창으로 출력된다.</p>
@@ -6975,9 +6975,9 @@ LENA Manager 상단의 'SERVER' 메뉴를 선택 한 뒤 좌측에서 WAS 를 �
 </div>
 </div>
 <div class="sect3">
-<h4 id="_web_servera_설치실행"><a class="link" href="#_web_servera_설치실행">3.1.5. Web Server(A) 설치/실행</a></h4>
+<h4 id="_weba_server_설치실행"><a class="link" href="#_weba_server_설치실행">3.1.5. WebA Server 설치/실행</a></h4>
 <div class="paragraph">
-<p>WAS 설치와 동일한 방식으로, LENA Manager Web UI를 통해 Web Server를 설치할 수 있다. Engine이 EN-A인 Web Server Node를 선택한 뒤 Web Server(A)를 설치할 수 있다.</p>
+<p>WAS 설치와 동일한 방식으로, LENA Manager Web UI를 통해 Web Server를 설치할 수 있다. Engine이 EN-A인 Web Server Node를 선택한 뒤 WebA Server를 설치할 수 있다.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -7000,13 +7000,13 @@ LENA Manager 상단의 'SERVER' 메뉴를 선택 한 뒤 좌측에서 WAS 를 �
 <p>Server Type: Web Server (고정)</p>
 </li>
 <li>
-<p>Node: Web Server 가 설치될 Node (수정불가)</p>
+<p>Node: Web Server가 설치될 Node (수정불가)</p>
 </li>
 <li>
-<p>Server ID: LENA Manager 가 Web Server 를 식별하기 위한 명칭</p>
+<p>Server ID: LENA Manager 가 Web Server를 식별하기 위한 명칭</p>
 </li>
 <li>
-<p>Service Port: Web Server 가 사용할 HTTP Port</p>
+<p>Service Port: Web Server가 사용할 HTTP Port</p>
 </li>
 <li>
 <p>Run User: Web Server 기동 시 사용할 OS 계정(수정불가)</p>
@@ -7015,7 +7015,7 @@ LENA Manager 상단의 'SERVER' 메뉴를 선택 한 뒤 좌측에서 WAS 를 �
 <p>Web Server Engine Path: Web Server 설치 시 사용할 Engine 경로(수정불가)</p>
 </li>
 <li>
-<p>Install Root Path: Web Server 가 설치될 경로(수정불가)</p>
+<p>Install Root Path: Web Server가 설치될 경로(수정불가)</p>
 </li>
 <li>
 <p>Log Home: Web Server Log 경로</p>
@@ -7040,7 +7040,7 @@ LENA Manager 상단의 'SERVER' 메뉴를 선택 한 뒤 좌측에서 WAS 를 �
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Web Server 는 기동 시 HTTP, HTTPS 등 다양한 Port를 사용하는데 LENA 에서는 Web Server 설치 시 사용자 편의를 위해 HTTP Port 만을 입력받고 이를 기준으로 다른 Port 값을 자동계산하여 설치한다.</p>
+<p>Web Server는 기동 시 HTTP, HTTPS 등 다양한 Port를 사용하는데 LENA 에서는 Web Server 설치 시 사용자 편의를 위해 HTTP Port 만을 입력받고 이를 기준으로 다른 Port 값을 자동계산하여 설치한다.</p>
 </div>
 </td>
 </tr>
@@ -7056,7 +7056,7 @@ LENA Manager 상단의 'SERVER' 메뉴를 선택 한 뒤 좌측에서 WAS 를 �
 <div class="title">Figure 16. Web Server 정상 설치 후 Web Server List</div>
 </div>
 <div class="paragraph">
-<p>중지되어 있는 Web Server 를 기동하려면 WAS List 우측의 'Start' 버튼을 클릭한다. 또한 기동되어있는 Web Server 를 중지하려면 같은 위치에 'Stop' 버튼으로 바뀌므로 해당 버튼을 클릭한다.</p>
+<p>중지되어 있는 Web Server를 기동하려면 Web Server List 우측의 'Start' 버튼을 클릭한다. 또한 기동되어있는 Web Server를 중지하려면 같은 위치의 'Stop' 버튼을 바뀌므로 해당 버튼을 클릭한다.</p>
 </div>
 <div class="paragraph">
 <p>Web Server 기동 시에는 Web Server 기동 Log가 Popup 창으로 출력된다.</p>
@@ -7069,10 +7069,10 @@ LENA Manager 상단의 'SERVER' 메뉴를 선택 한 뒤 좌측에서 WAS 를 �
 </div>
 </div>
 <div class="sect3">
-<h4 id="_web_servera_was_연동"><a class="link" href="#_web_servera_was_연동">3.1.6. Web Server(A) - WAS 연동</a></h4>
+<h4 id="_weba_server_was_연동"><a class="link" href="#_weba_server_was_연동">3.1.6. WebA Server - WAS 연동</a></h4>
 <div class="paragraph">
-<p>Web Server와 WAS 간 연동 설정에 대해 알아본다. LENA Web Server 와 WAS 의 연동은 Web Server 설정 화면에서 할 수 있다.
-LENA Manager 상단의 'SERVER' 메뉴에서 설치한 Web Server 를 선택하여 설정 화면을 열고 설정 화면 내 상단의 'Connector' 탭을 선택한다.</p>
+<p>WebA Server와 WAS 간 연동 설정에 대해 알아본다. WebA Server와 WAS 의 연동은 Web Server 설정 화면에서 할 수 있다.
+LENA Manager 상단의 'SERVER' 메뉴에서 설치한 Web Server를 선택하여 설정 화면을 열고 설정 화면 내 상단의 'Connector' 탭을 선택한다.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -7085,7 +7085,7 @@ LENA Manager 상단의 'SERVER' 메뉴에서 설치한 Web Server 를 선택하�
 'Connector' 탭 화면 하단의 Load Balancer Worker List 란에 연동할 WAS를 추가하면 기본적인 Web Server 와 WAS 간 연동이 완료된다.</p>
 </div>
 <div class="paragraph">
-<p>WAS 를 추가하기 위해서는 Load Balancer 란의 Configuration탭에서 'Add Worker' 버튼을 클릭하면 열리는 팝업에서 설치되어 있는 WAS를 선택하고 'Save' 버튼을 클릭한다.<br>
+<p>연동할 WAS를 추가하기 위해서는 Load Balancer 란의 Configuration탭에서 'Add Worker' 버튼을 클릭하면 열리는 팝업에서 설치되어 있는 WAS를 선택하고 'Save' 버튼을 클릭한다.<br>
 팝업에서는 LENA Manager 에 등록되어있는 WAS Node 별로 WAS 목록을 확인 할 수 있으며 이미 'Connector' 에 등록한 WAS는 보이지 않는다.</p>
 </div>
 <div class="imageblock">
@@ -7105,9 +7105,9 @@ LENA Manager 상단의 'SERVER' 메뉴에서 설치한 Web Server 를 선택하�
 </div>
 </div>
 <div class="sect3">
-<h4 id="_web_servern_설치실행"><a class="link" href="#_web_servern_설치실행">3.1.7. Web Server(N) 설치/실행</a></h4>
+<h4 id="_webn_server_설치실행"><a class="link" href="#_webn_server_설치실행">3.1.7. WebN Server 설치/실행</a></h4>
 <div class="paragraph">
-<p>Web Server(A) 설치와 동일한 방식으로, LENA Manager Web UI를 통해 Web Server를 설치할 수 있다. Engine이 EN-N인 Web Server Node를 선택한 뒤 Web Server(N)를 설치할 수 있다.</p>
+<p>WebA Server 설치와 동일한 방식으로, LENA Manager Web UI를 통해 Web Server를 설치할 수 있다. Engine이 EN-N인 Web Server Node를 선택한 뒤 WebN Server를 설치할 수 있다.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -7127,29 +7127,29 @@ LENA Manager 상단의 'SERVER' 메뉴에서 설치한 Web Server 를 선택하�
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Node: Web Server 가 설치될 Node (수정불가)</p>
+<p>Node: Web Server가 설치될 Node (수정불가)</p>
 </li>
 <li>
-<p>Server ID: LENA Manager 가 Web Server 를 식별하기 위한 명칭</p>
+<p>Server ID: LENA Manager 가 Web Server를 식별하기 위한 명칭</p>
 </li>
 <li>
-<p>Service Port: Web Server 가 사용할 Port Type 및 Port Number</p>
+<p>Service Port: Web Server가 사용할 Port Type 및 Port Number</p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
 <p>Port Type : Port Type에는 네 가지 타입을 가지고 있으며, 설치 시에 정해지는 default Type은 변경이 불가능 하다. (Port Number 는 수정 가능하다.)</p>
 </li>
 <li>
-<p>HTTP : HTTP Protocol 기반 Web Server  (설치 후 바로 기동 가능)</p>
+<p>HTTP : HTTP Protocol 기반 Web Server  (설치 후 즉시 기동 가능)</p>
 </li>
 <li>
-<p>HTTPS : HTTPS Protocol 기반 Web Server  (설치 후 SSL 인증서 및 추가 해야 기동)</p>
+<p>HTTPS : HTTPS Protocol 기반 Web Server  (설치 후 SSL 인증서 추가 해야 기동)</p>
 </li>
 <li>
-<p>TCP : TCP 포트를 기반으로 하는 Net Gateway (설치 후 바로 기동 가능)</p>
+<p>TCP : TCP 포트를 기반으로 하는 Net Gateway (설치 후 즉시 기동 가능)</p>
 </li>
 <li>
-<p>UDP : UDP 포트를 기반으로 하는 Net Gateway  (설치 후 바로 기동 가능)</p>
+<p>UDP : UDP 포트를 기반으로 하는 Net Gateway  (설치 후 즉시 기동 가능)</p>
 </li>
 </ol>
 </div>
@@ -7161,7 +7161,7 @@ LENA Manager 상단의 'SERVER' 메뉴에서 설치한 Web Server 를 선택하�
 <p>Web Server Engine Path: Web Server 설치 시 사용할 Engine 경로(수정불가)</p>
 </li>
 <li>
-<p>Install Root Path: Web Server 가 설치될 경로(수정불가)</p>
+<p>Install Root Path: Web Server가 설치될 경로(수정불가)</p>
 </li>
 <li>
 <p>Log Home: Web Server Log 경로</p>
@@ -7186,7 +7186,7 @@ LENA Manager 상단의 'SERVER' 메뉴에서 설치한 Web Server 를 선택하�
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Web Server 는 기동 시 HTTP, HTTPS 등 다양한 Port를 사용하는데 LENA N Type Web Server에서는 Web Server 설치 시 기본이 되는 Port 만을 입력 받고, 이를 기준으로 해당 Type으로 설치를 한다. 이후 다른 Type 추가는 가능하며, 기본으로 설치한 Type은 삭제가 불가능 하다</p>
+<p>Web Server는 기동 시 HTTP, HTTPS 등 다양한 Port를 사용하는데 EN-N Engine 타입의 Web Server에서는 Web Server 설치 시 기본이 되는 Port 만을 입력 받고, 이를 기준으로 해당 Type으로 설치를 한다. 이후 다른 Type 추가는 가능하며, 기본으로 설치한 Type은 삭제가 불가능 하다</p>
 </div>
 </td>
 </tr>
@@ -7202,7 +7202,7 @@ LENA Manager 상단의 'SERVER' 메뉴에서 설치한 Web Server 를 선택하�
 <div class="title">Figure 23. Web Server 정상 설치 후 Web Server List</div>
 </div>
 <div class="paragraph">
-<p>중지되어 있는 Web Server 를 기동하려면 WAS List 우측의 'Start' 버튼을 클릭한다. 또한 기동되어있는 Web Server 를 중지하려면 같은 위치에 'Stop' 버튼으로 바뀌므로 해당 버튼을 클릭한다.</p>
+<p>중지되어 있는 Web Server를 기동하려면 Web Server List 우측의 'Start' 버튼을 클릭한다. 또한 기동되어있는 Web Server를 중지하려면 같은 위치의 'Stop' 버튼을 바뀌므로 해당 버튼을 클릭한다.</p>
 </div>
 <div class="paragraph">
 <p>Web Server 기동 시에는 Web Server 기동 Log가 Popup 창으로 출력된다.</p>
@@ -7215,9 +7215,9 @@ LENA Manager 상단의 'SERVER' 메뉴에서 설치한 Web Server 를 선택하�
 </div>
 </div>
 <div class="sect3">
-<h4 id="_web_servern_was_연동_proxy"><a class="link" href="#_web_servern_was_연동_proxy">3.1.8. Web Server(N) - WAS 연동 (Proxy)</a></h4>
+<h4 id="_webn_server_was_연동_proxy"><a class="link" href="#_webn_server_was_연동_proxy">3.1.8. WebN Server - WAS 연동 (Proxy)</a></h4>
 <div class="paragraph">
-<p>WebN Server와 WAS 간 연동 설정에 대해 알아본다. LENA WebN Server 와 WAS 의 연동은 WebN Server 설정 화면에서 할 수 있다.
+<p>WebN Server와 WAS 간 연동 설정에 대해 알아본다. WebN Server와 WAS 의 연동은 WebN Server 설정 화면에서 할 수 있다.
 LENA Manager 상단의 'SERVER' 메뉴에서 설치한 WebN Server 를 선택하여 설정 화면을 열고 설정 화면 내 상단의 'Connector' 탭을 선택한다.</p>
 </div>
 <div class="imageblock">
@@ -7228,10 +7228,10 @@ LENA Manager 상단의 'SERVER' 메뉴에서 설치한 WebN Server 를 선택하
 </div>
 <div class="paragraph">
 <p>WebN Server 의 'Connector' 탭에서는 WebN Server 와 WAS 간 연결에 대한 설정을 관리한다.
-'Connector' 탭 화면 하단의 Load Balancer Member List 란에 연동할 WAS를 추가하면 기본적인 WebN Server 와 WAS 간 연동이 완료된다.</p>
+'Connector' 탭 화면 하단 &gt; Proxy 탭 &gt; Load Balancer &gt; Configuration 탭의 Load Balancer Member List에 연동할 WAS를 추가하면 기본적인 WebN Server 와 WAS 간 연동이 완료된다.</p>
 </div>
 <div class="paragraph">
-<p>WAS 를 추가하기 위해서는 Load Balancer 란의 Configuration탭에서 'Add Member' 버튼을 클릭하면 열리는 팝업에서 설치되어 있는 WAS를 선택하고 'Save' 버튼을 클릭한다.
+<p>연동할 WAS를 추가하기 위해서는 Load Balancer 란의 Configuration탭에서 'Add Member' 버튼을 클릭하면 열리는 팝업에서 설치되어 있는 WAS를 선택하고 'Save' 버튼을 클릭한다.
 팝업에서는 LENA Manager 에 등록되어있는 WAS Node 별로 WAS 목록을 확인 할 수 있으며 이미 'Connector' 에 등록한 WAS는 보이지 않는다.</p>
 </div>
 <div class="imageblock">
@@ -7251,9 +7251,9 @@ LENA Manager 상단의 'SERVER' 메뉴에서 설치한 WebN Server 를 선택하
 </div>
 </div>
 <div class="sect3">
-<h4 id="_web_servern_was_연동_net_gateway"><a class="link" href="#_web_servern_was_연동_net_gateway">3.1.9. Web Server(N) - WAS 연동 (Net Gateway)</a></h4>
+<h4 id="_webn_server_was_연동_net_gateway"><a class="link" href="#_webn_server_was_연동_net_gateway">3.1.9. WebN Server - WAS 연동 (Net Gateway)</a></h4>
 <div class="paragraph">
-<p>WebN Server와 Backend Server간 연동 설정에 대해 알아본다.LENA WebN Server 와 Backend Server의 연동은 WebN Server 설정 화면에서 할 수 있다.
+<p>WebN Server와 Backend Server간 연동 설정에 대해 알아본다.WebN Server와 Backend Server의 연동은 WebN Server 설정 화면에서 할 수 있다.
 LENA Manager 상단의 'SERVER' 메뉴에서 설치한 WebN Server 를 선택하여 설정 화면을 열고 설정 화면 내 상단의 'Connector' 탭을 선택한다. 이후 아래의 'Net Gateway' 탭을 선택 한다.</p>
 </div>
 <div class="imageblock">
@@ -7441,8 +7441,8 @@ WAS List 하단에는 설치된 Session Server를 확인 할 수 있는 Session 
 <div class="sect4">
 <h5 id="_embedded_모드_설치와_was_연동"><a class="link" href="#_embedded_모드_설치와_was_연동">Embedded 모드 설치와 WAS 연동</a></h5>
 <div class="paragraph">
-<p>Session Server 의 기능을 Embedded 모드로 사용할 WAS 를 선택하여 설정화면을 연 뒤, 상단의 'Session' 탭을 선택한다.<br>
-'Session' 탭 에서는 WAS 의 Session Clustering 적용을 위한 Session Server 연동 설정을 관리한다. 설정 항목의 'Session Clustering Enable' 항목을 'Yes' 로 변경하여 세부 설정이 표시되도록 한다. Embedded Mode 의 경우 WAS 에 Session Server 기능이 WAS 에 Embedded 형태로 WAS 가 기동한다.</p>
+<p>Session Server 의 기능을 Embedded 모드로 사용할 WAS를 선택하여 설정화면을 연 뒤, 상단의 'Session' 탭을 선택한다.<br>
+'Session' 탭 에서는 WAS 의 Session Clustering 적용을 위한 Session Server 연동 설정을 관리한다. 설정 항목의 'Session Clustering Enable' 항목을 'Yes' 로 변경하여 세부 설정이 표시되도록 한다. Embedded Mode 의 경우 WAS 에 Session Server 기능이 WAS 에 Embedded 형태로 WAS가 기동한다.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -7462,7 +7462,7 @@ WAS List 하단에는 설치된 Session Server를 확인 할 수 있는 Session 
 <p>Embedded Port: Embedded Session Server 가 사용할 Port를 입력한다.</p>
 </li>
 <li>
-<p>Secondary Server Host: 다른 하나의 Embedded Session Server 를 사용할 WAS 를 지정한다. WAS 가 설치된 Node 를 선택 후 WAS 를 선택한다.</p>
+<p>Secondary Server Host: 다른 하나의 Embedded Session Server 를 사용할 WAS를 지정한다. WAS가 설치된 Node 를 선택 후 WAS를 선택한다.</p>
 </li>
 <li>
 <p>Secondary Server Port: 다른 하나의 Embedded Session Server 가 사용할 Port 를 입력한다.</p>
@@ -7500,7 +7500,7 @@ WAS List 하단에는 설치된 Session Server를 확인 할 수 있는 Session 
 <div class="sect3">
 <h4 id="_server_간_연동_확인"><a class="link" href="#_server_간_연동_확인">3.1.11. Server 간 연동 확인</a></h4>
 <div class="paragraph">
-<p>앞서 <a href="#_web_servera_was_연동">Web Server(A) - WAS 연동</a> 과 <a href="#_web_servern_was_연동_proxy">Web Server(N) - WAS 연동 (Proxy)</a> 과 <a href="#_web_servern_was_연동_net_gateway">Web Server(N) - WAS 연동 (Net Gateway)</a> 과 <a href="#_session_server_설치_및_연동">Session Server 설치 및 연동</a> 과정을 통해서 진행한 연동 설정을 확인하는 방법을 설명한다.<br>
+<p>앞서 <a href="#_weba_server_was_연동">WebA Server - WAS 연동</a> 과 <a href="#_webn_server_was_연동_proxy">WebN Server - WAS 연동 (Proxy)</a> 과 <a href="#_webn_server_was_연동_net_gateway">WebN Server - WAS 연동 (Net Gateway)</a> 과 <a href="#_session_server_설치_및_연동">Session Server 설치 및 연동</a> 과정을 통해서 진행한 연동 설정을 확인하는 방법을 설명한다.<br>
 LENA Manager 에서는 설치한 Server 의 구성을 간편하게 확인할 수 있도록 Topology View 를 제공하고 있다. 이 Topology 기능을 통해 연동이 정상적으로 확인 하는 방법과
 Web Server, WAS 설치 시 기본 탑재되어 있는 LENA Sample 페이지를 통해 연동이 정상적으로 되어있는 지를 확인 할 수 있다.</p>
 </div>
@@ -7532,7 +7532,7 @@ Web Server, WAS 설치 시 기본 탑재되어 있는 LENA Sample 페이지를 �
 <p>http://[Web Server IP]:[Web Server Port]/index.html</p>
 </div>
 <div class="paragraph">
-<p>그럼 아래와 같이 LENA 에서 제공하는 index.html 페이지가 호출되는 것을 확인 할 수 있으며 Web Server 가 정상호출 되는 것을 확인 할 수 있다.</p>
+<p>그럼 아래와 같이 LENA 에서 제공하는 index.html 페이지가 호출되는 것을 확인 할 수 있으며 Web Server가 정상호출 되는 것을 확인 할 수 있다.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -7547,13 +7547,13 @@ Web Server, WAS 설치 시 기본 탑재되어 있는 LENA Sample 페이지를 �
 <p>LENA WAS를 설치하면 LENA 에서 제공하는 기본 Application 이 탑재되어 있다. 이 Application의 index.jsp, session.jsp 를 호출하면 각각 WAS 호출 테스트, Session Clustering 기능 테스트를 수행할 수 있다.<br></p>
 </div>
 <div class="paragraph">
-<p>Web Server 와 WAS 가 설치 초기상태로 설정되어 있다는 가정 하에 웹 브라우저에 아래와 같이 입력한다.</p>
+<p>Web Server 와 WAS가 설치 초기상태로 설정되어 있다는 가정 하에 웹 브라우저에 아래와 같이 입력한다.</p>
 </div>
 <div class="paragraph">
 <p>http://[Web Server IP]:[Web Server Port]/index.jsp</p>
 </div>
 <div class="paragraph">
-<p>Web Server 와 WAS 가 정상 연결이 되어있다면 Web Server 의 IP와 Port 로 호출한 위 요청은 WAS로 전달되어 index.jsp 페이지를 요청하게 되고
+<p>Web Server 와 WAS가 정상 연결이 되어있다면 Web Server 의 IP와 Port 로 호출한 위 요청은 WAS로 전달되어 index.jsp 페이지를 요청하게 되고
 다음과 같이 LENA Sample Application 에서 제공하는 index.jsp 페이지가 호출된다.</p>
 </div>
 <div class="imageblock">
@@ -7563,7 +7563,7 @@ Web Server, WAS 설치 시 기본 탑재되어 있는 LENA Sample 페이지를 �
 <div class="title">Figure 39. index.jsp 호출 Test</div>
 </div>
 <div class="paragraph">
-<p>index.jsp 페이지를 호출하면 현재 요청을 어떤 WAS 가 처리하는지를 Server ID, Service Port, JvmRout 값을 통해 확인할 수 있다.</p>
+<p>index.jsp 페이지를 호출하면 현재 요청을 어떤 WAS가 처리하는지를 Server ID, Service Port, JvmRout 값을 통해 확인할 수 있다.</p>
 </div>
 <div class="paragraph">
 <p>이번에는 동일한 Web Server IP, Port 로 아래와 같이 session.jsp 를 호출한다.</p>
@@ -7573,8 +7573,8 @@ Web Server, WAS 설치 시 기본 탑재되어 있는 LENA Sample 페이지를 �
 </div>
 <div class="paragraph">
 <p>session.jsp 를 호출하면 현재 요청에 대한 Session 정보가 추가로 확인된다. 호출을 반복함에 따라 Session Count 의 수가 증가하며 두번째 호출 부터 발급된 Session ID가 표시된다.
-Session Clustering 이 정상 적용 되었는지를 확인 하기 위해서는 Session ID가 발급된 상태에서 현재 요청을 처리중인 WAS 를 중지하고 웹 브라우저를 새로고침하여 요청을 다시 보냈을 때,
-기동중인 다른 WAS 가 요청을 처리하지만 Session ID 가 그대로 유지되며 Session Count 가 증가하는 것으로 확인할 수 있다.</p>
+Session Clustering 이 정상 적용 되었는지를 확인 하기 위해서는 Session ID가 발급된 상태에서 현재 요청을 처리중인 WAS를 중지하고 웹 브라우저를 새로고침하여 요청을 다시 보냈을 때,
+기동중인 다른 WAS가 요청을 처리하지만 Session ID 가 그대로 유지되며 Session Count 가 증가하는 것으로 확인할 수 있다.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -7591,7 +7591,7 @@ Session Clustering 이 정상 적용 되었는지를 확인 하기 위해서는 
 <div id="footer">
 <div id="footer-text">
 Version 1.3.3.0<br>
-Last updated 2023-12-11 14:46:32 +0900
+Last updated 2023-12-19 09:47:12 +0900
 </div>
 </div>
 </body>
