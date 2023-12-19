@@ -5307,7 +5307,6 @@ table.CodeRay td.code>pre{padding:0}
 <li><a href="#_log_in">2.1. Log In</a></li>
 <li><a href="#_log_out">2.2. Log Out</a></li>
 <li><a href="#_theme_변경">2.3. Theme 변경</a></li>
-<li><a href="#_manager_한글지원">2.4. Manager 한글지원</a></li>
 </ul>
 </li>
 <li><a href="#_dashboard">3. Dashboard</a></li>
@@ -5347,7 +5346,7 @@ table.CodeRay td.code>pre{padding:0}
 <li><a href="#_application_배포">4.3.10. Application 배포</a></li>
 </ul>
 </li>
-<li><a href="#_web_server_en_a">4.4. Web Server [EN-A]</a>
+<li><a href="#_weba_server">4.4. WebA Server</a>
 <ul class="sectlevel3">
 <li><a href="#_목록_5">4.4.1. 목록</a></li>
 <li><a href="#_install_3">4.4.2. Install</a></li>
@@ -5359,7 +5358,7 @@ table.CodeRay td.code>pre{padding:0}
 <li><a href="#_설정_정보_관리_2">4.4.8. 설정 정보 관리</a></li>
 </ul>
 </li>
-<li><a href="#_web_server_en_n">4.5. Web Server [EN-N]</a>
+<li><a href="#_webn_server">4.5. WebN Server</a>
 <ul class="sectlevel3">
 <li><a href="#_목록_6">4.5.1. 목록</a></li>
 <li><a href="#_install_4">4.5.2. Install</a></li>
@@ -5573,10 +5572,15 @@ table.CodeRay td.code>pre{padding:0}
 <li><a href="#_dbcp_로깅">10.10.2. DBCP 로깅</a></li>
 </ul>
 </li>
-<li><a href="#_session_server_상세">10.11. Session Server 상세</a>
+<li><a href="#_manager_언어_설정_변경">10.11. Manager 언어 설정 변경</a>
 <ul class="sectlevel3">
-<li><a href="#_session_server_standalone_모드">10.11.1. Session Server Standalone 모드</a></li>
-<li><a href="#_session_server_embedded_모드">10.11.2. Session Server Embedded 모드</a></li>
+<li><a href="#_언어_설정_변경_방법">10.11.1. 언어 설정 변경 방법</a></li>
+</ul>
+</li>
+<li><a href="#_session_server_상세">10.12. Session Server 상세</a>
+<ul class="sectlevel3">
+<li><a href="#_session_server_standalone_모드">10.12.1. Session Server Standalone 모드</a></li>
+<li><a href="#_session_server_embedded_모드">10.12.2. Session Server Embedded 모드</a></li>
 </ul>
 </li>
 </ul>
@@ -6005,36 +6009,6 @@ LENA Node와 Server에 대한 자원 모니터링과 그에 연계된 다양한 
 <p>Manager 상단 우측의 <span class="icon">수레바퀴 아이콘</span> 메뉴의 Dark Theme 메뉴를 통해 테마를 설정 할 수 있다. 라이트 모드와 다크 모드 두 가지 중에 선택이 가능하다.</p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_manager_한글지원"><a class="link" href="#_manager_한글지원">2.4. Manager 한글지원</a></h3>
-<div class="paragraph">
-<p>manager.conf 에 기본값 false 로 정의된 다음 항목을 변경 후 Login 시에 언어를 변경하여 사용한다.</p>
-</div>
-<div class="listingblock">
-<div class="title">manager.conf 파일 변경</div>
-<div class="content">
-<pre>lena.i18n.enable = false</pre>
-</div>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="/resources/1.3.3.0/static/images/manual/common_hng_info.png" alt="common hng info">
-</div>
-<div class="title">Figure 3. 언어 설정 변경 세부설명</div>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="/resources/1.3.3.0/static/images/manual/common_hng_setting.png" alt="common hng setting">
-</div>
-<div class="title">Figure 4. 언어 설정 변경 방법</div>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="/resources/1.3.3.0/static/images/manual/common_hng_img.png" alt="common hng img">
-</div>
-<div class="title">Figure 5. 언어 설정 변경 후 매니저 화면</div>
-</div>
-</div>
 </div>
 </div>
 <div class="sect1">
@@ -6047,7 +6021,7 @@ LENA Node와 Server에 대한 자원 모니터링과 그에 연계된 다양한 
 <div class="content">
 <img src="/resources/1.3.3.0/static/images/manual/dashboard_overview.png" alt="dashboard overview">
 </div>
-<div class="title">Figure 6. Dashboard</div>
+<div class="title">Figure 3. Dashboard</div>
 </div>
 <div class="paragraph">
 <p>화면 좌측의 시스템 목록에는 로그인 한 사용자에게 권한이 있는 시스템 목록이 제공된다.
@@ -6281,7 +6255,7 @@ All은 권한이 있는 모든 시스템의 정보를 통합하여 보여준다.
 <div class="content">
 <img src="/resources/1.3.3.0/static/images/manual/server_1_system.png" alt="server 1 system">
 </div>
-<div class="title">Figure 7. System List</div>
+<div class="title">Figure 4. System List</div>
 </div>
 </div>
 <div class="sect3">
@@ -6377,7 +6351,7 @@ All은 권한이 있는 모든 시스템의 정보를 통합하여 보여준다.
 <div class="content">
 <img src="/resources/1.3.3.0/static/images/manual/server_2_node.png" alt="server 2 node">
 </div>
-<div class="title">Figure 8. Node List</div>
+<div class="title">Figure 5. Node List</div>
 </div>
 <div class="paragraph">
 <p>Node의 속성은 아래와 같다.</p>
@@ -6870,7 +6844,7 @@ Node에 설치한 Server의 등록, 수정, 삭제를 수행하며, 그 외 Serv
 <div class="content">
 <img src="/resources/1.3.3.0/static/images/manual/server_3_application_server.png" alt="server 3 application server">
 </div>
-<div class="title">Figure 9. Web Application Server List</div>
+<div class="title">Figure 6. Web Application Server List</div>
 </div>
 <div class="paragraph">
 <p>WAS의 속성은 아래와 같다.</p>
@@ -7260,7 +7234,7 @@ Manager에서 서버가 uninstall되는 것을 방지 할 수 있다.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Server를 중지시 WAS 가 서비스중인 모든 작업이 끝난 후 종료된다.</p>
+<p>Server를 중지시 WAS가 서비스중인 모든 작업이 끝난 후 종료된다.</p>
 </li>
 <li>
 <p><a href="#server_was_general">General</a> 탭의 Shutdown Timeout 시간 이후에도 작업이 끝나지 않은경우 강제로 중지된다.</p>
@@ -9332,7 +9306,7 @@ Application Descriptor 와 DataSource에 대한 설정 및 관리 기능을 제�
 </div>
 </div>
 <div class="sect2">
-<h3 id="_web_server_en_a"><a class="link" href="#_web_server_en_a">4.4. Web Server [EN-A]</a></h3>
+<h3 id="_weba_server"><a class="link" href="#_weba_server">4.4. WebA Server</a></h3>
 <div class="paragraph">
 <p>NODE의 Engine이 EN-A 인 Web Server를 관리하기 위한 화면을 제공한다.
 Node에 설치한 Web Server의 등록, 수정, 삭제가 가능하며, 시작과 종료를 수행할 수 있다.</p>
@@ -9368,60 +9342,85 @@ Node에 설치한 Web Server의 등록, 수정, 삭제가 가능하며, 시작�
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Status</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Server의 상태</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">아래와 같은 상태를 제공함</p>
-<p class="tableblock">* Started(v)
-* Stop(ㅁ)
-* Error(!)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>아래와 같은 상태를 제공함</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Started(v)</p>
+</li>
+<li>
+<p>Stop(ㅁ)</p>
+</li>
+<li>
+<p>Error(!)</p>
+</li>
+</ul>
+</div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Name(*)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Server의 이름</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Address</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Server의 IP주소</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Server ID</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Server의 ID</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Engine</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Node의 Engine 타입</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>EN-A</p>
+</li>
+</ul>
+</div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">HTTP Port</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">HTTP 포트번호</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">HTTPS Port</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">HTTPS 포트번호</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">SSL</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Shell 실행시 SSL 기반의 패스워드 사용여부</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Web Server에 SSL 관련 설정을 해야함</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Web Server에 SSL 관련 설정을 해야함</p>
+</div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Server의 시작 및 종료</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon">+ 아이콘</span></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><span class="button">Register 버튼</span> 또는 <span class="button">- 버튼</span> 을 클릭하여 선택된 Server 정보가 변경 중임을 표시</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon">- 아이콘</span></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><span class="button">삭제(휴지통) 버튼</span> 을 클릭하여 선택된 Server정보가 삭제됨을 표시</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><span class="button">Action(&#8230;&#8203;) 버튼</span> 을 클릭하면 Forced Stop과 Forced Restart를 수행할 수 있는 메뉴 제공</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
 </tr>
 </tbody>
 </table>
@@ -9636,7 +9635,7 @@ Manager에서 서버가 uninstall되는 것을 방지 할 수 있다.</p>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Server를 중지시 <a href="#server_web_general">General</a> 탭의 Stop Mode 에 따라 종료 방식이 달라진다.</p>
+<p>Server를 중지시 <a href="#server_weba_general">General</a> 탭의 Stop Mode 에 따라 종료 방식이 달라진다.</p>
 </div>
 <div class="paragraph">
 <p>Stop : 기본 종료 옵션으로 현재 서비스중인 작업을 보장하지 않는다.<br>
@@ -9698,7 +9697,7 @@ Graceful Stop : 현재 서비스중인 작업을 완료한 후 종료한다. (Wi
 Web Server 목록에서 Server를 선택하면 설정 정보를 관리하는 화면으로 이동한다.</p>
 </div>
 <div class="sect4">
-<h5 id="server_web_general"><a class="link" href="#server_web_general">General</a></h5>
+<h5 id="server_weba_general"><a class="link" href="#server_weba_general">General</a></h5>
 <div class="paragraph">
 <p>Web Server의 일반적인 설정 값과 Connection, Process 정보를 편집할 수 있다.</p>
 </div>
@@ -10005,7 +10004,7 @@ AccessFileName : .htaccess)에 대하여 어떤 지시자 사용을 허가할 �
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Web Server 가 mpm event 방식을 사용할 수 있는 환경인 경우 Process Info 설정을 간편하게 할 수 있는 기능을 제공한다.</p>
+<p>Web Server가 mpm event 방식을 사용할 수 있는 환경인 경우 Process Info 설정을 간편하게 할 수 있는 기능을 제공한다.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -10213,7 +10212,7 @@ AccessFileName : .htaccess)에 대하여 어떤 지시자 사용을 허가할 �
 </div>
 </div>
 <div class="sect4">
-<h5 id="web_Connector"><a class="link" href="#web_Connector">Connector</a></h5>
+<h5 id="weba_Connector"><a class="link" href="#weba_Connector">Connector</a></h5>
 <div class="paragraph">
 <p>Web Server와 WAS를 연계하기 위한 정보를 관리한다.<br>
 Connector 페이지는 연계 방식에 따라 JK와 Proxy 탭으로 나누어져 있으며, 각 탭에서 모듈에 따른 Connector 설정 정보를 편집할 수 있다.</p>
@@ -10460,7 +10459,7 @@ Add Worker 버튼을 눌렀을 때 Worker를 추가할 수 있는 창이 화면�
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Server Type</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Worker가 가리키는 서버의 유형이다.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">값으로 Standard가 출력 된다.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">값으로 Standard 또는 Enterprise가 출력 된다.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Redirect</p></td>
@@ -11428,7 +11427,7 @@ ADMIN &gt; Manager Environment &gt; Manager Configuration 항목에서
 </div>
 </div>
 <div class="sect2">
-<h3 id="_web_server_en_n"><a class="link" href="#_web_server_en_n">4.5. Web Server [EN-N]</a></h3>
+<h3 id="_webn_server"><a class="link" href="#_webn_server">4.5. WebN Server</a></h3>
 <div class="paragraph">
 <p>NODE의 Engine이 EN-N 인 Web Server를 관리하기 위한 화면을 제공한다.
 Node에 설치한 Web Server의 등록, 수정, 삭제가 가능하며, 시작과 종료를 수행할 수 있다.</p>
@@ -11464,55 +11463,93 @@ Node에 설치한 Web Server의 등록, 수정, 삭제가 가능하며, 시작�
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Status</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Server의 상태</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">아래와 같은 상태를 제공함</p>
-<p class="tableblock">* Started(v)
-* Stop(ㅁ)
-* Error(!)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>아래와 같은 상태를 제공함</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Started(v)</p>
+</li>
+<li>
+<p>Stop(ㅁ)</p>
+</li>
+<li>
+<p>Error(!)</p>
+</li>
+</ul>
+</div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Name(*)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Server의 이름</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Address</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Server의 IP주소</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Server ID</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Server의 ID</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Engine</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Node의 Engine 타입</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>EN-N</p>
+</li>
+</ul>
+</div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Protocol Type</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">프로토콜 타입</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">HTTP, HTTPS, TCP, UDP</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>HTTP</p>
+</li>
+<li>
+<p>HTTPS</p>
+</li>
+<li>
+<p>TCP</p>
+</li>
+<li>
+<p>UDP</p>
+</li>
+</ul>
+</div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Port</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">포트 번호</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Server의 시작 및 종료</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon">+ 아이콘</span></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><span class="button">Register 버튼</span> 또는 <span class="button">- 버튼</span> 을 클릭하여 선택된 Server 정보가 변경 중임을 표시</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon">- 아이콘</span></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><span class="button">삭제(휴지통) 버튼</span> 을 클릭하여 선택된 Server정보가 삭제됨을 표시</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><span class="button">Action(&#8230;&#8203;) 버튼</span> 을 클릭하면 Forced Stop과 Graceful Stop과 Restart를 수행할 수 있는 메뉴 제공</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
 </tr>
 </tbody>
 </table>
@@ -11765,14 +11802,14 @@ Manager에서 서버가 uninstall되는 것을 방지 할 수 있다.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_forced_stopgraceful_stoprestart"><a class="link" href="#_forced_stopgraceful_stoprestart">Forced Stop/Graceful Stop/Restart</a></h5>
+<h5 id="_forced_stoprestart_3"><a class="link" href="#_forced_stoprestart_3">Forced Stop/Restart</a></h5>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
 <p>Server 목록 가장 우측의 <span class="button">&#8230;&#8203; 버튼</span> 을 클릭한다.</p>
 </li>
 <li>
-<p>강제 종료 혹은 Graceful 종료 혹은 재시작을 수행한다.</p>
+<p>강제 종료 혹은 재시작을 수행한다.</p>
 </li>
 </ol>
 </div>
@@ -11847,42 +11884,64 @@ WebN Server 목록에서 Server를 선택하면 설정 정보를 관리하는 �
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Server 설치 경로</p>
 </div></div></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Base Port(*)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>설치할때 설정한 Port Type 정보와 Port Number</p>
 </div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Port Type은 변경이 불가능하고, Port Number의 경우, 수정이 가능하다.</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Port Type은 변경 불가능, Port Number는 변경 가능</p>
+</div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Welcome Page</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>웹사이트의 초기페이지 문서로 어떤 파일을 사용할 것인지 정의</p>
 </div></div></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stop Mode</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Server 중지 Mode</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>Stop</p>
+</li>
+<li>
+<p>Graceful Stop</p>
+</li>
+</ul>
+</div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Directory Root Path</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Web Server에서 제공하는 문서들이 저장되어 있는 기본 폴더 경로</p>
 </div></div></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Disable Symbolic Links</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Symbolic Link 미사용 여부</p>
 </div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Default : on (사용 안함)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Default : on (사용 안함)</p>
+</div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Diasble Auto Index</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>디렉터리 목록 출력을 활성화하거나 비활성화합니다.</p>
 </div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Default : on (비활성화)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Default : on (비활성화)</p>
+</div></div></td>
 </tr>
 </tbody>
 </table>
@@ -11933,6 +11992,13 @@ WebN Server 목록에서 Server를 선택하면 설정 정보를 관리하는 �
 <p>프로토콜 타입을 선택한다.</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Virtual Host ID</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>해당 Port를 사용중인 Virtual Host ID를 표시한다.</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">특정 Virtual Host에서 해당 Port를 사용중이라면, Port Alias를 변경 할 수 없다.</p></td>
 </tr>
 </tbody>
 </table>
@@ -11985,6 +12051,13 @@ WebN Server 목록에서 Server를 선택하면 설정 정보를 관리하는 �
 <p>프로토콜 타입을 선택한다.</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Virtual Host ID</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>해당 Port를 사용중인 Virtual Host ID를 표시한다.</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">특정 Virtual Host에서 해당 Port를 사용중이라면, Port Alias를 변경 할 수 없다.</p></td>
 </tr>
 </tbody>
 </table>
@@ -12051,7 +12124,7 @@ WebN Server 목록에서 Server를 선택하면 설정 정보를 관리하는 �
 <td class="tableblock halign-left valign-top"><p class="tableblock">Default: 60</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Client Body Timeout</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Client Body Timeout(*)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>request body 정보를 읽는 시간, <strong>request body 전체 전송 timeout 시간이 아니라, 두개의 연속적인 읽기 작업 사이의 timeout 시간이다.</strong> client_body_timeout에 지정한 시간 안에 client가 아무것도 전송하지 않으면 요청은 408(Request Time-out)로 끝난다.</p>
 </div></div></td>
@@ -12165,33 +12238,47 @@ Proxy의 기본 설정 값을 관리한다.</p>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Proxy Connect Timeout(s)(*)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">백엔드 서버와의 연결을 설정하기 위한 시간 제한을 정의합니다. 이 시간 제한은 일반적으로 75초를 초과할 수 없습니다.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Default: 5</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Proxy Read Timeout(s)(*)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Proxy Read Timeout(*)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">백엔드 서버로 부터 응답을 읽는데 설정한 timeout 시간이다. 전체 응답 전송 timeout 시간이 아니라 두 개의 연속적인 읽기 작업 사이의 timeout 시간이다. proxy_read_timeout에 지정한 시간 안에 백엔드 서버가 아무것도 전송하지 않으면 connection은 닫힌다.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Default: 300</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Background ServerFault Check Interval(s)(*)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Proxy Connect Timeout(*)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">백엔드 서버와의 연결을 설정하기 위한 시간 제한을 정의합니다. 이 시간 제한은 일반적으로 75초를 초과할 수 없습니다.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Default: 5</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Background ServerFault Check Interval(*)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">백엔드 서버와 연결된 Member가 오류 상태인 경우, 본 항목에 설정한 간격(초)으로 서버를 확인하고 서버가 정상 동작 하면 요청을 다시 전달한다. 기능을 사용하지 않으려면 0으로 설정한다.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Default: 10</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Server Fault Retry Time(s)(*)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Server Fault Retry Time(*)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">백엔드 서버와 연결된 Member가 오류 상태인 경우, timeout(초)이 만료될 때 까지 어떠한 요청도 해당 서버에 전달하지 않는다.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Default: 60<br>
-Health Check Interval 과 Background ServerFault Check Interval 설정을 0으로 둘 다 사용하지 않을 경우에 활성화 되고, 해당 설정 값으로만 백엔드 서버의 상태를 확인하여 복구 시도함.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Default: 60<br></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Health Check Interval(s)(*)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Health Check Interval(*)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">백엔드 서버의 상태를 확인하기 위해 설정된 간격(초)으로 서버를 확인한다. 기능을 사용하지 않으려면 0으로 설정한다.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Default: 60</p></td>
 </tr>
 </tbody>
 </table>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Background ServerFault Check Interval과 Health Check Interval을 0으로 저장 시<br>
+모든 LoadBalancer의 Auto Server Fault Recovery값이 off로 변경되며, 신규생성 값도 off로 고정된다.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
 <div class="olist arabic">
 <ol class="arabic" start="2">
 <li>
@@ -12233,7 +12320,7 @@ Load Balancer 영역에는 Overview 탭과 Configuration 탭이 존재하며, Ov
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">URI Pattern Group ID</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Pattern</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">특정 URI Pattern에서 Load Balancer를 지정한 경우, 해당 URI Pattern이 속해있는 URI Pattern Group ID가 출력된다.</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
@@ -12287,10 +12374,26 @@ Load Balancer 영역에는 Overview 탭과 Configuration 탭이 존재하며, Ov
 </div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Session Cookie</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Session Cookie(*)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Session Cookie 이름을 변경하고자 하는 경우 설정한다.</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Default: JSESSIONID</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Timeout Retry</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Session Cookie 이름을 변경하고자 하는 경우 설정한다.</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Default:Off<br>
+On 셋팅 시 Gateway Timeout 발생 시 재 전송한다.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Auto Server Fault Recovery</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fox Directive 사용여부</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Default: On<br>
+Off 셋팅 시 Fail Check 관련하여 Health Check Interval값 대신 ServerFault Retry Time 값이 적용된다.</p>
 </div></div></td>
 </tr>
 </tbody>
@@ -12445,7 +12548,7 @@ Net Gateway의 기본 설정 값을 관리한다.</p>
 </div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 63. Connector Info (Proxy)</caption>
+<caption class="title">Table 63. Connector Info (Net Gateway)</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 50%;">
@@ -12765,7 +12868,7 @@ Add Upstream 버튼을 눌렀을 때 Upstream을 추가할 수 있는 창이 화
 </div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Rewrite Enable</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enable Rewrite</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Rewrite 기능을 사용할 것인지 여부, 체크 하면 하단에 입력 창 생성</p>
 </div></div></td>
@@ -12802,6 +12905,15 @@ Add Upstream 버튼을 눌렀을 때 Upstream을 추가할 수 있는 창이 화
 <p>Http→Https Redirect 사용여부</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enable Custom</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Custom Configuration 사용여부, 체크 하면 하단에 입력 창 생성</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>입력되는 내용은 별도의 파일로 생성, 저장</p>
+</div></div></td>
 </tr>
 </tbody>
 </table>
@@ -13153,7 +13265,7 @@ Node에 설치한 Session Server의 등록, 수정, 삭제가 가능하며, 시�
 <div class="content">
 <img src="/resources/1.3.3.0/static/images/manual/server_6_session_server.png" alt="server 6 session server">
 </div>
-<div class="title">Figure 10. Session Server List</div>
+<div class="title">Figure 7. Session Server List</div>
 </div>
 <div class="paragraph">
 <p>Session Server의 속성은 아래와 같다.</p>
@@ -13730,7 +13842,7 @@ ADMIN &gt; Manager Environment &gt; Manager Configuration 항목에서
 <div class="content">
 <img src="/resources/1.3.3.0/static/images/manual/server_cluster_overview.png" alt="server cluster overview">
 </div>
-<div class="title">Figure 11. Server Cluster 화면</div>
+<div class="title">Figure 8. Server Cluster 화면</div>
 </div>
 <div class="sect3">
 <h4 id="_server_cluster_목록"><a class="link" href="#_server_cluster_목록">5.1.1. Server Cluster 목록</a></h4>
@@ -14776,7 +14888,7 @@ Cluster에 추가된 server는 해당 Snapshot으로의 복원 대상에서 제�
 <div class="content">
 <img src="/resources/1.3.3.0/static/images/manual/resource_database.png" alt="resource database">
 </div>
-<div class="title">Figure 12. Database 목록 조회 화면</div>
+<div class="title">Figure 9. Database 목록 조회 화면</div>
 </div>
 <div class="sect3">
 <h4 id="_database_등록"><a class="link" href="#_database_등록">6.1.1. Database 등록</a></h4>
@@ -14846,7 +14958,7 @@ Cluster에 추가된 server는 해당 Snapshot으로의 복원 대상에서 제�
 <div class="content">
 <img src="/resources/1.3.3.0/static/images/manual/resource_datasource.png" alt="resource datasource">
 </div>
-<div class="title">Figure 13. DataSource 목록 조회 화면</div>
+<div class="title">Figure 10. DataSource 목록 조회 화면</div>
 </div>
 <div class="sect3">
 <h4 id="_datasource_등록"><a class="link" href="#_datasource_등록">6.2.1. DataSource 등록</a></h4>
@@ -14909,7 +15021,7 @@ Cluster에 추가된 server는 해당 Snapshot으로의 복원 대상에서 제�
 <div class="content">
 <img src="/resources/1.3.3.0/static/images/manual/resource_datasource_detail.png" alt="resource datasource detail">
 </div>
-<div class="title">Figure 14. DataSource 상세 정보 화면</div>
+<div class="title">Figure 11. DataSource 상세 정보 화면</div>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -15120,7 +15232,7 @@ Cluster에 추가된 server는 해당 Snapshot으로의 복원 대상에서 제�
 <div class="content">
 <img src="/resources/1.3.3.0/static/images/manual/resource_jta.png" alt="resource jta">
 </div>
-<div class="title">Figure 15. JTA 목록 조회 화면</div>
+<div class="title">Figure 12. JTA 목록 조회 화면</div>
 </div>
 <div class="sect3">
 <h4 id="_jta_등록"><a class="link" href="#_jta_등록">6.3.1. JTA 등록</a></h4>
@@ -15157,7 +15269,7 @@ Cluster에 추가된 server는 해당 Snapshot으로의 복원 대상에서 제�
 <div class="content">
 <img src="/resources/1.3.3.0/static/images/manual/resource_jta_detail.png" alt="resource jta detail">
 </div>
-<div class="title">Figure 16. JTA 상세 정보 화면</div>
+<div class="title">Figure 13. JTA 상세 정보 화면</div>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -15307,7 +15419,7 @@ Cluster에 추가된 server는 해당 Snapshot으로의 복원 대상에서 제�
 <div class="content">
 <img src="/resources/1.3.3.0/static/images/manual/resource_jms.png" alt="resource jms">
 </div>
-<div class="title">Figure 17. JMS 목록 조회 화면</div>
+<div class="title">Figure 14. JMS 목록 조회 화면</div>
 </div>
 <div class="sect3">
 <h4 id="_jms_등록"><a class="link" href="#_jms_등록">6.4.1. JMS 등록</a></h4>
@@ -15347,7 +15459,7 @@ Cluster에 추가된 server는 해당 Snapshot으로의 복원 대상에서 제�
 <div class="content">
 <img src="/resources/1.3.3.0/static/images/manual/resource_jms_detail.png" alt="resource jms detail">
 </div>
-<div class="title">Figure 18. JMS 상세 정보 화면</div>
+<div class="title">Figure 15. JMS 상세 정보 화면</div>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -15497,7 +15609,7 @@ Cluster에 추가된 server는 해당 Snapshot으로의 복원 대상에서 제�
 <div class="content">
 <img src="/resources/1.3.3.0/static/images/manual/resource_application.png" alt="resource application">
 </div>
-<div class="title">Figure 19. Application 목록 조회 화면</div>
+<div class="title">Figure 16. Application 목록 조회 화면</div>
 </div>
 <div class="sect3">
 <h4 id="_application_등록"><a class="link" href="#_application_등록">6.5.1. Application 등록</a></h4>
@@ -15541,7 +15653,7 @@ Cluster에 추가된 server는 해당 Snapshot으로의 복원 대상에서 제�
 <div class="content">
 <img src="/resources/1.3.3.0/static/images/manual/resource_application_detail.png" alt="resource application detail">
 </div>
-<div class="title">Figure 20. Application 상세 정보 화면</div>
+<div class="title">Figure 17. Application 상세 정보 화면</div>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -15740,19 +15852,19 @@ Cluster에 추가된 server는 해당 Snapshot으로의 복원 대상에서 제�
 <div class="content">
 <img src="/resources/1.3.3.0/static/images/manual/diagnostics_monitoring_dashboard_node_tab.png" alt="diagnostics monitoring dashboard node tab">
 </div>
-<div class="title">Figure 21. Monitoring Dashboard의 Node 탭 화면</div>
+<div class="title">Figure 18. Monitoring Dashboard의 Node 탭 화면</div>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="/resources/1.3.3.0/static/images/manual/diagnostics_monitoring_dashboard_cluster_tab.png" alt="diagnostics monitoring dashboard cluster tab">
 </div>
-<div class="title">Figure 22. Monitoring Dashboard의 Server Cluster 탭 화면</div>
+<div class="title">Figure 19. Monitoring Dashboard의 Server Cluster 탭 화면</div>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="/resources/1.3.3.0/static/images/manual/container/monitoring_serviceCluster.png" alt="monitoring serviceCluster">
 </div>
-<div class="title">Figure 23. Monitoring Dashboard의 Service Cluster 탭 화면</div>
+<div class="title">Figure 20. Monitoring Dashboard의 Service Cluster 탭 화면</div>
 </div>
 <div class="admonitionblock important">
 <table>
@@ -16000,7 +16112,7 @@ Cluster에 추가된 server는 해당 Snapshot으로의 복원 대상에서 제�
 <div class="content">
 <img src="/resources/1.3.3.0/static/images/manual/diagnostics_current_status_dump.png" alt="diagnostics current status dump">
 </div>
-<div class="title">Figure 24. Dump 창</div>
+<div class="title">Figure 21. Dump 창</div>
 </div>
 <div class="paragraph">
 <p>Heap Dump, Thread Dump, Active Service Dump를 생성하고 다운로드 할 수 있다.
@@ -16112,7 +16224,7 @@ Thread Dump는 {log_home}/logs/tdump, Active Service Dump는 {log_home}/logs/sdu
 <div class="content">
 <img src="/resources/1.3.3.0/static/images/manual/diagnostics_current_status_system.png" alt="diagnostics current status system">
 </div>
-<div class="title">Figure 25. System 탭</div>
+<div class="title">Figure 22. System 탭</div>
 </div>
 <div class="sect5">
 <h6 id="_memory_chart"><a class="link" href="#_memory_chart">Memory Chart</a></h6>
@@ -16367,7 +16479,7 @@ Thread List의 항목은 아래와 같다.</p>
 <div class="content">
 <img src="/resources/1.3.3.0/static/images/manual/diagnostics_current_status_datasource.png" alt="diagnostics current status datasource">
 </div>
-<div class="title">Figure 26. DataSource 탭 화면</div>
+<div class="title">Figure 23. DataSource 탭 화면</div>
 </div>
 <div class="sect5">
 <h6 id="_datasource_chart"><a class="link" href="#_datasource_chart">DataSource Chart</a></h6>
@@ -16463,7 +16575,7 @@ Active Connections가 붉은 점선에 근접할 경우 유의해야 한다.
 <div class="content">
 <img src="/resources/1.3.3.0/static/images/manual/diagnostics_analysis_dashboard.png" alt="diagnostics analysis dashboard">
 </div>
-<div class="title">Figure 27. Analysis Dashboard</div>
+<div class="title">Figure 24. Analysis Dashboard</div>
 </div>
 <div class="sect3">
 <h4 id="_performance_map"><a class="link" href="#_performance_map">7.2.1. Performance Map</a></h4>
@@ -16629,7 +16741,7 @@ Web Server, WAS, Session Server의 현재 상태가 좌측에 표시된다.
 <div class="content">
 <img src="/resources/1.3.3.0/static/images/manual/diagnostics_analysis_system_detail.png" alt="diagnostics analysis system detail">
 </div>
-<div class="title">Figure 28. System Detail 화면</div>
+<div class="title">Figure 25. System Detail 화면</div>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -16652,7 +16764,7 @@ Web Server, WAS, Session Server의 현재 상태가 좌측에 표시된다.
 <div class="content">
 <img src="/resources/1.3.3.0/static/images/manual/diagnostics_analysis_system_detail_xlog.png" alt="diagnostics analysis system detail xlog">
 </div>
-<div class="title">Figure 29. Transaction 상세 정보 화면</div>
+<div class="title">Figure 26. Transaction 상세 정보 화면</div>
 </div>
 <div class="paragraph">
 <p>상세 정보는 CLIENT(사용자 브라우저 관련), WEB(LENA Web Server 관련), WAS(LENA Web Application Server 관련) 측면의 데이터로 구성된다.
@@ -16990,7 +17102,7 @@ WAS가 전송한 이벤트 정보는 Manager의 DB에 일정 기간(3달) 동안
 <div class="content">
 <img src="/resources/1.3.3.0/static/images/manual/diagnostics_event_dashboard.png" alt="diagnostics event dashboard">
 </div>
-<div class="title">Figure 30. Event Dashboard</div>
+<div class="title">Figure 27. Event Dashboard</div>
 </div>
 <div class="paragraph">
 <p>이벤트 발생 추세를 일자 별 바 차트로 확인할 수 있다.
@@ -17095,7 +17207,7 @@ WAS가 전송한 이벤트 정보는 Manager의 DB에 일정 기간(3달) 동안
 <div class="content">
 <img src="/resources/1.3.3.0/static/images/manual/diagnostics_event_detail.png" alt="diagnostics event detail">
 </div>
-<div class="title">Figure 31. Event 상세 정보 화면</div>
+<div class="title">Figure 28. Event 상세 정보 화면</div>
 </div>
 <div class="paragraph">
 <p>Event 상세 정보의 공통 항목은 다음과 같다.</p>
@@ -17366,7 +17478,7 @@ WAS가 전송한 이벤트 정보는 Manager의 DB에 일정 기간(3달) 동안
 <div class="content">
 <img src="/resources/1.3.3.0/static/images/manual/diagnostics_statistics.png" alt="diagnostics statistics">
 </div>
-<div class="title">Figure 32. Statistics 화면</div>
+<div class="title">Figure 29. Statistics 화면</div>
 </div>
 <div class="paragraph">
 <p>위 화면에서 다음과 같은 내용을 확인할 수 있다.</p>
@@ -17412,7 +17524,7 @@ Report는 7일간 보관되며 오래된 Report는 자동으로 삭제된다.</p
 <div class="content">
 <img src="/resources/1.3.3.0/static/images/manual/diagnostics_report_list.png" alt="diagnostics report list">
 </div>
-<div class="title">Figure 33. 진단/대응 리포트 목록 화면</div>
+<div class="title">Figure 30. 진단/대응 리포트 목록 화면</div>
 </div>
 <div class="paragraph">
 <p><span class="button">View 버튼</span> 을 선택하여 Report를 확인할 수 있다.</p>
@@ -17427,7 +17539,7 @@ Report는 7일간 보관되며 오래된 Report는 자동으로 삭제된다.</p
 <div class="content">
 <img src="/resources/1.3.3.0/static/images/manual/diagnostics_report.png" alt="diagnostics report">
 </div>
-<div class="title">Figure 34. 진단/대응 리포트 화면</div>
+<div class="title">Figure 31. 진단/대응 리포트 화면</div>
 </div>
 <div class="paragraph">
 <p>위와 같이 이상 현상이 지속된 기간 내에 검출된 진단 결과간의 인과 관계를 도식화해 제공하며,
@@ -17458,7 +17570,7 @@ Fault 상황은 진단/대응 Rule에 설정한 설정 내용의 모두를 만�
 <div class="content">
 <img src="/resources/1.3.3.0/static/images/manual/diagnostics_report_detail.png" alt="diagnostics report detail">
 </div>
-<div class="title">Figure 35. 진단/대응 리포트 상세 정보</div>
+<div class="title">Figure 32. 진단/대응 리포트 상세 정보</div>
 </div>
 <div class="paragraph">
 <p>Report 상세 정보의 항목은 다음과 같다.</p>
@@ -17804,7 +17916,7 @@ Fault 상황은 진단/대응 Rule에 설정한 설정 내용의 모두를 만�
 <div class="content">
 <img src="/resources/1.3.3.0/static/images/manual/diagnostics_alert.png" alt="diagnostics alert">
 </div>
-<div class="title">Figure 36. 진단/대응 결과 알림</div>
+<div class="title">Figure 33. 진단/대응 결과 알림</div>
 </div>
 <div class="paragraph">
 <p>알림 내용을 선택하면 생성된 Report를 바로 확인할 수 있으며, 알림 내용을 확인하고 더 이상 표시하지 않기를 원한다면 <span class="button">x 버튼</span> 을 클릭한다.
@@ -17814,7 +17926,7 @@ Fault 상황은 진단/대응 Rule에 설정한 설정 내용의 모두를 만�
 <div class="content">
 <img src="/resources/1.3.3.0/static/images/manual/diagnostics_alert_list.png" alt="diagnostics alert list">
 </div>
-<div class="title">Figure 37. 진단/대응 결과 알림 목록 일괄 확인</div>
+<div class="title">Figure 34. 진단/대응 결과 알림 목록 일괄 확인</div>
 </div>
 <div class="paragraph">
 <p><span class="icon">Home 아이콘</span> 을 클릭하면 선택한 알림에 대한 진단 이력 화면으로 이동한다.
@@ -17849,7 +17961,7 @@ Fault 상황은 진단/대응 Rule에 설정한 설정 내용의 모두를 만�
 <div class="content">
 <img src="/resources/1.3.3.0/static/images/manual/diagnostics_dump_report.png" alt="diagnostics dump report">
 </div>
-<div class="title">Figure 38. Thread Dump Analysis 초기 화면</div>
+<div class="title">Figure 35. Thread Dump Analysis 초기 화면</div>
 </div>
 <div class="paragraph">
 <p>LENA Manager의 상단 'DIAGNOSTICS' 메뉴를 선택하고 좌측 Analysis 내 Thread Dump Analysis를 클릭한다.</p>
@@ -17858,16 +17970,16 @@ Fault 상황은 진단/대응 Rule에 설정한 설정 내용의 모두를 만�
 <div class="content">
 <img src="/resources/1.3.3.0/static/images/manual/diagnostics_dump_modal.png" alt="diagnostics dump modal">
 </div>
-<div class="title">Figure 39. 분석할 Thread Dump를 선택해 Report를 생성하는 모달 창</div>
+<div class="title">Figure 36. 분석할 Thread Dump를 선택해 Report를 생성하는 모달 창</div>
 </div>
 <div class="paragraph">
-<p>LENA Manager의 상단 'DIAGNOSTICS' 메뉴를 선택하고 좌측 Analysis 내 Thread Dump Analysis를 클릭한다.</p>
+<p>Create Report 버튼을 눌러 모달 창을 확인한다.</p>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="/resources/1.3.3.0/static/images/manual/diagnostics_dump_success.png" alt="diagnostics dump success">
 </div>
-<div class="title">Figure 40. Thread Dump 파일을 분석해 Report 생성에 성공한 화면</div>
+<div class="title">Figure 37. Thread Dump 파일을 분석해 Report 생성에 성공한 화면</div>
 </div>
 <div class="paragraph">
 <p>System Name, Target Type, Target Name을 순서 대로 선택하고 Search 버튼을 눌러 해당 Thread Dump 파일 목록을 확인한다.<br>
@@ -17891,7 +18003,7 @@ Fault 상황은 진단/대응 Rule에 설정한 설정 내용의 모두를 만�
 <div class="content">
 <img src="/resources/1.3.3.0/static/images/manual/diagnostics_dump_overview.png" alt="diagnostics dump overview">
 </div>
-<div class="title">Figure 41. 분석한 Report 파일을 보여주는 화면</div>
+<div class="title">Figure 38. 분석한 Report 파일을 보여주는 화면</div>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -17909,7 +18021,7 @@ Thread Dump 파일 별 Thread의 상태(State) 변화 추이를 그래프로 확
 <div class="content">
 <img src="/resources/1.3.3.0/static/images/manual/diagnostics_dump_threadInfo.png" alt="diagnostics dump threadInfo">
 </div>
-<div class="title">Figure 42. 각 상태 별 Thread의 정보</div>
+<div class="title">Figure 39. 각 상태 별 Thread의 정보</div>
 </div>
 </div>
 <div class="sect4">
@@ -17918,7 +18030,7 @@ Thread Dump 파일 별 Thread의 상태(State) 변화 추이를 그래프로 확
 <div class="content">
 <img src="/resources/1.3.3.0/static/images/manual/diagnostics_dump_dumpDetail.png" alt="diagnostics dump dumpDetail">
 </div>
-<div class="title">Figure 43. 분석한 Dump 파일 별 Thread 정보를 보여주는 화면</div>
+<div class="title">Figure 40. 분석한 Dump 파일 별 Thread 정보를 보여주는 화면</div>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -17951,7 +18063,7 @@ Rule 파일에 정의한 workerThread로 그룹핑한 Thread의 개수</p>
 <div class="content">
 <img src="/resources/1.3.3.0/static/images/manual/diagnostics_dump_dumpDetailInfo.png" alt="diagnostics dump dumpDetailInfo">
 </div>
-<div class="title">Figure 44. 선택한 Thread Dump 파일 내 상태 별 Thread 정보</div>
+<div class="title">Figure 41. 선택한 Thread Dump 파일 내 상태 별 Thread 정보</div>
 </div>
 </div>
 </div>
@@ -17959,7 +18071,7 @@ Rule 파일에 정의한 workerThread로 그룹핑한 Thread의 개수</p>
 <div class="sect2">
 <h3 id="_진단_및_대응"><a class="link" href="#_진단_및_대응">7.5. 진단 및 대응</a></h3>
 <div class="paragraph">
-<p>진단 및 대응 기능을 사용하면, 장애 가능성 사전에 진단하고 적절한 대응을 자동으로 수행하여 Server 안정성을 높일 수 있다.</p>
+<p>진단 및 대응 기능을 사용하면, 장애 가능성을 사전에 진단하고 적절한 대응을 자동으로 수행하여 Server 안정성을 높일 수 있다.</p>
 </div>
 <div class="ulist">
 <ul>
@@ -18071,7 +18183,7 @@ OOM이 발생하면 Server의 정상적인 동작을 보장할 수 없으므로,
 <div class="content">
 <img src="/resources/1.3.3.0/static/images/manual/diagnostics_current_status_diagnostics_rule_setting.png" alt="diagnostics current status diagnostics rule setting">
 </div>
-<div class="title">Figure 45. Diagnostics Rule Setting 화면</div>
+<div class="title">Figure 42. Diagnostics Rule Setting 화면</div>
 </div>
 <div class="paragraph">
 <p>진단/대응 유형 별로 Tab으로 구성되어 있으며, 기본적인 Default Rule 이 제공된다.
@@ -18652,7 +18764,7 @@ OOM이 발생하면 Server의 정상적인 동작을 보장할 수 없으므로,
 <div class="content">
 <img src="/resources/1.3.3.0/static/images/manual/diagnostics_current_status_server_rule_mapping.png" alt="diagnostics current status server rule mapping">
 </div>
-<div class="title">Figure 46. 진단 Rule Mapping 화면</div>
+<div class="title">Figure 43. 진단 Rule Mapping 화면</div>
 </div>
 <div class="paragraph">
 <p>진단/대응 Rule이 Mapping된 이후에는 다음과 같이 Server Rule Setting 화면에서 Rule을 Enable/Disable 할 수 있다.</p>
@@ -18661,7 +18773,7 @@ OOM이 발생하면 Server의 정상적인 동작을 보장할 수 없으므로,
 <div class="content">
 <img src="/resources/1.3.3.0/static/images/manual/diagnostics_current_status_server_rule_setting.png" alt="diagnostics current status server rule setting">
 </div>
-<div class="title">Figure 47. Server Rule Setting 화면</div>
+<div class="title">Figure 44. Server Rule Setting 화면</div>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -18708,7 +18820,7 @@ Session을 찾기 위해서는 Cluster된 Session Server가 기동중이어야 �
 <div class="content">
 <img src="/resources/1.3.3.0/static/images/manual/diagnostics_session_trace.png" alt="diagnostics session trace">
 </div>
-<div class="title">Figure 48. Session Trace 화면</div>
+<div class="title">Figure 45. Session Trace 화면</div>
 </div>
 <div class="paragraph">
 <p>조회 결과 항목은 다음과 같다.</p>
@@ -18780,7 +18892,7 @@ Session을 찾기 위해서는 Cluster된 Session Server가 기동중이어야 �
 <div class="content">
 <img src="/resources/1.3.3.0/static/images/manual/diagnostics_event_trace.png" alt="diagnostics event trace">
 </div>
-<div class="title">Figure 49. Event Trace 화면</div>
+<div class="title">Figure 46. Event Trace 화면</div>
 </div>
 <div class="paragraph">
 <p>Trace 정보는 일주일 동안만 보관된다.
@@ -18979,7 +19091,7 @@ Session을 찾기 위해서는 Cluster된 Session Server가 기동중이어야 �
 <div class="content">
 <img src="/resources/1.3.3.0/static/images/manual/diagnostics_trace_setting.png" alt="diagnostics trace setting">
 </div>
-<div class="title">Figure 50. Trace Setting 화면</div>
+<div class="title">Figure 47. Trace Setting 화면</div>
 </div>
 <div class="paragraph">
 <p>Trace 설정 항목은 아래와 같다.</p>
@@ -19074,7 +19186,7 @@ TunA APM 메뉴의 구성은 아래와 같다.</p>
 <div class="content">
 <img src="/resources/1.3.3.0/static/images/manual/diagnostics_tuna_connection_1.png" alt="diagnostics tuna connection 1">
 </div>
-<div class="title">Figure 51. TunA 연결 정보 입력 화면</div>
+<div class="title">Figure 48. TunA 연결 정보 입력 화면</div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -19124,7 +19236,7 @@ TunA APM 메뉴의 구성은 아래와 같다.</p>
 <div class="content">
 <img src="/resources/1.3.3.0/static/images/manual/diagnostics_tuna_connection_1_action.png" alt="image" width="150" height="50">
 </div>
-<div class="title">Figure 52. TunA 연결 정보 입력 후 Action 컬럼</div>
+<div class="title">Figure 49. TunA 연결 정보 입력 후 Action 컬럼</div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -19159,7 +19271,7 @@ TunA APM 메뉴의 구성은 아래와 같다.</p>
 <div class="content">
 <img src="/resources/1.3.3.0/static/images/manual/diagnostics_tuna_connection_2.png" alt="diagnostics tuna connection 2">
 </div>
-<div class="title">Figure 53. TunA 사용자 정보 입력 화면</div>
+<div class="title">Figure 50. TunA 사용자 정보 입력 화면</div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -19204,7 +19316,7 @@ TunA APM 메뉴의 구성은 아래와 같다.</p>
 <div class="content">
 <img src="/resources/1.3.3.0/static/images/manual/diagnostics_tuna_connection_2_1.png" alt="diagnostics tuna connection 2 1">
 </div>
-<div class="title">Figure 54. 신규 사용자의 TunA 시스템 그룹 입력 화면</div>
+<div class="title">Figure 51. 신규 사용자의 TunA 시스템 그룹 입력 화면</div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -19282,7 +19394,7 @@ TunA APM 메뉴의 구성은 아래와 같다.</p>
 <div class="content">
 <img src="/resources/1.3.3.0/static/images/manual/diagnostics_tuna_connection_2_2.png" alt="diagnostics tuna connection 2 2">
 </div>
-<div class="title">Figure 55. 기존 사용자의 TunA 시스템 그룹 입력 화면</div>
+<div class="title">Figure 52. 기존 사용자의 TunA 시스템 그룹 입력 화면</div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -19349,7 +19461,7 @@ TunA APM 메뉴의 구성은 아래와 같다.</p>
 <div class="content">
 <img src="/resources/1.3.3.0/static/images/manual/diagnostics_tuna_connection_3.png" alt="diagnostics tuna connection 3">
 </div>
-<div class="title">Figure 56. Open TunA 버튼이 활성화 된 모습</div>
+<div class="title">Figure 53. Open TunA 버튼이 활성화 된 모습</div>
 </div>
 <div class="paragraph">
 <p>TunA Connection Information과 TunA User Information을 통해 필요한 정보가 모두 입력되면 위 첨부된 화면과 같이 TunA와 연결되는 버튼을 사용할 수 있다.<br>
@@ -19367,7 +19479,7 @@ TunA 에서 제공되는 Agent 파일은 TunA Host Agent와 TunA Java Agent로 �
 <div class="content">
 <img src="/resources/1.3.3.0/static/images/manual/diagnostics_tuna_module_1.png" alt="diagnostics tuna module 1">
 </div>
-<div class="title">Figure 57. Agent Module Upload 버튼</div>
+<div class="title">Figure 54. Agent Module Upload 버튼</div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -19399,7 +19511,7 @@ TunA 에서 제공되는 Agent 파일은 TunA Host Agent와 TunA Java Agent로 �
 <div class="content">
 <img src="/resources/1.3.3.0/static/images/manual/diagnostics_tuna_module_2.png" alt="diagnostics tuna module 2">
 </div>
-<div class="title">Figure 58. Agent Module Upload 후의 화면</div>
+<div class="title">Figure 55. Agent Module Upload 후의 화면</div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -19442,7 +19554,7 @@ TunA 에서 제공되는 Agent 파일은 TunA Host Agent와 TunA Java Agent로 �
 <div class="content">
 <img src="/resources/1.3.3.0/static/images/manual/diagnostics_tuna_install_1.png" alt="diagnostics tuna install 1">
 </div>
-<div class="title">Figure 59. Install Management 화면</div>
+<div class="title">Figure 56. Install Management 화면</div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -19493,7 +19605,7 @@ TunA 에서 제공되는 Agent 파일은 TunA Host Agent와 TunA Java Agent로 �
 <div class="content">
 <img src="/resources/1.3.3.0/static/images/manual/diagnostics_tuna_install_1_dialog_1.png" alt="diagnostics tuna install 1 dialog 1">
 </div>
-<div class="title">Figure 60. Host 추가 다이얼로그 화면</div>
+<div class="title">Figure 57. Host 추가 다이얼로그 화면</div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -19570,7 +19682,7 @@ LENA Manager에 등록 또는 설치된 Node를 포함하는 Host만 확인 할 
 <div class="content">
 <img src="/resources/1.3.3.0/static/images/manual/diagnostics_tuna_install_1_dialog_2.png" alt="diagnostics tuna install 1 dialog 2">
 </div>
-<div class="title">Figure 61. WAS 추가 다이얼로그 화면</div>
+<div class="title">Figure 58. WAS 추가 다이얼로그 화면</div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -19637,7 +19749,7 @@ LENA Manager에 등록 또는 설치된 WAS만 확인 할 수 있다.</p>
 <div class="content">
 <img src="/resources/1.3.3.0/static/images/manual/diagnostics_tuna_install_2.png" alt="diagnostics tuna install 2">
 </div>
-<div class="title">Figure 62. Host와 WAS가 설치 대상 목록에 추가된 Install Management 화면</div>
+<div class="title">Figure 59. Host와 WAS가 설치 대상 목록에 추가된 Install Management 화면</div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -19686,7 +19798,7 @@ LENA Manager에 등록 또는 설치된 WAS만 확인 할 수 있다.</p>
 <div class="content">
 <img src="/resources/1.3.3.0/static/images/manual/diagnostics_tuna_host_1.png" alt="diagnostics tuna host 1">
 </div>
-<div class="title">Figure 63. Host Management 화면</div>
+<div class="title">Figure 60. Host Management 화면</div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -19773,7 +19885,7 @@ LENA Manager에 등록 또는 설치된 WAS만 확인 할 수 있다.</p>
 <div class="content">
 <img src="/resources/1.3.3.0/static/images/manual/diagnostics_tuna_was_1.png" alt="diagnostics tuna was 1">
 </div>
-<div class="title">Figure 64. WAS - TunA Tab 화면</div>
+<div class="title">Figure 61. WAS - TunA Tab 화면</div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -19835,7 +19947,7 @@ LENA Manager에 등록 또는 설치된 WAS만 확인 할 수 있다.</p>
 <div class="content">
 <img src="/resources/1.3.3.0/static/images/manual/topology_overview.png" alt="topology overview">
 </div>
-<div class="title">Figure 65. Topolopgy 화면</div>
+<div class="title">Figure 62. Topolopgy 화면</div>
 </div>
 <div class="sect2">
 <h3 id="_화면_구성"><a class="link" href="#_화면_구성">8.1. 화면 구성</a></h3>
@@ -20029,7 +20141,7 @@ Request 수, 평균 응답시간, 서비스 응답 error 수를 확인 할 수 �
 <div class="content">
 <img src="/resources/1.3.3.0/static/images/manual/topology_control_edit_off.png" alt="topology control edit off">
 </div>
-<div class="title">Figure 66. Topolopgy Control [Edit: OFF]</div>
+<div class="title">Figure 63. Topolopgy Control [Edit: OFF]</div>
 </div>
 <div class="sect4">
 <h5 id="_client_영역"><a class="link" href="#_client_영역">CLIENT 영역</a></h5>
@@ -20309,7 +20421,7 @@ Request 수, 평균 응답시간, 서비스 응답 error 수를 확인 할 수 �
 <div class="content">
 <img src="/resources/1.3.3.0/static/images/manual/topology_control_edit_on.png" alt="topology control edit on">
 </div>
-<div class="title">Figure 67. Topolopgy Control [Edit: ON]</div>
+<div class="title">Figure 64. Topolopgy Control [Edit: ON]</div>
 </div>
 <div class="sect4">
 <h5 id="_node"><a class="link" href="#_node">Node</a></h5>
@@ -20645,7 +20757,7 @@ Request 수, 평균 응답시간, 서비스 응답 error 수를 확인 할 수 �
 <div class="content">
 <img src="/resources/1.3.3.0/static/images/manual/admin_users.png" alt="admin users">
 </div>
-<div class="title">Figure 68. Users 화면</div>
+<div class="title">Figure 65. Users 화면</div>
 </div>
 <div class="paragraph">
 <p>사용자 관리의 속성은 아래와 같다.</p>
@@ -20852,7 +20964,7 @@ ADMIN &gt; Auths 메뉴를 통해 권한 그룹을 생성, 수정, 삭제할 수
 <div class="content">
 <img src="/resources/1.3.3.0/static/images/manual/admin_auths.png" alt="admin auths">
 </div>
-<div class="title">Figure 69. Auths 화면</div>
+<div class="title">Figure 66. Auths 화면</div>
 </div>
 <div class="paragraph">
 <p>권한 관리의 속성은 아래와 같다.</p>
@@ -20972,7 +21084,7 @@ ADMIN &gt; Auths 메뉴를 통해 권한 그룹을 생성, 수정, 삭제할 수
 <div class="content">
 <img src="/resources/1.3.3.0/static/images/manual/admin_user_auth_mapping.png" alt="admin user auth mapping">
 </div>
-<div class="title">Figure 70. User-Auth Mapping 화면</div>
+<div class="title">Figure 67. User-Auth Mapping 화면</div>
 </div>
 <div class="paragraph">
 <p>사용자 권한 관리의 속성은 아래와 같다.</p>
@@ -21066,7 +21178,7 @@ LENA Manager에 등록된 모든 메뉴를 보여주는 메뉴 목록 중 접근
 <div class="content">
 <img src="/resources/1.3.3.0/static/images/manual/admin_menu_auth_mapping.png" alt="admin menu auth mapping">
 </div>
-<div class="title">Figure 71. Menu-Auth Mapping 화면</div>
+<div class="title">Figure 68. Menu-Auth Mapping 화면</div>
 </div>
 <div class="paragraph">
 <p>메뉴 권한 관리의 속성은 아래와 같다.</p>
@@ -21232,7 +21344,7 @@ LENA Manager에 등록된 모든 메뉴를 보여주는 메뉴 목록 중 접근
 <div class="content">
 <img src="/resources/1.3.3.0/static/images/manual/admin_license.png" alt="admin license">
 </div>
-<div class="title">Figure 72. License의 목록 화면</div>
+<div class="title">Figure 69. License의 목록 화면</div>
 </div>
 </div>
 <div class="sect3">
@@ -21378,7 +21490,7 @@ License 발급에 필요한 시스템 현황을 확인할 수 있다.</p>
 <div class="content">
 <img src="/resources/1.3.3.0/static/images/manual/admin_license_system_info_ui.png" alt="admin license system info ui">
 </div>
-<div class="title">Figure 73. System Information</div>
+<div class="title">Figure 70. System Information</div>
 </div>
 <div class="paragraph">
 <p>CLI환경에서도 각 Node별 License 현황을 조회하기 위한 Shell Script를 제공한다.
@@ -21502,7 +21614,7 @@ ${LENA_HOME}/bin에 위치한 start-agent.sh, check-license.sh파일과 각 Appl
 <div class="content">
 <img src="/resources/1.3.3.0/static/images/manual/admin_service_control_rule_setting.png" alt="admin service control rule setting">
 </div>
-<div class="title">Figure 74. Rule Setting 화면</div>
+<div class="title">Figure 71. Rule Setting 화면</div>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -21618,7 +21730,7 @@ Proxy Server의 보안적 특성으로 인해 User IP를 구할 수 없어 Rule 
 <div class="content">
 <img src="/resources/1.3.3.0/static/images/manual/admin_service_control_rule_applying.png" alt="admin service control rule applying">
 </div>
-<div class="title">Figure 75. Rule Applying 화면</div>
+<div class="title">Figure 72. Rule Applying 화면</div>
 </div>
 <div class="paragraph">
 <p>Rule 현황 및 적용 화면에서 사용되는 속성들은 Rule설정 화면과 유사하며 아래의 속성들은 추가적인 속성들이다.</p>
@@ -21676,7 +21788,7 @@ Proxy Server의 보안적 특성으로 인해 User IP를 구할 수 없어 Rule 
 <div class="content">
 <img src="/resources/1.3.3.0/static/images/manual/admin_service_control_log.png" alt="admin service control log">
 </div>
-<div class="title">Figure 76. Service Control Log 화면</div>
+<div class="title">Figure 73. Service Control Log 화면</div>
 </div>
 <div class="paragraph">
 <p>처리 목록에서 사용되는 속성들은 아래와 같다.</p>
@@ -22912,7 +23024,7 @@ Action Trace에서는 이러한 수행이력을 조회/추적하는 기능을 �
 <div class="content">
 <img src="/resources/1.3.3.0/static/images/manual/admin_action_trace.png" alt="admin action trace">
 </div>
-<div class="title">Figure 77. Action Trace 화면</div>
+<div class="title">Figure 74. Action Trace 화면</div>
 </div>
 <div class="sect4">
 <h5 id="_이력_조회"><a class="link" href="#_이력_조회">이력 조회</a></h5>
@@ -24068,7 +24180,69 @@ version is completed.!!</code></pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_session_server_상세"><a class="link" href="#_session_server_상세">10.11. Session Server 상세</a></h3>
+<h3 id="_manager_언어_설정_변경"><a class="link" href="#_manager_언어_설정_변경">10.11. Manager 언어 설정 변경</a></h3>
+<div class="paragraph">
+<p>LENA Manager 의 언어 설정을 변경 할 수 있다.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 152. LENA Manager 설정 가능 언어</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-center valign-top">언어</th>
+<th class="tableblock halign-center valign-top">Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">영문(US)</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">O</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">한글(KR)</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_언어_설정_변경_방법"><a class="link" href="#_언어_설정_변경_방법">10.11.1. 언어 설정 변경 방법</a></h4>
+<div class="paragraph">
+<p>언어설정 변경 기능을 켜기위해 먼저 다음 메뉴로 진입한다.</p>
+</div>
+<div class="paragraph">
+<p>ADMIN &gt; Preference &gt; Manager Environment<br>
+(기본 영문 설정 기준)</p>
+</div>
+<div class="paragraph">
+<p>Manager Configuration 의 톱니바퀴 버튼을 클릭하여 세부 설정을 열어 다음과 같이 수정한다.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="ruby">...
+ <span class="integer">9</span>  <span class="comment"># i18n On/off</span>
+<span class="integer">10</span>  lena.i18n.enable=<span class="predefined-constant">true</span> <span class="comment"># false -&gt; true</span>
+...</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>이제 Login Page 에서 언어설정을 변경할 수 있다. 로그인한 상태라면 로그아웃 하여 Login 페이지로 이동한다.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="/resources/1.3.3.0/static/images/manual/appendix_manager_lang_setting.png" alt="image" width="623" height="471"></span></p>
+</div>
+<div class="paragraph">
+<p>사용할 언어를 선택 한 뒤 로그인하면 변경 된 언어로 LENA Manager를 사용할 수 있다.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="/resources/1.3.3.0/static/images/manual/appendix_manager_lang_setting_example.png" alt="image" width="623" height="471"></span></p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_session_server_상세"><a class="link" href="#_session_server_상세">10.12. Session Server 상세</a></h3>
 <div class="paragraph">
 <p>Application Server의 Session Clustering은 별도의 Session Server를
 설치하여 Session을 공유해 Clustering 한다. Session Server는 별도
@@ -24076,7 +24250,7 @@ VM위에서 작동하는 Standalone 모드와 Application Server에 Session Serv
 모듈을 탑재한 Embedded 모드가 있다.</p>
 </div>
 <div class="sect3">
-<h4 id="_session_server_standalone_모드"><a class="link" href="#_session_server_standalone_모드">10.11.1. Session Server Standalone 모드</a></h4>
+<h4 id="_session_server_standalone_모드"><a class="link" href="#_session_server_standalone_모드">10.12.1. Session Server Standalone 모드</a></h4>
 <div class="imageblock">
 <div class="content">
 <img src="/resources/1.3.3.0/static/images/manual/appendix_session_standalone.png" alt="image" width="507" height="404">
@@ -24448,7 +24622,7 @@ Server와 접속을 유지하고 있기 때문에 Primary Session Server 장애�
 </div>
 </div>
 <div class="sect3">
-<h4 id="_session_server_embedded_모드"><a class="link" href="#_session_server_embedded_모드">10.11.2. Session Server Embedded 모드</a></h4>
+<h4 id="_session_server_embedded_모드"><a class="link" href="#_session_server_embedded_모드">10.12.2. Session Server Embedded 모드</a></h4>
 <div class="paragraph">
 <p>Session Server Embedded 모드는, Application Server 내에 Session Server
 Module을 내장하는 방식이다.</p>
@@ -24698,7 +24872,7 @@ session server 모듈을 embedded 한다.</p></td>
 <div id="footer">
 <div id="footer-text">
 Version 1.3.3.0<br>
-Last updated 2023-12-11 14:46:32 +0900
+Last updated 2023-12-19 09:47:12 +0900
 </div>
 </div>
 </body>
