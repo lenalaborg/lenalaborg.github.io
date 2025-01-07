@@ -5324,23 +5324,25 @@ table.CodeRay td.code>pre{padding:0}
 <li><a href="#_was_node_설치">WAS Node 설치</a></li>
 <li><a href="#_was_node_설치_스펙_변경시">WAS Node 설치 (스펙 변경시)</a></li>
 <li><a href="#_web_server_node_설치">Web Server Node 설치</a></li>
+<li><a href="#_memory_datastore_node_설치">Memory DataStore Node 설치</a></li>
 <li><a href="#_lena_manager와_node의_연동등록">LENA Manager와 Node의 연동(등록)</a></li>
 </ul>
 </li>
 <li><a href="#_node_원격_설치lena_manager_web_ui">3.1.3. Node 원격 설치(LENA Manager Web UI)</a></li>
 <li><a href="#_was_설치실행">3.1.4. WAS 설치/실행</a></li>
 <li><a href="#_web_serveren_a_설치실행">3.1.5. Web Server(EN-A) 설치/실행</a></li>
-<li><a href="#_web_serveren_a_was_연동">3.1.6. Web Server(EN-A) - WAS 연동</a></li>
-<li><a href="#_web_serveren_n_설치실행">3.1.7. Web Server(EN-N) 설치/실행</a></li>
-<li><a href="#_web_serveren_n_was_연동_proxy">3.1.8. Web Server(EN-N) - WAS 연동 (Proxy)</a></li>
-<li><a href="#_web_serveren_n_was_연동_net_gateway">3.1.9. Web Server(EN-N) - WAS 연동 (Net Gateway)</a></li>
-<li><a href="#_session_server_설치_및_연동">3.1.10. Session Server 설치 및 연동</a>
+<li><a href="#_memory_cache_설치실행">3.1.6. Memory Cache 설치/실행</a></li>
+<li><a href="#_web_serveren_a_was_연동">3.1.7. Web Server(EN-A) - WAS 연동</a></li>
+<li><a href="#_web_serveren_n_설치실행">3.1.8. Web Server(EN-N) 설치/실행</a></li>
+<li><a href="#_web_serveren_n_was_연동_proxy">3.1.9. Web Server(EN-N) - WAS 연동 (Proxy)</a></li>
+<li><a href="#_web_serveren_n_was_연동_net_gateway">3.1.10. Web Server(EN-N) - WAS 연동 (Net Gateway)</a></li>
+<li><a href="#_session_server_설치_및_연동">3.1.11. Session Server 설치 및 연동</a>
 <ul class="sectlevel4">
 <li><a href="#_standalone_모드_설치와_was_연동">Standalone 모드 설치와 WAS 연동</a></li>
 <li><a href="#_embedded_모드_설치와_was_연동">Embedded 모드 설치와 WAS 연동</a></li>
 </ul>
 </li>
-<li><a href="#_server_간_연동_확인">3.1.11. Server 간 연동 확인</a>
+<li><a href="#_server_간_연동_확인">3.1.12. Server 간 연동 확인</a>
 <ul class="sectlevel4">
 <li><a href="#_topology_를_통한_확인">Topology 를 통한 확인</a></li>
 <li><a href="#_sample_page_호출을_통한_확인">Sample Page 호출을 통한 확인</a></li>
@@ -5575,7 +5577,7 @@ Node가 설치된 Host/VM, Web Server 의 모니터링 정보를 Manager로 전�
 </div>
 <div class="imageblock text-center">
 <div class="content">
-<img src="/resources/1.3.4.0/static/images/installation/vmhost/1_2_mechanism.png" alt="FullyContainer" width="623" height="471">
+<img src="/resources/{version}/static/images/installation/vmhost/1_2_mechanism.png" alt="FullyContainer" width="623" height="471">
 </div>
 <div class="title">Figure 1. LENA Manager의 모니터링 및 통합관리의 작동방식</div>
 </div>
@@ -5931,7 +5933,7 @@ X86 아키텍처에서 권고되는 바는 아니지만, 만약 한 물리 서�
 </div>
 <div class="imageblock text-center">
 <div class="content">
-<img src="/resources/1.3.4.0/static/images/installation/vmhost/2_1_6_prerequisite_network_traffic.png" alt="FullyContainer" width="623" height="471">
+<img src="/resources/{version}/static/images/installation/vmhost/2_1_6_prerequisite_network_traffic.png" alt="FullyContainer" width="623" height="471">
 </div>
 <div class="title">Figure 2. LENA Network Traffic</div>
 </div>
@@ -6365,7 +6367,7 @@ LENA started.</code></pre>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.4.0/static/images/installation/vmhost/3_1_1_manager_access.png" alt="3 1 1 manager access">
+<img src="/resources/{version}/static/images/installation/vmhost/3_1_1_manager_access.png" alt="3 1 1 manager access">
 </div>
 <div class="title">Figure 3. LENA 접속 화면</div>
 </div>
@@ -6382,7 +6384,7 @@ LENA started.</code></pre>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.4.0/static/images/installation/vmhost/3_1_1_manager_dashboard.png" alt="3 1 1 manager dashboard">
+<img src="/resources/{version}/static/images/installation/vmhost/3_1_1_manager_dashboard.png" alt="3 1 1 manager dashboard">
 </div>
 <div class="title">Figure 4. LENA 초기화면(DASHBOARD)</div>
 </div>
@@ -6390,7 +6392,7 @@ LENA started.</code></pre>
 <div class="sect3">
 <h4 id="_node_설치command_line"><a class="link" href="#_node_설치command_line">3.1.2. Node 설치(Command Line)</a></h4>
 <div class="paragraph">
-<p>Node의 설치는 LENA 설치 패키지의 압축을 푸는 것과 같다. WAS, Web Server를 설치할 서버에 각 설치 패키지를 준비한 경로(예: /engn001/lena 또는 /engn001/lenaw)에 업로드 후 압축을 해제한다.<br>
+<p>Node의 설치는 LENA 설치 패키지의 압축을 푸는 것과 같다. WAS, Web Server, Memory Cahce를 설치할 서버에 각 설치 패키지를 준비한 경로(예: /engn001/lena 또는 /engn001/lenaw)에 업로드 후 압축을 해제한다.<br>
 Node를 설치하면 아래와 같이 Node Agent를 실행, 중지, 상태확인을 하기위한 script가 존재한다.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
@@ -6695,6 +6697,113 @@ LENA Agent is started.</code></pre>
 </div>
 </div>
 <div class="sect4">
+<h5 id="_memory_datastore_node_설치"><a class="link" href="#_memory_datastore_node_설치">Memory DataStore Node 설치</a></h5>
+<div class="paragraph">
+<p>Memory Cache를 설치할 Server에 LENA Memory Cache 설치용 패키지를 업로드 후 압축을 풀어 설치한다.</p>
+</div>
+<div class="listingblock">
+<div class="title">경로 / 파일 확인</div>
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="bash"> [lena]# cd /engn001/lena
+ [lena]# ll
+ -rw-rw-r--  1 lena lena lena-mds-linux_na_x86_64-1.3.4.0b.tar.gz</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">설치파일 압축 해제 / 디렉토리 명 변경</div>
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="bash"> [lena]# tar -xvzf lena-mds-linux_na_x86_64-1.3.4.0b.tar.gz
+ [lena]# mv lena-mds-linux_na_x86_64-1.3.4.0b
+ [lena]# ll
+ drwxr-xr-x 12 lena lena 1.3
+ -rw-rw-r--  1 lena lena lena-mds-linux_na_x86_64-1.3.4.0b.tar.gz</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>압축 해제 시 설치파일의 확장자 부분을 제외한 나머지 이름으로 디렉토리가 생성되는데<br>
+이 디렉토리 명을 1.3 으로 간략하게 변경하여 사용한다.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Node를 설치 한 후 start-agent.sh로 Node Agent를 실행한다.</p>
+</div>
+<div class="listingblock">
+<div class="title">Node Agent 실행</div>
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="bash">[lena]# cd /engn001/lena/1.3/bin
+[lena]# ./start-agent.sh
+Input JAVA_HOME path for LENA. ( q: quit )
+JAVA_HOME PATH :
+/engn001/java/jdk1.8.0_202
+Input Agent port for LENA Agent. ( q: quit )
+Agent port (Default : 16700):
+
+Input Agent user for LENA Agent. ( q: quit )
+Agent user (Default : lena):
+
+Agent Engine type [ EN-R ]
+
+--------------------------------
+           LENA Agent
+--------------------------------
+Using LENA_HOME    : /engn001/lena/lena-mds-linux_na_x86_64-1.3.4.0b
+Using JAVA_HOME    : /engn001/java/jdk1.8.0_202/jre
+Using CONF_FILE    : /engn001/lena/lena-mds-linux_na_x86_64-1.3.4.0b/conf/agent.conf
+Using LOG_HOME     : /engn001/lena/lena-mds-linux_na_x86_64-1.3.4.0b/logs/lena-agent
+Using RUN_USER     : lena
+Using PORT         : 16700
+Using UUID         : f6614115-d861-3678-ac36-e4d068eeb02a
+LENA Agent is started.</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Node Agent 실행 시 입력받는 항목은 다음과 같다.</p>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>JAVA HOME (jdk) 경로 입력</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Node Agent가 사용할 Port 입력</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Node Agent 실행 OS 계정 입력</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>Node Agent가 사용할 Memory Cacher Engine Type 입력
+<div class="ulist">
+<ul>
+<li>
+<p>Default : EN-R</p>
+</li>
+<li>
+<p>Engin Type : EN-R (Redis 기반)</p>
+</li>
+<li>
+<p>현재는 Redis 버전만 제공함.</p>
+</li>
+</ul>
+</div></td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect4">
 <h5 id="_lena_manager와_node의_연동등록"><a class="link" href="#_lena_manager와_node의_연동등록">LENA Manager와 Node의 연동(등록)</a></h5>
 <div class="paragraph">
 <p>WAS Node와 Web Server Node를 설치하고 Agent를 기동하면 LENA Manager를 통해 Node를 등록할 수 있다.</p>
@@ -6705,7 +6814,7 @@ Node 등록을 위해 'Register' 버튼을 클릭하면 아래와 같이 Node를
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.4.0/static/images/installation/vmhost/3_1_2_node_register_01.png" alt="3 1 2 node register 01">
+<img src="/resources/{version}/static/images/installation/vmhost/3_1_2_node_register_01.png" alt="3 1 2 node register 01">
 </div>
 <div class="title">Figure 5. SERVER 메뉴 초기화면</div>
 </div>
@@ -6745,11 +6854,14 @@ Node 등록을 위해 'Register' 버튼을 클릭하면 아래와 같이 Node를
 <li>
 <p>EN-N : Nginx 기반 Web Server Engine</p>
 </li>
+<li>
+<p>EN-R : Redis 기반 Memory Cache Engine</p>
+</li>
 </ul>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.4.0/static/images/installation/vmhost/3_1_2_node_register_02.png" alt="3 1 2 node register 02">
+<img src="/resources/{version}/static/images/installation/vmhost/3_1_2_node_register_02.png" alt="3 1 2 node register 02">
 </div>
 <div class="title">Figure 6. Node 정상 등록 예시 화면</div>
 </div>
@@ -6759,7 +6871,7 @@ Node 등록을 위해 'Register' 버튼을 클릭하면 아래와 같이 Node를
 <h4 id="_node_원격_설치lena_manager_web_ui"><a class="link" href="#_node_원격_설치lena_manager_web_ui">3.1.3. Node 원격 설치(LENA Manager Web UI)</a></h4>
 <div class="paragraph">
 <p>Node의 설치는 <a href="#_node_설치command_line">Node 설치(Command Line)</a> 에서 진행한 방법 외에도 LENA Manager를 통해 원격으로 설치할 수도 있다.
-이를 위해서는 LENA (Manager)를 설치한 Server의 특정 디렉토리 안에 LENA 설치파일(WAS, Web Server)를 업로드 해 두어야 한다.
+이를 위해서는 LENA (Manager)를 설치한 Server의 특정 디렉토리 안에 LENA 설치파일(WAS, Web Server, Memory Cache)를 업로드 해 두어야 한다.
 설치 패키지를 업로드 해 두어야 하는 경로의 예시는 다음과 같다.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
@@ -6790,7 +6902,8 @@ Node 등록을 위해 'Register' 버튼을 클릭하면 아래와 같이 Node를
 <pre class="CodeRay highlight"><code data-lang="bash">[lena]# cd /engn001/lena/1.3/repository/install-files/default
 [lena]# ll
 -rw-rw-r--. 1 lena lena lena-enterprise-linux_na_x86_64-1.3.4.0.tar.gz
--rw-rw-r--. 1 lena lena lena-web-linux_na_x86_64-1.3.4.0.tar.gz</code></pre>
+-rw-rw-r--. 1 lena lena lena-web-linux_na_x86_64-1.3.4.0.tar.gz
+-rw-rw-r--. 1 lena lena lena-mds-linux_na_x86_64-1.3.4.0.tar.gz</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -6798,7 +6911,7 @@ Node 등록을 위해 'Register' 버튼을 클릭하면 아래와 같이 Node를
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.4.0/static/images/installation/vmhost/3_1_3_node_install_remote_01.png" alt="3 1 3 node install remote 01">
+<img src="/resources/{version}/static/images/installation/vmhost/3_1_3_node_install_remote_01.png" alt="3 1 3 node install remote 01">
 </div>
 <div class="title">Figure 7. WAS Node 원격 설치 예시</div>
 </div>
@@ -6841,7 +6954,7 @@ Node 등록을 위해 'Register' 버튼을 클릭하면 아래와 같이 Node를
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.4.0/static/images/installation/vmhost/3_1_3_node_install_remote_02.png" alt="3 1 3 node install remote 02">
+<img src="/resources/{version}/static/images/installation/vmhost/3_1_3_node_install_remote_02.png" alt="3 1 3 node install remote 02">
 </div>
 <div class="title">Figure 8. WAS Node 원격 설치 진행 확인 예시</div>
 </div>
@@ -6850,7 +6963,7 @@ Node 등록을 위해 'Register' 버튼을 클릭하면 아래와 같이 Node를
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.4.0/static/images/installation/vmhost/3_1_3_node_install_remote_03.png" alt="3 1 3 node install remote 03">
+<img src="/resources/{version}/static/images/installation/vmhost/3_1_3_node_install_remote_03.png" alt="3 1 3 node install remote 03">
 </div>
 <div class="title">Figure 9. Node 원격 설치 후 등록 완료된 상태 예시</div>
 </div>
@@ -6877,13 +6990,13 @@ LENA Manager 상단의 'SERVER' 메뉴를 선택 한 뒤 좌측에서 WAS를 설
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.4.0/static/images/installation/vmhost/3_1_4_was_install_01.png" alt="3 1 4 was install 01">
+<img src="/resources/{version}/static/images/installation/vmhost/3_1_4_was_install_01.png" alt="3 1 4 was install 01">
 </div>
 <div class="title">Figure 10. WAS List 확인</div>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.4.0/static/images/installation/vmhost/3_1_4_was_install_02.png" alt="3 1 4 was install 02">
+<img src="/resources/{version}/static/images/installation/vmhost/3_1_4_was_install_02.png" alt="3 1 4 was install 02">
 </div>
 <div class="title">Figure 11. WAS 설치정보 입력 Popup 과 입력 값 예시</div>
 </div>
@@ -6957,7 +7070,7 @@ LENA Manager 상단의 'SERVER' 메뉴를 선택 한 뒤 좌측에서 WAS를 설
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.4.0/static/images/installation/vmhost/3_1_4_was_install_03.png" alt="3 1 4 was install 03">
+<img src="/resources/{version}/static/images/installation/vmhost/3_1_4_was_install_03.png" alt="3 1 4 was install 03">
 </div>
 <div class="title">Figure 12. WAS 정상 설치 후 WAS List</div>
 </div>
@@ -6969,7 +7082,7 @@ LENA Manager 상단의 'SERVER' 메뉴를 선택 한 뒤 좌측에서 WAS를 설
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.4.0/static/images/installation/vmhost/3_1_4_was_install_04.png" alt="3 1 4 was install 04">
+<img src="/resources/{version}/static/images/installation/vmhost/3_1_4_was_install_04.png" alt="3 1 4 was install 04">
 </div>
 <div class="title">Figure 13. WAS의 기동과 Log</div>
 </div>
@@ -6981,13 +7094,13 @@ LENA Manager 상단의 'SERVER' 메뉴를 선택 한 뒤 좌측에서 WAS를 설
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.4.0/static/images/installation/vmhost/3_1_5_weba_install_01.png" alt="3 1 5 weba install 01">
+<img src="/resources/{version}/static/images/installation/vmhost/3_1_5_weba_install_01.png" alt="3 1 5 weba install 01">
 </div>
 <div class="title">Figure 14. Web Server List 확인</div>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.4.0/static/images/installation/vmhost/3_1_5_weba_install_02.png" alt="3 1 5 weba install 02">
+<img src="/resources/{version}/static/images/installation/vmhost/3_1_5_weba_install_02.png" alt="3 1 5 weba install 02">
 </div>
 <div class="title">Figure 15. Web Server 설치정보 입력 Popup 과 입력 값 예시</div>
 </div>
@@ -7051,7 +7164,7 @@ LENA Manager 상단의 'SERVER' 메뉴를 선택 한 뒤 좌측에서 WAS를 설
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.4.0/static/images/installation/vmhost/3_1_5_weba_install_03.png" alt="3 1 5 weba install 03">
+<img src="/resources/{version}/static/images/installation/vmhost/3_1_5_weba_install_03.png" alt="3 1 5 weba install 03">
 </div>
 <div class="title">Figure 16. Web Server 정상 설치 후 Web Server List</div>
 </div>
@@ -7063,22 +7176,100 @@ LENA Manager 상단의 'SERVER' 메뉴를 선택 한 뒤 좌측에서 WAS를 설
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.4.0/static/images/installation/vmhost/3_1_5_weba_install_04.png" alt="3 1 5 weba install 04">
+<img src="/resources/{version}/static/images/installation/vmhost/3_1_5_weba_install_04.png" alt="3 1 5 weba install 04">
 </div>
 <div class="title">Figure 17. Web Server 의 기동과 Log</div>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_web_serveren_a_was_연동"><a class="link" href="#_web_serveren_a_was_연동">3.1.6. Web Server(EN-A) - WAS 연동</a></h4>
+<h4 id="_memory_cache_설치실행"><a class="link" href="#_memory_cache_설치실행">3.1.6. Memory Cache 설치/실행</a></h4>
+<div class="paragraph">
+<p>MDS Node를 설치, 등록까지 완료했다면 이제 LENA Manager Web UI를 통해 Memory Cache를 설치할 수 있다.
+LENA Manager 상단의 'SERVER' 메뉴를 선택 한 뒤 좌측에서 Memory Cache를 설치할 MDS Node를 선택하면 Cache List를 확인할 수 있다. 이 화면에서 'Install' 버튼을 클릭한다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="/resources/{version}/static/images/installation/vmhost/3_1_12_memory_cache_install_01.png" alt="3 1 12 memory cache install 01">
+</div>
+<div class="title">Figure 18. Cache List 확인</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="/resources/{version}/static/images/installation/vmhost/3_1_12_memory_cache_install_02.png" alt="3 1 12 memory cache install 02">
+</div>
+<div class="title">Figure 19. Memory Cache 설치정보 입력 Popup 과 입력 값 예시</div>
+</div>
+<div class="paragraph">
+<p>'Install' 버튼을 클릭하면 Memory Cache를 설치하기 위한 정보를 입력하는 Popup 창이 출력되며 각 입력항목은 다음과 같다.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Server Type: Standard</p>
+</li>
+<li>
+<p>Node: Memory Cache가 설치될 Node(수정불가)</p>
+</li>
+<li>
+<p>Server ID: LENA Manager 가 Memory Cache를 식별하기 위한 명칭</p>
+</li>
+<li>
+<p>Service Port: Memory Cache가 설치될 때 기준이 되는 HTTP Port를 의미</p>
+</li>
+<li>
+<p>Run User: Memory Cache의 기동 시 사용할 OS 계정(수정불가)</p>
+</li>
+<li>
+<p>Install Root Path: Memory Cache가 설치될 경로(수정불가)</p>
+</li>
+<li>
+<p>Log Home: Memory Cache Log의 경로</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>default: [Install Root Path]/logs</p>
+</li>
+<li>
+<p>custom: 사용자가 임의로 경로 지정</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Memory Cache 설치 정보를 모두 입력 한 뒤 'Save' 버튼을 클릭하면 Memory Cache가 설치되며 Cache List 에서 설치한 Memory Cache를 확인 할 수 있다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="/resources/{version}/static/images/installation/vmhost/3_1_12_memory_cache_install_03.png" alt="3 1 12 memory cache install 03">
+</div>
+<div class="title">Figure 20. Memory Cache 정상 설치 후 Memory Cache List</div>
+</div>
+<div class="paragraph">
+<p>중지되어 있는 Memory Cache를 기동하려면 Cache List 우측의 'Start' 버튼을 클릭한다. 또한 기동되어있는 Memory Cache를 중지하려면 같은 위치의 'Stop' 버튼을 바뀌므로 해당 버튼을 클릭한다.</p>
+</div>
+<div class="paragraph">
+<p>Memory Cache 기동 시에는 기동 Log가 Popup 창으로 출력된다.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="/resources/{version}/static/images/installation/vmhost/3_1_12_memory_cache_install_04.png" alt="3 1 12 memory cache install 04">
+</div>
+<div class="title">Figure 21. Memory Cache의 기동과 Log</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_web_serveren_a_was_연동"><a class="link" href="#_web_serveren_a_was_연동">3.1.7. Web Server(EN-A) - WAS 연동</a></h4>
 <div class="paragraph">
 <p>Web Server(EN-A)와 WAS 간 연동 설정에 대해 알아본다. Web Server(EN-A)와 WAS 의 연동은 Web Server 설정 화면에서 할 수 있다.
 LENA Manager 상단의 'SERVER' 메뉴에서 설치한 Web Server를 선택하여 설정 화면을 열고 설정 화면 내 상단의 'Connector' 탭을 선택한다.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.4.0/static/images/installation/vmhost/3_1_6_weba_was_connect_01.png" alt="3 1 6 weba was connect 01">
+<img src="/resources/{version}/static/images/installation/vmhost/3_1_6_weba_was_connect_01.png" alt="3 1 6 weba was connect 01">
 </div>
-<div class="title">Figure 18. Web Server 초기 설정화면</div>
+<div class="title">Figure 22. Web Server 초기 설정화면</div>
 </div>
 <div class="paragraph">
 <p>Web Server 의 'Connector' 탭에서는 Web Server 와 WAS 간 연결에 대한 설정을 관리한다.<br>
@@ -7090,36 +7281,36 @@ LENA Manager 상단의 'SERVER' 메뉴에서 설치한 Web Server를 선택하�
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.4.0/static/images/installation/vmhost/3_1_6_weba_was_connect_02.png" alt="3 1 6 weba was connect 02">
+<img src="/resources/{version}/static/images/installation/vmhost/3_1_6_weba_was_connect_02.png" alt="3 1 6 weba was connect 02">
 </div>
-<div class="title">Figure 19. 연동할 WAS 추가</div>
+<div class="title">Figure 23. 연동할 WAS 추가</div>
 </div>
 <div class="paragraph">
 <p>WAS List에 연동 설정할 WAS가 추가되면 우측 하단의 'Save' 버튼을 클릭하여 최종 저장한다.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.4.0/static/images/installation/vmhost/3_1_6_weba_was_connect_03.png" alt="3 1 6 weba was connect 03">
+<img src="/resources/{version}/static/images/installation/vmhost/3_1_6_weba_was_connect_03.png" alt="3 1 6 weba was connect 03">
 </div>
-<div class="title">Figure 20. 연동할 WAS 목록 저장</div>
+<div class="title">Figure 24. 연동할 WAS 목록 저장</div>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_web_serveren_n_설치실행"><a class="link" href="#_web_serveren_n_설치실행">3.1.7. Web Server(EN-N) 설치/실행</a></h4>
+<h4 id="_web_serveren_n_설치실행"><a class="link" href="#_web_serveren_n_설치실행">3.1.8. Web Server(EN-N) 설치/실행</a></h4>
 <div class="paragraph">
 <p>Web Server(EN-A) 설치와 동일한 방식으로, LENA Manager Web UI를 통해 Web Server를 설치할 수 있다. Engine이 EN-N인 Web Server Node를 선택한 뒤 Web Server(EN-N)를 설치할 수 있다.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.4.0/static/images/installation/vmhost/3_1_7_webn_install_01.png" alt="3 1 7 webn install 01">
+<img src="/resources/{version}/static/images/installation/vmhost/3_1_7_webn_install_01.png" alt="3 1 7 webn install 01">
 </div>
-<div class="title">Figure 21. Web Server List 확인</div>
+<div class="title">Figure 25. Web Server List 확인</div>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.4.0/static/images/installation/vmhost/3_1_7_webn_install_02.png" alt="3 1 7 webn install 02">
+<img src="/resources/{version}/static/images/installation/vmhost/3_1_7_webn_install_02.png" alt="3 1 7 webn install 02">
 </div>
-<div class="title">Figure 22. Web Server 설치정보 입력 Popup 과 입력 값 예시</div>
+<div class="title">Figure 26. Web Server 설치정보 입력 Popup 과 입력 값 예시</div>
 </div>
 <div class="paragraph">
 <p>'Install' 버튼을 클릭하면 Web Server를 설치하기 위한 정보를 입력하는 Popup 창이 출력되며 각 입력항목은 다음과 같다.</p>
@@ -7210,9 +7401,9 @@ LENA Manager 상단의 'SERVER' 메뉴에서 설치한 Web Server를 선택하�
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.4.0/static/images/installation/vmhost/3_1_7_webn_install_03.png" alt="3 1 7 webn install 03">
+<img src="/resources/{version}/static/images/installation/vmhost/3_1_7_webn_install_03.png" alt="3 1 7 webn install 03">
 </div>
-<div class="title">Figure 23. Web Server 정상 설치 후 Web Server List</div>
+<div class="title">Figure 27. Web Server 정상 설치 후 Web Server List</div>
 </div>
 <div class="paragraph">
 <p>중지되어 있는 Web Server를 기동하려면 Web Server List 우측의 'Start' 버튼을 클릭한다. 또한 기동되어있는 Web Server를 중지하려면 같은 위치의 'Stop' 버튼을 바뀌므로 해당 버튼을 클릭한다.</p>
@@ -7222,22 +7413,22 @@ LENA Manager 상단의 'SERVER' 메뉴에서 설치한 Web Server를 선택하�
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.4.0/static/images/installation/vmhost/3_1_7_webn_install_04.png" alt="3 1 7 webn install 04">
+<img src="/resources/{version}/static/images/installation/vmhost/3_1_7_webn_install_04.png" alt="3 1 7 webn install 04">
 </div>
-<div class="title">Figure 24. Web Server 의 기동과 Log</div>
+<div class="title">Figure 28. Web Server 의 기동과 Log</div>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_web_serveren_n_was_연동_proxy"><a class="link" href="#_web_serveren_n_was_연동_proxy">3.1.8. Web Server(EN-N) - WAS 연동 (Proxy)</a></h4>
+<h4 id="_web_serveren_n_was_연동_proxy"><a class="link" href="#_web_serveren_n_was_연동_proxy">3.1.9. Web Server(EN-N) - WAS 연동 (Proxy)</a></h4>
 <div class="paragraph">
 <p>Web Server(EN-N)와 WAS 간 연동 설정에 대해 알아본다. Web Server(EN-N)와 WAS 의 연동은 Web Server(EN-N) 설정 화면에서 할 수 있다.
 LENA Manager 상단의 'SERVER' 메뉴에서 설치한 Web Server(EN-N) 를 선택하여 설정 화면을 열고 설정 화면 내 상단의 'Connector' 탭을 선택한다.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.4.0/static/images/installation/vmhost/3_1_8_webn_was_proxy_connect_01.png" alt="3 1 8 webn was proxy connect 01">
+<img src="/resources/{version}/static/images/installation/vmhost/3_1_8_webn_was_proxy_connect_01.png" alt="3 1 8 webn was proxy connect 01">
 </div>
-<div class="title">Figure 25. Web Server 초기 설정화면</div>
+<div class="title">Figure 29. Web Server 초기 설정화면</div>
 </div>
 <div class="paragraph">
 <p>Web Server(EN-N) 의 'Connector' 탭에서는 Web Server(EN-N) 와 WAS 간 연결에 대한 설정을 관리한다.
@@ -7249,31 +7440,31 @@ LENA Manager 상단의 'SERVER' 메뉴에서 설치한 Web Server(EN-N) 를 선�
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.4.0/static/images/installation/vmhost/3_1_8_webn_was_proxy_connect_02.png" alt="3 1 8 webn was proxy connect 02">
+<img src="/resources/{version}/static/images/installation/vmhost/3_1_8_webn_was_proxy_connect_02.png" alt="3 1 8 webn was proxy connect 02">
 </div>
-<div class="title">Figure 26. 연동할 WAS 추가</div>
+<div class="title">Figure 30. 연동할 WAS 추가</div>
 </div>
 <div class="paragraph">
 <p>WAS List에 연동 설정할 WAS가 추가되면 우측 하단의 'Save' 버튼을 클릭하여 최종 저장한다.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.4.0/static/images/installation/vmhost/3_1_8_webn_was_proxy_connect_03.png" alt="3 1 8 webn was proxy connect 03">
+<img src="/resources/{version}/static/images/installation/vmhost/3_1_8_webn_was_proxy_connect_03.png" alt="3 1 8 webn was proxy connect 03">
 </div>
-<div class="title">Figure 27. 연동할 WAS 목록 저장</div>
+<div class="title">Figure 31. 연동할 WAS 목록 저장</div>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_web_serveren_n_was_연동_net_gateway"><a class="link" href="#_web_serveren_n_was_연동_net_gateway">3.1.9. Web Server(EN-N) - WAS 연동 (Net Gateway)</a></h4>
+<h4 id="_web_serveren_n_was_연동_net_gateway"><a class="link" href="#_web_serveren_n_was_연동_net_gateway">3.1.10. Web Server(EN-N) - WAS 연동 (Net Gateway)</a></h4>
 <div class="paragraph">
 <p>Web Server(EN-N)와 Backend Server간 연동 설정에 대해 알아본다.Web Server(EN-N)와 Backend Server의 연동은 Web Server(EN-N) 설정 화면에서 할 수 있다.
 LENA Manager 상단의 'SERVER' 메뉴에서 설치한 Web Server(EN-N) 를 선택하여 설정 화면을 열고 설정 화면 내 상단의 'Connector' 탭을 선택한다. 이후 아래의 'Net Gateway' 탭을 선택 한다.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.4.0/static/images/installation/vmhost/3_1_9_web_was_net_connect_01.png" alt="3 1 9 web was net connect 01">
+<img src="/resources/{version}/static/images/installation/vmhost/3_1_9_web_was_net_connect_01.png" alt="3 1 9 web was net connect 01">
 </div>
-<div class="title">Figure 28. Web Server 초기 설정화면</div>
+<div class="title">Figure 32. Web Server 초기 설정화면</div>
 </div>
 <div class="paragraph">
 <p>Web Server(EN-N) 의 'Connector' 탭 하위의 'Net Gateway' 탭 에서는 Web Server(EN-N) 와 Backend Server간 연결에 대한 설정을 관리한다.
@@ -7284,22 +7475,22 @@ LENA Manager 상단의 'SERVER' 메뉴에서 설치한 Web Server(EN-N) 를 선�
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.4.0/static/images/installation/vmhost/3_1_9_web_was_net_connect_02.png" alt="3 1 9 web was net connect 02">
+<img src="/resources/{version}/static/images/installation/vmhost/3_1_9_web_was_net_connect_02.png" alt="3 1 9 web was net connect 02">
 </div>
-<div class="title">Figure 29. 연동할 Backend Server 추가</div>
+<div class="title">Figure 33. 연동할 Backend Server 추가</div>
 </div>
 <div class="paragraph">
 <p>Member List에 연동 설정할 Backend Server가 추가되면 우측 하단의 'Save' 버튼을 클릭하여 최종 저장한다.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.4.0/static/images/installation/vmhost/3_1_9_web_was_net_connect_03.png" alt="3 1 9 web was net connect 03">
+<img src="/resources/{version}/static/images/installation/vmhost/3_1_9_web_was_net_connect_03.png" alt="3 1 9 web was net connect 03">
 </div>
-<div class="title">Figure 30. 연동할 Backend Server 목록 저장</div>
+<div class="title">Figure 34. 연동할 Backend Server 목록 저장</div>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_session_server_설치_및_연동"><a class="link" href="#_session_server_설치_및_연동">3.1.10. Session Server 설치 및 연동</a></h4>
+<h4 id="_session_server_설치_및_연동"><a class="link" href="#_session_server_설치_및_연동">3.1.11. Session Server 설치 및 연동</a></h4>
 <div class="paragraph">
 <p>Session Server는 Session Clustering 을 적용 시에 설치하며 다음 두 가지 방법으로 설치할 수 있다.</p>
 </div>
@@ -7321,15 +7512,15 @@ WAS List 하단에는 설치된 Session Server를 확인 할 수 있는 Session 
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.4.0/static/images/installation/vmhost/3_1_10_session_install_01.png" alt="3 1 10 session install 01">
+<img src="/resources/{version}/static/images/installation/vmhost/3_1_10_session_install_01.png" alt="3 1 10 session install 01">
 </div>
-<div class="title">Figure 31. Session Server List 확인</div>
+<div class="title">Figure 35. Session Server List 확인</div>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.4.0/static/images/installation/vmhost/3_1_10_session_install_02.png" alt="3 1 10 session install 02">
+<img src="/resources/{version}/static/images/installation/vmhost/3_1_10_session_install_02.png" alt="3 1 10 session install 02">
 </div>
-<div class="title">Figure 32. Session Server 설치정보 입력 Popup 과 입력 값 예시</div>
+<div class="title">Figure 36. Session Server 설치정보 입력 Popup 과 입력 값 예시</div>
 </div>
 <div class="paragraph">
 <p>'Install' 버튼을 클릭하면 Session Server를 설치하기 위한 정보를 입력하는 Popup 창이 출력되며 각 입력항목은 다음과 같다.</p>
@@ -7397,9 +7588,9 @@ WAS List 하단에는 설치된 Session Server를 확인 할 수 있는 Session 
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.4.0/static/images/installation/vmhost/3_1_10_session_install_03.png" alt="3 1 10 session install 03">
+<img src="/resources/{version}/static/images/installation/vmhost/3_1_10_session_install_03.png" alt="3 1 10 session install 03">
 </div>
-<div class="title">Figure 33. 다른 하나의 Session Server 설치</div>
+<div class="title">Figure 37. 다른 하나의 Session Server 설치</div>
 </div>
 <div class="paragraph">
 <p>Session Server 를 모두 설치 한 뒤 WAS 와 연동하기 위해 WAS 설정 화면의 'Session' 탭을 선택한다.<br>
@@ -7407,9 +7598,9 @@ WAS List 하단에는 설치된 Session Server를 확인 할 수 있는 Session 
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.4.0/static/images/installation/vmhost/3_1_10_session_install_04.png" alt="3 1 10 session install 04">
+<img src="/resources/{version}/static/images/installation/vmhost/3_1_10_session_install_04.png" alt="3 1 10 session install 04">
 </div>
-<div class="title">Figure 34. WAS 의 Standalone 모드 Session Server 설정</div>
+<div class="title">Figure 38. WAS 의 Standalone 모드 Session Server 설정</div>
 </div>
 <div class="paragraph">
 <p>Standalone 모드 Session Server 를 기준으로, 설정 값은 다음과 같다.</p>
@@ -7459,9 +7650,9 @@ WAS List 하단에는 설치된 Session Server를 확인 할 수 있는 Session 
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.4.0/static/images/installation/vmhost/3_1_10_session_install_05.png" alt="3 1 10 session install 05">
+<img src="/resources/{version}/static/images/installation/vmhost/3_1_10_session_install_05.png" alt="3 1 10 session install 05">
 </div>
-<div class="title">Figure 35. WAS 의 Embedded 모드 Session Server 설정</div>
+<div class="title">Figure 39. WAS 의 Embedded 모드 Session Server 설정</div>
 </div>
 <div class="paragraph">
 <p>Embedded 모드 Session Server 를 기준으로, 설정 값은 다음과 같다.</p>
@@ -7504,14 +7695,14 @@ WAS List 하단에는 설치된 Session Server를 확인 할 수 있는 Session 
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.4.0/static/images/installation/vmhost/3_1_10_session_install_06.png" alt="3 1 10 session install 06">
+<img src="/resources/{version}/static/images/installation/vmhost/3_1_10_session_install_06.png" alt="3 1 10 session install 06">
 </div>
-<div class="title">Figure 36. WAS 의 Embedded 모드 Session Server 설정의 완료</div>
+<div class="title">Figure 40. WAS 의 Embedded 모드 Session Server 설정의 완료</div>
 </div>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_server_간_연동_확인"><a class="link" href="#_server_간_연동_확인">3.1.11. Server 간 연동 확인</a></h4>
+<h4 id="_server_간_연동_확인"><a class="link" href="#_server_간_연동_확인">3.1.12. Server 간 연동 확인</a></h4>
 <div class="paragraph">
 <p>앞서 <a href="#_web_serveren_a_was_연동">Web Server(EN-A) - WAS 연동</a> 과 <a href="#_web_serveren_n_was_연동_proxy">Web Server(EN-N) - WAS 연동 (Proxy)</a> 과 <a href="#_web_serveren_n_was_연동_net_gateway">Web Server(EN-N) - WAS 연동 (Net Gateway)</a> 과 <a href="#_session_server_설치_및_연동">Session Server 설치 및 연동</a> 과정을 통해서 진행한 연동 설정을 확인하는 방법을 설명한다.<br>
 LENA Manager 에서는 설치한 Server 의 구성을 간편하게 확인할 수 있도록 Topology View 를 제공하고 있다. 이 Topology 기능을 통해 연동이 정상적으로 확인 하는 방법과
@@ -7524,9 +7715,9 @@ Web Server, WAS 설치 시 기본 탑재되어 있는 LENA Sample 페이지를 �
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.4.0/static/images/installation/vmhost/3_1_11_check_connect_01.png" alt="3 1 11 check connect 01">
+<img src="/resources/{version}/static/images/installation/vmhost/3_1_11_check_connect_01.png" alt="3 1 11 check connect 01">
 </div>
-<div class="title">Figure 37. Topology View</div>
+<div class="title">Figure 41. Topology View</div>
 </div>
 <div class="paragraph">
 <p>Topology View 에서는 기본적으로 현재 등록되어 있는 Node 와 Node 별 설치한 Server 의 구성과 연동정보를 확인 할 수있다.<br>
@@ -7549,9 +7740,9 @@ Web Server, WAS 설치 시 기본 탑재되어 있는 LENA Sample 페이지를 �
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.4.0/static/images/installation/vmhost/3_1_11_check_connect_02.png" alt="3 1 11 check connect 02">
+<img src="/resources/{version}/static/images/installation/vmhost/3_1_11_check_connect_02.png" alt="3 1 11 check connect 02">
 </div>
-<div class="title">Figure 38. Web Server 호출 Test</div>
+<div class="title">Figure 42. Web Server 호출 Test</div>
 </div>
 </div>
 <div class="sect4">
@@ -7571,9 +7762,9 @@ Web Server, WAS 설치 시 기본 탑재되어 있는 LENA Sample 페이지를 �
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.4.0/static/images/installation/vmhost/3_1_11_check_connect_03.png" alt="3 1 11 check connect 03">
+<img src="/resources/{version}/static/images/installation/vmhost/3_1_11_check_connect_03.png" alt="3 1 11 check connect 03">
 </div>
-<div class="title">Figure 39. index.jsp 호출 Test</div>
+<div class="title">Figure 43. index.jsp 호출 Test</div>
 </div>
 <div class="paragraph">
 <p>index.jsp 페이지를 호출하면 현재 요청을 어떤 WAS가 처리하는지를 Server ID, Service Port, JvmRout 값을 통해 확인할 수 있다.</p>
@@ -7591,9 +7782,9 @@ Session Clustering 이 정상 적용 되었는지를 확인 하기 위해서는 
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="/resources/1.3.4.0/static/images/installation/vmhost/3_1_11_check_connect_04.png" alt="3 1 11 check connect 04">
+<img src="/resources/{version}/static/images/installation/vmhost/3_1_11_check_connect_04.png" alt="3 1 11 check connect 04">
 </div>
-<div class="title">Figure 40. session.jsp 호출 Test</div>
+<div class="title">Figure 44. session.jsp 호출 Test</div>
 </div>
 </div>
 </div>
@@ -7604,7 +7795,7 @@ Session Clustering 이 정상 적용 되었는지를 확인 하기 위해서는 
 <div id="footer">
 <div id="footer-text">
 Version 1.3.4.0<br>
-Last updated 2024-12-20 09:23:21 +0900
+Last updated 2025-01-03 14:10:48 +0900
 </div>
 </div>
 </body>
