@@ -3,8 +3,10 @@
 ## 신규 버전 작업 가이드
 
 ### 화면 / 메뉴 트리용 md 파일 생성
-경로 : /content/docs/{version}
+- html경로 : /content/docs/{version}
 방법 : 신규 버전 디렉토리 생성 후 _index.md, installation.md, userguid.md 파일 생성
+- pdf경로 : /content/download/{version}
+방법 : 신규 버전 디렉토리 생성 후 _index.md 파일 생성
 
 ### 화면용 html 파일 추가 / 변환 작업
 #### html 파일 추가
@@ -38,4 +40,13 @@ src/main/resources/static/ko/release-note/release_note.html
 > - LENA_Manual_Container_v1.3.pdf
 > - LENA_Manual_Enterprise_v1.3.pdf
 > - LENA_Manual_Standard_v1.3.pdf
+> - LENA_Manual_VM_v1.3.pdf
+
+### 설치파일에 최신 pdf파일 업로드
+경로 : lena-server/lena-manager/src/main/webapp/resources/docs
+방법 : jenkins 에 생성된 pdf 파일을 lena 프로젝트에 업로드해준다. (1.3.4.0 이후 버전부터 적용대상)
+대상목록
+> - LENA_Installation_Container_v1.3.pdf
+> - LENA_Installation_VM_v1.3.pdf
+> - LENA_Manual_Container_v1.3.pdf
 > - LENA_Manual_VM_v1.3.pdf
