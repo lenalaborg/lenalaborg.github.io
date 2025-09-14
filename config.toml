@@ -9,6 +9,23 @@ pygmentsUseClasses = true
 pygmentsCodeFences = true
 disablePathToLower = true
 
+# Multilingual configuration
+defaultContentLanguage = "ko"
+defaultContentLanguageInSubdir = true
+
+[languages]
+  [languages.ko]
+    languageName = "한국어"
+    weight = 1
+    title = "LENA Docs"
+    contentDir = "content/ko"
+    
+  [languages.en]
+    languageName = "English"
+    weight = 2
+    title = "LENA Docs"
+    contentDir = "content/en"
+
 # Needed for mermaid shortcodes
 [markup]
   [markup.goldmark.renderer]
