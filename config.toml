@@ -11,7 +11,7 @@ disablePathToLower = true
 
 # Multilingual configuration
 defaultContentLanguage = "ko"
-defaultContentLanguageInSubdir = true
+defaultContentLanguageInSubdir = false
 
 [languages]
   [languages.ko]
