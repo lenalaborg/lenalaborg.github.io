@@ -2,4 +2,4 @@
 title: 1.3.4.3
 geekdocNav: false
 ---
-{{< include file="/static/_includes/1.3.4.3/release_note.html" type="html" >}}
+{{< include file="/static/ko/_includes/1.3.4.3/release_note.html" type="html" >}}
