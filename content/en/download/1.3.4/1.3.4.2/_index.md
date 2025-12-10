@@ -1,6 +1,7 @@
 ---
 title: 1.3.4.2
 geekdocNav: false
+weight: 2
 ---
 - [LENA_Installation_Container](../../../../resources/1.3.4.2/pdf/LENA_Installation_Container_v1.3-en.pdf)
 - [LENA_Installation_Enterprise](../../../../resources/1.3.4.2/pdf/LENA_Installation_Enterprise_v1.3-en.pdf)

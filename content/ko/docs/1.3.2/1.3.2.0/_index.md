@@ -1,5 +1,6 @@
 ---
 title: 1.3.2.0
 geekdocNav: false
+weight: 0
 ---
 {{< include file="/static/ko/_includes/1.3.2.0/release_note.html" type="html" >}}
