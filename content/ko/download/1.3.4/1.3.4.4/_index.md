@@ -10,4 +10,3 @@ weight: 3
 - [LENA_Manual_Container](../../../../resources/1.3.4.4/pdf/LENA_Manual_Container_v1.3.pdf)
 - [LENA_Manual_Enterprise](../../../../resources/1.3.4.4/pdf/LENA_Manual_Enterprise_v1.3.pdf)
 - [LENA_Manual_Standard](../../../../resources/1.3.4.4/pdf/LENA_Manual_Standard_v1.3.pdf)
-- [LENA_Patch_Manual](../../../../resources/1.3.4.4/pdf/LENA_Patch_Manual_v1.3.pdf)
