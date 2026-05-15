@@ -3,6 +3,7 @@
 ## 신규 버전 작업 가이드
 
 ### 화면 / 메뉴 트리용 md 파일 생성
+#### (version 정보와 weight값 반영필요)
 - html경로 : /content/ko/docs/{version}
 방법 : 신규 버전 디렉토리 생성 후 _index.md, installation.md, userguid.md 파일 생성
 - pdf경로 : /content/ko/download/{version}

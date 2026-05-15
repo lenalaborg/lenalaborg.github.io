@@ -1,7 +1,7 @@
 ---
 title: 1.3.3.7
 geekdocNav: false
-weight: 6
+weight: 7
 ---
 - [LENA_Brochure](../../../../resources/1.3.3.7/pdf/LENA_Brochure.pdf)
 - [LENA_Installation_Container](../../../../resources/1.3.3.7/pdf/LENA_Installation_Container_v1.3.pdf)

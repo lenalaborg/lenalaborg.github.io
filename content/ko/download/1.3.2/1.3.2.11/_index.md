@@ -1,7 +1,7 @@
 ---
 title: 1.3.2.11
 geekdocNav: false
-weight: 9
+weight: 11
 ---
 - [LENA_Brochure](../../../../resources/1.3.2.11/pdf/LENA_Brochure.pdf)
 - [LENA_Installation_Container](../../../../resources/1.3.2.11/pdf/LENA_Installation_Container_v1.3.pdf)
