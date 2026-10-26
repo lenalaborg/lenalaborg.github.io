@@ -93,7 +93,2228 @@ Verification via Sample Application
 1. Overview
 
 
-This document describes installation steps before operating LENA Server on a typical VM Host environment. For the complete features and operational guidance of LENA, refer to the separately provided Administrator Manual."><title>Installation | LENA Docs</title><link rel=icon href=/favicon/lena_logo.png type=image/x-icon><script src=/js/darkmode-ce906ea916.min.js></script><link rel=preload as=font href=/fonts/Metropolis.woff2 type=font/woff2 crossorigin=anonymous><link rel=preload as=font href=/fonts/LiberationSans.woff2 type=font/woff2 crossorigin=anonymous><link rel=preload href=/main-0c0de99286.min.css as=style><link rel=stylesheet href=/main-0c0de99286.min.css media=all><link rel=preload href=/mobile-c344439d04.min.css as=style><link rel=stylesheet href=/mobile-c344439d04.min.css media="screen and (max-width: 45rem)"><link rel=preload href=/print-f79fc3e5d7.min.css as=style><link rel=stylesheet href=/print-f79fc3e5d7.min.css media=print><link rel=preload href=/custom.css as=style><link rel=stylesheet href=/custom.css media=all><script src=/js/language-switcher.js></script></head><body itemscope itemtype=https://schema.org/WebPage><svg class="svg-sprite" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol viewBox="-2.29 -2.29 28.57 28.57" id="gdoc_arrow_back" xmlns="http://www.w3.org/2000/svg"><path d="M24 10.526v2.947H5.755l8.351 8.421-2.105 2.105-12-12 12-12 2.105 2.105-8.351 8.421H24z"/></symbol><symbol viewBox="-2.29 -2.29 28.57 28.57" id="gdoc_arrow_left_alt" xmlns="http://www.w3.org/2000/svg"><path d="M5.965 10.526V6.035L0 12l5.965 5.965v-4.491H24v-2.947H5.965z"/></symbol><symbol viewBox="-2.29 -2.29 28.57 28.57" id="gdoc_arrow_right_alt" xmlns="http://www.w3.org/2000/svg"><path d="M18.035 10.526V6.035L24 12l-5.965 5.965v-4.491H0v-2.947h18.035z"/></symbol><symbol viewBox="-2.29 -2.29 32.57 32.57" id="gdoc_bitbucket" xmlns="http://www.w3.org/2000/svg"><path d="M15.905 13.355c.189 1.444-1.564 2.578-2.784 1.839-1.375-.602-1.375-2.784-.034-3.403 1.151-.705 2.818.223 2.818 1.564zm1.907-.361c-.309-2.44-3.076-4.056-5.328-3.042-1.426.636-2.389 2.148-2.32 3.747.086 2.097 2.08 3.815 4.176 3.626s3.729-2.234 3.472-4.331zm4.108-9.315c-.756-.997-2.045-1.169-3.179-1.358-3.214-.516-6.513-.533-9.727.034-1.066.172-2.269.361-2.939 1.323 1.1 1.031 2.664 1.186 4.073 1.358 2.544.327 5.156.344 7.699.017 1.426-.172 3.008-.309 4.073-1.375zm.979 17.788c-.481 1.684-.206 3.953-1.994 4.932-3.076 1.701-6.806 1.89-10.191 1.289-1.787-.327-3.884-.894-4.864-2.578-.43-1.65-.705-3.334-.98-5.018l.103-.275.309-.155c5.121 3.386 12.288 3.386 17.427.0.808.241.206 1.22.189 1.805zM26.01 4.951c-.584 3.764-1.255 7.51-1.908 11.257-.189 1.1-1.255 1.719-2.148 2.183-3.214 1.615-6.96 1.89-10.483 1.512-2.389-.258-4.829-.894-6.771-2.389-.911-.705-.911-1.908-1.083-2.922-.602-3.523-1.289-7.046-1.719-10.604.206-1.547 1.942-2.217 3.231-2.698C6.848.654 8.686.362 10.508.19c3.884-.378 7.854-.241 11.618.859 1.341.395 2.784.945 3.695 2.097.412.533.275 1.203.189 1.805z"/></symbol><symbol viewBox="-2.29 -2.29 28.57 28.57" id="gdoc_bookmark" xmlns="http://www.w3.org/2000/svg"><path d="M15.268 4.392q.868.0 1.532.638t.664 1.506v17.463l-7.659-3.268-7.608 3.268V6.536q0-.868.664-1.506t1.532-.638h10.876zm4.34 14.144V4.392q0-.868-.638-1.532t-1.506-.664H6.537q0-.868.664-1.532T8.733.0h10.876q.868.0 1.532.664t.664 1.532v17.412z"/></symbol><symbol viewBox="-2.29 -2.29 32.57 32.57" id="gdoc_brightness_auto" xmlns="http://www.w3.org/2000/svg"><path d="M16.846 18.938h2.382L15.22 7.785h-2.44L8.772 18.938h2.382l.871-2.44h3.95zm7.087-9.062L27.999 14l-4.066 4.124v5.809h-5.809L14 27.999l-4.124-4.066H4.067v-5.809L.001 14l4.066-4.124V4.067h5.809L14 .001l4.124 4.066h5.809v5.809zm-11.385 4.937L14 10.282l1.452 4.531h-2.904z"/></symbol><symbol viewBox="-2.29 -2.29 32.57 32.57" id="gdoc_brightness_dark" xmlns="http://www.w3.org/2000/svg"><path d="M14 21.435q3.079.0 5.257-2.178T21.435 14t-2.178-5.257T14 6.565q-1.51.0-3.079.697 1.917.871 3.108 2.701T15.22 14t-1.191 4.037-3.108 2.701q1.568.697 3.079.697zm9.933-11.559L27.999 14l-4.066 4.124v5.809h-5.809L14 27.999l-4.124-4.066H4.067v-5.809L.001 14l4.066-4.124V4.067h5.809L14 .001l4.124 4.066h5.809v5.809z"/></symbol><symbol viewBox="-2.29 -2.29 32.57 32.57" id="gdoc_brightness_light" xmlns="http://www.w3.org/2000/svg"><path d="M14 21.435q3.079.0 5.257-2.178T21.435 14t-2.178-5.257T14 6.565 8.743 8.743 6.565 14t2.178 5.257T14 21.435zm9.933-3.311v5.809h-5.809L14 27.999l-4.124-4.066H4.067v-5.809L.001 14l4.066-4.124V4.067h5.809L14 .001l4.124 4.066h5.809v5.809L27.999 14z"/></symbol><symbol viewBox="-2.29 -2.29 32.57 32.57" id="gdoc_cloud_off" xmlns="http://www.w3.org/2000/svg"><path d="M9.023 10.5H7q-1.914.0-3.281 1.395t-1.367 3.309 1.367 3.281T7 19.852h11.375zM3.5 4.976l1.477-1.477L24.5 23.022l-1.477 1.477-2.352-2.297H6.999q-2.898.0-4.949-2.051t-2.051-4.949q0-2.844 1.969-4.867t4.758-2.133zm19.086 5.578q2.242.164 3.828 1.832T28 16.351q0 3.008-2.461 4.758l-1.695-1.695q1.805-.984 1.805-3.063.0-1.422-1.039-2.461t-2.461-1.039h-1.75v-.602q0-2.68-1.859-4.539t-4.539-1.859q-1.531.0-2.953.711l-1.75-1.695Q11.431 3.5 14.001 3.5q2.953.0 5.496 2.078t3.09 4.977z"/></symbol><symbol viewBox="-2.29 -2.29 32.57 32.57" id="gdoc_code" xmlns="http://www.w3.org/2000/svg"><path d="M9.917 24.5a1.75 1.75.0 10-3.501.001 1.75 1.75.0 003.501-.001zm0-21a1.75 1.75.0 10-3.501.001A1.75 1.75.0 009.917 3.5zm11.666 2.333a1.75 1.75.0 10-3.501.001 1.75 1.75.0 003.501-.001zm1.75.0a3.502 3.502.0 01-1.75 3.026c-.055 6.581-4.721 8.039-7.82 9.023-2.898.911-3.846 1.349-3.846 3.117v.474a3.502 3.502.0 011.75 3.026c0 1.932-1.568 3.5-3.5 3.5s-3.5-1.568-3.5-3.5c0-1.294.711-2.424 1.75-3.026V6.526A3.502 3.502.0 014.667 3.5c0-1.932 1.568-3.5 3.5-3.5s3.5 1.568 3.5 3.5a3.502 3.502.0 01-1.75 3.026v9.06c.93-.456 1.914-.766 2.807-1.039 3.391-1.075 5.323-1.878 5.359-5.687a3.502 3.502.0 01-1.75-3.026c0-1.932 1.568-3.5 3.5-3.5s3.5 1.568 3.5 3.5z"/></symbol><symbol viewBox="-2.29 -2.29 36.57 36.57" id="gdoc_date" xmlns="http://www.w3.org/2000/svg"><path d="M27.192 28.844V11.192H4.808v17.652h22.384zm0-25.689q1.277.0 2.253.976t.976 2.253v22.459q0 1.277-.976 2.216t-2.253.939H4.808q-1.352.0-2.291-.901t-.939-2.253V6.385q0-1.277.939-2.253t2.291-.976h1.577V.001h3.23v3.155h12.769V.001h3.23v3.155h1.577zm-3.155 11.267v3.155h-3.23v-3.155h3.23zm-6.46.0v3.155h-3.155v-3.155h3.155zm-6.384.0v3.155h-3.23v-3.155h3.23z"/></symbol><symbol viewBox="-2.29 -2.29 36.57 36.57" id="gdoc_download" xmlns="http://www.w3.org/2000/svg"><path d="M2.866 28.209h26.269v3.79H2.866v-3.79zm26.268-16.925L16 24.418 2.866 11.284h7.493V.001h11.283v11.283h7.493z"/></symbol><symbol viewBox="-2.29 -2.29 36.57 36.57" id="gdoc_email" xmlns="http://www.w3.org/2000/svg"><path d="M28.845 9.615v-3.23L16 14.422 3.155 6.385v3.23L16 17.577zm0-6.46q1.277.0 2.216.977T32 6.385v19.23q0 1.277-.939 2.253t-2.216.977H3.155q-1.277.0-2.216-.977T0 25.615V6.385q0-1.277.939-2.253t2.216-.977h25.69z"/></symbol><symbol viewBox="-2.29 -2.29 32.57 32.57" id="gdoc_git" xmlns="http://www.w3.org/2000/svg"><path d="M27.472 12.753 15.247.529a1.803 1.803.0 00-2.55.0l-2.84 2.84 2.137 2.137a2.625 2.625.0 013.501 3.501l3.499 3.499a2.625 2.625.0 11-1.237 1.237l-3.499-3.499c-.083.04-.169.075-.257.106v7.3a2.626 2.626.0 11-1.75.0v-7.3a2.626 2.626.0 01-1.494-3.607L8.62 4.606l-8.09 8.09a1.805 1.805.0 000 2.551l12.225 12.224a1.803 1.803.0 002.55.0l12.168-12.168a1.805 1.805.0 000-2.551z"/></symbol><symbol viewBox="-2.29 -2.29 36.57 36.57" id="gdoc_github" xmlns="http://www.w3.org/2000/svg"><path d="M16 .394c8.833.0 15.999 7.166 15.999 15.999.0 7.062-4.583 13.062-10.937 15.187-.813.146-1.104-.354-1.104-.771.0-.521.021-2.25.021-4.396.0-1.5-.5-2.458-1.083-2.958 3.562-.396 7.312-1.75 7.312-7.896.0-1.75-.625-3.167-1.646-4.291.167-.417.708-2.042-.167-4.25-1.333-.417-4.396 1.646-4.396 1.646a15.032 15.032.0 00-8 0S8.937 6.602 7.603 7.018c-.875 2.208-.333 3.833-.167 4.25-1.021 1.125-1.646 2.542-1.646 4.291.0 6.125 3.729 7.5 7.291 7.896-.458.417-.875 1.125-1.021 2.146-.917.417-3.25 1.125-4.646-1.333-.875-1.521-2.458-1.646-2.458-1.646-1.562-.021-.104.979-.104.979 1.042.479 1.771 2.333 1.771 2.333.938 2.854 5.396 1.896 5.396 1.896.0 1.333.021 2.583.021 2.979.0.417-.292.917-1.104.771C4.582 29.455-.001 23.455-.001 16.393-.001 7.56 7.165.394 15.998.394zM6.063 23.372c.042-.083-.021-.187-.146-.25-.125-.042-.229-.021-.271.042-.042.083.021.187.146.25.104.062.229.042.271-.042zm.646.709c.083-.062.062-.208-.042-.333-.104-.104-.25-.146-.333-.062-.083.062-.062.208.042.333.104.104.25.146.333.062zm.625.937c.104-.083.104-.25.0-.396-.083-.146-.25-.208-.354-.125-.104.062-.104.229.0.375s.271.208.354.146zm.875.875c.083-.083.042-.271-.083-.396-.146-.146-.333-.167-.417-.062-.104.083-.062.271.083.396.146.146.333.167.417.062zm1.187.521c.042-.125-.083-.271-.271-.333-.167-.042-.354.021-.396.146s.083.271.271.312c.167.062.354.0.396-.125zm1.313.104c0-.146-.167-.25-.354-.229-.187.0-.333.104-.333.229.0.146.146.25.354.229.187.0.333-.104.333-.229zm1.208-.208c-.021-.125-.187-.208-.375-.187-.187.042-.312.167-.292.312.021.125.187.208.375.167s.312-.167.292-.292z"/></symbol><symbol viewBox="-2.29 -2.29 32.57 32.57" id="gdoc_gitlab" xmlns="http://www.w3.org/2000/svg"><path d="M1.629 11.034 14 26.888.442 17.048a1.09 1.09.0 01-.39-1.203l1.578-4.811zm7.217.0h10.309l-5.154 15.854zM5.753 1.475l3.093 9.559H1.63l3.093-9.559a.548.548.0 011.031.0zm20.618 9.559 1.578 4.811c.141.437-.016.922-.39 1.203l-13.558 9.84 12.371-15.854zm0 0h-7.216l3.093-9.559a.548.548.0 011.031.0z"/></symbol><symbol viewBox="-2.29 -2.29 36.57 36.57" id="gdoc_heart" xmlns="http://www.w3.org/2000/svg"><path d="M16 29.714a1.11 1.11.0 01-.786-.321L4.072 18.643c-.143-.125-4.071-3.714-4.071-8 0-5.232 3.196-8.357 8.535-8.357 3.125.0 6.053 2.464 7.464 3.857 1.411-1.393 4.339-3.857 7.464-3.857 5.339.0 8.535 3.125 8.535 8.357.0 4.286-3.928 7.875-4.089 8.035L16.785 29.392c-.214.214-.5.321-.786.321z"/></symbol><symbol viewBox="-2.29 -2.29 32.57 32.57" id="gdoc_keyborad_arrow_down" xmlns="http://www.w3.org/2000/svg"><path d="M3.281 5.36 14 16.079 24.719 5.36 28 8.641l-14 14-14-14z"/></symbol><symbol viewBox="-2.29 -2.29 36.57 36.57" id="gdoc_keyborad_arrow_left" xmlns="http://www.w3.org/2000/svg"><path d="M25.875 28.25 22.125 32 6.126 16.001 22.125.002l3.75 3.75-12.25 12.25z"/></symbol><symbol viewBox="-2.29 -2.29 36.57 36.57" id="gdoc_keyborad_arrow_right" xmlns="http://www.w3.org/2000/svg"><path d="M6.125 28.25 18.375 16 6.125 3.75 9.875.0l15.999 15.999L9.875 31.998z"/></symbol><symbol viewBox="-2.29 -2.29 32.57 32.57" id="gdoc_keyborad_arrow_up" xmlns="http://www.w3.org/2000/svg"><path d="M24.719 22.64 14 11.921 3.281 22.64.0 19.359l14-14 14 14z"/></symbol><symbol viewBox="-2.29 -2.29 36.57 36.57" id="gdoc_link" xmlns="http://www.w3.org/2000/svg"><path d="M24.037 7.963q3.305.0 5.634 2.366T32 16t-2.329 5.671-5.634 2.366h-6.46v-3.08h6.46q2.028.0 3.493-1.465t1.465-3.493-1.465-3.493-3.493-1.465h-6.46v-3.08h6.46zM9.615 17.578v-3.155h12.77v3.155H9.615zM3.005 16q0 2.028 1.465 3.493t3.493 1.465h6.46v3.08h-6.46q-3.305.0-5.634-2.366T0 16.001t2.329-5.671 5.634-2.366h6.46v3.08h-6.46q-2.028.0-3.493 1.465t-1.465 3.493z"/></symbol><symbol viewBox="-2.29 -2.29 36.57 36.57" id="gdoc_menu" xmlns="http://www.w3.org/2000/svg"><path d="M.001 5.334h31.998v3.583H.001V5.334zm0 12.416v-3.5h31.998v3.5H.001zm0 8.916v-3.583h31.998v3.583H.001z"/></symbol><symbol viewBox="-2.29 -2.29 32.57 32.57" id="gdoc_notification" xmlns="http://www.w3.org/2000/svg"><path d="M22.615 19.384l2.894 2.894v1.413H2.49v-1.413l2.894-2.894V12.25q0-3.365 1.716-5.856t4.745-3.231v-1.01q0-.875.606-1.514T13.999.0t1.548.639.606 1.514v1.01q3.029.74 4.745 3.231t1.716 5.856v7.134zM14 27.999q-1.211.0-2.053-.808t-.841-2.019h5.788q0 1.144-.875 1.986T14 27.999z"/></symbol><symbol viewBox="-2.29 -2.29 32.57 32.57" id="gdoc_path" xmlns="http://www.w3.org/2000/svg"><path d="M28 12.62h-9.793V8.414h-2.826v11.173h2.826v-4.206H28V26.62h-9.793v-4.206H12.62v-14H9.794v4.206H.001V1.381h9.793v4.206h8.413V1.381H28V12.62z"/></symbol><symbol viewBox="-2.29 -2.29 36.57 36.57" id="gdoc_person" xmlns="http://www.w3.org/2000/svg"><path d="M16 20.023q5.052.0 10.526 2.199t5.473 5.754v4.023H0v-4.023q0-3.555 5.473-5.754t10.526-2.199zM16 16q-3.275.0-5.614-2.339T8.047 8.047t2.339-5.661T16 0t5.614 2.386 2.339 5.661-2.339 5.614T16 16z"/></symbol><symbol viewBox="-2.29 -2.29 36.57 36.57" id="gdoc_search" xmlns="http://www.w3.org/2000/svg"><path d="M11.925 20.161q3.432.0 5.834-2.402t2.402-5.834-2.402-5.834-5.834-2.402-5.834 2.402-2.402 5.834 2.402 5.834 5.834 2.402zm10.981.0L32 29.255 29.255 32l-9.094-9.094v-1.458l-.515-.515q-3.26 2.831-7.721 2.831-4.976.0-8.45-3.432T.001 11.925t3.474-8.45 8.45-3.474 8.407 3.474 3.432 8.45q0 1.802-.858 4.075t-1.973 3.646l.515.515h1.458z"/></symbol><symbol viewBox="-2.29 -2.29 32.57 32.57" id="gdoc_shield" xmlns="http://www.w3.org/2000/svg"><path d="M22.167 15.166V3.5h-8.166v20.726c.93-.492 2.424-1.349 3.883-2.497 1.95-1.531 4.284-3.919 4.284-6.562zm3.499-13.999v14c0 7.674-10.737 12.523-11.192 12.724-.146.073-.31.109-.474.109s-.328-.036-.474-.109c-.456-.201-11.192-5.049-11.192-12.724v-14C2.334.529 2.863.0 3.501.0H24.5c.638.0 1.167.529 1.167 1.167z"/></symbol><symbol viewBox="-2.29 -2.29 32.57 32.57" id="gdoc_tags" xmlns="http://www.w3.org/2000/svg"><path d="M6.606 7.549c0-1.047-.84-1.887-1.887-1.887s-1.887.84-1.887 1.887.84 1.887 1.887 1.887 1.887-.84 1.887-1.887zm15.732 8.493c0 .501-.206.988-.546 1.327l-7.239 7.254c-.354.339-.84.546-1.342.546s-.988-.206-1.327-.546L1.342 14.066C.59 13.329.0 11.899.0 10.852V4.718a1.9 1.9.0 011.887-1.887h6.134c1.047.0 2.477.59 3.229 1.342L21.792 14.7c.339.354.546.84.546 1.342zm5.661.0c0 .501-.206.988-.546 1.327l-7.239 7.254c-.354.339-.84.546-1.342.546-.767.0-1.15-.354-1.651-.87l6.93-6.93c.339-.339.546-.826.546-1.327s-.206-.988-.546-1.342L13.609 4.173c-.752-.752-2.182-1.342-3.229-1.342h3.303c1.047.0 2.477.59 3.229 1.342L27.454 14.7c.339.354.546.84.546 1.342z"/></symbol></svg><div class=wrapper><input type=checkbox class=hidden id=menu-control>
+This document describes installation steps before operating LENA Server on a typical VM Host environment. For the complete features and operational guidance of LENA, refer to the separately provided Administrator Manual.
+
+
+This document is based on LENA version 1.3.3 and includes the following:
+
+
+
+
+LENA installation
+
+
+
+Linux-based
+
+
+Windows-based
+
+
+
+
+
+
+
+1.1. Components
+
+LENA consists of a Web Server, a WAS (Web Application Server), a Session Server, a Node Agent that monitors and controls the status of Web Servers, an Advertiser installed on Application Servers that provides status information, and the Manager, an integrated management tool for administrators.
+
+
+1.1.1. Server
+
+LENA provides three types of servers: Web Server, Application Server, and Session Server. Their roles are as follows:
+
+
+
+
+Web Server: Provides web resources based on user requests. It acts as the front for application services provided by the Application Server and can optionally provide load balancing and a security layer (SSL).
+
+
+Application Server: Runs and serves applications written in Java.
+
+
+Session Server: Maintains user sessions across Application Servers.
+
+
+
+
+
+1.1.2. Agent, Advertiser
+
+Agents are installed on Nodes and Servers and are responsible for control and monitoring.
+
+
+
+
+Node Agent
+
+
+
+Aggregates Web Server status monitoring data and provides it to the Manager.
+
+
+
+
+
+Advertiser
+
+
+
+Aggregates Application Server status monitoring data and provides it to the Manager.
+
+
+
+
+
+
+
+
+1.1.3. Manager
+
+The Manager is a web application that provides control and monitoring of Nodes and Servers through the Node Agent and Advertiser. Representative features include the following.
+
+
+Table 1. LENA Manager key features
+
+
+
+
+
+
+Item
+Description
+
+
+
+
+Dashboard
+
+
+
+Status of Servers and Server Clusters
+
+
+Notification checks
+
+
+
+
+
+Server
+
+
+
+Register/modify/delete System (logical server groups)
+
+
+
+
+
+Server Cluster
+
+
+
+Register/modify/delete Server Clusters
+
+
+Register/delete Servers to a Server Cluster
+
+
+Compare and synchronize configurations of Servers registered in a Server Cluster
+
+
+Snapshot for backup/restore of Server Cluster configuration
+
+
+Graceful restart of Servers registered in a Server Cluster
+
+
+
+
+
+Resource
+
+
+
+View and register/modify/delete resources
+Database / DataSource / MessageService(JMS) / Transaction(JTA) / Application / LoadBalancer(SLB)
+
+
+View and register/modify/delete the list of servers using a resource
+
+
+
+
+
+Diagnostics + (Monitoring)
+
+
+
+Issue-status monitoring for servers
+
+
+View events occurring on servers
+
+
+
+
+
+Topology
+
+
+
+View server composition by System
+
+
+
+
+
+Admin
+
+
+
+User and permission management; mapping among user/role/menu
+
+
+View user operation history
+
+
+License management; status view and upload
+
+
+
+
+
+
+
+
+
+1.2. Mechanism
+
+LENA provides monitoring and centralized management of Web Servers and WAS through the Manager. To enable this, an Agent is installed per Node, called the Node Agent. The Node Agent receives user commands from the Manager to control the Web Server/WAS installed on the Node, and sends monitoring information for the host/VM where the Node is installed and for the Web Server back to the Manager.
+
+
+
+
+
+Figure 1. LENA Manager monitoring and centralized management workflow
+
+
+In addition to LENA Manager, Web Server, and WAS, components such as the Manager Repository used for Manager operations, the Session Server for session clustering, and the Advertiser for collecting WAS monitoring information enable monitoring and centralized management via the Manager.
+
+
+
+
+
+
+
+
+Item
+Description
+
+
+
+
+Manager
+Manages configuration files deployed to servers and provides server monitoring
+
+
+Manager Repository
+File storage repository for Manager operations; includes various configuration and DB information
+
+
+Node Agent
+Aggregates Web Server monitoring data and sends it to the Manager; executes control/configuration commands received from the Manager
+
+
+Application Server
+Application Server instance
+
+
+Web Server
+Web Server instance
+
+
+Session Server
+Session Server instance
+
+
+Advertiser
+Aggregates monitoring data and sends it to the Manager (integrated into the Application Server)
+
+
+
+
+
+
+
+2. Installation Prerequisite
+
+
+2.1. System Requirements
+
+2.1.1. Hardware Resource
+
+
+
+CPU
+This entirely depends on how much performance the Web Application you want to run requires. For basic LENA service operation, we recommend 2 cores or more.
+
+
+Memory
+For Memory, refer to the table below. All modules except Web Server operate on JVM basis and use Heap Memory. LENA has pre-configured default Heap Memory values, which are installed with these values during installation but can be modified as needed. For stable operation, ensure that the sum of Heap Memory settings for all modules installed on one physical server does not exceed the remaining memory capacity of the physical server.
+
+
+
+
+The minimum requirements for installing LENA Manager and each Server are as follows:
+
+
+
+
+
+
+
+
+
+
+
+Category
+JVM
+Disk Space
+Minimum Memory
+Default Memory
+
+
+
+
+Manager
+JDK 1.8 +
+About 300 MB
+512 MB
+1 GB
+
+
+Node Agent
+JDK 1.8 +
+-
+64 MB
+256 MB
+
+
+Application Server
+JDK 1.8 +
+About 100 MB
+512 MB
+2 GB
+
+
+Web Server
+JDK 1.8 +
+About 50 MB
+512 MB
+-
+
+
+Session Server
+JDK 1.8 +
+About 50 MB
+512 MB
+1 GB
+
+
+
+
+Each Server is installed based on default Memory settings during installation, and Memory settings can be changed and applied above the minimum Memory requirements.
+
+
+
+2.1.2. Operating System
+
+
+
+Linux
+Supports Redhat (RHEL, CentOS) 6.5 or higher / Ubuntu 12.04 or higher and is the most recommended operating system. To match the characteristics of general x86 architecture, we recommend distributed installation on multiple low-capacity servers rather than large-capacity integrated server configuration.
+
+
+Windows
+Supports Windows 7 or higher. Unlike Linux/Unix, due to Windows characteristics, it provides Windows Service registration functionality to run LENA Module in the background. Otherwise, LENA Module always runs in the foreground.
+
+
+
+
+
+
+
+
+
+
+
+Linux/Unix basically provides scripts to run LENA Module.
+If registration as OS Service is required, the server administrator must directly configure it according to the OS environment.
+
+
+
+
+
+
+
+
+Unix
+Supports Solaris, HP-UX, and AIX. Unlike Linux/Windows, Unix does not provide new versions and patches by default, and when needed, they are created and distributed through individual review by OS version, which typically requires about 2 weeks.
+
+
+
+
+
+2.1.3. Account
+
+Before installing LENA, an account is needed for LENA installation and startup. Unless there is a suitable reason, Root / Administrator accounts are not recommended for security reasons and cannot be used to run LENA, so create a separate account in advance.
+
+
+
+
+
+
+
+
+Although not recommended in X86 architecture, suppose multiple different business systems are operated on one physical server, and the responsible operators are separated by system, and accounts are separated for access control between systems. In this case, Node should be installed/configured and operated by operator account (by business system), and it is recommended to configure LENA Manager by system as well.
+
+
+
+
+
+
+2.1.4. Directory
+
+Before proceeding with LENA installation, you must prepare an installation directory that can be used by the account created in the previous step. The table below is the directory structure suggested by LENA, and you can use a directory structure that matches your policy.
+The table below is explained based on Linux/Unix, but for Windows, configure the directories identically under C:.
+
+
+Table 2. Directory Requirement
+
+
+
+
+
+
+
+Category
+Directory
+Notes
+
+
+
+
+LENA WAS Node(Binary)
+/engn001/lena
+
+
+
+LENA WEB Node(Binary)
+/engn001/lenaw
+
+
+
+Web Server, WAS Log
+/logs001
+Configure when log path separation is needed
+
+
+Web Application Source
+/sorc001
+
+
+
+
+
+The consideration is whether to separate log files. If not separately configured, logs are created by default under the path where LENA Node is installed. To make log checking easier and disk capacity management convenient, we recommend separating the log directory.
+
+
+If possible, we recommend mounting separate external disk volumes to Node, log, and source directories to isolate them from the OS System area.
+
+
+
+2.1.5. JVM
+
+For JDK, it must be installed separately in binary form or through the package installation manager provided by the OS before proceeding with LENA installation.
+
+
+
+
+
+
+
+
+
+
+
+LENA Version
+EN(Engine No)
+JDK Version(LTS)
+JAVA EE Spec
+Servlet Spec
+
+
+
+
+1.3.3.X
+9 (Default)
+JDK 8 (1.8.x+), 11, 17, 21
+8
+4.0
+
+
+1.3.3.X
+7
+JDK 6 (1.6.x+), 7 (1.7.x+), 8 (1.8.x+)
+6
+3.0
+
+
+1.3.3.X
+8
+JDK 8 (  1.8.x+), 11
+7
+3.1
+
+
+1.3.3.X
+10
+JDK 11, 17, 21
+10 (Servlet)
+6.0
+
+
+1.3.2.X
+8 (Default)
+JDK 8 (  1.8.x+), 11
+7
+3.1
+
+
+1.3.2.X
+7
+JDK 6 (1.6.x+), 7 (1.7.x+), 8 (1.8.x+)
+6
+3.0
+
+
+1.3.2.X
+9
+JDK 8 (1.8.x+), 11, 17
+8
+4.0
+
+
+1.3.2.X
+10
+JDK 11, 17
+10 (Servlet)
+6.0
+
+
+1.3.1.X
+N/A
+JDK 8 (1.8.x+), JDK 11
+7
+-
+
+
+1.3.0.X
+N/A
+JDK 8 (1.8.x+), JDK 11
+7
+-
+
+
+
+
+
+
+
+
+
+
+
+For OracleJDK, only up to version 8u202 can be used for free.
+
+
+
+
+
+
+
+2.1.6. Network
+
+The diagram below shows the traffic flow between each LENA Module. LENA Management-related paths and Web Service-related paths are expressed in detail.
+
+
+
+
+
+Figure 2. LENA Network Traffic
+
+
+The traffic paths between LENA modules and the ports used as shown in the above diagram are as follows. The specified port numbers are predefined defaults and can be specified separately when installing each module. After selecting ports by referring to the table below, the firewall must be opened in advance.
+
+
+
+
+
+
+
+
+
+The ports used by LENA use ports above 1025 for security requirements. However, if you need to use well-known ports such as port 80 when providing services, refer to the port 80 usage guide provided in the appendix.
+
+
+
+
+
+
+Table 3. LENA Firewall Open Rule
+
+
+
+
+
+
+
+
+
+Src
+Dest
+Protocol
+Port
+Notes
+
+
+
+
+Operator
+LENA Manager
+TCP
+
+7700
+
+Manager Web UI access
+
+
+LENA Manager
+WEB Node Agent
+TCP
+
+16900
+
+WEB Node control
+
+
+WAS Node Agent
+TCP
+16800
+
+WAS Node control
+
+
+
+WEB Node Agent
+LENA Manager
+UDP
+
+16100
+
+Monitoring information transmission
+
+
+WAS Node Agent
+
+
+WAS Advertiser
+
+
+Session Server
+
+
+User/Operator
+Web Server
+HTTP
+
+8000
+
+WEB service access
+
+
+HTTPS
+8363
+WEB service secure(SSL) access
+                                                         (HTTP + 363 / modifiable)
+
+
+Operator
+WAS
+HTTP
+
+8080
+
+WAS service access
+
+
+Web Server
+AJP
+8009
+
+Web Server-WAS connection
+                                              (HTTP - 71 / modifiable)
+
+
+
+WAS
+Session Server
+TCP
+
+5180
+
+Session Clustering
+
+
+Session Server
+
+
+WAS
+DB
+TCP
+
+3306
+
+WAS JDBC access
+
+
+
+
+
+
+
+
+
+
+
+LENA installs Web Server / WAS by specifying HTTP Port during installation. Based on this HTTP Port, other ports for server operation such as HTTPS port are automatically calculated and installed, examples of which are shown in italics in the table above. Therefore, when installing multiple Web Servers and WAS, to prevent conflicts with other ports already in use, we recommend installing with the same digits for 1s and 10s place by Web Server or WAS, and changing the 100s place.
+
+
+Table 4. HTTP Port Setting Example When Installing Web Server and WAS on Equipment with Same IP
+
+
+
+
+
+
+
+
+Category
+Server Name
+HTTP Port
+Notes
+
+
+WAS
+ee_01
+8080
+-
+
+
+ee_02
+8180
+ee_01&#8217;s HTTP Port value + 100
+
+
+Web
+web_01
+7180
+-
+
+
+web_02
+7280
+web_01&#8217;s HTTP Port value + 100
+
+
+
+
+Also, we recommend not using Dynamic Port Range for the entire port range. There is a possibility that other OS services may occupy ports required for LENA startup as source ports.
+
+
+
+
+
+
+
+
+
+
+3. Installation
+
+
+3.1. LENA Installation
+
+Upload the LENA installation file to a prepared directory on the target server. Using the installation file, install LENA Manager on the server intended for the Manager, install the Web Server Node on the server intended for the Web Server, and install the WAS Node on the server intended for WAS.
+
+
+
+
+
+
+
+
+
+Before proceeding with the LENA installation, refer to the JVM section of the Operator Manual and install the JDK in advance.
+
+
+
+
+
+
+After installing the Node, install the Web Server and WAS through the LENA Manager Web UI. The LENA installation files are categorized as follows by product edition and purpose.
+
+
+Table 5. LENA installation file classification (OS: Linux/Windows 64bit / LENA: as of 1.3.3.0)
+
+
+
+
+
+
+
+
+Product Edition
+OS Type
+Installation File
+Remarks
+
+
+
+
+Enterprise
+Linux
+lena-enterprise-linux_na_x86_64-1.3.3.0.tar.gz
+For installing LENA Manager and WAS
+
+
+Windows
+lena-enterprise-win_na_x86_64-1.3.3.0.zip
+
+
+Standard
+Linux
+lena-standard-linux_na_x86_64-1.3.3.0.tar.gz
+
+
+Windows
+lena-standard-win_na_x86_64-1.3.3.0.zip
+
+
+-
+Linux
+lena-web-linux_na_x86_64-1.3.3.0.tar.gz
+For installing Web Server
+
+
+Windows
+lena-web-win-na_x86_64-1.3.3.0.zip
+
+
+
+
+
+
+
+
+
+
+
+For the differences between the Enterprise Edition and the Standard Edition, refer to the Server Module section of the Operator Manual.
+
+
+
+
+
+
+LENA installation on Linux and Windows proceeds in the same overall manner.
+This document explains based on Linux.
+
+
+3.1.1. LENA Manager Installation/Execution
+
+The LENA installation package is provided as a compressed file; upload it to the server to be installed and extract it before use. LENA Manager is included in the WAS Node installation file. Upload the installation file to the path where you will install (e.g., /engn001/lena) and extract it.
+
+
+
+
+
+
+
+
+
+LENA Manager is included in the WAS Node installation file.
+
+
+
+
+
+
+
+Verify installation path and uploaded installation file
+
+
+
+
+ [lena]# cd /engn001/lena
+ [lena]# ll
+ -rw-rw-r--  1 lena lena lena-enterprise-linux_na_x86_64-1.3.3.0.tar.gz
+
+
+
+
+
+
+
+
+
+
+When extracting, a directory is created using the filename excluding the extension.
+Rename this directory to the simplified name 1.3 and use it.
+
+
+
+
+
+
+
+Extract the installation file / Rename directory
+
+
+
+
+ [lena]# tar -xvzf lena-enterprise-linux_na_x86_64-1.3.3.0.tar.gz
+ [lena]# mv lena-enterprise-linux_na_x86_64-1.3.3.0  1.3
+ [lena]# ll
+ drwxr-xr-x 12 lena lena 1.3
+ -rw-rw-r--  1 lena lena lena-enterprise-linux_na_x86_64-1.3.3.0.tar.gz
+
+
+
+Use the install.sh file (e.g., /engn001/lena/1.3/bin/install.sh) for installation.
+Install using the following commands.
+
+
+
+LENA Manager installation
+
+
+
+
+[lena]# cd /engn001/lena/1.3/bin
+[lena]# ./install.sh create lena-manager
+*******************************
+*  LENA Server Install !      *
+*******************************
++-------------------------------------------------------------------------------------
+| 1. SERVICE_PORT is the port number used by Manager.
+|    ex : 7700
+| 2. MONITORING_PORT is the port number used by Manager for monitoring.
+|    ex : 16100
+| 3. RUN_USER is user running LENA Manager.
+|    ex : lena, wasadm
++-------------------------------------------------------------------------------------
+Input SERVICE_PORT for execution. (q:quit)
+Default value is '7700'
+7700
+
+
+
+After LENA Manager installation completes, script files related to LENA Manager are generated in the directory where install.sh was executed.
+
+
+Table 6. LENA Manager management scripts
+
+
+
+
+
+
+Script Name
+Description
+
+
+
+
+start-manager.sh
+Starts LENA Manager.
+
+
+ps-manager.sh
+Checks whether LENA Manager is running.
+
+
+stop-manager.sh
+Stops LENA Manager.
+
+
+
+
+Run start-manager.sh to start LENA Manager.
+
+
+
+[lena]# ./start-manager.sh
+--------------------------------
+          LENA Manager
+--------------------------------
+Using LENA_HOME     : /engn001/lena/jadeu3/1.3
+Using JRE_HOME      : /engn001/java/jdk1.8.0_202
+Using SERVER_PID    : /engn001/lena/jadeu3/1.3/modules/lena-manager/lena-manager_solmanager.pid
+Using SERVER_HOME   : /engn001/lena/jadeu3/1.3/modules/lena-manager
+Using SERVER_ID     : lena-manager
+Using INSTANCE_NAME : lena-manager_solmanager
+LENA started.
+
+
+
+Once LENA Manager starts normally, you can access the Manager via the server’s Service Port.
+http://Server_IP:7700
+
+
+
+
+
+Figure 3. LENA access screen
+
+
+Log in with the following initial account/password to see the initial screen.
+
+
+
+Initial account/password
+
+admin / !admin1234
+
+
+
+
+
+
+
+Figure 4. LENA initial screen (DASHBOARD)
+
+
+
+3.1.2. Node Installation (Command Line)
+
+Installing a Node is the same as extracting the LENA installation package. On the servers where you will install WAS and the Web Server, upload the respective installation packages to a prepared path (e.g., /engn001/lena or /engn001/lenaw) and extract them.
+After installing the Node, scripts to start, stop, and check the status of the Node Agent are available as shown below.
+
+
+Table 7. Node Agent management scripts
+
+
+
+
+
+
+
+Script Path
+Script Name
+Remarks
+
+
+
+
+Under the Node installation path 'bin'
+(e.g., /engn001/lena/1.3/bin)
+start-agent.sh
+Run Node Agent
+
+
+ps-agent.sh
+Check Node Agent process
+
+
+stop-agent.sh
+Stop Node Agent
+
+
+
+
+WAS Node Installation
+
+Consider the following when installing a WAS Node:
+
+
+
+
+Install LENA Manager and WAS Node on the same server
+
+
+Install LENA Manager and WAS Node on different servers (standalone LENA Manager)
+
+
+
+
+In case 1, the WAS Node is already installed because the WAS Node installation package was extracted to install LENA Manager in LENA Manager Installation/Execution.
+
+
+In case 2, upload the LENA WAS installation package to the prepared path (e.g., /engn001/lena) on the server where the WAS Node will be installed, and extract it as follows.
+
+
+Verify installation path and uploaded file
+
+ [lena]# cd /engn001/lena
+ [lena]# ll
+ -rw-rw-r--  1 lena lena lena-enterprise-linux_na_x86_64-1.3.3.0.tar.gz
+
+
+
+
+
+
+
+
+
+
+When extracting, a directory is created using the filename excluding the extension.
+Rename this directory to the simplified name 1.3 and use it.
+
+
+
+
+
+
+Extract installation file / Rename directory
+
+ [lena]# tar -xvzf lena-enterprise-linux_na_x86_64-1.3.3.0.tar.gz
+ [lena]# mv lena-enterprise-linux_na_x86_64-1.3.3.0 1.3
+ [lena]# ll
+ drwxr-xr-x 12 lena lena 1.3
+ -rw-rw-r--  1 lena lena lena-enterprise-linux_na_x86_64-1.3.3.0.tar.gz
+
+
+
+After installing the Node, run the Node Agent with start-agent.sh.
+
+
+Run Node Agent
+
+[lena]# cd /engn001/lena/1.3/bin
+[lena]# ./start-agent.sh
+Input JAVA_HOME path for LENA. ( q: quit )
+JAVA_HOME PATH :
+/engn001/java/jdk1.8.0_202                           (1)
+Input Agent port for LENA Agent. ( q: quit )
+Agent port (Default : 16800):
+16800                                                (2)
+Input Agent user for LENA Agent. ( q: quit )
+Agent user (Default : lena):
+lena                                                 (3)
+
+--------------------------------
+          LENA Agent
+--------------------------------
+Using LENA_HOME    : /engn001/lena/1.3
+Using JAVA_HOME    : /engn001/java/jdk1.8.0_202/jre
+Using CONF_FILE    : /engn001/lena/1.3/conf/agent.conf
+Using LOG_HOME     : /engn001/lena/1.3/logs/lena-agent
+Using RUN_USER     : lena
+Using PORT         : 16800
+Using UUID         : 98449860-0a9a-323b-9766-98c4292000df
+LENA Agent is started.
+
+
+
+The input items when running Node Agent are as follows.
+
+
+
+
+1
+Enter JAVA HOME (jdk) path
+
+
+2
+Enter the port Node Agent will use
+
+
+3
+Enter the OS account to run Node Agent
+
+
+
+
+
+WAS Node Installation (when changing spec)
+
+The procedure to change the WAS Node spec is as follows.
+
+
+
+
+Perform WAS Node installation with the base installation file.
+
+
+Before proceeding with additional server installation, perform a depot change.
+
+
+
+
+LENA_HOME/bin/change-depot.sh <path-to-depot-file>
+
+
+
+[lena]$ ./change-depot.sh ~/lena-depot-linux_na_x86_64-1.3.3.0-EN9.tar.gz
+*******************************
+*  LENA Depot Change !        *
+*******************************
+========================= Execution Result ========================
+RESULT : Success
+MESSAGE : depot change succeeded from EN8 to EN9
+===================================================================
+
+Execution is completed.!!
+
+
+
+The naming rule for the depot file is as follows.
+
+
+lena-depot-{os name}-{lena version}-{engine number}
+
+
+Example) lena-depot-linux_na_x86_64-1.3.3.0-EN9.tar.gz
+
+
+
+Web Server Node Installation
+
+Upload the LENA Web Server installation package to the server where the Web Server will be installed and extract it.
+
+
+Verify path / file
+
+ [lenaw]# cd /engn001/lenaw
+ [lenaw]# ll
+ -rw-rw-r--  1 lena lena lena-web-linux_na_x86_64-1.3.3.0.tar.gz
+
+
+
+Extract installation file / Rename directory
+
+ [lenaw]# tar -xvzf lena-web-linux_na_x86_64-1.3.3.0.tar.gz
+ [lenaw]# mv lena-web-linux_na_x86_64-1.3.3.0 1.3
+ [lenaw]# ll
+ drwxr-xr-x 12 lena lena 1.3
+ -rw-rw-r--  1 lena lena lena-web-linux_na_x86_64-1.3.3.0.tar.gz
+
+
+
+
+
+
+
+
+
+
+When extracting, a directory is created using the filename excluding the extension.
+Rename this directory to the simplified name 1.3 and use it.
+
+
+
+
+
+
+After installing the Node, run the Node Agent with start-agent.sh.
+
+
+Run Node Agent
+
+[lena]# cd /engn001/lenaw/1.3/bin
+[lena]# ./start-agent.sh
+Input JAVA_HOME path for LENA. ( q: quit )
+JAVA_HOME PATH :
+/engn001/java/jdk1.8.0_202                           (1)
+Input Agent port for LENA Agent. ( q: quit )
+Agent port (Default : 16900):
+16900                                                (2)
+Input Agent user for LENA Agent. ( q: quit )
+Agent user (Default : lena):
+lena                                                 (3)
+Input Web Agent Engine type for LENA Agent. ( q: quit )
+Agent Engine type [EN-A, EN-N] (Default : EN-A):
+EN-A                                                 (4)
+Openssl version 1.1.1 detected.
+Input your openssl version(1.0.1, 1.0.2, 1.1.1 or 3.0) (Default : 1.1.1, q:quit):
+1.1.1                                                (5)
+Do you want to select the module for the openssl version 1.1.1? Make sure all of your instances are shut down(Y/N, Default:Y)
+Y                                                    (6)
+
+The modules have been copied successfully.
+--------------------------------
+          LENA Agent
+--------------------------------
+Using LENA_HOME    : /engn001/lenaw/1.3
+Using JAVA_HOME    : /engn001/java/jdk1.8.0_202/jre
+Using CONF_FILE    : /engn001/lena/1.3/conf/agent.conf
+Using LOG_HOME     : /engn001/lena/1.3/logs/lena-agent
+Using RUN_USER     : lena
+Using PORT         : 16900
+Using UUID         : 98449860-0a9a-323b-9766-98c4292000df
+LENA Agent is started.
+
+
+
+The input items when running Node Agent are as follows.
+
+
+
+
+1
+Enter JAVA HOME (jdk) path
+
+
+2
+Enter the port Node Agent will use
+
+
+3
+Enter the OS account to run Node Agent
+
+
+4
+Enter the Web Server Engine Type that Node Agent will use
+
+
+
+Default : EN-A
+
+
+Engine Type : EN-A (legacy Apache-based), EN-N (Nginx-based)
+
+
+The engine type is decided at the first Agent startup; cross-engine (EN-A, EN-N) usage is not allowed within a single Agent
+
+
+
+
+
+5
+Enter OpenSSL version
+
+
+6
+Confirm OpenSSL version selection
+
+
+
+
+
+Integration (Registration) of LENA Manager and Nodes
+
+After installing WAS Node and Web Server Node and starting the Agent, you can register Nodes through LENA Manager.
+
+
+Click the 'SERVER' menu at the top of LENA Manager to check the Node List.
+Click the 'Register' button to register a Node; an empty row is added as shown below, and fill in each input item.
+
+
+
+
+
+Figure 5. SERVER menu initial screen
+
+
+The items to input when registering a Node are as follows:
+
+
+
+
+Node Name: Name of the Node to register
+
+
+Node Type: Select either Application / Web
+
+
+Node IP: IP Address of the server where the Node is installed
+
+
+Node Port: Node Port entered at Node installation
+
+
+
+
+For Manager Address, the IP of the server where LENA Manager is installed is auto-filled, so no separate input is needed.
+
+
+After entering all items, click the 'Save' button to complete Node registration; if successful, you will see a screen like the following.
+
+
+You can check the engine type via the Engine field.
+
+
+
+
+EN-A : Apache-based Web Server Engine
+
+
+EN-N : Nginx-based Web Server Engine
+
+
+
+
+
+
+
+Figure 6. Example of successful Node registration
+
+
+
+
+3.1.3. Remote Node Installation (LENA Manager Web UI)
+
+In addition to the method described in Node Installation (Command Line), Nodes can also be installed remotely through LENA Manager.
+To do this, upload the LENA installation files (WAS, Web Server) into a specific directory on the server where LENA (Manager) is installed.
+An example of the path where you should upload the installation packages:
+
+
+Table 8. Installation file upload path for remote installation (example)
+
+
+
+
+
+
+LENA Installation Path
+LENA installation package upload path
+
+
+
+
+/engn001/lena/1.3 (LENA_HOME)
+[LENA_HOME]/repository/install-files/default
+
+
+
+
+Upload the WAS and Web Server installation packages you used earlier to that path.
+
+
+Verifying installation packages for remote installation
+
+[lena]# cd /engn001/lena/1.3/repository/install-files/default
+[lena]# ll
+-rw-rw-r--. 1 lena lena lena-enterprise-linux_na_x86_64-1.3.3.0.tar.gz
+-rw-rw-r--. 1 lena lena lena-web-linux_na_x86_64-1.3.3.0.tar.gz
+
+
+
+If you have uploaded the installation packages to the appropriate path, select the 'SERVER' menu on LENA Manager and click the 'Install' button at the bottom.
+
+
+
+
+
+Figure 7. Example of remote WAS Node installation
+
+
+The items that must be entered for remote Node installation are as follows:
+
+
+
+
+Node Type: Select either Application / Web
+
+
+Node Name: Name of the Node to install on the remote server
+
+
+Node Address: IP Address of the remote server where the Node will be installed
+
+
+Node Port: Port that the Node will use on the remote server
+
+
+User: OS account of the remote server
+
+
+Password: Password of the OS account of the remote server
+
+
+SSH Port: SSH Port of the remote server
+
+
+LENA Home: Path where the Node will be installed on the remote server
+
+
+Java Home: Installed JAVA Home path on the remote server
+
+
+
+
+Based on the values entered for remote installation, LENA Manager transfers the pre-prepared installation package files to the remote server, installs the Node, and automatically starts the Agent of the installed Node, completing the remote installation. You can check the progress in a popup window.
+
+
+
+
+
+Figure 8. Example of checking progress of remote WAS Node installation
+
+
+When installation completes successfully, the remotely installed Node is automatically registered in LENA Manager.
+
+
+
+
+
+Figure 9. Example after remote Node installation and registration completion
+
+
+
+
+
+
+
+
+
+For remote Node installation, the SSH Port firewall must be open between the server where LENA Manager is installed and the server where the remote installation will be performed.
+
+
+
+
+
+
+
+3.1.4. WAS Installation/Execution
+
+After installing and registering the WAS Node, you can now install WAS through the LENA Manager Web UI.
+Click the 'SERVER' menu at the top of LENA Manager, then select the WAS Node on the left where you want to install WAS to view the WAS List. Click the 'Install' button on this screen.
+
+
+
+
+
+Figure 10. Viewing WAS List
+
+
+
+
+
+Figure 11. WAS installation popup and example inputs
+
+
+Clicking the 'Install' button opens a popup to enter information for installing WAS, and the input items are as follows.
+
+
+
+
+Server Type: Type of WAS, choose between Standard / Enterprise
+
+
+Node: Node where WAS will be installed (not editable)
+
+
+Server ID: Name for LENA Manager to identify the WAS
+
+
+Service Port: The base HTTP Port upon which WAS installation is configured
+
+
+Run User: OS account used to start WAS (not editable)
+
+
+Install Root Path: Path where WAS will be installed (not editable)
+
+
+Log Home: Path for WAS logs
+
+
+
+default: [Install Root Path]/logs
+
+
+custom: user-defined path
+
+
+
+
+
+JVM Route: Value for the Web Server to identify WAS when integrated with Web Server
+
+
+
+auto: automatically generated by LENA
+
+
+manual: user-defined
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+When WAS starts, it uses various ports such as HTTP, HTTPS, and AJP. For convenience during WAS installation in LENA, only the HTTP Port is entered, and other port values are automatically calculated and installed based on it.
+
+
+
+
+
+
+After entering all WAS installation information, click the 'Save' button to install WAS, and you can check the installed WAS in the WAS List.
+
+
+
+
+
+Figure 12. WAS List after normal WAS installation
+
+
+To start a stopped WAS, click the 'Start' button on the right of the WAS List. To stop a running WAS, the 'Stop' button appears in the same location; click that button.
+
+
+When starting WAS, the WAS startup log (and Application startup log if an application is deployed) is displayed in a popup.
+
+
+
+
+
+Figure 13. WAS startup and logs
+
+
+
+3.1.5. WebA Server Installation/Execution
+
+In the same way as WAS installation, you can install the Web Server through the LENA Manager Web UI. Select a Web Server Node with engine EN-A, and you can install WebA Server.
+
+
+
+
+
+Figure 14. Viewing Web Server List
+
+
+
+
+
+Figure 15. Web Server installation popup and example inputs
+
+
+Clicking the 'Install' button opens a popup to enter information for installing the Web Server, and the input items are as follows.
+
+
+
+
+Server Type: Web Server (fixed)
+
+
+Node: Node where the Web Server will be installed (not editable)
+
+
+Server ID: Name for LENA Manager to identify the Web Server
+
+
+Service Port: HTTP Port the Web Server will use
+
+
+Run User: OS account used to start the Web Server (not editable)
+
+
+Web Server Engine Path: Engine path to be used when installing the Web Server (not editable)
+
+
+Install Root Path: Path where the Web Server will be installed (not editable)
+
+
+Log Home: Path for Web Server logs
+
+
+
+default: [Install Root Path]/logs
+
+
+custom: user-defined path
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+When the Web Server starts, it uses various ports such as HTTP and HTTPS. For Web Servers of the EN-N engine type, only the base port is entered during installation, and installation is performed for that type based on it. Adding other types later is possible, but the initially installed base type cannot be deleted.
+
+
+
+
+
+
+After entering all Web Server installation information, click the 'Save' button to install the Web Server. You can check it in the Web Server List.
+
+
+
+
+
+Figure 16. Web Server List after normal installation
+
+
+To start a stopped Web Server, click the 'Start' button on the right of the Web Server List. To stop a running Web Server, the 'Stop' button appears in the same location; click that button.
+
+
+When starting the Web Server, the Web Server startup log is displayed in a popup.
+
+
+
+
+
+Figure 17. Web Server startup and logs
+
+
+
+3.1.6. WebA Server - WAS Integration
+
+This section explains the integration settings between WebA Server and WAS. The integration between WebA Server and WAS can be configured on the Web Server settings screen.
+From the 'SERVER' menu at the top of LENA Manager, select the installed Web Server to open the settings screen, and select the 'Connector' tab at the top of the settings screen.
+
+
+
+
+
+Figure 18. Initial Web Server settings screen
+
+
+On the Web Server&#8217;s 'Connector' tab, you manage the connection settings between the Web Server and WAS.
+Adding the WAS to be integrated in the Load Balancer Worker List at the bottom of the 'Connector' tab completes the basic integration between the Web Server and WAS.
+
+
+To add the WAS to be integrated, click the 'Add Worker' button on the Configuration tab of the Load Balancer section; in the popup, select the installed WAS and click 'Save'.
+In the popup, you can check the WAS list per WAS Node registered in LENA Manager, and WAS already registered in 'Connector' are not shown.
+
+
+
+
+
+Figure 19. Adding WAS to integrate
+
+
+Once the WAS to be integrated is added to the WAS List, click the 'Save' button at the bottom right to save the list.
+
+
+
+
+
+Figure 20. Saving the list of WAS to integrate
+
+
+
+3.1.7. WebN Server Installation/Execution
+
+As with WebA Server installation, you can install a Web Server through the LENA Manager Web UI. Select a Web Server Node with engine EN-N, and you can install WebN Server.
+
+
+
+
+
+Figure 21. Viewing Web Server List
+
+
+
+
+
+Figure 22. Web Server installation popup and example inputs
+
+
+Clicking the 'Install' button opens a popup to enter information for installing the Web Server, and the input items are as follows.
+
+
+
+
+Node: Node where the Web Server will be installed (not editable)
+
+
+Server ID: Name for LENA Manager to identify the Web Server
+
+
+Service Port: Port Type and Port Number the Web Server will use
+
+
+
+Port Type : There are four types of Port Type; the default type determined at installation cannot be changed. (Port Number can be edited.)
+
+
+HTTP : HTTP protocol-based Web Server  (can be started immediately after installation)
+
+
+HTTPS : HTTPS protocol-based Web Server  (requires adding an SSL certificate after installation to start)
+
+
+TCP : Net Gateway based on TCP port (can be started immediately after installation)
+
+
+UDP : Net Gateway based on UDP port  (can be started immediately after installation)
+
+
+
+
+
+Run User: OS account used to start the Web Server (not editable)
+
+
+Web Server Engine Path: Engine path to be used when installing the Web Server (not editable)
+
+
+Install Root Path: Path where the Web Server will be installed (not editable)
+
+
+Log Home: Path for Web Server logs
+
+
+
+default: [Install Root Path]/logs
+
+
+custom: user-defined path
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+When the Web Server starts, it uses various ports such as HTTP and HTTPS. For Web Servers of the EN-N engine type, only the base port is entered during installation, and installation is performed for that type based on it. Adding other types later is possible, but the initially installed base type cannot be deleted.
+
+
+
+
+
+
+After entering all Web Server installation information, click the 'Save' button to install the Web Server. You can check it in the Web Server List.
+
+
+
+
+
+Figure 23. Web Server List after normal installation
+
+
+To start a stopped Web Server, click the 'Start' button on the right of the Web Server List. To stop a running Web Server, the 'Stop' button appears in the same location; click that button.
+
+
+When starting the Web Server, the Web Server startup log is displayed in a popup.
+
+
+
+
+
+Figure 24. Web Server startup and logs
+
+
+
+3.1.8. WebN Server - WAS Integration (Proxy)
+
+This section explains the integration settings between WebN Server and WAS. The integration between WebN Server and WAS can be configured on the WebN Server settings screen.
+From the 'SERVER' menu at the top of LENA Manager, select the installed WebN Server to open the settings screen, and select the 'Connector' tab at the top of the settings screen.
+
+
+
+
+
+Figure 25. Initial Web Server settings screen
+
+
+On the WebN Server 'Connector' tab, you manage the connection settings between WebN Server and WAS.
+Adding the WAS to be integrated in the Load Balancer > Configuration tab > Load Balancer Member List under the 'Connector' tab > Proxy tab completes the basic integration between WebN Server and WAS.
+
+
+To add the WAS to be integrated, click the 'Add Member' button on the Configuration tab of the Load Balancer section; in the popup, select the installed WAS and click 'Save'.
+In the popup, you can check the WAS list per WAS Node registered in LENA Manager, and WAS already registered in 'Connector' are not shown.
+
+
+
+
+
+Figure 26. Adding WAS to integrate
+
+
+Once the WAS to be integrated is added to the WAS List, click the 'Save' button at the bottom right to save the list.
+
+
+
+
+
+Figure 27. Saving the list of WAS to integrate
+
+
+
+3.1.9. WebN Server - WAS Integration (Net Gateway)
+
+This section explains the integration settings between WebN Server and Backend Server. The integration between WebN Server and Backend Server can be configured on the WebN Server settings screen.
+From the 'SERVER' menu at the top of LENA Manager, select the installed WebN Server to open the settings screen, and select the 'Connector' tab at the top of the settings screen. Then select the 'Net Gateway' tab below.
+
+
+
+
+
+Figure 28. Initial Web Server settings screen
+
+
+On the 'Net Gateway' tab under the WebN Server 'Connector' tab, you manage the connection settings between WebN Server and Backend Server.
+Adding the Backend Server to be integrated in the Load Balancer Worker List at the bottom of the 'Connector' tab completes the basic integration between Web Server and Backend Server.
+
+
+To add a Backend Server to integrate, click the 'Add Upstream' button on the Configuration tab of the Load Balancer section; in the list that opens, directly enter the IP or DNS and Port, and click 'Save'.
+
+
+
+
+
+Figure 29. Adding Backend Server to integrate
+
+
+Once the Backend Server to be integrated is added to the Member List, click the 'Save' button at the bottom right to save the list.
+
+
+
+
+
+Figure 30. Saving the list of Backend Servers to integrate
+
+
+
+3.1.10. Session Server Installation and Integration
+
+Install the Session Server when applying Session Clustering; it can be installed in the following two ways.
+
+
+
+
+Standalone mode: Install Session Server on a separate server
+
+
+Embedded mode: Do not install Session Server on a separate server; install it in embedded form within an already installed WAS
+
+
+
+
+Standalone Mode Installation and WAS Integration
+
+The Session Server can be installed on a WAS Node. Select the 'SERVER' menu at the top of LENA Manager and select the WAS Node where you will install the Session Server.
+At the bottom of the WAS List, you can check the Session Server List where the installed Session Servers can be viewed.
+
+
+
+
+
+Figure 31. Viewing Session Server List
+
+
+
+
+
+Figure 32. Session Server installation popup and example inputs
+
+
+Clicking the 'Install' button opens a popup to enter information for installing the Session Server, and the input items are as follows.
+
+
+
+
+Server Type: Standalone (fixed)
+
+
+Node: Node where the Session Server will be installed (not editable)
+
+
+Server ID: Name for LENA Manager to identify the Session Server
+
+
+Service Port: Port that the Session Server will use
+
+
+Mirror Server IP: Node where the other Session Server is installed (choose from registered Nodes)
+
+
+Mirror Server Port: Port used by the Session Server on the Node where the other Session Server is installed
+
+
+Run User: OS account used to start the Session Server (not editable)
+
+
+Install Root Path: Path where the Session Server will be installed (not editable)
+
+
+Log Home: Path for Session Server logs
+
+
+
+default: [Install Root Path]/logs
+
+
+Enter manually: user-defined path
+
+
+
+
+
+
+
+After entering all Session Server installation information, click the 'Save' button to install the Session Server; you can check it in the Session Server List.
+
+
+
+
+
+
+
+
+
+In a Session Clustering configuration, install two Session Servers and configure redundancy with one as Primary and the other as Secondary.
+
+
+
+
+
+
+In the example above, another WAS Node is specified for 'Mirror Server IP'; install a Session Server on that WAS Node as well as below.
+
+
+
+
+
+Figure 33. Installing the other Session Server
+
+
+After installing all Session Servers, select the 'Session' tab on the WAS settings screen to integrate with WAS.
+The 'Session' tab manages the settings required to apply Session Clustering for WAS by integrating with Session Servers. Change the 'Session Clustering Enable' item to 'Yes' to display detailed settings. In Standalone Mode, Session Servers are installed separately and integrated with WAS to apply Session Clustering.
+
+
+
+
+
+Figure 34. WAS Standalone mode Session Server settings
+
+
+Based on the Standalone mode Session Server, the settings are as follows.
+
+
+
+
+Primary Server Host: Select the Node where the Session Server designated as Primary is installed, and select the Session Server.
+
+
+Secondary Server Host: Select the Node where the Session Server designated as Secondary is installed, and select the Session Server. When two Session Servers are installed, after selecting the Primary Server Host, the remaining Session Server is automatically designated as Secondary.
+
+
+External Stored Session: Along with applying Session Clustering, select whether to manage Session information on the two Session Servers only (instead of WAS and two Session Servers). This option is commonly used when configured on Cloud or Container environments. (Default false)
+
+
+Share session in applications: If multiple applications are deployed to WAS, select whether to share Session information among the applications. (Default false)
+
+
+Multi Login Control: Select whether to enable the duplicate login control feature. (Default false)
+
+
+
+
+For Standalone mode Session Servers, you must apply the above settings for each WAS to which the configuration applies.
+
+
+
+
+
+
+
+
+
+After changing Session settings, the WAS must be restarted.
+
+
+
+
+
+
+
+Embedded Mode Installation and WAS Integration
+
+Select the WAS on which you will use the Session Server function in Embedded mode, open the settings screen, and select the 'Session' tab at the top.
+The 'Session' tab manages the settings required to apply Session Clustering for WAS by integrating with Session Server. Change the 'Session Clustering Enable' item to 'Yes' to display detailed settings. In Embedded Mode, the Session Server function is embedded in WAS and runs within WAS.
+
+
+
+
+
+Figure 35. WAS Embedded mode Session Server settings
+
+
+Based on the Embedded mode Session Server, the settings are as follows.
+
+
+
+
+Embedded Host: When Embedded Mode is selected, it is fixed to the current WAS.
+
+
+Embedded Port: Enter the port used by the Embedded Session Server.
+
+
+Secondary Server Host: Specify the WAS on which to use the other Embedded Session Server. Select the Node where WAS is installed, then select WAS.
+
+
+Secondary Server Port: Enter the port used by the other Embedded Session Server.
+
+
+Multi Login Contorl: Select whether to enable the duplicate login control feature. (Default false)
+
+
+
+
+After finishing entering and selecting the settings, click the 'Save' button to complete the Embedded Session settings. When the Embedded Session settings are completed on one WAS, the settings are also applied to the other WAS.
+
+
+
+
+
+
+
+
+
+After changing Session settings, the WAS must be restarted.
+
+
+
+
+
+
+
+
+
+Figure 36. Completion of WAS Embedded mode Session Server settings
+
+
+
+
+3.1.11. Verifying Inter-Server Integration
+
+This section explains how to verify the integration settings performed through the processes described in WebA Server - WAS Integration, WebN Server - WAS Integration (Proxy), WebN Server - WAS Integration (Net Gateway), and Session Server Installation and Integration.
+LENA Manager provides a Topology View for easily checking the configuration of installed servers. Using this Topology feature, you can verify whether integration is normal, and you can also verify integration using the LENA Sample pages that come preloaded during Web Server and WAS installation.
+
+
+Verification via Topology
+
+Click the 'Topology' menu at the top of LENA Manager.
+
+
+
+
+
+Figure 37. Topology View
+
+
+In the Topology View, you can basically check the currently registered Nodes, the configuration of Servers installed per Node, and the integration information.
+In the figure above, two Web Servers, two WAS, and two Session Servers are installed, and the integration settings between Web Server and WAS, and between WAS and Session Server are represented with connecting lines, through which you can verify that the inter-server integration has been performed correctly.
+
+
+
+Verification via Sample Page
+
+LENA&#8217;s Web Server and WAS come with a default Sample Page and Sample Application. These can also be used to verify proper integration after initial installation.
+
+
+First, check the Web Server&#8217;s IP and Port, then enter the following in a web browser.
+
+
+http://[Web Server IP]:[Web Server Port]/index.html
+
+
+You will see that the index.html page provided by LENA is called as shown below, and you can verify that the Web Server is called successfully.
+
+
+
+
+
+Figure 38. Web Server call test
+
+
+
+Verification via Sample Application
+
+When you install LENA WAS, the default application provided by LENA is loaded. By calling index.jsp and session.jsp of this application, you can test WAS calls and Session Clustering respectively.
+
+
+Assuming that the Web Server and WAS are in their initial installed state, enter the following in a web browser.
+
+
+http://[Web Server IP]:[Web Server Port]/index.jsp
+
+
+If the Web Server and WAS are connected normally, the request called with the Web Server IP and Port is forwarded to the WAS, which then requests the index.jsp page, and the index.jsp page provided by the LENA Sample Application is called as follows.
+
+
+
+
+
+Figure 39. index.jsp call test
+
+
+When you call the index.jsp page, you can check which WAS is handling the current request via the Server ID, Service Port, and JvmRout values.
+
+
+Next, call session.jsp with the same Web Server IP and Port as follows.
+
+
+http://[Web Server IP]:[Web Server Port]/session.jsp
+
+
+When you call session.jsp, additional Session information about the current request is displayed. As you repeat the calls, the Session Count increases, and from the second call, the issued Session ID is displayed.
+To verify that Session Clustering has been applied correctly, after a Session ID is issued, stop the WAS currently handling the request, then refresh the web browser to send the request again.
+Even though another running WAS handles the request, the Session ID remains the same and the Session Count increases, which confirms correct clustering.
+
+
+
+
+
+Figure 40. session.jsp call test
+
+
+
+
+
+
+
+
+
+Version 1.3.3.0
+Last updated 2025-09-21 08:28:03 +0900
+
+
+
+"><title>Installation | LENA Docs</title><link rel=icon href=/favicon/lena_logo.png type=image/x-icon><script src=/js/darkmode-ce906ea916.min.js></script><link rel=preload as=font href=/fonts/Metropolis.woff2 type=font/woff2 crossorigin=anonymous><link rel=preload as=font href=/fonts/LiberationSans.woff2 type=font/woff2 crossorigin=anonymous><link rel=preload href=/main-0c0de99286.min.css as=style><link rel=stylesheet href=/main-0c0de99286.min.css media=all><link rel=preload href=/mobile-c344439d04.min.css as=style><link rel=stylesheet href=/mobile-c344439d04.min.css media="screen and (max-width: 45rem)"><link rel=preload href=/print-f79fc3e5d7.min.css as=style><link rel=stylesheet href=/print-f79fc3e5d7.min.css media=print><link rel=preload href=/custom.css as=style><link rel=stylesheet href=/custom.css media=all><script src=/js/language-switcher.js></script></head><body itemscope itemtype=https://schema.org/WebPage><svg class="svg-sprite" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol viewBox="-2.29 -2.29 28.57 28.57" id="gdoc_arrow_back" xmlns="http://www.w3.org/2000/svg"><path d="M24 10.526v2.947H5.755l8.351 8.421-2.105 2.105-12-12 12-12 2.105 2.105-8.351 8.421H24z"/></symbol><symbol viewBox="-2.29 -2.29 28.57 28.57" id="gdoc_arrow_left_alt" xmlns="http://www.w3.org/2000/svg"><path d="M5.965 10.526V6.035L0 12l5.965 5.965v-4.491H24v-2.947H5.965z"/></symbol><symbol viewBox="-2.29 -2.29 28.57 28.57" id="gdoc_arrow_right_alt" xmlns="http://www.w3.org/2000/svg"><path d="M18.035 10.526V6.035L24 12l-5.965 5.965v-4.491H0v-2.947h18.035z"/></symbol><symbol viewBox="-2.29 -2.29 32.57 32.57" id="gdoc_bitbucket" xmlns="http://www.w3.org/2000/svg"><path d="M15.905 13.355c.189 1.444-1.564 2.578-2.784 1.839-1.375-.602-1.375-2.784-.034-3.403 1.151-.705 2.818.223 2.818 1.564zm1.907-.361c-.309-2.44-3.076-4.056-5.328-3.042-1.426.636-2.389 2.148-2.32 3.747.086 2.097 2.08 3.815 4.176 3.626s3.729-2.234 3.472-4.331zm4.108-9.315c-.756-.997-2.045-1.169-3.179-1.358-3.214-.516-6.513-.533-9.727.034-1.066.172-2.269.361-2.939 1.323 1.1 1.031 2.664 1.186 4.073 1.358 2.544.327 5.156.344 7.699.017 1.426-.172 3.008-.309 4.073-1.375zm.979 17.788c-.481 1.684-.206 3.953-1.994 4.932-3.076 1.701-6.806 1.89-10.191 1.289-1.787-.327-3.884-.894-4.864-2.578-.43-1.65-.705-3.334-.98-5.018l.103-.275.309-.155c5.121 3.386 12.288 3.386 17.427.0.808.241.206 1.22.189 1.805zM26.01 4.951c-.584 3.764-1.255 7.51-1.908 11.257-.189 1.1-1.255 1.719-2.148 2.183-3.214 1.615-6.96 1.89-10.483 1.512-2.389-.258-4.829-.894-6.771-2.389-.911-.705-.911-1.908-1.083-2.922-.602-3.523-1.289-7.046-1.719-10.604.206-1.547 1.942-2.217 3.231-2.698C6.848.654 8.686.362 10.508.19c3.884-.378 7.854-.241 11.618.859 1.341.395 2.784.945 3.695 2.097.412.533.275 1.203.189 1.805z"/></symbol><symbol viewBox="-2.29 -2.29 28.57 28.57" id="gdoc_bookmark" xmlns="http://www.w3.org/2000/svg"><path d="M15.268 4.392q.868.0 1.532.638t.664 1.506v17.463l-7.659-3.268-7.608 3.268V6.536q0-.868.664-1.506t1.532-.638h10.876zm4.34 14.144V4.392q0-.868-.638-1.532t-1.506-.664H6.537q0-.868.664-1.532T8.733.0h10.876q.868.0 1.532.664t.664 1.532v17.412z"/></symbol><symbol viewBox="-2.29 -2.29 32.57 32.57" id="gdoc_brightness_auto" xmlns="http://www.w3.org/2000/svg"><path d="M16.846 18.938h2.382L15.22 7.785h-2.44L8.772 18.938h2.382l.871-2.44h3.95zm7.087-9.062L27.999 14l-4.066 4.124v5.809h-5.809L14 27.999l-4.124-4.066H4.067v-5.809L.001 14l4.066-4.124V4.067h5.809L14 .001l4.124 4.066h5.809v5.809zm-11.385 4.937L14 10.282l1.452 4.531h-2.904z"/></symbol><symbol viewBox="-2.29 -2.29 32.57 32.57" id="gdoc_brightness_dark" xmlns="http://www.w3.org/2000/svg"><path d="M14 21.435q3.079.0 5.257-2.178T21.435 14t-2.178-5.257T14 6.565q-1.51.0-3.079.697 1.917.871 3.108 2.701T15.22 14t-1.191 4.037-3.108 2.701q1.568.697 3.079.697zm9.933-11.559L27.999 14l-4.066 4.124v5.809h-5.809L14 27.999l-4.124-4.066H4.067v-5.809L.001 14l4.066-4.124V4.067h5.809L14 .001l4.124 4.066h5.809v5.809z"/></symbol><symbol viewBox="-2.29 -2.29 32.57 32.57" id="gdoc_brightness_light" xmlns="http://www.w3.org/2000/svg"><path d="M14 21.435q3.079.0 5.257-2.178T21.435 14t-2.178-5.257T14 6.565 8.743 8.743 6.565 14t2.178 5.257T14 21.435zm9.933-3.311v5.809h-5.809L14 27.999l-4.124-4.066H4.067v-5.809L.001 14l4.066-4.124V4.067h5.809L14 .001l4.124 4.066h5.809v5.809L27.999 14z"/></symbol><symbol viewBox="-2.29 -2.29 32.57 32.57" id="gdoc_cloud_off" xmlns="http://www.w3.org/2000/svg"><path d="M9.023 10.5H7q-1.914.0-3.281 1.395t-1.367 3.309 1.367 3.281T7 19.852h11.375zM3.5 4.976l1.477-1.477L24.5 23.022l-1.477 1.477-2.352-2.297H6.999q-2.898.0-4.949-2.051t-2.051-4.949q0-2.844 1.969-4.867t4.758-2.133zm19.086 5.578q2.242.164 3.828 1.832T28 16.351q0 3.008-2.461 4.758l-1.695-1.695q1.805-.984 1.805-3.063.0-1.422-1.039-2.461t-2.461-1.039h-1.75v-.602q0-2.68-1.859-4.539t-4.539-1.859q-1.531.0-2.953.711l-1.75-1.695Q11.431 3.5 14.001 3.5q2.953.0 5.496 2.078t3.09 4.977z"/></symbol><symbol viewBox="-2.29 -2.29 32.57 32.57" id="gdoc_code" xmlns="http://www.w3.org/2000/svg"><path d="M9.917 24.5a1.75 1.75.0 10-3.501.001 1.75 1.75.0 003.501-.001zm0-21a1.75 1.75.0 10-3.501.001A1.75 1.75.0 009.917 3.5zm11.666 2.333a1.75 1.75.0 10-3.501.001 1.75 1.75.0 003.501-.001zm1.75.0a3.502 3.502.0 01-1.75 3.026c-.055 6.581-4.721 8.039-7.82 9.023-2.898.911-3.846 1.349-3.846 3.117v.474a3.502 3.502.0 011.75 3.026c0 1.932-1.568 3.5-3.5 3.5s-3.5-1.568-3.5-3.5c0-1.294.711-2.424 1.75-3.026V6.526A3.502 3.502.0 014.667 3.5c0-1.932 1.568-3.5 3.5-3.5s3.5 1.568 3.5 3.5a3.502 3.502.0 01-1.75 3.026v9.06c.93-.456 1.914-.766 2.807-1.039 3.391-1.075 5.323-1.878 5.359-5.687a3.502 3.502.0 01-1.75-3.026c0-1.932 1.568-3.5 3.5-3.5s3.5 1.568 3.5 3.5z"/></symbol><symbol viewBox="-2.29 -2.29 36.57 36.57" id="gdoc_date" xmlns="http://www.w3.org/2000/svg"><path d="M27.192 28.844V11.192H4.808v17.652h22.384zm0-25.689q1.277.0 2.253.976t.976 2.253v22.459q0 1.277-.976 2.216t-2.253.939H4.808q-1.352.0-2.291-.901t-.939-2.253V6.385q0-1.277.939-2.253t2.291-.976h1.577V.001h3.23v3.155h12.769V.001h3.23v3.155h1.577zm-3.155 11.267v3.155h-3.23v-3.155h3.23zm-6.46.0v3.155h-3.155v-3.155h3.155zm-6.384.0v3.155h-3.23v-3.155h3.23z"/></symbol><symbol viewBox="-2.29 -2.29 36.57 36.57" id="gdoc_download" xmlns="http://www.w3.org/2000/svg"><path d="M2.866 28.209h26.269v3.79H2.866v-3.79zm26.268-16.925L16 24.418 2.866 11.284h7.493V.001h11.283v11.283h7.493z"/></symbol><symbol viewBox="-2.29 -2.29 36.57 36.57" id="gdoc_email" xmlns="http://www.w3.org/2000/svg"><path d="M28.845 9.615v-3.23L16 14.422 3.155 6.385v3.23L16 17.577zm0-6.46q1.277.0 2.216.977T32 6.385v19.23q0 1.277-.939 2.253t-2.216.977H3.155q-1.277.0-2.216-.977T0 25.615V6.385q0-1.277.939-2.253t2.216-.977h25.69z"/></symbol><symbol viewBox="-2.29 -2.29 32.57 32.57" id="gdoc_git" xmlns="http://www.w3.org/2000/svg"><path d="M27.472 12.753 15.247.529a1.803 1.803.0 00-2.55.0l-2.84 2.84 2.137 2.137a2.625 2.625.0 013.501 3.501l3.499 3.499a2.625 2.625.0 11-1.237 1.237l-3.499-3.499c-.083.04-.169.075-.257.106v7.3a2.626 2.626.0 11-1.75.0v-7.3a2.626 2.626.0 01-1.494-3.607L8.62 4.606l-8.09 8.09a1.805 1.805.0 000 2.551l12.225 12.224a1.803 1.803.0 002.55.0l12.168-12.168a1.805 1.805.0 000-2.551z"/></symbol><symbol viewBox="-2.29 -2.29 36.57 36.57" id="gdoc_github" xmlns="http://www.w3.org/2000/svg"><path d="M16 .394c8.833.0 15.999 7.166 15.999 15.999.0 7.062-4.583 13.062-10.937 15.187-.813.146-1.104-.354-1.104-.771.0-.521.021-2.25.021-4.396.0-1.5-.5-2.458-1.083-2.958 3.562-.396 7.312-1.75 7.312-7.896.0-1.75-.625-3.167-1.646-4.291.167-.417.708-2.042-.167-4.25-1.333-.417-4.396 1.646-4.396 1.646a15.032 15.032.0 00-8 0S8.937 6.602 7.603 7.018c-.875 2.208-.333 3.833-.167 4.25-1.021 1.125-1.646 2.542-1.646 4.291.0 6.125 3.729 7.5 7.291 7.896-.458.417-.875 1.125-1.021 2.146-.917.417-3.25 1.125-4.646-1.333-.875-1.521-2.458-1.646-2.458-1.646-1.562-.021-.104.979-.104.979 1.042.479 1.771 2.333 1.771 2.333.938 2.854 5.396 1.896 5.396 1.896.0 1.333.021 2.583.021 2.979.0.417-.292.917-1.104.771C4.582 29.455-.001 23.455-.001 16.393-.001 7.56 7.165.394 15.998.394zM6.063 23.372c.042-.083-.021-.187-.146-.25-.125-.042-.229-.021-.271.042-.042.083.021.187.146.25.104.062.229.042.271-.042zm.646.709c.083-.062.062-.208-.042-.333-.104-.104-.25-.146-.333-.062-.083.062-.062.208.042.333.104.104.25.146.333.062zm.625.937c.104-.083.104-.25.0-.396-.083-.146-.25-.208-.354-.125-.104.062-.104.229.0.375s.271.208.354.146zm.875.875c.083-.083.042-.271-.083-.396-.146-.146-.333-.167-.417-.062-.104.083-.062.271.083.396.146.146.333.167.417.062zm1.187.521c.042-.125-.083-.271-.271-.333-.167-.042-.354.021-.396.146s.083.271.271.312c.167.062.354.0.396-.125zm1.313.104c0-.146-.167-.25-.354-.229-.187.0-.333.104-.333.229.0.146.146.25.354.229.187.0.333-.104.333-.229zm1.208-.208c-.021-.125-.187-.208-.375-.187-.187.042-.312.167-.292.312.021.125.187.208.375.167s.312-.167.292-.292z"/></symbol><symbol viewBox="-2.29 -2.29 32.57 32.57" id="gdoc_gitlab" xmlns="http://www.w3.org/2000/svg"><path d="M1.629 11.034 14 26.888.442 17.048a1.09 1.09.0 01-.39-1.203l1.578-4.811zm7.217.0h10.309l-5.154 15.854zM5.753 1.475l3.093 9.559H1.63l3.093-9.559a.548.548.0 011.031.0zm20.618 9.559 1.578 4.811c.141.437-.016.922-.39 1.203l-13.558 9.84 12.371-15.854zm0 0h-7.216l3.093-9.559a.548.548.0 011.031.0z"/></symbol><symbol viewBox="-2.29 -2.29 36.57 36.57" id="gdoc_heart" xmlns="http://www.w3.org/2000/svg"><path d="M16 29.714a1.11 1.11.0 01-.786-.321L4.072 18.643c-.143-.125-4.071-3.714-4.071-8 0-5.232 3.196-8.357 8.535-8.357 3.125.0 6.053 2.464 7.464 3.857 1.411-1.393 4.339-3.857 7.464-3.857 5.339.0 8.535 3.125 8.535 8.357.0 4.286-3.928 7.875-4.089 8.035L16.785 29.392c-.214.214-.5.321-.786.321z"/></symbol><symbol viewBox="-2.29 -2.29 32.57 32.57" id="gdoc_keyborad_arrow_down" xmlns="http://www.w3.org/2000/svg"><path d="M3.281 5.36 14 16.079 24.719 5.36 28 8.641l-14 14-14-14z"/></symbol><symbol viewBox="-2.29 -2.29 36.57 36.57" id="gdoc_keyborad_arrow_left" xmlns="http://www.w3.org/2000/svg"><path d="M25.875 28.25 22.125 32 6.126 16.001 22.125.002l3.75 3.75-12.25 12.25z"/></symbol><symbol viewBox="-2.29 -2.29 36.57 36.57" id="gdoc_keyborad_arrow_right" xmlns="http://www.w3.org/2000/svg"><path d="M6.125 28.25 18.375 16 6.125 3.75 9.875.0l15.999 15.999L9.875 31.998z"/></symbol><symbol viewBox="-2.29 -2.29 32.57 32.57" id="gdoc_keyborad_arrow_up" xmlns="http://www.w3.org/2000/svg"><path d="M24.719 22.64 14 11.921 3.281 22.64.0 19.359l14-14 14 14z"/></symbol><symbol viewBox="-2.29 -2.29 36.57 36.57" id="gdoc_link" xmlns="http://www.w3.org/2000/svg"><path d="M24.037 7.963q3.305.0 5.634 2.366T32 16t-2.329 5.671-5.634 2.366h-6.46v-3.08h6.46q2.028.0 3.493-1.465t1.465-3.493-1.465-3.493-3.493-1.465h-6.46v-3.08h6.46zM9.615 17.578v-3.155h12.77v3.155H9.615zM3.005 16q0 2.028 1.465 3.493t3.493 1.465h6.46v3.08h-6.46q-3.305.0-5.634-2.366T0 16.001t2.329-5.671 5.634-2.366h6.46v3.08h-6.46q-2.028.0-3.493 1.465t-1.465 3.493z"/></symbol><symbol viewBox="-2.29 -2.29 36.57 36.57" id="gdoc_menu" xmlns="http://www.w3.org/2000/svg"><path d="M.001 5.334h31.998v3.583H.001V5.334zm0 12.416v-3.5h31.998v3.5H.001zm0 8.916v-3.583h31.998v3.583H.001z"/></symbol><symbol viewBox="-2.29 -2.29 32.57 32.57" id="gdoc_notification" xmlns="http://www.w3.org/2000/svg"><path d="M22.615 19.384l2.894 2.894v1.413H2.49v-1.413l2.894-2.894V12.25q0-3.365 1.716-5.856t4.745-3.231v-1.01q0-.875.606-1.514T13.999.0t1.548.639.606 1.514v1.01q3.029.74 4.745 3.231t1.716 5.856v7.134zM14 27.999q-1.211.0-2.053-.808t-.841-2.019h5.788q0 1.144-.875 1.986T14 27.999z"/></symbol><symbol viewBox="-2.29 -2.29 32.57 32.57" id="gdoc_path" xmlns="http://www.w3.org/2000/svg"><path d="M28 12.62h-9.793V8.414h-2.826v11.173h2.826v-4.206H28V26.62h-9.793v-4.206H12.62v-14H9.794v4.206H.001V1.381h9.793v4.206h8.413V1.381H28V12.62z"/></symbol><symbol viewBox="-2.29 -2.29 36.57 36.57" id="gdoc_person" xmlns="http://www.w3.org/2000/svg"><path d="M16 20.023q5.052.0 10.526 2.199t5.473 5.754v4.023H0v-4.023q0-3.555 5.473-5.754t10.526-2.199zM16 16q-3.275.0-5.614-2.339T8.047 8.047t2.339-5.661T16 0t5.614 2.386 2.339 5.661-2.339 5.614T16 16z"/></symbol><symbol viewBox="-2.29 -2.29 36.57 36.57" id="gdoc_search" xmlns="http://www.w3.org/2000/svg"><path d="M11.925 20.161q3.432.0 5.834-2.402t2.402-5.834-2.402-5.834-5.834-2.402-5.834 2.402-2.402 5.834 2.402 5.834 5.834 2.402zm10.981.0L32 29.255 29.255 32l-9.094-9.094v-1.458l-.515-.515q-3.26 2.831-7.721 2.831-4.976.0-8.45-3.432T.001 11.925t3.474-8.45 8.45-3.474 8.407 3.474 3.432 8.45q0 1.802-.858 4.075t-1.973 3.646l.515.515h1.458z"/></symbol><symbol viewBox="-2.29 -2.29 32.57 32.57" id="gdoc_shield" xmlns="http://www.w3.org/2000/svg"><path d="M22.167 15.166V3.5h-8.166v20.726c.93-.492 2.424-1.349 3.883-2.497 1.95-1.531 4.284-3.919 4.284-6.562zm3.499-13.999v14c0 7.674-10.737 12.523-11.192 12.724-.146.073-.31.109-.474.109s-.328-.036-.474-.109c-.456-.201-11.192-5.049-11.192-12.724v-14C2.334.529 2.863.0 3.501.0H24.5c.638.0 1.167.529 1.167 1.167z"/></symbol><symbol viewBox="-2.29 -2.29 32.57 32.57" id="gdoc_tags" xmlns="http://www.w3.org/2000/svg"><path d="M6.606 7.549c0-1.047-.84-1.887-1.887-1.887s-1.887.84-1.887 1.887.84 1.887 1.887 1.887 1.887-.84 1.887-1.887zm15.732 8.493c0 .501-.206.988-.546 1.327l-7.239 7.254c-.354.339-.84.546-1.342.546s-.988-.206-1.327-.546L1.342 14.066C.59 13.329.0 11.899.0 10.852V4.718a1.9 1.9.0 011.887-1.887h6.134c1.047.0 2.477.59 3.229 1.342L21.792 14.7c.339.354.546.84.546 1.342zm5.661.0c0 .501-.206.988-.546 1.327l-7.239 7.254c-.354.339-.84.546-1.342.546-.767.0-1.15-.354-1.651-.87l6.93-6.93c.339-.339.546-.826.546-1.327s-.206-.988-.546-1.342L13.609 4.173c-.752-.752-2.182-1.342-3.229-1.342h3.303c1.047.0 2.477.59 3.229 1.342L27.454 14.7c.339.354.546.84.546 1.342z"/></symbol></svg><div class=wrapper><input type=checkbox class=hidden id=menu-control>
 <input type=checkbox class=hidden id=menu-header-control><header class=gdoc-header><div class="container flex align-center justify-between"><a class=gdoc-header__link href=https://docs.lenalab.org/><span class="gdoc-brand flex align-center"><img class=gdoc-brand__img src=/logo_lena_w_s.png alt>
 <span class=gdoc-brand__title>LENA Docs</span></span></a><div class=gdoc-menu-header><span id=gdoc-dark-mode><svg class="icon gdoc_brightness_dark"><title>Toggle Dark/Light mode</title><use xlink:href="#gdoc_brightness_dark"/></svg>
 <svg class="icon gdoc_brightness_light"><title>Toggle Dark/Light mode</title><use xlink:href="#gdoc_brightness_light"/></svg></span></div></div></header><main class="container flex flex-even"><div class=gdoc-page><div class="gdoc-page__header flex flex-wrap
